@@ -1,6 +1,6 @@
 # modly
 
-# Webbshoppen skall till ett minimum bestå av följande komponenter:
+<h3> Webbshoppen skall till ett minimum bestå av följande komponenter: </h3>
 
 Startsida (design finns) med möjlighet för kunden att logga
 in/registrera sig. Även länkar till sidor om företaget (Om Modly),
