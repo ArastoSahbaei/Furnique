@@ -1,6 +1,5 @@
 
     .subHeader {
-        width: 100%;
         color: #ffffff;
         background-color: #427271;
         margin: -8px;
@@ -12,5 +11,6 @@
 
     .subHeaderListItem {
         display: inline-block;
+        margin: 10px;
         margin-right: 130px;
     }

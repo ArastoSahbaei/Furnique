@@ -9,11 +9,11 @@ export default function NavigationBar() {
         <div className="navigationBarWrapper">
             <ul className="navigationList">
                 <span className="logotype">MODLY</span>
-                <li className="itemList">      <NavLink activeClassName='is-active' to="/home">      Home        </NavLink> </li>
-                <li className="itemList">     <NavLink activeClassName='is-active' to="/about">     About       </NavLink> </li>
-                <li className="itemList"> <NavLink activeClassName='is-active' to="/expertise"> Expertise   </NavLink> </li>
-                <li className="itemList"> <NavLink activeClassName='is-active' to="/portfolio"> Portfolio   </NavLink> </li>
-                <li className="itemList">   <NavLink activeClassName='is-active' to="/contact">   Contact     </NavLink> </li>
+                <li className="itemList"> <NavLink activeClassName='is-active' to="/home">      Home        </NavLink> </li>
+                <li className="itemList"> <NavLink activeClassName='is-active' to="/about">     About       </NavLink> </li>
+                <li className="itemList"> <NavLink activeClassName='is-active' to="/expertise"> Animations   </NavLink> </li>
+                <li className="itemList"> <NavLink activeClassName='is-active' to="/portfolio"> Support   </NavLink> </li>
+                <li className="itemList"> <NavLink activeClassName='is-active' to="/contact">   Contact     </NavLink> </li>
                 <span className="shoppingCartIcon">SHOPPINGCART</span>
             </ul>
                 <SubHeader/>
