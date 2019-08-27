@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import './Animation.css'
 import * as THREE from "three";
 
@@ -17,3 +17,4 @@ export default function Animation() {
         </div>
     )
 }
+ */

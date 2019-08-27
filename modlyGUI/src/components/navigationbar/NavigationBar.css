@@ -1,0 +1,56 @@
+.navigationWrapper {
+    position: fixed;
+    width: 100%;
+    }
+
+  .navigationList {
+    list-style-type: none;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 22px;
+    background-color: rgba(145, 115, 115, 0.527);
+    top: 0;
+    margin: -8px;
+    padding: -8px;
+    text-align: center;
+    }
+
+    .logotype {
+        float: left;
+        margin-top: 12px;
+    }
+
+    .shoppingCartIcon {
+        float: right;
+        margin-top: 12px;
+        margin-right: 10px;
+    }
+  
+    li {
+      display: inline-block;
+      margin: 14px;
+    }
+  
+    li:hover {
+      letter-spacing: 4px;
+      -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+      -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+      box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    }
+  
+    a {
+      text-decoration: none;
+      color:inherit;
+      -o-transition:.5s;
+      -ms-transition:.5s;
+      -moz-transition:.5s;
+      -webkit-transition:.5s;
+      transition:.5s;
+    }
+  
+    .is-active {
+    letter-spacing: 4px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    color: rgba(255, 255, 255, 0.603);
+    }
