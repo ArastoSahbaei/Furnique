@@ -18,11 +18,13 @@
         margin-top: 12px;
     }
 
-    .shoppingCartIcon {
+    .shoppingCartIcon, .myLikesIcon {
         float: right;
         margin-top: 12px;
-        margin-right: 10px;
+        margin-right: 14px;
+        color: white;
     }
+
   
     .itemList {
       display: inline-block;
