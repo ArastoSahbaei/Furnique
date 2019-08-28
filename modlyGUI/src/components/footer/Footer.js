@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <div className="footerWrapper">
                <ul className="footerList">
-                    <li className="footerList"> hehe </li>
+                    <li className="footerList"> Modly Corporation </li>
                 </ul>
         </div>
     )

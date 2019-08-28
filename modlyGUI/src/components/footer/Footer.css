@@ -1,7 +1,6 @@
 .footerWrapper {
     position: fixed;
-    left: 0;
-    bottom: -2%;
+    bottom: 0;
     width: 100%;
     color: white;
     text-align: center;
@@ -12,5 +11,7 @@
     background-color: #427271;
     text-align: center;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
     }
     
