@@ -5,12 +5,12 @@
         color: #ffffff;
         background-color: #292929;
         text-align: center;
-        font-family: 'ZCOOL KuaiLe', cursive;
+        font-family: 'Lato', sans-serif;
         font-size: 14px;
     }
 
     .subHeaderListItem {
         display: inline-block;
-        margin: 10px;
+        margin: 16px;
         margin-right: 130px;
     }
