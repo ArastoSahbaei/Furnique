@@ -1,12 +1,13 @@
 import React from 'react';
 /* import Animation from './animations/Animation.js' */
 import NavigationBar from './components/navigationbar/NavigationBar'
+import Footer from './components/footer/Footer'
 
 function App() {
   return (
     <div className="App">
       <NavigationBar/>
-      <h1>This is the Modly application :></h1>
+      {/* <Footer/> */}
      {/*  <Animation/> */}
     </div>
   );

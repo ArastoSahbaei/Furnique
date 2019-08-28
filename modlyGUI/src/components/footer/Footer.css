@@ -1,0 +1,16 @@
+.footerWrapper {
+    position: fixed;
+    left: 0;
+    bottom: -2%;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.footerList {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    background-color: #427271;
+    text-align: center;
+    list-style-type: none;
+    }
+    
