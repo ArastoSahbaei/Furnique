@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <div className="footerWrapper">
                <ul className="footerList">
-                    <li className="footerList"> Modly Corporation </li>
+                    <li className="footerList"> ©2019 Modly AB. All rights reserved. </li>
                     <SocialMedia/>
                 </ul>
         </div>

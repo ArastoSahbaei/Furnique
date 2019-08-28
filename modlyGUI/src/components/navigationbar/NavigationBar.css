@@ -9,7 +9,7 @@
     list-style-type: none;
     font-family: 'ZCOOL KuaiLe', cursive;
     font-size: 22px;
-    background-color: rgba(145, 115, 115, 0.527);
+    background-color: #427271;
     text-align: center;
     }
 
@@ -51,5 +51,5 @@
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
-    color: rgba(255, 255, 255, 0.603);
+    color: rgba(255, 255, 255, 0.89);
     }
