@@ -2,8 +2,6 @@
     display: flex;
     justify-content: center;
     padding: 0px;
-
-
   }
   
   .socialMediaUL .socialMediaLI {
@@ -16,8 +14,8 @@
     background: #fff;
     text-align: center;
     line-height: 40px;
-    font-size: 27px;
-    margin: 010px;
+    font-size: 28px;
+    margin: 12px;
     display: block;
     border-radius: 50%;
     position: relative;
@@ -46,7 +44,7 @@
     width: 100%;
     height: 100%;
     background: #f00;
-    transition: .5s;
+    transition: .7s;
     z-index: 1;
   }
   
@@ -55,7 +53,7 @@
   }
   
   .socialMediaUL .socialMediaLI:nth-child(1) a:before {
-    background: #ff0000;
+    background: #c8232c;
   }
   
   .socialMediaUL .socialMediaLI:nth-child(2) a:before {
@@ -67,5 +65,5 @@
   }
   
   .socialMediaUL .socialMediaLI:nth-child(4) a:before {
-    background: #333;
+    background: #1DA1F2;
   }
