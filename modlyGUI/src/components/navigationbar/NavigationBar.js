@@ -9,7 +9,7 @@ export default function NavigationBar() {
         <Router>
             <div className="navigationBarWrapper">
                 <ul className="navigationList">
-                    <span className="logotype">MODLY</span>
+                    <span className="logotype">M O D L Y .</span>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/home">      Home         </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/about">     About        </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/expertise"> Animations   </NavLink> </li>

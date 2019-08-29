@@ -16,6 +16,7 @@
     .logotype {
         float: left;
         margin-top: 12px;
+        color: white;
     }
 
     .shoppingCartIcon, .myLikesIcon {
