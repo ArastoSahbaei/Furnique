@@ -16,7 +16,7 @@ export default function NavigationBar() {
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/portfolio"> Inspiration      </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/contact">   Kontakt      </NavLink> </li>
                     <li className="shoppingCartIcon"> <i class="fa fa-shopping-cart" aria-hidden="true"> </i></li>
-                    <li className="myLikesIcon"> <i class="fa fa-heart" aria-hidden="true"> </i></li>
+                    <li className="myLikesIcon"> <i class="fa fa-user" aria-hidden="true"> </i></li>
                 </ul>
                 <SubHeader/>
                 <Switch>
