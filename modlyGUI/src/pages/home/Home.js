@@ -3,6 +3,7 @@ import './Home.css'
 import TreeLogo from '../../shared/images/denne.jpg';
 import DesignSection from './designsection/DesignSection'
 import RecommendationSection from './recommendationsection/RecommendationSection'
+import NewsLetterSection from './newslettersection/NewsLetterSection'
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
             <p className="subTitle">LÄS MER OM HUR</p>
             <DesignSection/>
             <RecommendationSection/>
+            <NewsLetterSection/>
         </div>
     )
 }
