@@ -10,11 +10,11 @@ export default function NavigationBar() {
             <div className="navigationBarWrapper">
                 <ul className="navigationList">
                     <span className="logotype">M O D L Y .</span>
-                    <li className="itemList"> <NavLink activeClassName='is-active' to="/home">      Home         </NavLink> </li>
-                    <li className="itemList"> <NavLink activeClassName='is-active' to="/about">     About        </NavLink> </li>
-                    <li className="itemList"> <NavLink activeClassName='is-active' to="/expertise"> Animations   </NavLink> </li>
-                    <li className="itemList"> <NavLink activeClassName='is-active' to="/portfolio"> Support      </NavLink> </li>
-                    <li className="itemList"> <NavLink activeClassName='is-active' to="/contact">   Contact      </NavLink> </li>
+                    <li className="itemList"> <NavLink activeClassName='is-active' to="/home">      Hem         </NavLink> </li>
+                    <li className="itemList"> <NavLink activeClassName='is-active' to="/about">     Design        </NavLink> </li>
+                    <li className="itemList"> <NavLink activeClassName='is-active' to="/expertise"> Animation   </NavLink> </li>
+                    <li className="itemList"> <NavLink activeClassName='is-active' to="/portfolio"> Inspiration      </NavLink> </li>
+                    <li className="itemList"> <NavLink activeClassName='is-active' to="/contact">   Kontakt      </NavLink> </li>
                     <li className="shoppingCartIcon"> <i class="fa fa-shopping-cart" aria-hidden="true"> </i></li>
                     <li className="myLikesIcon"> <i class="fa fa-heart" aria-hidden="true"> </i></li>
                 </ul>
