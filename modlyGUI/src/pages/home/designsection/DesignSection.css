@@ -68,7 +68,7 @@
    height: 70%;
    align-self: center;
    justify-self: center;
-   animation: loopAnimation ease 4s infinite 1s;
+   animation: fadeInEffect 2s, loopAnimation ease 6s infinite 1s;
    animation-direction: alternate;
 }
 
@@ -91,3 +91,26 @@
        transform: translateX(300px);
     }
  }
+
+ @keyframes fadeInEffect {
+   0% {
+      opacity: 0;
+      transform: translateX(0);
+   }
+   50% {
+      opacity: 0;
+      transform: translateX(0);
+   }
+   80% {
+      opacity: 0;
+      transform: translateX(0);
+   }
+   90% {
+      opacity: 0.5;
+      transform: translateX(0);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
