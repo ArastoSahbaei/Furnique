@@ -19,7 +19,8 @@ export default function RecommendationSection() {
 
             <Card className="card1">
                 <CardHeader avatar={ <Avatar aria-label="Recipe">  <img className="image1"  src={user1} alt="Eng" /> </Avatar> }
-                title="Elisabeth Vikander"/>
+                title="Elisabeth Vikander"
+                subheader="Inredningsdesigner, Ziik"/>
                 <CardContent>
                 <Typography component="p"> "Vivamus laoreet ante vel tellus aliquet, ac fringilla leo condimentum. Mauris in massa malesuada, fringilla massa accumsan, imperdiet sapien. Vestibulum suscipit blandit commodo. Nulla facilisi. Pellentesque in nisl diam." </Typography>
                 </CardContent>
@@ -27,7 +28,8 @@ export default function RecommendationSection() {
 
             <Card className="card2">
                 <CardHeader avatar={ <Avatar aria-label="Recipe">  <img className="image1"  src={user2} alt="Eng" /> </Avatar> }
-                title="Arasto Sahbaei"/>
+                title="Arasto Sahbaei"
+                subheader="Projektledare, ZARA"/>
                 <CardContent>
                 <Typography component="p"> "Vivamus laoreet ante vel tellus aliquet, ac fringilla leo condimentum. Mauris in massa malesuada, fringilla massa accumsan, imperdiet sapien. Vestibulum suscipit blandit commodo. Nulla facilisi. Pellentesque in nisl diam." </Typography>
                 </CardContent>
@@ -35,7 +37,8 @@ export default function RecommendationSection() {
 
             <Card className="card3">
                 <CardHeader avatar={ <Avatar aria-label="Recipe">  <img className="image1"  src={user3} alt="Eng" /> </Avatar> }
-                title="Amanda Cronberg"/>
+                title="Amanda Cronberg"
+                subheader="Butikschef, Cronberg's Möbeldesign"/>
                 <CardContent>
                 <Typography component="p"> "Vivamus laoreet ante vel tellus aliquet, ac fringilla leo condimentum. Mauris in massa malesuada, fringilla massa accumsan, imperdiet sapien. Vestibulum suscipit blandit commodo. Nulla facilisi. Pellentesque in nisl diam." </Typography>
                 </CardContent>
