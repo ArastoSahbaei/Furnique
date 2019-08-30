@@ -32,6 +32,18 @@
    text-decoration: underline;
    font-size: 22px;
    margin: 10px;
+   -o-transition:.5s;
+   -ms-transition:.5s;
+   -moz-transition:.5s;
+   -webkit-transition:.5s;
+   transition:.5s;
+   
+}
+.produktLI1:hover, .produktLI2:hover, .produktLI3:hover {
+      letter-spacing: 4px;
+      -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+      -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+      box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 }
 
 .produktLI1{
