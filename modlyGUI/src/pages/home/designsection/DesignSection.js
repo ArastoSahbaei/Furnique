@@ -6,7 +6,7 @@ import Arrow from '../../../shared/images/arrow.png';
 export default function DesignSection() {
     return (
                <div className="produktWrapper">
-                            <img className="arrowLogo" src={Arrow}/>
+                            <img className="arrowLogo" src={Arrow} alt=""/>
                                 <p className="produktTitle">Skapa Design</p>
                                 <ul className="produktUL">
                                     <li className="produktLI1">MATBORD</li>
