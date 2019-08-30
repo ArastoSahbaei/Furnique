@@ -17,10 +17,21 @@
 
 .recommendationTitle {
     color: black;
-    font-size: 32px;
+    font-size: 42px;
     grid-column: 3/5;
     grid-row: 1/1;
     justify-self: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.MuiTypography-body1 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.MuiTypography-body2 {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
 }
 
 .card1 {
@@ -43,4 +54,9 @@
     align-self: center;
     justify-self: center;
     width: 80%;
+}
+
+.image1, .image2, .image3 {
+    width: 100%;
+    height: 100%;
 }
