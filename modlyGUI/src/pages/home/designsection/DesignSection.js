@@ -7,7 +7,7 @@ export default function DesignSection() {
     return (
                <div className="produktWrapper">
                             <img className="arrowLogo" src={Arrow}/>
-                                <p className="produktTitle">Designa din möbel</p>
+                                <p className="produktTitle">Skapa Design</p>
                                 <ul className="produktUL">
                                     <li className="produktLI1">MATBORD</li>
                                     <li className="produktLI2">SOFFBORD</li>
