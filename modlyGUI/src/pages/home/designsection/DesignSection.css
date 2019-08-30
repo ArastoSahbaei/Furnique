@@ -46,17 +46,17 @@
       box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 }
 
-.produktLI1{
+.produktLI1 {
     animation-name: rightToLeft;
     animation-duration: 2s;
 }
 
-.produktLI2{
+.produktLI2 { 
     animation-name: rightToLeft;
     animation-duration: 2.5s;
 }
 
-.produktLI3{
+.produktLI3 { 
     animation-name: rightToLeft;
     animation-duration: 3s;
 }
