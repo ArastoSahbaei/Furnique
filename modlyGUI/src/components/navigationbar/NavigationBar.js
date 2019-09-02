@@ -3,6 +3,7 @@ import { Route, NavLink, Switch, BrowserRouter as Router } from 'react-router-do
 import './NavigationBar.css'
 import SubHeader from './subheader/SubHeader.js'
 import Home from '../../pages/home/Home'
+import Design from '../../pages/shop/Shop'
 
 export default function NavigationBar() {
     return (
@@ -21,7 +22,7 @@ export default function NavigationBar() {
                 <SubHeader/>
                 <Switch>
                     <Route exact path="/home"       component={Home} />
-                    <Route exact path="/about"      component={Home} />
+                    <Route exact path="/about"      component={Design} />
                     <Route exact path="/expertise"  component={Home} />
                     <Route exact path="/portfolio"  component={Home} />
                     <Route exact path="/contact"    component={Home} />
