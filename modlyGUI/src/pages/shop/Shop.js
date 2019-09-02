@@ -12,7 +12,7 @@ export default function Shop() {
     camera.position.y = 2;
 
     var renderer = new THREE.WebGLRenderer({antialias: true});
-    renderer.setClearColor("#e5e5e5");
+    renderer.setClearColor("blue");
     renderer.setSize(window.innerWidth, window.innerHeight)
 
     document.body.append(renderer.domElement);
@@ -22,21 +22,24 @@ export default function Shop() {
         camera.updateProjectionMatrix();
     })
 
-
-
     const boxWidth = 2;
     const boxHeight = 1;
     const boxDepth = 1;
     const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+    const tableLegs = new THREE.BoxGeometry(1, 1, 1);
     
     var loader = new THREE.TextureLoader();
     var material = new THREE.MeshLambertMaterial({ map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg') })
+    var tableMaterial = new THREE.MeshLambertMaterial(0xe0e0e0)
     var mesh = new THREE.Mesh(geometry, material)
-    scene.add(mesh);
+    var mesh2 = new THREE.Mesh(tableLegs, tableMaterial)
+    scene.add(mesh, mesh2);
 
-    mesh.position.set(0, 1, 1)
+    mesh.position.set(0, 1.35, 1)
+    mesh2.position.set(3, 1.35, 1)
    /*  mesh.rotation.set(3, 1, 3) */
     mesh.scale.set(4, 0.15, 4)
+    mesh2.scale.set(0.2, 3, 0.2)
 
     var light = new THREE.DirectionalLight(0xe0e0e0, 1.5, 50);
 
@@ -46,8 +49,10 @@ export default function Shop() {
     var render = function() {
         requestAnimationFrame(render);
         mesh.rotation.y += 0.003;
+        mesh2.rotation.y += 0.003;
         renderer.render(scene, camera);
     }
+
 
     render();
    
