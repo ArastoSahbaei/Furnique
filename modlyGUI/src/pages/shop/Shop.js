@@ -44,7 +44,7 @@ export default function Shop() {
     tableLeg1.position.set(3, 0.2, 0)
     tableLeg2.position.set(-1, 2, 1)
     tableLeg3.position.set(1, 3, -1.5)
-    tableLeg4.position.set(-3, -2, -0.5)
+    tableLeg4.position.set(0.9, -5, 0.4)
    /*  mesh.rotation.set(3, 1, 3) */
     mesh.scale.set(4, 0.15, 4)
     tableLeg1.scale.set(0.3, 2, 0.3)
