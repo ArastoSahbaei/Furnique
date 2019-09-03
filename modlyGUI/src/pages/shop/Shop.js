@@ -4,43 +4,36 @@ import * as THREE from "three";
 
 export default function Shop() {
 
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(105, (window.innerWidth / window.innerHeight), 0.1, 1000);
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(105, (window.innerWidth / window.innerHeight), 0.1, 1000);
     camera.position.z = 8;
     camera.position.y = 4;
-    camera.lookAt( scene.position )
-    var renderer = new THREE.WebGLRenderer({antialias: true});
-
-/*     renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.BasicShadowMap; */
-
-
-    renderer.setClearColor(0xb7d6fb);
-    renderer.setSize(window.innerWidth, window.innerHeight)
-    document.body.append(renderer.domElement);
-
+    camera.lookAt( scene.position );
     window.addEventListener('resize', () => {
         renderer.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
     })
 
+    const renderer = new THREE.WebGLRenderer({antialias: true});
+    renderer.setClearColor(0xb7d6fb);
+    renderer.setSize(window.innerWidth, window.innerHeight)
+    document.body.append(renderer.domElement);
+
     const boxWidth = 2; const boxHeight = 1; const boxDepth = 1;
-    const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+    const boxGeometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
     
     const tableLegs = new THREE.BoxGeometry(0.3, 10, 0.3);
-    var loader = new THREE.TextureLoader();
-    var material = new THREE.MeshLambertMaterial({ map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg') })
-    var tableMaterial = new THREE.MeshLambertMaterial({ color: 0x3262a8, shininess: 50, shading: THREE.SmoothShading })
-    var tableBoard = new THREE.Mesh(geometry, material)
-/*     mesh.receiveShadow = true;
-    mesh.castShadow = true; */
-    var tableLeg1 = new THREE.Mesh(tableLegs, tableMaterial)
-    var tableLeg2 = new THREE.Mesh(tableLegs, tableMaterial)
-    var tableLeg3 = new THREE.Mesh(tableLegs, tableMaterial)
-    var tableLeg4 = new THREE.Mesh(tableLegs, tableMaterial)
+    const loader = new THREE.TextureLoader();
+    const material = new THREE.MeshLambertMaterial({ map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg') })
+    const tableMaterial = new THREE.MeshLambertMaterial({ color: 0x3262a8, shininess: 50, shading: THREE.SmoothShading })
+    const tableBoard = new THREE.Mesh(boxGeometry, material)
+    const tableLeg1 = new THREE.Mesh(tableLegs, tableMaterial)
+    const tableLeg2 = new THREE.Mesh(tableLegs, tableMaterial)
+    const tableLeg3 = new THREE.Mesh(tableLegs, tableMaterial)
+    const tableLeg4 = new THREE.Mesh(tableLegs, tableMaterial)
     
-    var group = new THREE.Group();
+    const group = new THREE.Group();
     tableBoard.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
         
     scene.add(tableBoard);
@@ -59,7 +52,7 @@ export default function Shop() {
     tableLeg4.scale.set(0.1, 1.1, 0.1)
 
     const floor = () => {
-        var meshFloor = new THREE.Mesh(
+        const meshFloor = new THREE.Mesh(
         new THREE.PlaneGeometry(100, 100, 100, 100),
         new THREE.MeshPhongMaterial({color:0xffffff, wireframe: false, antialias: true})
         )
@@ -68,9 +61,9 @@ export default function Shop() {
         scene.add(meshFloor);
     }
 
-    const light = () => {
-        var ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
-        var light = new THREE.PointLight(0xffffff, 1.3, 18);
+    const lightAndShadow = () => {
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
+        const light = new THREE.PointLight(0xffffff, 1.3, 18);
         light.position.set(1, 1, 1)
         light.castShadow = true
         light.shadow.camera.near = 0.7
@@ -80,12 +73,11 @@ export default function Shop() {
 }
     const render = () => {
         requestAnimationFrame(render);
-        tableBoard.rotation.y += 0.005;
-       /*  mesh.rotation.x += 0.01; */ 
+        tableBoard.rotation.y -= 0.005;
         renderer.render(scene, camera);
     }
 
-    light();
+    lightAndShadow();
     floor();
     render();
    
