@@ -86,8 +86,8 @@ export default function Shop() {
         controls.update();
     }
 
-    const render = () => {
-        requestAnimationFrame(render);
+    const animate = () => {
+        requestAnimationFrame(animate);
         tableBoard.rotation.y -= 0.005;
    /*      tableBoard.rotation.x -= 0.005; */
         renderer.render(scene, camera);
@@ -95,7 +95,7 @@ export default function Shop() {
     }
 
     lightAndShadow();
-    render();
+    animate();
    
     return (
         <div>
