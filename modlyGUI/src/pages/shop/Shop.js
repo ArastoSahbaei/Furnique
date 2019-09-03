@@ -26,7 +26,7 @@ export default function Shop() {
     const boxHeight = 1;
     const boxDepth = 1;
     const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
-    const tableLegs = new THREE.BoxGeometry(1, 1, 1);
+    const tableLegs = new THREE.BoxGeometry(0.3, 10, 0.3);
     var loader = new THREE.TextureLoader();
     var material = new THREE.MeshLambertMaterial({ map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg') })
     var tableMaterial = new THREE.MeshLambertMaterial({ map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg'), shininess: 50, shading: THREE.SmoothShading })
@@ -37,20 +37,20 @@ export default function Shop() {
     var tableLeg4 = new THREE.Mesh(tableLegs, tableMaterial)
     
         var group = new THREE.Group();
-        mesh.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4 );
+        mesh.add(tableLeg4);
         scene.add(mesh);
     
     mesh.position.set(0, 1.15, 1)
-    tableLeg1.position.set(5, 0.2, 0)
+    tableLeg1.position.set(3, 0.2, 0)
     tableLeg2.position.set(-1, 2, 1)
     tableLeg3.position.set(1, 3, -1.5)
-    tableLeg4.position.set(-1, -4, -1.5)
+    tableLeg4.position.set(-3, -2, -0.5)
    /*  mesh.rotation.set(3, 1, 3) */
     mesh.scale.set(4, 0.15, 4)
     tableLeg1.scale.set(0.3, 2, 0.3)
     tableLeg2.scale.set(1, 0.1, 0.1)
     tableLeg3.scale.set(1, 0.1, 0.1)
-    tableLeg4.scale.set(0.3, 0.1, 0.1)
+    tableLeg4.scale.set(0.3, 1.1, 0.1)
 
 
     var light = new THREE.DirectionalLight(0xe0e0e0, 1.5, 50);
