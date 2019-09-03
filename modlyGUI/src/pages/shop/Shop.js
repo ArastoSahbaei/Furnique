@@ -6,11 +6,10 @@ import * as THREE from "three";
 export default function Shop() {
 
     var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(75, (window.innerWidth / window.innerHeight), 0.1, 1000);
+    var camera = new THREE.PerspectiveCamera(105, (window.innerWidth / window.innerHeight), 0.1, 1000);
     camera.position.z = 8;
-    camera.position.y = 2;
+    camera.position.y = 4;
     camera.lookAt( scene.position )
-
     var renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setClearColor(0x7c7d81);
     renderer.setSize(window.innerWidth, window.innerHeight)
@@ -47,8 +46,9 @@ export default function Shop() {
     tableLeg2.position.set(-0.9, -6, -0.4)
     tableLeg3.position.set(-0.9, -6, 0.4)
     tableLeg4.position.set(0.9, -6, 0.4)
-   /*  mesh.rotation.set(3, 1, 3) */
+    mesh.rotation.set(-0.1, 0.9, 0) 
     mesh.scale.set(4, 0.15, 4)
+
     tableLeg1.scale.set(0.1, 1.1, 0.1)
     tableLeg2.scale.set(0.1, 1.1, 0.1)
     tableLeg3.scale.set(0.1, 1.1, 0.1)
@@ -62,9 +62,8 @@ export default function Shop() {
 
     var render = function() {
         requestAnimationFrame(render);
-        mesh.rotation.y += 0.01;
-        mesh.rotation.x += 0.01;
-  
+        mesh.rotation.y += 0.005;
+       /*  mesh.rotation.x += 0.01; */ 
         renderer.render(scene, camera);
     }
 
