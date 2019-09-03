@@ -3,7 +3,6 @@ import './Shop.css'
 import * as THREE from "three";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 
-
 export default function Shop() {
 
     const scene = new THREE.Scene();
@@ -18,10 +17,6 @@ export default function Shop() {
         camera.updateProjectionMatrix();
     })
     
-    
-    
-
-
     const renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setClearColor(0xb7d6fb);
     renderer.setSize(window.innerWidth, window.innerHeight)
@@ -89,7 +84,6 @@ export default function Shop() {
     const animate = () => {
         requestAnimationFrame(animate);
         tableBoard.rotation.y -= 0.005;
-   /*      tableBoard.rotation.x -= 0.005; */
         renderer.render(scene, camera);
         orbitCamera()
     }
