@@ -1,6 +1,8 @@
 import React from 'react'
 import './Shop.css'
 import * as THREE from "three";
+import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
+
 
 export default function Shop() {
 
@@ -9,11 +11,16 @@ export default function Shop() {
     camera.position.z = 8;
     camera.position.y = 4;
     camera.lookAt( scene.position );
+
     window.addEventListener('resize', () => {
         renderer.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
     })
+    
+    
+    
+
 
     const renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setClearColor(0xb7d6fb);
@@ -22,12 +29,14 @@ export default function Shop() {
 
     const boxWidth = 2; const boxHeight = 1; const boxDepth = 1;
     const boxGeometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
-    const loader = new THREE.TextureLoader();
-    const material = new THREE.MeshLambertMaterial({ map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg') })
+    const textureLoader = new THREE.TextureLoader();
+    const customPicture = textureLoader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
+    const material = new THREE.MeshLambertMaterial({map: customPicture})
     const tableBoard = new THREE.Mesh(boxGeometry, material)
     tableBoard.position.set(0, 1.15, 1)
     tableBoard.rotation.set(-0.1, 0.9, 0) 
     tableBoard.scale.set(4, 0.15, 4)
+
     
     const tableLegsGeometry = new THREE.BoxGeometry(0.3, 10, 0.3);
     const tableLegsMaterial = new THREE.MeshLambertMaterial({ color: 0x3262a8, shininess: 50, shading: THREE.SmoothShading })
@@ -44,19 +53,16 @@ export default function Shop() {
     tableLeg3.scale.set(0.1, 1.1, 0.1)
     tableLeg4.scale.set(0.1, 1.1, 0.1)
 
+    const meshFloor = new THREE.Mesh(
+    new THREE.PlaneGeometry(100, 100, 100, 100),
+    new THREE.MeshPhongMaterial({color:0xffffff, wireframe: false, antialias: true})
+    )
+    meshFloor.rotation.x -= Math.PI / 2;
+    meshFloor.receiveShadow = true;
+
     const group = new THREE.Group();
     tableBoard.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
-    scene.add(tableBoard);
-
-    const floor = () => {
-        const meshFloor = new THREE.Mesh(
-        new THREE.PlaneGeometry(100, 100, 100, 100),
-        new THREE.MeshPhongMaterial({color:0xffffff, wireframe: false, antialias: true})
-        )
-        meshFloor.rotation.x -= Math.PI / 2;
-        meshFloor.receiveShadow = true;
-        scene.add(meshFloor);
-    }
+    scene.add(tableBoard, meshFloor);
 
     const lightAndShadow = () => {
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
@@ -68,14 +74,27 @@ export default function Shop() {
         light.position.set(0.3, 2, 2);
         scene.add(light, ambientLight);
 }
+
+    const orbitCamera = () => {
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.005;
+        controls.enableZoom = false;
+        controls.enableKeys = false;
+        controls.enableRotate = true; /* TODO: Single axis changes are OK. Fix this later. */
+        controls.rotateSpeed = 0.05;
+        controls.update();
+    }
+
     const render = () => {
         requestAnimationFrame(render);
         tableBoard.rotation.y -= 0.005;
+   /*      tableBoard.rotation.x -= 0.005; */
         renderer.render(scene, camera);
+        orbitCamera()
     }
 
     lightAndShadow();
-    floor();
     render();
    
     return (
