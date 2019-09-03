@@ -22,34 +22,31 @@ export default function Shop() {
 
     const boxWidth = 2; const boxHeight = 1; const boxDepth = 1;
     const boxGeometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
-    
-    const tableLegs = new THREE.BoxGeometry(0.3, 10, 0.3);
     const loader = new THREE.TextureLoader();
     const material = new THREE.MeshLambertMaterial({ map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg') })
-    const tableMaterial = new THREE.MeshLambertMaterial({ color: 0x3262a8, shininess: 50, shading: THREE.SmoothShading })
     const tableBoard = new THREE.Mesh(boxGeometry, material)
-    const tableLeg1 = new THREE.Mesh(tableLegs, tableMaterial)
-    const tableLeg2 = new THREE.Mesh(tableLegs, tableMaterial)
-    const tableLeg3 = new THREE.Mesh(tableLegs, tableMaterial)
-    const tableLeg4 = new THREE.Mesh(tableLegs, tableMaterial)
-    
-    const group = new THREE.Group();
-    tableBoard.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
-        
-    scene.add(tableBoard);
-
     tableBoard.position.set(0, 1.15, 1)
+    tableBoard.rotation.set(-0.1, 0.9, 0) 
+    tableBoard.scale.set(4, 0.15, 4)
+    
+    const tableLegsGeometry = new THREE.BoxGeometry(0.3, 10, 0.3);
+    const tableLegsMaterial = new THREE.MeshLambertMaterial({ color: 0x3262a8, shininess: 50, shading: THREE.SmoothShading })
+    const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
+    const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
+    const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
+    const tableLeg4 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
     tableLeg1.position.set(0.9, -6, -0.4)
     tableLeg2.position.set(-0.9, -6, -0.4)
     tableLeg3.position.set(-0.9, -6, 0.4)
     tableLeg4.position.set(0.9, -6, 0.4)
-    tableBoard.rotation.set(-0.1, 0.9, 0) 
-    tableBoard.scale.set(4, 0.15, 4)
-
     tableLeg1.scale.set(0.1, 1.1, 0.1)
     tableLeg2.scale.set(0.1, 1.1, 0.1)
     tableLeg3.scale.set(0.1, 1.1, 0.1)
     tableLeg4.scale.set(0.1, 1.1, 0.1)
+
+    const group = new THREE.Group();
+    tableBoard.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
+    scene.add(tableBoard);
 
     const floor = () => {
         const meshFloor = new THREE.Mesh(
