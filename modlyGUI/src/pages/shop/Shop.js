@@ -37,20 +37,20 @@ export default function Shop() {
     var tableLeg4 = new THREE.Mesh(tableLegs, tableMaterial)
     
         var group = new THREE.Group();
-        mesh.add(tableLeg4);
+        mesh.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
         scene.add(mesh);
     
     mesh.position.set(0, 1.15, 1)
-    tableLeg1.position.set(3, 0.2, 0)
-    tableLeg2.position.set(-1, 2, 1)
-    tableLeg3.position.set(1, 3, -1.5)
+    tableLeg1.position.set(0.9, -5, -0.4)
+    tableLeg2.position.set(-0.9, -5, -0.4)
+    tableLeg3.position.set(-0.9, -5, 0.4)
     tableLeg4.position.set(0.9, -5, 0.4)
    /*  mesh.rotation.set(3, 1, 3) */
     mesh.scale.set(4, 0.15, 4)
-    tableLeg1.scale.set(0.3, 2, 0.3)
-    tableLeg2.scale.set(1, 0.1, 0.1)
-    tableLeg3.scale.set(1, 0.1, 0.1)
-    tableLeg4.scale.set(0.3, 1.1, 0.1)
+    tableLeg1.scale.set(0.1, 1.1, 0.1)
+    tableLeg2.scale.set(0.1, 1.1, 0.1)
+    tableLeg3.scale.set(0.1, 1.1, 0.1)
+    tableLeg4.scale.set(0.1, 1.1, 0.1)
 
 
     var light = new THREE.DirectionalLight(0xe0e0e0, 1.5, 50);
@@ -61,7 +61,7 @@ export default function Shop() {
     var render = function() {
         requestAnimationFrame(render);
         mesh.rotation.y += 0.01;
-        tableLeg1.rotation.y += 0.01;
+        mesh.rotation.x += 0.01;
   
         renderer.render(scene, camera);
     }
