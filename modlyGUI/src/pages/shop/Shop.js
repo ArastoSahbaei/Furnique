@@ -48,16 +48,17 @@ export default function Shop() {
     tableLeg3.scale.set(0.1, 1.1, 0.1)
     tableLeg4.scale.set(0.1, 1.1, 0.1)
 
-    const meshFloor = new THREE.Mesh(
-    new THREE.PlaneGeometry(100, 100, 100, 100),
-    new THREE.MeshPhongMaterial({color:0xffffff, wireframe: false, antialias: true})
-    )
-    meshFloor.rotation.x -= Math.PI / 2;
-    meshFloor.receiveShadow = true;
-
+    const floorGeometry = new THREE.PlaneGeometry( 1000, 1000, 10, 10 );
+    floorGeometry.rotateX( - Math.PI / 2 );
+/*     const floorTexture = new THREE.TextureLoader().load('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOOcWSD0K2mPwokAFfZIhq5Xl49bh8B17RlU6NqCGa4UOKydgX');
+    floorTexture.wrapS = floorTexture.wrapT = THREE.RepeatWrapping;
+    floorTexture.repeat.set(20, 20); */
+    const floorMaterial = new THREE.MeshBasicMaterial({color: 0x7c7d81}),
+    floor = new THREE.Mesh( floorGeometry, floorMaterial );
+   
     const group = new THREE.Group();
     tableBoard.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
-    scene.add(tableBoard, meshFloor);
+    scene.add(tableBoard, floor);
 
     const lightAndShadow = () => {
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
