@@ -22,12 +22,12 @@ export default function Shop() {
     renderer.setSize(window.innerWidth, window.innerHeight)
     document.body.append(renderer.domElement);
     const boxWidth = 2; const boxHeight = 1; const boxDepth = 1;
-    const boxGeometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+    const tableBoardGeometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
     const textureLoader = new THREE.TextureLoader();
     const customPicture = textureLoader.load('https://threejsfundamentals.org/threejs/lessons/resources/images/compressed-but-large-wood-texture.jpg')
-    const material = new THREE.MeshLambertMaterial({map: customPicture})
-    const tableBoard = new THREE.Mesh(boxGeometry, material)
-    tableBoard.position.set(1, 1, 1)
+    const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture})
+    const tableBoard = new THREE.Mesh(tableBoardGeometry, tableBoardMaterial)
+    tableBoard.position.set(0, 2, 0)
     tableBoard.scale.set(4, 0.2, 4)
     /* tableBoard.rotation.set(0, 4, 0)  */
 
@@ -73,7 +73,7 @@ export default function Shop() {
     const orbitCamera = () => {
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
-        controls.dampingFactor = 0.005;
+        controls.dampingFactor = 0.001;
         controls.enableZoom = false;
         controls.enableKeys = false;
         controls.enableRotate = true; /* TODO: Single axis changes are OK. Fix this later. */
