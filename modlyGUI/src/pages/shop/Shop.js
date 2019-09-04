@@ -8,7 +8,7 @@ export default function Shop() {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(35, (window.innerWidth / window.innerHeight), 0.1, 1000);
     camera.position.z = 8;
-    camera.position.y = 4;
+    camera.position.y = 2;
     camera.lookAt( scene.position );
 
     window.addEventListener('resize', () => {
@@ -29,8 +29,6 @@ export default function Shop() {
     const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture})
     const tableBoard = new THREE.Mesh(tableBoardGeometry, tableBoardMaterial)
     tableBoard.position.set(0, 0, 0)
-/*     tableBoard.scale.set(4, 0.2, 4) */
-    /* tableBoard.rotation.set(0, 4, 0)  */
 
     const tableLegPosition = (boxWidth * 0.45); //Positioning the legs
     const tableLegHeight = 0.8 // Height of the legs
@@ -46,22 +44,16 @@ export default function Shop() {
     tableLeg2.position.set(-tableLegPosition, -tableLegHeightPosition, -0.4)
     tableLeg3.position.set(-tableLegPosition, -tableLegHeightPosition, 0.4)
     tableLeg4.position.set(tableLegPosition, -tableLegHeightPosition, 0.4)
-/*  tableLeg1.scale.set(0.1, 1.1, 0.1)
-    tableLeg2.scale.set(0.1, 1.1, 0.1)
-    tableLeg3.scale.set(0.1, 1.1, 0.1)
-    tableLeg4.scale.set(0.1, 1.1, 0.1) */
 
     const floorGeometry = new THREE.PlaneGeometry( 1000, 1000, 10, 10 );
     floorGeometry.rotateX( - Math.PI / 2 );
-/*  const floorTexture = new THREE.TextureLoader().load('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOOcWSD0K2mPwokAFfZIhq5Xl49bh8B17RlU6NqCGa4UOKydgX');
+    const floorTexture = new THREE.TextureLoader().load('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOOcWSD0K2mPwokAFfZIhq5Xl49bh8B17RlU6NqCGa4UOKydgX');
     floorTexture.wrapS = floorTexture.wrapT = THREE.RepeatWrapping;
-    floorTexture.repeat.set(20, 20); */
+    floorTexture.repeat.set(20, 20);
     const floorMaterial = new THREE.MeshBasicMaterial({color: 0x7c7d81}),
     floor = new THREE.Mesh( floorGeometry, floorMaterial );
 
-    const group = new THREE.Group();
-    tableBoard.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
-    scene.add(tableBoard);
+
 
     const lightAndShadow = () => {
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
@@ -73,6 +65,11 @@ export default function Shop() {
         light.position.set(0.3, 2, 2);
         scene.add(light, ambientLight);
 }
+
+    const displayObjects = () => {
+        tableBoard.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
+        scene.add(tableBoard);
+    }
 
     const orbitCamera = () => {
         const controls = new OrbitControls(camera, renderer.domElement);
@@ -92,6 +89,7 @@ export default function Shop() {
         orbitCamera()
     }
 
+    displayObjects();
     lightAndShadow();
     animate();
    
