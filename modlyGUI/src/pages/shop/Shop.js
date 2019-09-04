@@ -25,7 +25,7 @@ export default function Shop() {
     const boxWidth = 2; const boxHeight = 1; const boxDepth = 1;
     const boxGeometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
     const textureLoader = new THREE.TextureLoader();
-    const customPicture = textureLoader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
+    const customPicture = textureLoader.load('https://threejsfundamentals.org/threejs/lessons/resources/images/compressed-but-large-wood-texture.jpg')
     const material = new THREE.MeshLambertMaterial({map: customPicture})
     const tableBoard = new THREE.Mesh(boxGeometry, material)
     tableBoard.position.set(0, 1.15, 1)
@@ -34,7 +34,7 @@ export default function Shop() {
 
     
     const tableLegsGeometry = new THREE.BoxGeometry(0.3, 10, 0.3);
-    const tableLegsMaterial = new THREE.MeshLambertMaterial({ color: 0x3262a8, shininess: 50, shading: THREE.SmoothShading })
+    const tableLegsMaterial = new THREE.MeshLambertMaterial(({map: customPicture}))
     const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
     const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
     const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
