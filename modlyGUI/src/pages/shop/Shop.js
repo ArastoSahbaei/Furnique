@@ -18,19 +18,18 @@ export default function Shop() {
     })
     
     const renderer = new THREE.WebGLRenderer({antialias: true});
-    renderer.setClearColor(0xb7d6fb);
+    renderer.setClearColor(0xb7d6fb); 
     renderer.setSize(window.innerWidth, window.innerHeight)
     document.body.append(renderer.domElement);
-
     const boxWidth = 2; const boxHeight = 1; const boxDepth = 1;
     const boxGeometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
     const textureLoader = new THREE.TextureLoader();
     const customPicture = textureLoader.load('https://threejsfundamentals.org/threejs/lessons/resources/images/compressed-but-large-wood-texture.jpg')
     const material = new THREE.MeshLambertMaterial({map: customPicture})
     const tableBoard = new THREE.Mesh(boxGeometry, material)
-    tableBoard.position.set(0, 1.15, 1)
-    tableBoard.rotation.set(-0.1, 0.9, 0) 
-    tableBoard.scale.set(4, 0.15, 4)
+    tableBoard.position.set(1, 1, 1)
+    tableBoard.scale.set(4, 0.2, 4)
+    /* tableBoard.rotation.set(0, 4, 0)  */
 
     
     const tableLegsGeometry = new THREE.BoxGeometry(0.3, 10, 0.3);
