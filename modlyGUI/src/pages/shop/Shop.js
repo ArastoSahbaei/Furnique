@@ -20,6 +20,7 @@ export default function Shop() {
     const renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setClearColor(0xb7d6fb); 
     renderer.setSize(window.innerWidth, window.innerHeight)
+    renderer.setPixelRatio(window.devicePixelRatio)
     document.body.append(renderer.domElement);
 
     const boxWidth = 1; const boxHeight = 0.1; const boxDepth = 1;
@@ -75,7 +76,8 @@ export default function Shop() {
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
         controls.dampingFactor = 0.001;
-        controls.enableZoom = false;
+        controls.enableZoom = true;
+        controls.zoomSpeed = 0.001;
         controls.enableKeys = false;
         controls.enableRotate = true; /* TODO: Single axis changes are OK. Fix this later. */
         controls.rotateSpeed = 0.05;
