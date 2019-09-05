@@ -46,7 +46,8 @@ export default function Shop() {
     tableLeg3.position.set(-tableLegPosition, -tableLegHeightPosition, 0.4)
     tableLeg4.position.set(tableLegPosition, -tableLegHeightPosition, 0.4)
 
-    const floorGeometry = new THREE.PlaneGeometry( 80, 80, 10, 10 );
+    const floorWidh = 80; const floorHeight = 80; const floorWidthSegments = 50; const floorHeightSegments = 50;
+    const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidthSegments, floorHeightSegments );
     floorGeometry.rotateX( - Math.PI / 2 );
     const floorTexture = new THREE.TextureLoader().load('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOOcWSD0K2mPwokAFfZIhq5Xl49bh8B17RlU6NqCGa4UOKydgX');
     floorTexture.wrapS = floorTexture.wrapT = THREE.RepeatWrapping;
