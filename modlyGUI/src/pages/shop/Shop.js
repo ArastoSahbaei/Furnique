@@ -69,8 +69,9 @@ export default function Shop() {
 }
 
     const displayObjects = () => {
+        tableLeg1.add(floor);
         tableBoard.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
-        scene.add(tableBoard, floor);
+        scene.add(tableBoard);
     }
 
     const orbitCamera = () => {
@@ -78,7 +79,7 @@ export default function Shop() {
         controls.enableDamping = true;
         controls.dampingFactor = 0.001;
         controls.enableZoom = true;
-        controls.zoomSpeed = 0.001;
+        controls.zoomSpeed = 0.0005;
         controls.enableKeys = false;
         controls.enableRotate = true; /* TODO: Single axis changes are OK. Fix this later. */
         controls.rotateSpeed = 0.05;
