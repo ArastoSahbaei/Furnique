@@ -27,16 +27,16 @@ export default function Shop() {
     const tableBoardGeometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
     const textureLoader = new THREE.TextureLoader();
     const customPicture = textureLoader.load('https://threejsfundamentals.org/threejs/lessons/resources/images/compressed-but-large-wood-texture.jpg')
-    const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture, wireframe: true})
+    const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture, wireframe: false})
     const tableBoard = new THREE.Mesh(tableBoardGeometry, tableBoardMaterial)
     tableBoard.position.set(0, 0, 0)
 
     const tableLegPosition = (boxWidth * 0.45); //Positioning the legs
-    const tableLegHeight = 1.1 // Height of the legs
+    const tableLegHeight = 0.6 // Height of the legs
     const tableLegHeightPosition = (tableLegHeight/2) //Keeping the leg position under table (avoiding the leg to cut through the table)
 
     const tableLegsGeometry = new THREE.BoxGeometry(0.05, tableLegHeight, 0.05);
-    const tableLegsMaterial = new THREE.MeshLambertMaterial(({map: customPicture, wireframe: true}))
+    const tableLegsMaterial = new THREE.MeshLambertMaterial(({map: customPicture, wireframe: false}))
     const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
     const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
     const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
@@ -46,13 +46,13 @@ export default function Shop() {
     tableLeg3.position.set(-tableLegPosition, -tableLegHeightPosition, 0.4)
     tableLeg4.position.set(tableLegPosition, -tableLegHeightPosition, 0.4)
 
-    const floorWidh = 80; const floorHeight = 80; const floorWidthSegments = 50; const floorHeightSegments = 50;
+    const floorWidh = 20; const floorHeight = 20; const floorWidthSegments = 50; const floorHeightSegments = 50;
     const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidthSegments, floorHeightSegments );
     floorGeometry.rotateX( - Math.PI / 2 );
     const floorTexture = new THREE.TextureLoader().load('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOOcWSD0K2mPwokAFfZIhq5Xl49bh8B17RlU6NqCGa4UOKydgX');
     floorTexture.wrapS = floorTexture.wrapT = THREE.RepeatWrapping;
     floorTexture.repeat.set(20, 20);
-    const floorMaterial = new THREE.MeshBasicMaterial({color: 0x7c7d81, wireframe: true}),
+    const floorMaterial = new THREE.MeshBasicMaterial({color: 0xFFFFFF, wireframe: false}),
     floor = new THREE.Mesh( floorGeometry, floorMaterial );
     floor.position.set(0, -tableLegHeightPosition, 0) //This keeps the floor at bottom of the tableLegs
 
@@ -77,9 +77,9 @@ export default function Shop() {
     const orbitCamera = () => {
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
-        controls.dampingFactor = 0.001;
+        controls.dampingFactor = 0.25;
         controls.enableZoom = true;
-        controls.zoomSpeed = 0.0005;
+        controls.zoomSpeed = 0.005;
         controls.enableKeys = false;
         controls.enableRotate = true; /* TODO: Single axis changes are OK. Fix this later. */
         controls.rotateSpeed = 0.05;
