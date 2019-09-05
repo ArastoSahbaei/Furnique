@@ -27,7 +27,7 @@ export default function Shop() {
     const tableBoardGeometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
     const textureLoader = new THREE.TextureLoader();
     const customPicture = textureLoader.load('https://threejsfundamentals.org/threejs/lessons/resources/images/compressed-but-large-wood-texture.jpg')
-    const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture})
+    const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture, wireframe: true})
     const tableBoard = new THREE.Mesh(tableBoardGeometry, tableBoardMaterial)
     tableBoard.position.set(0, 0, 0)
 
@@ -36,7 +36,7 @@ export default function Shop() {
     const tableLegHeightPosition = (tableLegHeight/2) //Keeping the leg position under table (avoiding the leg to cut through the table)
 
     const tableLegsGeometry = new THREE.BoxGeometry(0.05, tableLegHeight, 0.05);
-    const tableLegsMaterial = new THREE.MeshLambertMaterial(({map: customPicture}))
+    const tableLegsMaterial = new THREE.MeshLambertMaterial(({map: customPicture, wireframe: true}))
     const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
     const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
     const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
@@ -51,7 +51,7 @@ export default function Shop() {
     const floorTexture = new THREE.TextureLoader().load('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOOcWSD0K2mPwokAFfZIhq5Xl49bh8B17RlU6NqCGa4UOKydgX');
     floorTexture.wrapS = floorTexture.wrapT = THREE.RepeatWrapping;
     floorTexture.repeat.set(20, 20);
-    const floorMaterial = new THREE.MeshBasicMaterial({color: 0x7c7d81}),
+    const floorMaterial = new THREE.MeshBasicMaterial({color: 0x7c7d81, wireframe: true}),
     floor = new THREE.Mesh( floorGeometry, floorMaterial );
 
 
