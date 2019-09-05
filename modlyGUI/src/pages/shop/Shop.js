@@ -78,9 +78,11 @@ export default function Shop() {
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
         controls.dampingFactor = 0.25;
+        controls.enablePan = false;
         controls.enableZoom = true;
+        /* controls.minPolarAngle = 0.8;
+		controls.maxPolarAngle = 0.4; */
         controls.zoomSpeed = 0.005;
-        controls.enableKeys = false;
         controls.enableRotate = true; /* TODO: Single axis changes are OK. Fix this later. */
         controls.rotateSpeed = 0.05;
         controls.update();
