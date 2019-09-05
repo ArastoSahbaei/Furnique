@@ -2,9 +2,9 @@ import React from 'react'
 import './Shop.css'
 import * as THREE from "three";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
+import * as dat from 'dat.gui';
 
 export default function Shop() {
-
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(35, (window.innerWidth / window.innerHeight), 0.1, 1000);
     camera.position.z = 8;
@@ -98,15 +98,30 @@ export default function Shop() {
     displayObjects();
     lightAndShadow();
     animate();
-   
+
+
+    var FizzyText = function() {
+        this.slider1 = 0;
+        this.slider2 = 0;
+     };
+
+     var gui = new dat.GUI();
+     var text = new FizzyText();
+     var slider1 = gui.add(text, 'slider1', 0, 5).listen();
+     var slider2 = gui.add(text, 'slider2', 0, 5);
+
+     slider1.onChange(function(value){
+        console.log(value); 
+        value = tableLegHeight; // this doesn't work
+      });
+      console.log(tableLegHeight)
+
+
+
+
     return (
         <div>
-            {console.log("tableBoard Position:")}
-            {console.log(tableBoard.position)}
-            {console.log("tableLeg Position:")}
-            {console.log(tableLeg1.position)}
-            {console.log("floor Position:")}
-            {console.log(floor.position)}
+           
         </div>
     )
 
