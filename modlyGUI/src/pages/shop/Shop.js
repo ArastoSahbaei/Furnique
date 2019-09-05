@@ -32,7 +32,7 @@ export default function Shop() {
     tableBoard.position.set(0, 0, 0)
 
     const tableLegPosition = (boxWidth * 0.45); //Positioning the legs
-    const tableLegHeight = 0.8 // Height of the legs
+    const tableLegHeight = 1.1 // Height of the legs
     const tableLegHeightPosition = (tableLegHeight/2) //Keeping the leg position under table (avoiding the leg to cut through the table)
 
     const tableLegsGeometry = new THREE.BoxGeometry(0.05, tableLegHeight, 0.05);
@@ -54,8 +54,7 @@ export default function Shop() {
     floorTexture.repeat.set(20, 20);
     const floorMaterial = new THREE.MeshBasicMaterial({color: 0x7c7d81, wireframe: true}),
     floor = new THREE.Mesh( floorGeometry, floorMaterial );
-
-
+    floor.position.set(0, -tableLegHeightPosition, 0) //This keeps the floor at bottom of the tableLegs
 
     const lightAndShadow = () => {
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
