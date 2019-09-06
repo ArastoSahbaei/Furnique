@@ -23,11 +23,11 @@ export default function Shop() {
     renderer.setPixelRatio(window.devicePixelRatio)
     document.body.append(renderer.domElement);
 
-    const boxWidth = 2; const boxHeight = 0.1; const boxDepth = 1;
-    const tableBoardGeometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+    const boxWidth = 2; const boxDepth = 1; const boxHeight = 1;
+    const tableBoardGeometry = new THREE.BoxGeometry(boxWidth, boxDepth, boxHeight);
     const textureLoader = new THREE.TextureLoader();
     const customPicture = textureLoader.load('https://threejsfundamentals.org/threejs/lessons/resources/images/compressed-but-large-wood-texture.jpg')
-    const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture, wireframe: false})
+    const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture, wireframe: true})
     const tableBoard = new THREE.Mesh(tableBoardGeometry, tableBoardMaterial)
     tableBoard.position.set(0, 0, 0)
 
@@ -36,7 +36,7 @@ export default function Shop() {
     const tableLegHeightPosition = (tableLegHeight/2) //Keeping the leg position under table (avoiding the leg to cut through the table)
 
     const tableLegsGeometry = new THREE.BoxGeometry(0.05, tableLegHeight, 0.05);
-    const tableLegsMaterial = new THREE.MeshLambertMaterial(({map: customPicture, wireframe: false}))
+    const tableLegsMaterial = new THREE.MeshLambertMaterial(({map: customPicture, wireframe: true}))
     const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
     const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
     const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
