@@ -90,11 +90,12 @@ export default function Shop() {
 
     const render = () => {
         requestAnimationFrame(render);
-       /*  tableBoard.rotation.y -= title.TableWidth; */
         tableBoard.scale.x = title.TableWidth;
-        tableBoard.scale.y = title.slider1;
-        tableBoard.scale.z = title.slider2;
-        tableLeg2.scale.tableLegHeight -= title.slider1;
+        tableBoard.scale.z = title.TableHeight;
+        tableLeg1.scale.x = title.TableHeight
+        tableLeg2.scale.x = title.TableHeight
+        tableLeg3.scale.x = title.TableHeight
+        tableLeg4.scale.x = title.TableHeight
         renderer.render(scene, camera);
         orbitCamera()
      }
@@ -102,16 +103,22 @@ export default function Shop() {
      var gui = new dat.GUI();
      var controls = function() {
         this.TableWidth = 1;
-        this.slider1 = 1;
-        this.slider2 = 1;
+        this.TableHeight = 1;
+        this.Height = 1;
+        this.Width = 1;
     }
 
     var title = new controls();
-    gui.add(title, 'TableWidth', 1, 10);
-    gui.add(title, 'slider1', 1, 10);
-    gui.add(title, 'slider2', 1, 10);
 
-/*      controls.slider1.onChange(function(value){
+    var surface = gui.addFolder('Surface')
+    surface.add(title, 'TableWidth', 1, 10);
+    surface.add(title, 'TableHeight', 1, 10);
+
+    var legs = gui.addFolder('Legs')
+    legs.add(title, 'TableWidth', 1, 10);
+    legs.add(title, 'TableHeight', 1, 10);
+
+/*      controls.Height.onChange(function(value){
         console.log(value); 
         value = tableLegHeight; // this doesn't work
       }); */
