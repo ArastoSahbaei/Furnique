@@ -95,9 +95,8 @@ export default function Shop() {
         tableBoard.scale.z = title.TableHeight;
         tableBoardGeometry.parameters.widthSegments = 115;
         tableLeg1.scale.x = title.LegsWidth;
-        tableLeg2.scale.x = title.LegsWidth;
-        tableLeg3.scale.x = title.LegsWidth;
-        tableLeg4.scale.x = title.LegsWidth;
+        tableLeg1.scale.y = title.LegsHeight;
+        tableLeg2.scale.y = title.LegsHeight;
         tableBoard.rotation.y -= title.RotationSpeed;
         renderer.render(scene, camera);
         orbitCamera()
@@ -119,8 +118,8 @@ export default function Shop() {
     surface.add(title, 'TableHeight', 1, 10);
     
     var legs = gui.addFolder('Legs')
-    legs.add(title, 'TableWidth', 1, 10);
-    legs.add(title, 'TableHeight', 1, 10);
+    legs.add(title, 'LegsWidth', 1, 10);
+    legs.add(title, 'LegsHeight', 1, 10);
     
     gui.add(title, 'RotationSpeed', 0.005, 0.1);
 /*      controls.Height.onChange(function(value){
