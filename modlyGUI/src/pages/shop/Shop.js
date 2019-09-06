@@ -23,7 +23,7 @@ export default function Shop() {
     renderer.setPixelRatio(window.devicePixelRatio)
     document.body.append(renderer.domElement);
 
-    const boxWidth = 1; const boxHeight = 0.1; const boxDepth = 1;
+    const boxWidth = 2; const boxHeight = 0.1; const boxDepth = 1;
     const tableBoardGeometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
     const textureLoader = new THREE.TextureLoader();
     const customPicture = textureLoader.load('https://threejsfundamentals.org/threejs/lessons/resources/images/compressed-but-large-wood-texture.jpg')
@@ -32,7 +32,7 @@ export default function Shop() {
     tableBoard.position.set(0, 0, 0)
 
     const tableLegPosition = (boxWidth * 0.45); //Positioning the legs
-    const tableLegHeight = 0.6 // Height of the legs
+    const tableLegHeight = 1.6 // Height of the legs
     const tableLegHeightPosition = (tableLegHeight/2) //Keeping the leg position under table (avoiding the leg to cut through the table)
 
     const tableLegsGeometry = new THREE.BoxGeometry(0.05, tableLegHeight, 0.05);
@@ -91,22 +91,25 @@ export default function Shop() {
     const render = () => {
         requestAnimationFrame(render);
         tableBoard.scale.x = title.TableWidth;
+        
         tableBoard.scale.z = title.TableHeight;
-        tableLeg1.scale.x = title.TableHeight;
-        tableLeg2.scale.x = title.TableHeight;
-        tableLeg3.scale.x = title.TableHeight;
-        tableLeg4.scale.x = title.TableHeight;
+        tableBoardGeometry.parameters.widthSegments = 115;
+        tableLeg1.scale.x = title.LegsWidth;
+        tableLeg2.scale.x = title.LegsWidth;
+        tableLeg3.scale.x = title.LegsWidth;
+        tableLeg4.scale.x = title.LegsWidth;
         tableBoard.rotation.y -= title.RotationSpeed;
         renderer.render(scene, camera);
         orbitCamera()
+        console.log(tableBoard.scale.z)
      }
 
      var gui = new dat.GUI();
      var controls = function() {
          this.TableWidth = 1;
          this.TableHeight = 1;
-         this.TableWidth = 1;
-         this.TableHeight = 1;
+         this.LegsWidth = 1;
+         this.LegsHeight = 1;
          this.RotationSpeed = 0.005;
     }
     var title = new controls();
@@ -119,7 +122,7 @@ export default function Shop() {
     legs.add(title, 'TableWidth', 1, 10);
     legs.add(title, 'TableHeight', 1, 10);
     
-     gui.add(title, 'RotationSpeed', 0.005, 0.1);
+    gui.add(title, 'RotationSpeed', 0.005, 0.1);
 /*      controls.Height.onChange(function(value){
         console.log(value); 
         value = tableLegHeight; // this doesn't work
