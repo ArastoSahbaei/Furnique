@@ -82,9 +82,9 @@ export default function Shop() {
         controls.enableZoom = true;
         /* controls.minPolarAngle = 0.8;
 		controls.maxPolarAngle = 0.4; */
-        controls.zoomSpeed = 0.005;
+        controls.zoomSpeed = 0.001;
         controls.enableRotate = true; /* TODO: Single axis changes are OK. Fix this later. */
-        controls.rotateSpeed = 0.05;
+        controls.rotateSpeed = 0.005;
         controls.update();
     }
 
@@ -92,42 +92,42 @@ export default function Shop() {
         requestAnimationFrame(render);
         tableBoard.scale.x = title.TableWidth;
         tableBoard.scale.z = title.TableHeight;
-        tableLeg1.scale.x = title.TableHeight
-        tableLeg2.scale.x = title.TableHeight
-        tableLeg3.scale.x = title.TableHeight
-        tableLeg4.scale.x = title.TableHeight
+        tableLeg1.scale.x = title.TableHeight;
+        tableLeg2.scale.x = title.TableHeight;
+        tableLeg3.scale.x = title.TableHeight;
+        tableLeg4.scale.x = title.TableHeight;
+        tableBoard.rotation.y -= title.RotationSpeed;
         renderer.render(scene, camera);
         orbitCamera()
      }
 
      var gui = new dat.GUI();
      var controls = function() {
-        this.TableWidth = 1;
-        this.TableHeight = 1;
-        this.Height = 1;
-        this.Width = 1;
+         this.TableWidth = 1;
+         this.TableHeight = 1;
+         this.TableWidth = 1;
+         this.TableHeight = 1;
+         this.RotationSpeed = 0.005;
     }
-
     var title = new controls();
-
+    
     var surface = gui.addFolder('Surface')
     surface.add(title, 'TableWidth', 1, 10);
     surface.add(title, 'TableHeight', 1, 10);
-
+    
     var legs = gui.addFolder('Legs')
     legs.add(title, 'TableWidth', 1, 10);
     legs.add(title, 'TableHeight', 1, 10);
-
+    
+     gui.add(title, 'RotationSpeed', 0.005, 0.1);
 /*      controls.Height.onChange(function(value){
         console.log(value); 
         value = tableLegHeight; // this doesn't work
       }); */
 
-
     displayObjects();
     lightAndShadow();
     render();
-
 
     return (
         <div>
