@@ -31,20 +31,17 @@ export default function Shop() {
     const tableBoard = new THREE.Mesh(tableBoardGeometry, tableBoardMaterial)
     tableBoard.position.set(0, 0, 0)
 
-    const tableLegPosition = (boxWidth * 0.45); //Positioning the legs
-    const tableLegHeight = 1.6 // Height of the legs
-    const tableLegHeightPosition = (tableLegHeight/2) //Keeping the leg position under table (avoiding the leg to cut through the table)
-
-    const tableLegsGeometry = new THREE.BoxGeometry(0.05, tableLegHeight, 0.05);
+    const tableLegDepth = 1.6 // Depth of the legs
+    const tableLegsGeometry = new THREE.BoxGeometry(0.05, tableLegDepth, 0.05);
     const tableLegsMaterial = new THREE.MeshLambertMaterial(({map: customPicture, wireframe: true}))
     const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
     const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
     const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
     const tableLeg4 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
-    tableLeg1.position.set(tableLegPosition, -tableLegHeightPosition, -0.4)
-    tableLeg2.position.set(-tableLegPosition, -tableLegHeightPosition, -0.4)
-    tableLeg3.position.set(-tableLegPosition, -tableLegHeightPosition, 0.4)
-    tableLeg4.position.set(tableLegPosition, -tableLegHeightPosition, 0.4)
+    tableLeg1.position.set(boxWidth * 0.45, -tableLegDepth/2, -0.4)
+    tableLeg2.position.set(-boxWidth * 0.45, -tableLegDepth/2, -0.4)
+    tableLeg3.position.set(-boxWidth * 0.45, -tableLegDepth/2, 0.4)
+    tableLeg4.position.set(boxWidth * 0.45, -tableLegDepth/2, 0.4)
 
     const floorWidh = 1000; const floorHeight = 1000; const floorWidthSegments = 50; const floorHeightSegments = 50;
     const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidthSegments, floorHeightSegments );
@@ -54,7 +51,7 @@ export default function Shop() {
     floorTexture.repeat.set(20, 20);
     const floorMaterial = new THREE.MeshBasicMaterial({color: 0xFFFFFF, wireframe: false}),
     floor = new THREE.Mesh( floorGeometry, floorMaterial );
-    floor.position.set(0, -tableLegHeightPosition, 0) //This keeps the floor at bottom of the tableLegs
+    floor.position.set(0, -tableLegDepth/2, 0) //This keeps the floor at bottom of the tableLegs
 
     const lightAndShadow = () => {
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.75);
