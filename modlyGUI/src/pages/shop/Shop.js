@@ -46,7 +46,7 @@ export default function Shop() {
     tableLeg3.position.set(-tableLegPosition, -tableLegHeightPosition, 0.4)
     tableLeg4.position.set(tableLegPosition, -tableLegHeightPosition, 0.4)
 
-    const floorWidh = 20; const floorHeight = 20; const floorWidthSegments = 50; const floorHeightSegments = 50;
+    const floorWidh = 1000; const floorHeight = 1000; const floorWidthSegments = 50; const floorHeightSegments = 50;
     const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidthSegments, floorHeightSegments );
     floorGeometry.rotateX( - Math.PI / 2 );
     const floorTexture = new THREE.TextureLoader().load('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOOcWSD0K2mPwokAFfZIhq5Xl49bh8B17RlU6NqCGa4UOKydgX');
@@ -88,35 +88,38 @@ export default function Shop() {
         controls.update();
     }
 
-    const animate = () => {
-        requestAnimationFrame(animate);
-        tableBoard.rotation.y -= 0.005;
+    const render = () => {
+        requestAnimationFrame(render);
+       /*  tableBoard.rotation.y -= title.TableWidth; */
+        tableBoard.scale.x = title.TableWidth;
+        tableBoard.scale.y = title.slider1;
+        tableBoard.scale.z = title.slider2;
+        tableLeg2.scale.tableLegHeight -= title.slider1;
         renderer.render(scene, camera);
         orbitCamera()
+     }
+
+     var gui = new dat.GUI();
+     var controls = function() {
+        this.TableWidth = 1;
+        this.slider1 = 1;
+        this.slider2 = 1;
     }
+
+    var title = new controls();
+    gui.add(title, 'TableWidth', 1, 10);
+    gui.add(title, 'slider1', 1, 10);
+    gui.add(title, 'slider2', 1, 10);
+
+/*      controls.slider1.onChange(function(value){
+        console.log(value); 
+        value = tableLegHeight; // this doesn't work
+      }); */
+
 
     displayObjects();
     lightAndShadow();
-    animate();
-
-
-    var FizzyText = function() {
-        this.slider1 = 0;
-        this.slider2 = 0;
-     };
-
-     var gui = new dat.GUI();
-     var text = new FizzyText();
-     var slider1 = gui.add(text, 'slider1', 0, 5).listen();
-     var slider2 = gui.add(text, 'slider2', 0, 5);
-
-     slider1.onChange(function(value){
-        console.log(value); 
-        value = tableLegHeight; // this doesn't work
-      });
-      console.log(tableLegHeight)
-
-
+    render();
 
 
     return (
