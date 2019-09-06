@@ -91,12 +91,12 @@ export default function Shop() {
     const render = () => {
         requestAnimationFrame(render);
         tableBoard.scale.x = title.TableWidth;
-        
         tableBoard.scale.z = title.TableHeight;
-        tableBoardGeometry.parameters.widthSegments = 115;
+        tableBoard.scale.y = title.TableDepth;
+
         tableLeg1.scale.x = title.LegsWidth;
         tableLeg1.scale.y = title.LegsHeight;
-        tableLeg2.scale.y = title.LegsHeight;
+        tableLeg1.scale.z = title.LegsDepth;
         tableBoard.rotation.y -= title.RotationSpeed;
         renderer.render(scene, camera);
         orbitCamera()
@@ -107,8 +107,10 @@ export default function Shop() {
      var controls = function() {
          this.TableWidth = 1;
          this.TableHeight = 1;
+         this.TableDepth = 1;
          this.LegsWidth = 1;
          this.LegsHeight = 1;
+         this.LegsDepth = 1;
          this.RotationSpeed = 0.005;
     }
     var title = new controls();
@@ -116,10 +118,12 @@ export default function Shop() {
     var surface = gui.addFolder('Surface')
     surface.add(title, 'TableWidth', 1, 10);
     surface.add(title, 'TableHeight', 1, 10);
+    surface.add(title, 'TableDepth', 1, 10);
     
     var legs = gui.addFolder('Legs')
     legs.add(title, 'LegsWidth', 1, 10);
     legs.add(title, 'LegsHeight', 1, 10);
+    legs.add(title, 'LegsDepth', 1, 10);
     
     gui.add(title, 'RotationSpeed', 0.005, 0.1);
 /*      controls.Height.onChange(function(value){
