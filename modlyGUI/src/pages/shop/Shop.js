@@ -23,25 +23,21 @@ export default function Shop() {
     renderer.setPixelRatio(window.devicePixelRatio)
     document.body.append(renderer.domElement);
 
-    const boxWidth = 2; const boxDepth = 1; const boxHeight = 1;
+    const boxWidth = 1; const boxDepth = 0.1; const boxHeight = 1;
     const tableBoardGeometry = new THREE.BoxGeometry(boxWidth, boxDepth, boxHeight);
     const textureLoader = new THREE.TextureLoader();
     const customPicture = textureLoader.load('https://threejsfundamentals.org/threejs/lessons/resources/images/compressed-but-large-wood-texture.jpg')
-    const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture, wireframe: true})
+    const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture, wireframe: false})
     const tableBoard = new THREE.Mesh(tableBoardGeometry, tableBoardMaterial)
     tableBoard.position.set(0, 0, 0)
 
-    const tableLegDepth = 1.6 // Depth of the legs
+    const tableLegDepth = 1.7 // Depth of the legs
     const tableLegsGeometry = new THREE.BoxGeometry(0.05, tableLegDepth, 0.05);
-    const tableLegsMaterial = new THREE.MeshLambertMaterial(({map: customPicture, wireframe: true}))
-    const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
-    const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
-    const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
-    const tableLeg4 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial)
-    tableLeg1.position.set(boxWidth * 0.45, -tableLegDepth/2, -0.4)
-    tableLeg2.position.set(-boxWidth * 0.45, -tableLegDepth/2, -0.4)
-    tableLeg3.position.set(-boxWidth * 0.45, -tableLegDepth/2, 0.4)
-    tableLeg4.position.set(boxWidth * 0.45, -tableLegDepth/2, 0.4)
+    const tableLegsMaterial = new THREE.MeshLambertMaterial(({map: customPicture, wireframe: false}))
+    const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial);
+    const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); const tableLeg4 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial);
+    tableLeg1.position.set(boxWidth * 0.45, -tableLegDepth/2, -0.4); tableLeg2.position.set(-boxWidth * 0.45, -tableLegDepth/2, -0.4)
+    tableLeg3.position.set(-boxWidth * 0.45, -tableLegDepth/2, 0.4); tableLeg4.position.set(boxWidth * 0.45, -tableLegDepth/2, 0.4)
 
     const floorWidh = 1000; const floorHeight = 1000; const floorWidthSegments = 50; const floorHeightSegments = 50;
     const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidthSegments, floorHeightSegments );
@@ -58,10 +54,6 @@ export default function Shop() {
         const lightIntensity = 1.3; const lightDistance = 18;
         const light = new THREE.PointLight(0xffffff, lightIntensity, lightDistance);
         light.position.set(1, 1, 1)
-        light.castShadow = true
-        light.shadow.camera.near = 0.7
-        light.shadow.camera.far = 25
-        light.position.set(0.3, 2, 2);
         scene.add(light, ambientLight);
 }
 
@@ -77,8 +69,6 @@ export default function Shop() {
         controls.dampingFactor = 0.25;
         controls.enablePan = false;
         controls.enableZoom = true;
-        /* controls.minPolarAngle = 0.8;
-		controls.maxPolarAngle = 0.4; */
         controls.zoomSpeed = 0.001;
         controls.enableRotate = true; /* TODO: Single axis changes are OK. Fix this later. */
         controls.rotateSpeed = 0.005;
@@ -91,9 +81,10 @@ export default function Shop() {
         tableBoard.scale.z = title.TableHeight;
         tableBoard.scale.y = title.TableDepth;
 
-        tableLeg1.scale.x = title.LegsWidth;
-        tableLeg1.scale.y = title.LegsHeight;
-        tableLeg1.scale.z = title.LegsDepth;
+        tableLeg1.scale.x = title.LegsWidth; tableLeg2.scale.x = title.LegsWidth; tableLeg3.scale.x = title.LegsWidth; tableLeg4.scale.x = title.LegsWidth;
+        tableLeg1.scale.y = title.LegsHeight; tableLeg2.scale.y = title.LegsHeight; tableLeg3.scale.y = title.LegsHeight; tableLeg4.scale.y = title.LegsHeight;
+        tableLeg1.scale.z = title.LegsDepth; tableLeg2.scale.z = title.LegsDepth; tableLeg3.scale.z = title.LegsDepth; tableLeg4.scale.z = title.LegsDepth;
+
         tableBoard.rotation.y -= title.RotationSpeed;
         renderer.render(scene, camera);
         orbitCamera()
@@ -113,20 +104,16 @@ export default function Shop() {
     var title = new controls();
     
     var surface = gui.addFolder('Surface')
-    surface.add(title, 'TableWidth', 1, 10);
-    surface.add(title, 'TableHeight', 1, 10);
-    surface.add(title, 'TableDepth', 1, 10);
+    surface.add(title, 'TableWidth', 1, 3);
+    surface.add(title, 'TableHeight', 1, 3);
+    surface.add(title, 'TableDepth', 1, 3);
     
     var legs = gui.addFolder('Legs')
-    legs.add(title, 'LegsWidth', 1, 10);
-    legs.add(title, 'LegsHeight', 1, 10);
-    legs.add(title, 'LegsDepth', 1, 10);
+    legs.add(title, 'LegsWidth', 1, 3);
+    legs.add(title, 'LegsHeight', 1, 3);
+    legs.add(title, 'LegsDepth', 1, 3);
     
     gui.add(title, 'RotationSpeed', 0.005, 0.1);
-/*      controls.Height.onChange(function(value){
-        console.log(value); 
-        value = tableLegHeight; // this doesn't work
-      }); */
 
     displayObjects();
     lightAndShadow();

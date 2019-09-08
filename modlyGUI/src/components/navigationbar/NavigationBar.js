@@ -4,6 +4,7 @@ import './NavigationBar.css'
 import SubHeader from './subheader/SubHeader.js'
 import Home from '../../pages/home/Home'
 import Design from '../../pages/shop/Shop'
+import Main from '../../animations/Main'
 
 export default function NavigationBar() {
     return (
@@ -23,7 +24,7 @@ export default function NavigationBar() {
                 <Switch>
                     <Route exact path="/home"       component={Home} />
                     <Route exact path="/about"      component={Design} />
-                    <Route exact path="/expertise"  component={Home} />
+                    <Route exact path="/expertise"  component={Main} />
                     <Route exact path="/portfolio"  component={Home} />
                     <Route exact path="/contact"    component={Home} />
                     <Route component={Home} />
