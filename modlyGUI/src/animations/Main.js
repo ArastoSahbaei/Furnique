@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import addCustomSceneObjects from './Lele'
-
+import Mesh from './Mesh'
+import Lightss from './Lights'
 
 const style = {
-  height: 680 // we can control scene size by setting container dimensions
+  height: 740
 };
 
 export default class Main extends Component {
+  
   componentDidMount() {
     this.sceneSetup();
-    /* this.addCustomSceneObjects(); */
-    this.addLights();
     this.startAnimationLoop();
-    addCustomSceneObjects({ scene: this.scene, cube: this.cube }) 
+    Mesh({ scene: this.scene, cube: this.cube }); 
+    Lightss({ scene: this.scene, light: this.lightning })
     window.addEventListener("resize", this.handleWindowResize);
   }
 
@@ -35,28 +35,6 @@ export default class Main extends Component {
     this.renderer = new THREE.WebGLRenderer({antialias: true});
     this.renderer.setSize(width, height);
     this.el.appendChild(this.renderer.domElement); // mount using React ref
-  };
-
-/*   addCustomSceneObjects = () => {
-    const geometry = new THREE.BoxGeometry(2, 2, 2);
-    const material = new THREE.MeshPhongMaterial({color: 0x156289, emissive: 0x072534, side: THREE.DoubleSide, flatShading: true});
-    this.cube = new THREE.Mesh(geometry, material);
-    this.scene.add(this.cube);
-  } */
-
-  addLights = () => {
-    const lights = [];
-    lights[0] = new THREE.PointLight(0xffffff, 1, 0);
-    lights[1] = new THREE.PointLight(0xffffff, 1, 0);
-    lights[2] = new THREE.PointLight(0xffffff, 1, 0);
-
-    lights[0].position.set(0, 200, 0);
-    lights[1].position.set(100, 200, 100);
-    lights[2].position.set(-100, -200, -100);
-
-    this.scene.add(lights[0]);
-    this.scene.add(lights[1]);
-    this.scene.add(lights[2]);
   };
 
   startAnimationLoop = () => {
