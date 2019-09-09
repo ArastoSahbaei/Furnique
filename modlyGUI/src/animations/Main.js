@@ -72,6 +72,8 @@ export default class Main extends Component {
   };
 
   render() {
-    return <div style={style} ref={ref => (this.el = ref)} />;
+    return <div>
+      <div style={style} ref={ref => (this.el = ref)} />;
+      </div>
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
@@ -8,12 +8,14 @@ const style = {
 
 export default function Prio() {
 
+    const inputEl = useRef(null);
     const one = sceneSetup();
     const two = addCustomSceneObjects();
     const three = addLights();
     const four = startAnimationLoop()
 
     function sceneSetup() {
+
         
     }
 
@@ -29,15 +31,15 @@ export default function Prio() {
 
     }
 
-    function handleWindowResize {
+    function handleWindowResize() {
 
     }
-
+    
 
 
     return (
         <div>
-            <h1>haha</h1>
+             <div style={style} ref={inputEl} />;
         </div>
     )
 }
