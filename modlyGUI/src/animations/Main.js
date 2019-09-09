@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-
 const style = {
   height: 680 // we can control scene size by setting container dimensions
 };
