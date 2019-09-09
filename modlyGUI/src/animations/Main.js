@@ -14,7 +14,7 @@ export default class Main extends Component {
     /* this.addCustomSceneObjects(); */
     this.addLights();
     this.startAnimationLoop();
-    this.addCustomSceneObjects({ scene: this.scene, cube: this.cube }) 
+    addCustomSceneObjects({ scene: this.scene, cube: this.cube }) 
     window.addEventListener("resize", this.handleWindowResize);
   }
 
@@ -32,17 +32,17 @@ export default class Main extends Component {
     this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     this.camera.position.z = 5;
     this.controls = new OrbitControls(this.camera, this.el);
-    this.renderer = new THREE.WebGLRenderer();
+    this.renderer = new THREE.WebGLRenderer({antialias: true});
     this.renderer.setSize(width, height);
     this.el.appendChild(this.renderer.domElement); // mount using React ref
   };
 
-  addCustomSceneObjects = () => {
+/*   addCustomSceneObjects = () => {
     const geometry = new THREE.BoxGeometry(2, 2, 2);
     const material = new THREE.MeshPhongMaterial({color: 0x156289, emissive: 0x072534, side: THREE.DoubleSide, flatShading: true});
     this.cube = new THREE.Mesh(geometry, material);
     this.scene.add(this.cube);
-  }
+  } */
 
   addLights = () => {
     const lights = [];
@@ -60,7 +60,7 @@ export default class Main extends Component {
   };
 
   startAnimationLoop = () => {
-/*     this.cube.rotation.x += 0.01;
+/*  this.cube.rotation.x += 0.01;
     this.cube.rotation.y += 0.01; */
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
