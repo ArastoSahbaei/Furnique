@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import addCustomSceneObjects from './Lele'
+
 
 const style = {
   height: 680 // we can control scene size by setting container dimensions
@@ -9,9 +11,10 @@ const style = {
 export default class Main extends Component {
   componentDidMount() {
     this.sceneSetup();
-    this.addCustomSceneObjects();
+    /* this.addCustomSceneObjects(); */
     this.addLights();
     this.startAnimationLoop();
+    this.addCustomSceneObjects({ scene: this.scene, cube: this.cube }) 
     window.addEventListener("resize", this.handleWindowResize);
   }
 
@@ -57,8 +60,8 @@ export default class Main extends Component {
   };
 
   startAnimationLoop = () => {
-    this.cube.rotation.x += 0.01;
-    this.cube.rotation.y += 0.01;
+/*     this.cube.rotation.x += 0.01;
+    this.cube.rotation.y += 0.01; */
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
   };
