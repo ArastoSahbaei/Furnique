@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import SceneSubject from './SceneSubject';
 
 
 const style = {
@@ -14,7 +13,6 @@ export default class Main extends Component {
     this.addCustomSceneObjects();
     this.addLights();
     this.startAnimationLoop();
-    this.createSceneSubjects(this.sceneSetup);
     window.addEventListener("resize", this.handleWindowResize);
   }
 
@@ -36,14 +34,6 @@ export default class Main extends Component {
     this.renderer.setSize(width, height);
     this.el.appendChild(this.renderer.domElement); // mount using React ref
   };
-
-   createSceneSubjects = (scene) => {
-    const sceneSubjects = [
-        new SceneSubject(scene)
-    ];
-
-    return sceneSubjects;
-}
 
   addCustomSceneObjects = () => {
     const geometry = new THREE.BoxGeometry(2, 2, 2);
