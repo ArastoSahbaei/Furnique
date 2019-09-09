@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import SceneSubject from './SceneSubject';
+
 
 const style = {
   height: 680 // we can control scene size by setting container dimensions
@@ -12,6 +14,7 @@ export default class Main extends Component {
     this.addCustomSceneObjects();
     this.addLights();
     this.startAnimationLoop();
+    this.createSceneSubjects(this.sceneSetup);
     window.addEventListener("resize", this.handleWindowResize);
   }
 
@@ -34,14 +37,17 @@ export default class Main extends Component {
     this.el.appendChild(this.renderer.domElement); // mount using React ref
   };
 
+   createSceneSubjects = (scene) => {
+    const sceneSubjects = [
+        new SceneSubject(scene)
+    ];
+
+    return sceneSubjects;
+}
+
   addCustomSceneObjects = () => {
     const geometry = new THREE.BoxGeometry(2, 2, 2);
-    const material = new THREE.MeshPhongMaterial({
-      color: 0x156289,
-      emissive: 0x072534,
-      side: THREE.DoubleSide,
-      flatShading: true
-    });
+    const material = new THREE.MeshPhongMaterial({color: 0x156289, emissive: 0x072534, side: THREE.DoubleSide, flatShading: true});
     this.cube = new THREE.Mesh(geometry, material);
     this.scene.add(this.cube);
   }
