@@ -23,7 +23,7 @@ export default ({ scene }) => {
 
     const floorWidh = 1000; const floorHeight = 1000; const floorWidthSegments = 50; const floorHeightSegments = 50;
     const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidthSegments, floorHeightSegments );
-    const floorMaterial = new THREE.MeshBasicMaterial({color: 0xFFFFFF, wireframe: false}),
+    const floorMaterial = new THREE.MeshBasicMaterial({color: 0xff7b5c, wireframe: false}),
     floor = new THREE.Mesh( floorGeometry, floorMaterial );
     floorGeometry.rotateX( - Math.PI / 2 );
     floor.position.set(0, -tableLegDepth/2, 0); //This keeps the floor at bottom of the tableLegs

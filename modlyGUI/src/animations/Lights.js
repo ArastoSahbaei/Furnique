@@ -10,7 +10,5 @@ export default ({ scene }) => {
     lights[1].position.set(100, 200, 100);
     lights[2].position.set(-100, -200, -100);
 
-    scene.add(lights[0]);
-    scene.add(lights[1]);
-    scene.add(lights[2]);
+    scene.add(lights[0], lights[1], lights[2]);
   }
