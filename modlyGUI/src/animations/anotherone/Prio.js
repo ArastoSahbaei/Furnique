@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+/* import React, {useRef} from 'react'
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
@@ -43,3 +43,4 @@ export default function Prio() {
         </div>
     )
 }
+ */

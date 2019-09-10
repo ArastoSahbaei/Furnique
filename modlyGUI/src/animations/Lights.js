@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-export default ({ scene, lightss }) => {
+export default ({ scene }) => {
     const lights = [];
     lights[0] = new THREE.PointLight(0xffffff, 1, 0);
     lights[1] = new THREE.PointLight(0xffffff, 1, 0);

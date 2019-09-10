@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import Mesh from './Mesh'
-import Lightss from './Lights'
+import addMesh from './Mesh'
+import addLights from './Lights'
 
 const style = {
   height: 740
@@ -12,9 +12,9 @@ export default class Main extends Component {
   
   componentDidMount() {
     this.sceneSetup();
+    addMesh({ scene: this.scene, cube: this.cube }); 
+    addLights({ scene: this.scene })
     this.startAnimationLoop();
-    Mesh({ scene: this.scene, cube: this.cube }); 
-    Lightss({ scene: this.scene, light: this.lightning })
     window.addEventListener("resize", this.handleWindowResize);
   }
 
@@ -38,8 +38,10 @@ export default class Main extends Component {
   };
 
   startAnimationLoop = () => {
-/*  this.cube.rotation.x += 0.01;
-    this.cube.rotation.y += 0.01; */
+    const cube = this.scene.getObjectByName('myCube')
+    console.log(cube)
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
   };
