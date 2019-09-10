@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import addMesh from './Mesh'
+import addMesh2 from './Mesh2'
 import addLights from './Lights'
 
 const style = {
@@ -12,7 +13,8 @@ export default class Main extends Component {
   
   componentDidMount() {
     this.sceneSetup();
-    addMesh({ scene: this.scene, cube: this.cube }); 
+   /*  addMesh({ scene: this.scene, cube: this.cube });  */
+    addMesh2({ scene: this.scene, cube: this.tableBoard }); 
     addLights({ scene: this.scene })
     this.startAnimationLoop();
     window.addEventListener("resize", this.handleWindowResize);
@@ -40,8 +42,8 @@ export default class Main extends Component {
   startAnimationLoop = () => {
     const cube = this.scene.getObjectByName('myCube')
     console.log(cube)
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+/*     cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01; */
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
   };
