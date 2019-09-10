@@ -7,6 +7,7 @@ export default ({ scene }) => {
     const customPicture = textureLoader.load('https://threejsfundamentals.org/threejs/lessons/resources/images/compressed-but-large-wood-texture.jpg');
     const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture, wireframe: false});
     const tableBoard = new THREE.Mesh(tableBoardGeometry, tableBoardMaterial);
+    tableBoard.name = 'tableSurface'
 
     const tableLegDepth = 1.7 // Depth of the legs
     const tableLegsGeometry = new THREE.BoxGeometry(0.05, tableLegDepth, 0.05);

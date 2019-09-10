@@ -40,10 +40,8 @@ export default class Main extends Component {
   };
 
   startAnimationLoop = () => {
-    const cube = this.scene.getObjectByName('myCube')
-    console.log(cube)
-/*     cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01; */
+    const tableBoard = this.scene.getObjectByName('tableSurface')
+    tableBoard.rotation.y += 0.01;
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
   };
