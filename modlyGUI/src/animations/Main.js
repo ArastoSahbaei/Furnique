@@ -42,7 +42,7 @@ export default class Main extends Component {
   };
 
   startAnimationLoop = () => {
-    const tableBoard = this.scene.getObjectByName('tableSurface')
+    const tableBoard = this.scene.getObjectByName('tableSurface');
     tableBoard.rotation.y += this.title.RotationSpeed;
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
