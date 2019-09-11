@@ -53,18 +53,19 @@ componentDidMount() {
     tableBoard.scale.x = this.title.TableWidth;
     tableBoard.scale.z = this.title.TableHeight;
     tableBoard.scale.y = this.title.TableDepth;
-
+    
     tableLeg1.scale.x = this.title.LegsWidth;  tableLeg2.scale.x = this.title.LegsWidth;  tableLeg3.scale.x = this.title.LegsWidth;  tableLeg4.scale.x = this.title.LegsWidth;
     tableLeg1.scale.z = this.title.LegsHeight; tableLeg2.scale.z = this.title.LegsHeight; tableLeg3.scale.z = this.title.LegsHeight; tableLeg4.scale.z = this.title.LegsHeight;
     tableLeg1.scale.y = this.title.LegsDepth;  tableLeg2.scale.y = this.title.LegsDepth;  tableLeg3.scale.y = this.title.LegsDepth;  tableLeg4.scale.y = this.title.LegsDepth;
 
     tableLeg1.position.x = -this.title.LegPositionX; tableLeg2.position.x = this.title.LegPositionX; tableLeg3.position.x = -this.title.LegPositionX; tableLeg4.position.x = this.title.LegPositionX;
     tableLeg1.position.z = this.title.LegPositionZ; tableLeg2.position.z = -this.title.LegPositionZ; tableLeg3.position.z = -this.title.LegPositionZ; tableLeg4.position.z = this.title.LegPositionZ;
-
+/*     console.log(tableBoard.getWorldPosition());
+    console.log(tableLeg1.getWorldPosition()); */
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
   };
-
+  
   handleWindowResize = () => {
     const width = this.el.clientWidth;
     const height = this.el.clientHeight;
@@ -81,7 +82,7 @@ componentDidMount() {
     this.TableDepth = 0.8;
     this.LegsWidth = 1;
     this.LegsHeight = 1;
-    this.LegsDepth = 1;
+    this.LegsDepth = 2;
     this.LegPositionX = 0.65;
     this.LegPositionZ = 0.65;
     this.RotationSpeed = 0.005;
@@ -105,5 +106,5 @@ componentDidMount() {
 
   render() {
     return <div style={style} ref={ref => (this.el = ref)} />;
-  }
+      }
 }
