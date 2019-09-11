@@ -97,7 +97,7 @@ componentDidMount() {
     this.legs = this.gui.addFolder('Legs')
     this.legs.add(this.title, 'LegsWidth', 1, 3);
     this.legs.add(this.title, 'LegsHeight', 1, 3);
-    this.legs.add(this.title, 'LegsDepth', 0.1, 3);
+    this.legs.add(this.title, 'LegsDepth', 0.1, 2);
     this.legs.add(this.title, 'LegPositionX', 0.5, 0.67);
     this.legs.add(this.title, 'LegPositionZ', 0.5, 0.67);
     this.legs.add(this.title, 'LegPositionY', 0.5, 1.67);
