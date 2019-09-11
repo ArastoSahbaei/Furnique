@@ -44,15 +44,14 @@ componentDidMount() {
   startAnimationLoop = () => {
     const tableBoard = this.scene.getObjectByName('tableSurface');
     tableBoard.rotation.y += this.title.RotationSpeed;
+    tableBoard.scale.x = this.title.TableWidth;
+    tableBoard.scale.z = this.title.TableHeight;
+    tableBoard.scale.y = this.title.TableDepth;
 
     const tableLeg1 = this.scene.getObjectByName('tableLeg1');
     const tableLeg2 = this.scene.getObjectByName('tableLeg2');
     const tableLeg3 = this.scene.getObjectByName('tableLeg3');
     const tableLeg4 = this.scene.getObjectByName('tableLeg4');
-    
-    tableBoard.scale.x = this.title.TableWidth;
-    tableBoard.scale.z = this.title.TableHeight;
-    tableBoard.scale.y = this.title.TableDepth;
     
     tableLeg1.scale.x = this.title.LegsWidth;  tableLeg2.scale.x = this.title.LegsWidth;  tableLeg3.scale.x = this.title.LegsWidth;  tableLeg4.scale.x = this.title.LegsWidth;
     tableLeg1.scale.z = this.title.LegsHeight; tableLeg2.scale.z = this.title.LegsHeight; tableLeg3.scale.z = this.title.LegsHeight; tableLeg4.scale.z = this.title.LegsHeight;
@@ -60,8 +59,8 @@ componentDidMount() {
 
     tableLeg1.position.x = -this.title.LegPositionX; tableLeg2.position.x = this.title.LegPositionX; tableLeg3.position.x = -this.title.LegPositionX; tableLeg4.position.x = this.title.LegPositionX;
     tableLeg1.position.z = this.title.LegPositionZ; tableLeg2.position.z = -this.title.LegPositionZ; tableLeg3.position.z = -this.title.LegPositionZ; tableLeg4.position.z = this.title.LegPositionZ;
-/*     console.log(tableBoard.getWorldPosition());
-    console.log(tableLeg1.getWorldPosition()); */
+    tableLeg1.position.y = -this.title.LegsDepth * 0.67; tableLeg2.position.y = -this.title.LegsDepth * 0.67; tableLeg3.position.y = -this.title.LegsDepth * 0.67; tableLeg4.position.y = -this.title.LegsDepth * 0.67; 
+
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
   };
@@ -85,6 +84,7 @@ componentDidMount() {
     this.LegsDepth = 2;
     this.LegPositionX = 0.65;
     this.LegPositionZ = 0.65;
+    this.LegPositionY = 0.65;
     this.RotationSpeed = 0.005;
 }
 
@@ -100,6 +100,7 @@ componentDidMount() {
     this.legs.add(this.title, 'LegsDepth', 0.1, 3);
     this.legs.add(this.title, 'LegPositionX', 0.5, 0.67);
     this.legs.add(this.title, 'LegPositionZ', 0.5, 0.67);
+    this.legs.add(this.title, 'LegPositionY', 0.5, 1.67);
 
     this.gui.add(this.title, 'RotationSpeed', 0.0, 0.025);
   }
