@@ -8,17 +8,17 @@ export default ({ scene }) => {
     const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture, wireframe: false});
     const tableBoard = new THREE.Mesh(tableBoardGeometry, tableBoardMaterial);
    
-    const tableLegDepth = 2.3 // Depth of the legs
+    const tableLegDepth = 1.3 // Depth of the legs
     const tableLegsGeometry = new THREE.BoxGeometry(0.05, tableLegDepth, 0.05);
     const tableLegsMaterial = new THREE.MeshLambertMaterial(({map: customPicture, wireframe: false}));
     const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
     const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial);
     const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
     const tableLeg4 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial);
-    tableLeg1.position.set(boxWidth * 0.45, -tableLegDepth/2, -0.4); 
-    tableLeg2.position.set(-boxWidth * 0.45, -tableLegDepth/2, -0.4);
-    tableLeg3.position.set(-boxWidth * 0.45, -tableLegDepth/2, 0.4); 
-    tableLeg4.position.set(boxWidth * 0.45, -tableLegDepth/2, 0.4);
+    tableLeg1.position.set(boxWidth * 0.40, -tableLegDepth/2, -0.6); 
+    tableLeg2.position.set(-boxWidth * 0.40, -tableLegDepth/2, -0.6);
+    tableLeg3.position.set(-boxWidth * 0.40, -tableLegDepth/2, 0.6); 
+    tableLeg4.position.set(boxWidth * 0.40, -tableLegDepth/2, 0.6);
 
     const floorWidh = 1000; const floorHeight = 1000; const floorWidthSegments = 50; const floorHeightSegments = 50;
     const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidthSegments, floorHeightSegments );
