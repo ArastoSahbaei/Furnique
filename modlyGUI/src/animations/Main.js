@@ -43,10 +43,18 @@ export default class Main extends Component {
 
   startAnimationLoop = () => {
     const tableBoard = this.scene.getObjectByName('tableSurface');
+    const tableLeg1 = this.scene.getObjectByName('tableLeg1');
+    const tableLeg2 = this.scene.getObjectByName('tableLeg2');
+    const tableLeg3 = this.scene.getObjectByName('tableLeg3');
+    const tableLeg4 = this.scene.getObjectByName('tableLeg4');
     tableBoard.rotation.y += this.title.RotationSpeed;
     tableBoard.scale.x = this.title.TableWidth;
     tableBoard.scale.z = this.title.TableHeight;
     tableBoard.scale.y = this.title.TableDepth;
+
+    tableLeg1.scale.x = this.title.LegsWidth;  tableLeg2.scale.x = this.title.LegsWidth;  tableLeg3.scale.x = this.title.LegsWidth;  tableLeg4.scale.x = this.title.LegsWidth;
+    tableLeg1.scale.z = this.title.LegsHeight; tableLeg2.scale.z = this.title.LegsHeight; tableLeg3.scale.z = this.title.LegsHeight; tableLeg4.scale.z = this.title.LegsHeight;
+    tableLeg1.scale.y = this.title.LegsDepth;  tableLeg2.scale.y = this.title.LegsDepth;  tableLeg3.scale.y = this.title.LegsDepth;  tableLeg4.scale.y = this.title.LegsDepth;
 
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
@@ -63,17 +71,28 @@ export default class Main extends Component {
    userGUI = () => {
     this.gui = new dat.GUI();
     const controls = function() {
-    this.TableWidth = 1;
-    this.TableHeight = 1;
-    this.TableDepth = 1;
+    this.TableWidth = 1.5;
+    this.TableHeight = 1.5;
+    this.TableDepth = 0.8;
+    this.LegsWidth = 1;
+    this.LegsHeight = 1;
+    this.LegsDepth = 1;
     this.RotationSpeed = 0.005;
 }
     this.title = new controls();
     this.surface = this.gui.addFolder('Surface')
     this.surface.add(this.title, 'TableWidth', 1, 3);
     this.surface.add(this.title, 'TableHeight', 1, 3);
-    this.surface.add(this.title, 'TableDepth', 1, 3);
+    this.surface.add(this.title, 'TableDepth', 0.5, 1);
+
+    this.legs = this.gui.addFolder('Legs')
+    this.legs.add(this.title, 'LegsWidth', 1, 3);
+    this.legs.add(this.title, 'LegsHeight', 1, 3);
+    this.legs.add(this.title, 'LegsDepth', 1, 3);
+
     this.gui.add(this.title, 'RotationSpeed', 0.005, 0.1);
+
+    
   }
 
   render() {
