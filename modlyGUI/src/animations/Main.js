@@ -12,7 +12,7 @@ const style = {
 
 export default class Main extends Component {
   
-  componentDidMount() {
+componentDidMount() {
     this.sceneSetup();
    /*  addMesh({ scene: this.scene, cube: this.cube });  */
     addMesh2({ scene: this.scene }); 
@@ -73,7 +73,7 @@ export default class Main extends Component {
     this.camera.updateProjectionMatrix();
   };
 
-   userGUI = () => {
+  userGUI = () => {
     this.gui = new dat.GUI();
     const controls = function() {
     this.TableWidth = 1.5;
@@ -100,8 +100,6 @@ export default class Main extends Component {
     this.legs.add(this.title, 'LegPositionZ', 0.5, 0.67);
 
     this.gui.add(this.title, 'RotationSpeed', 0.0, 0.1);
-
-    
   }
 
   render() {
