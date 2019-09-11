@@ -15,7 +15,7 @@ export default class Main extends Component {
   componentDidMount() {
     this.sceneSetup();
    /*  addMesh({ scene: this.scene, cube: this.cube });  */
-    addMesh2({ scene: this.scene, cube: this.tableBoard }); 
+    addMesh2({ scene: this.scene }); 
     addLights({ scene: this.scene });
     this.userGUI();
     this.startAnimationLoop();
@@ -61,19 +61,19 @@ export default class Main extends Component {
   };
 
    userGUI = () => {
-   this.gui = new dat.GUI();
-   var controls = function() {
+    this.gui = new dat.GUI();
+    const controls = function() {
     this.TableWidth = 1;
     this.TableHeight = 1;
     this.TableDepth = 1;
-   this.RotationSpeed = 0.005;
+    this.RotationSpeed = 0.005;
 }
-  this.title = new controls();
-  this.surface = this.gui.addFolder('Surface')
-  this.surface.add(this.title, 'TableWidth', 1, 3);
-  this.surface.add(this.title, 'TableHeight', 1, 3);
-  this.surface.add(this.title, 'TableDepth', 1, 3);
-  this.gui.add(this.title, 'RotationSpeed', 0.005, 0.1);
+    this.title = new controls();
+    this.surface = this.gui.addFolder('Surface')
+    this.surface.add(this.title, 'TableWidth', 1, 3);
+    this.surface.add(this.title, 'TableHeight', 1, 3);
+    this.surface.add(this.title, 'TableDepth', 1, 3);
+    this.gui.add(this.title, 'RotationSpeed', 0.005, 0.1);
   }
 
   render() {
