@@ -82,8 +82,8 @@ export default class Main extends Component {
     this.LegsWidth = 1;
     this.LegsHeight = 1;
     this.LegsDepth = 1;
-    this.LegPositionX = 0.35;
-    this.LegPositionZ = 1.35;
+    this.LegPositionX = 0.65;
+    this.LegPositionZ = 0.65;
     this.RotationSpeed = 0.005;
 }
     this.title = new controls();
@@ -96,8 +96,8 @@ export default class Main extends Component {
     this.legs.add(this.title, 'LegsWidth', 1, 3);
     this.legs.add(this.title, 'LegsHeight', 1, 3);
     this.legs.add(this.title, 'LegsDepth', 0.1, 3);
-    this.legs.add(this.title, 'LegPositionX', 0.1, 0.65);
-    this.legs.add(this.title, 'LegPositionZ', 0.1, 0.65);
+    this.legs.add(this.title, 'LegPositionX', 0.5, 0.67);
+    this.legs.add(this.title, 'LegPositionZ', 0.5, 0.67);
 
     this.gui.add(this.title, 'RotationSpeed', 0.0, 0.1);
 
