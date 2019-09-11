@@ -58,10 +58,8 @@ export default class Main extends Component {
     tableLeg1.scale.z = this.title.LegsHeight; tableLeg2.scale.z = this.title.LegsHeight; tableLeg3.scale.z = this.title.LegsHeight; tableLeg4.scale.z = this.title.LegsHeight;
     tableLeg1.scale.y = this.title.LegsDepth;  tableLeg2.scale.y = this.title.LegsDepth;  tableLeg3.scale.y = this.title.LegsDepth;  tableLeg4.scale.y = this.title.LegsDepth;
 
-    tableLeg1.position.x = -this.title.LegPositionX;
-    tableLeg2.position.x = this.title.LegPositionX;
-    tableLeg3.position.x = -this.title.LegPositionX;
-    tableLeg4.position.x = this.title.LegPositionX;
+    tableLeg1.position.x = -this.title.LegPositionX; tableLeg2.position.x = this.title.LegPositionX; tableLeg3.position.x = -this.title.LegPositionX; tableLeg4.position.x = this.title.LegPositionX;
+    tableLeg1.position.z = this.title.LegPositionZ; tableLeg2.position.z = -this.title.LegPositionZ; tableLeg3.position.z = -this.title.LegPositionZ; tableLeg4.position.z = this.title.LegPositionZ;
 
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
@@ -85,19 +83,21 @@ export default class Main extends Component {
     this.LegsHeight = 1;
     this.LegsDepth = 1;
     this.LegPositionX = 0.35;
+    this.LegPositionZ = 1.35;
     this.RotationSpeed = 0.005;
 }
     this.title = new controls();
     this.surface = this.gui.addFolder('Surface')
-    this.surface.add(this.title, 'TableWidth', 1, 3);
-    this.surface.add(this.title, 'TableHeight', 1, 3);
+    this.surface.add(this.title, 'TableWidth', 0.5, 3);
+    this.surface.add(this.title, 'TableHeight', 0.5, 3);
     this.surface.add(this.title, 'TableDepth', 0.5, 1);
 
     this.legs = this.gui.addFolder('Legs')
     this.legs.add(this.title, 'LegsWidth', 1, 3);
     this.legs.add(this.title, 'LegsHeight', 1, 3);
-    this.legs.add(this.title, 'LegsDepth', 1, 3);
-    this.legs.add(this.title, 'LegPositionX', 0.1, 0.35);
+    this.legs.add(this.title, 'LegsDepth', 0.1, 3);
+    this.legs.add(this.title, 'LegPositionX', 0.1, 0.65);
+    this.legs.add(this.title, 'LegPositionZ', 0.1, 0.65);
 
     this.gui.add(this.title, 'RotationSpeed', 0.0, 0.1);
 

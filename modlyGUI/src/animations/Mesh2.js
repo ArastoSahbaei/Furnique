@@ -1,7 +1,7 @@
 import * as THREE from "three";
 
 export default ({ scene }) => {
-  const boxWidth = 0.9; const boxDepth = 0.1; const boxHeight = 1.5;
+  const boxWidth = 1.5; const boxDepth = 0.1; const boxHeight = 1.5;
     const tableBoardGeometry = new THREE.BoxGeometry(boxWidth, boxDepth, boxHeight);
     const textureLoader = new THREE.TextureLoader();
     const customPicture = textureLoader.load('https://threejsfundamentals.org/threejs/lessons/resources/images/compressed-but-large-wood-texture.jpg');
