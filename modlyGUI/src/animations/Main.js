@@ -86,6 +86,7 @@ componentDidMount() {
     this.LegPositionZ = 0.65;
     this.RotationSpeed = 0.005;
 }
+
     this.title = new controls();
     this.surface = this.gui.addFolder('Surface')
     this.surface.add(this.title, 'TableWidth', 0.5, 3);
@@ -99,7 +100,7 @@ componentDidMount() {
     this.legs.add(this.title, 'LegPositionX', 0.5, 0.67);
     this.legs.add(this.title, 'LegPositionZ', 0.5, 0.67);
 
-    this.gui.add(this.title, 'RotationSpeed', 0.0, 0.1);
+    this.gui.add(this.title, 'RotationSpeed', 0.0, 0.025);
   }
 
   render() {
