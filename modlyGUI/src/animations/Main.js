@@ -61,6 +61,10 @@ componentDidMount() {
     tableLeg1.position.z = this.title.LegPositionZ; tableLeg2.position.z = -this.title.LegPositionZ; tableLeg3.position.z = -this.title.LegPositionZ; tableLeg4.position.z = this.title.LegPositionZ;
     tableLeg1.position.y = -this.title.LegsDepth * 0.67; tableLeg2.position.y = -this.title.LegsDepth * 0.67; tableLeg3.position.y = -this.title.LegsDepth * 0.67; tableLeg4.position.y = -this.title.LegsDepth * 0.67; 
 
+/*     const spotLight_01 = this.scene.getObjectByName('spotLight_01');
+    spotLight_01.intensity += (Math.random() - 0.5) * 0.15;
+    spotLight_01.intensity = Math.abs(spotLight_01.intensity); */
+
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
   };

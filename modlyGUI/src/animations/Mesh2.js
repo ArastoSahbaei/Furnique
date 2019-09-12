@@ -1,10 +1,11 @@
 import * as THREE from "three";
+import Wood from '../shared/images/wood.jpg'
 
 export default ({ scene }) => {
     const boxWidth = 1.5; const boxDepth = 0.1; const boxHeight = 1.5;
     const tableBoardGeometry = new THREE.BoxGeometry(boxWidth, boxDepth, boxHeight);
     const textureLoader = new THREE.TextureLoader();
-    const customPicture = textureLoader.load('https://threejsfundamentals.org/threejs/lessons/resources/images/compressed-but-large-wood-texture.jpg');
+    const customPicture = textureLoader.load(Wood);
     const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture, wireframe: false});
     const tableBoard = new THREE.Mesh(tableBoardGeometry, tableBoardMaterial);
    
@@ -20,9 +21,13 @@ export default ({ scene }) => {
     tableLeg3.position.set(-boxWidth * 0.40, -tableLegDepth/2, 0.6); 
     tableLeg4.position.set(boxWidth * 0.40, -tableLegDepth/2, 0.6);
 
-    const floorWidh = 1000; const floorHeight = 1000; const floorWidthSegments = 100; const floorHeightSegments = 100;
+    const floorWidh = 200; const floorHeight = 200; const floorWidthSegments = 100; const floorHeightSegments = 100;
     const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidthSegments, floorHeightSegments );
-    const floorMaterial = new THREE.MeshStandardMaterial({color: 0xff7b5c, side: THREE.DoubleSide, wireframe: false}),
+/*     const floorTextureLoader = new THREE.TextureLoader();
+    const floorTextureMaterial = floorTextureLoader.load(Floor); */
+/*     floorTextureMaterial.wrapS = floorTextureMaterial.wrapT = THREE.RepeatWrapping;
+    floorTextureMaterial.repeat.set(6, 6); */
+    const floorMaterial = new THREE.MeshStandardMaterial({color: 0x898864, side: THREE.DoubleSide, wireframe: false}),
     floor = new THREE.Mesh( floorGeometry, floorMaterial );
     floorGeometry.rotateX( Math.PI / 2 );
     floor.position.set(0, -tableLegDepth/2, 0); //This keeps the floor at bottom of the tableLegs
