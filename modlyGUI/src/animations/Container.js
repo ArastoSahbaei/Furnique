@@ -1,4 +1,4 @@
-import React, {setState} from 'react'
+import React, {setState, useState} from 'react'
 import Main from './Main'
 
 export default function Container() {
@@ -7,15 +7,10 @@ export default function Container() {
 
     return (
         <>
-          <button
-            onClick={() =>
-              this.setState(state => ({ isMounted: !state.isMounted }))
-            }
-          >
-            {isMounted ? "Unmount" : "Mount"}
-          </button>
+{/*        <button
+            onClick={() => setisMounted( {isMounted} == !isMounted )}> {isMounted ? "Unmount" : "Mount"}
+          </button> */}
           {isMounted && <Main />}
-          {isMounted && <div>Scroll to zoom, drag to rotate</div>}
         </>
       );
 }

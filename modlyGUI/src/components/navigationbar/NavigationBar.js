@@ -4,7 +4,7 @@ import './NavigationBar.css'
 import SubHeader from './subheader/SubHeader.js'
 import Home from '../../pages/home/Home'
 import Design from '../../pages/shop/Shop'
-import Main from '../../animations/Main'
+import Main from '../../animations/Container'
 
 export default function NavigationBar() {
     return (
