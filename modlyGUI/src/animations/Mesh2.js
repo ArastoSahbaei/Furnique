@@ -10,7 +10,7 @@ export default ({ scene }) => {
    
     const tableLegDepth = 1.3 // Depth of the legs
     const tableLegsGeometry = new THREE.BoxGeometry(0.05, tableLegDepth, 0.05);
-    const tableLegsMaterial = new THREE.MeshLambertMaterial(({map: customPicture, wireframe: false}));
+    const tableLegsMaterial = new THREE.MeshStandardMaterial(({map: customPicture, wireframe: false}));
     const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
     const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial);
     const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
@@ -20,11 +20,11 @@ export default ({ scene }) => {
     tableLeg3.position.set(-boxWidth * 0.40, -tableLegDepth/2, 0.6); 
     tableLeg4.position.set(boxWidth * 0.40, -tableLegDepth/2, 0.6);
 
-    const floorWidh = 1000; const floorHeight = 1000; const floorWidthSegments = 50; const floorHeightSegments = 50;
+    const floorWidh = 1000; const floorHeight = 1000; const floorWidthSegments = 100; const floorHeightSegments = 100;
     const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidthSegments, floorHeightSegments );
-    const floorMaterial = new THREE.MeshBasicMaterial({color: 0xff7b5c, wireframe: false}),
+    const floorMaterial = new THREE.MeshStandardMaterial({color: 0xff7b5c, side: THREE.DoubleSide, wireframe: false}),
     floor = new THREE.Mesh( floorGeometry, floorMaterial );
-    floorGeometry.rotateX( - Math.PI / 2 );
+    floorGeometry.rotateX( Math.PI / 2 );
     floor.position.set(0, -tableLegDepth/2, 0); //This keeps the floor at bottom of the tableLegs
 
     tableBoard.name = 'tableSurface'
@@ -32,6 +32,22 @@ export default ({ scene }) => {
     tableLeg2.name = 'tableLeg2'
     tableLeg3.name = 'tableLeg3'
     tableLeg4.name = 'tableLeg4'
+
+    tableBoard.castShadow = true;
+    tableLeg1.castShadow = true;
+    tableLeg2.castShadow = true;
+    tableLeg3.castShadow = true;
+    tableLeg4.castShadow = true;
+    tableLeg1.receiveShadow = true;
+    tableLeg2.receiveShadow = true;
+    tableLeg3.receiveShadow = true;
+    tableLeg4.receiveShadow = true; 
+
+    floor.receiveShadow = true;
+    floor.roughness = 1;
+    floor.metalness = 1; 
+/*     tableBoard.roughness = 0.5;
+    tableBoard.metalness = 0.51; */
 
     tableLeg1.add(floor);
     tableBoard.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);

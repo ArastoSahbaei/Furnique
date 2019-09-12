@@ -34,10 +34,14 @@ componentDidMount() {
 
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-    this.camera.position.z = 5;
+    this.camera.position.x = 0; this.camera.position.y = 5; this.camera.position.z = 10;
+    this.camera.lookAt(0, 0, 0);
+
     this.controls = new OrbitControls(this.camera, this.el);
     this.renderer = new THREE.WebGLRenderer({antialias: true});
     this.renderer.setSize(width, height);
+    this.renderer.shadowMap.enabled = true;
+    this.renderer.shadowMapType = THREE.PCFShadowMap;
     this.el.appendChild(this.renderer.domElement); // mount using React ref
   };
 
@@ -48,11 +52,7 @@ componentDidMount() {
     tableBoard.scale.z = this.title.TableHeight;
     tableBoard.scale.y = this.title.TableDepth;
 
-    const tableLeg1 = this.scene.getObjectByName('tableLeg1');
-    const tableLeg2 = this.scene.getObjectByName('tableLeg2');
-    const tableLeg3 = this.scene.getObjectByName('tableLeg3');
-    const tableLeg4 = this.scene.getObjectByName('tableLeg4');
-    
+    const tableLeg1 = this.scene.getObjectByName('tableLeg1');const tableLeg2 = this.scene.getObjectByName('tableLeg2');const tableLeg3 = this.scene.getObjectByName('tableLeg3');const tableLeg4 = this.scene.getObjectByName('tableLeg4');
     tableLeg1.scale.x = this.title.LegsWidth;  tableLeg2.scale.x = this.title.LegsWidth;  tableLeg3.scale.x = this.title.LegsWidth;  tableLeg4.scale.x = this.title.LegsWidth;
     tableLeg1.scale.z = this.title.LegsHeight; tableLeg2.scale.z = this.title.LegsHeight; tableLeg3.scale.z = this.title.LegsHeight; tableLeg4.scale.z = this.title.LegsHeight;
     tableLeg1.scale.y = this.title.LegsDepth;  tableLeg2.scale.y = this.title.LegsDepth;  tableLeg3.scale.y = this.title.LegsDepth;  tableLeg4.scale.y = this.title.LegsDepth;
@@ -92,7 +92,7 @@ componentDidMount() {
     this.surface = this.gui.addFolder('Surface')
     this.surface.add(this.title, 'TableWidth', 0.5, 3);
     this.surface.add(this.title, 'TableHeight', 0.5, 3);
-    this.surface.add(this.title, 'TableDepth', 0.5, 1);
+    this.surface.add(this.title, 'TableDepth', 0.5, 2);
 
     this.legs = this.gui.addFolder('Legs')
     this.legs.add(this.title, 'LegsWidth', 1, 3);
