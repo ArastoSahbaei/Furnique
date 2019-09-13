@@ -1,6 +1,6 @@
 import * as THREE from "three";
-import DarkMarbleTexture from './textures/DarkMarble'
-import WoodTexture from './textures/Wood'
+import DarkMarbleTexture from '../textures/DarkMarble'
+import WoodTexture from '../textures/Wood'
 
 export default ({ scene }) => {
     const boxWidth = 1.5; const boxDepth = 0.1; const boxHeight = 1.5;
@@ -33,21 +33,16 @@ export default ({ scene }) => {
     tableLeg3.name = 'tableLeg3'
     tableLeg4.name = 'tableLeg4'
 
-    tableBoard.castShadow = true;
-    tableLeg1.castShadow = true;
-    tableLeg2.castShadow = true;
-    tableLeg3.castShadow = true;
-    tableLeg4.castShadow = true;
-    tableLeg1.receiveShadow = true;
-    tableLeg2.receiveShadow = true;
-    tableLeg3.receiveShadow = true;
-    tableLeg4.receiveShadow = true; 
+    tableBoard.castShadow = true; 
+    tableLeg1.castShadow = true;      tableLeg2.castShadow = true;      tableLeg3.castShadow = true;      tableLeg4.castShadow = true;
+    tableLeg1.receiveShadow = true;   tableLeg2.receiveShadow = true;   tableLeg3.receiveShadow = true;   tableLeg4.receiveShadow = true; 
 
     floor.receiveShadow = true;
     floor.roughness = 1;
     floor.metalness = 1; 
-/*     tableBoard.roughness = 0.5;
+/*  tableBoard.roughness = 0.5;
     tableBoard.metalness = 0.51; */
+
     tableLeg1.add(floor);
     tableBoard.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
     scene.add(tableBoard);

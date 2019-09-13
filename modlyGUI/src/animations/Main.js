@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import addMesh from './Mesh'
-import addMesh2 from './Mesh2'
+import addMesh from './mesh/Mesh'
+import addMesh2 from './mesh/Mesh2'
 import addLights from './Lights'
 import * as dat from 'dat.gui';
 
