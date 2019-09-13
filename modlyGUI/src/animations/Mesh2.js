@@ -27,7 +27,7 @@ export default ({ scene }) => {
     const floorTextureMaterial = floorTextureLoader.load(Floor); */
 /*     floorTextureMaterial.wrapS = floorTextureMaterial.wrapT = THREE.RepeatWrapping;
     floorTextureMaterial.repeat.set(6, 6); */
-    const floorMaterial = new THREE.MeshStandardMaterial({color: 0x898864, side: THREE.DoubleSide, wireframe: false}),
+    const floorMaterial = new THREE.MeshStandardMaterial({color: 0x6E6D74, side: THREE.DoubleSide, wireframe: false}),
     floor = new THREE.Mesh( floorGeometry, floorMaterial );
     floorGeometry.rotateX( Math.PI / 2 );
     floor.position.set(0, -tableLegDepth/2, 0); //This keeps the floor at bottom of the tableLegs
