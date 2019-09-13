@@ -1,8 +1,8 @@
 import * as THREE from "three";
-import Marble from '../../shared/images/marble.jpg'
+import DarkMarble from '../../shared/images/marble.jpg'
 
 export default () => {
     const textureLoader = new THREE.TextureLoader();
-    const darkMarble = textureLoader.load(Marble);
+    const darkMarble = textureLoader.load(DarkMarble);
     return darkMarble;
 }
