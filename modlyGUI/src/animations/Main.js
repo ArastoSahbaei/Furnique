@@ -25,6 +25,7 @@ componentDidMount() {
   componentWillUnmount() {
     window.removeEventListener("resize", this.handleWindowResize);
     window.cancelAnimationFrame(this.requestID);
+    this.gui.destroy();
     this.controls.dispose();
   }
 
