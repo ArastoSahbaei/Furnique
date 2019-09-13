@@ -33,11 +33,11 @@ export default ({ scene }) => {
     tableLeg3.name = 'tableLeg3'
     tableLeg4.name = 'tableLeg4'
 
+    floor.receiveShadow = true;
     tableBoard.castShadow = true; 
     tableLeg1.castShadow = true;      tableLeg2.castShadow = true;      tableLeg3.castShadow = true;      tableLeg4.castShadow = true;
     tableLeg1.receiveShadow = true;   tableLeg2.receiveShadow = true;   tableLeg3.receiveShadow = true;   tableLeg4.receiveShadow = true; 
 
-    floor.receiveShadow = true;
     floor.roughness = 1;
     floor.metalness = 1; 
 /*  tableBoard.roughness = 0.5;
