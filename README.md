@@ -1,4 +1,4 @@
-# Modly
+# Modu
 
 <h3> Webbshoppen skall till ett minimum bestå av följande komponenter: </h3>
 
