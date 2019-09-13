@@ -1,17 +1,16 @@
 import * as THREE from "three";
-import Wood from '../shared/images/wood.jpg'
+import DarkMarbleTexture from './textures/DarkMarble'
+import WoodTexture from './textures/Wood'
 
 export default ({ scene }) => {
     const boxWidth = 1.5; const boxDepth = 0.1; const boxHeight = 1.5;
     const tableBoardGeometry = new THREE.BoxGeometry(boxWidth, boxDepth, boxHeight);
-    const textureLoader = new THREE.TextureLoader();
-    const customPicture = textureLoader.load(Wood);
-    const tableBoardMaterial = new THREE.MeshLambertMaterial({map: customPicture, wireframe: false});
+    const tableBoardMaterial = new THREE.MeshLambertMaterial({map: DarkMarbleTexture(), wireframe: false});
     const tableBoard = new THREE.Mesh(tableBoardGeometry, tableBoardMaterial);
    
     const tableLegDepth = 1.3 // Depth of the legs
     const tableLegsGeometry = new THREE.BoxGeometry(0.05, tableLegDepth, 0.05);
-    const tableLegsMaterial = new THREE.MeshStandardMaterial(({map: customPicture, wireframe: false}));
+    const tableLegsMaterial = new THREE.MeshStandardMaterial(({map: WoodTexture(), wireframe: false}));
     const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
     const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial);
     const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
@@ -23,10 +22,6 @@ export default ({ scene }) => {
 
     const floorWidh = 200; const floorHeight = 200; const floorWidthSegments = 100; const floorHeightSegments = 100;
     const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidthSegments, floorHeightSegments );
-/*     const floorTextureLoader = new THREE.TextureLoader();
-    const floorTextureMaterial = floorTextureLoader.load(Floor); */
-/*     floorTextureMaterial.wrapS = floorTextureMaterial.wrapT = THREE.RepeatWrapping;
-    floorTextureMaterial.repeat.set(6, 6); */
     const floorMaterial = new THREE.MeshStandardMaterial({color: 0x6E6D74, side: THREE.DoubleSide, wireframe: false}),
     floor = new THREE.Mesh( floorGeometry, floorMaterial );
     floorGeometry.rotateX( Math.PI / 2 );
@@ -53,13 +48,7 @@ export default ({ scene }) => {
     floor.metalness = 1; 
 /*     tableBoard.roughness = 0.5;
     tableBoard.metalness = 0.51; */
-
     tableLeg1.add(floor);
     tableBoard.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
     scene.add(tableBoard);
   }
-
-
-/*   const floorTexture = new THREE.TextureLoader().load('https://2ecffd01e1ab3e9383f0-07db7b9624bbdf022e3b5395236d5cf8.ssl.cf4.rackcdn.com/Product-800x800/2173fb1a-1ddf-47d5-8566-83c2f28135cd.png');
-  floorTexture.wrapS = floorTexture.wrapT = THREE.RepeatWrapping;
-  floorTexture.repeat.set(20, 20); */
