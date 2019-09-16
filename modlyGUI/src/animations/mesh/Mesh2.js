@@ -12,21 +12,18 @@ export default ({ scene }) => {
     const tableLegDepth = 1.3 // Depth of the legs
     const tableLegsGeometry = new THREE.BoxGeometry(0.05, tableLegDepth, 0.05);
     const tableLegsMaterial = new THREE.MeshStandardMaterial(({map: WoodTexture(), wireframe: false}));
-    const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
-    const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial);
-    const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
-    const tableLeg4 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial);
-    tableLeg1.position.set(boxWidth * 0.40, -tableLegDepth/2, -0.6); 
-    tableLeg2.position.set(-boxWidth * 0.40, -tableLegDepth/2, -0.6);
-    tableLeg3.position.set(-boxWidth * 0.40, -tableLegDepth/2, 0.6); 
-    tableLeg4.position.set(boxWidth * 0.40, -tableLegDepth/2, 0.6);
+    const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); const tableLeg4 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial);
+      tableLeg1.position.set(boxWidth * 0.40, 13, -0.6); 
+    tableLeg2.position.set(-boxWidth * 0.40, 43, -0.6);
+    tableLeg3.position.set(-boxWidth * 0.40, 43, 0.6); 
+    tableLeg4.position.set(boxWidth * 0.40, 43, 0.6);  
 
     const floorWidh = 200; const floorHeight = 200; const floorWidthSegments = 100; const floorHeightSegments = 100;
     const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidthSegments, floorHeightSegments );
     const floorMaterial = new THREE.MeshStandardMaterial({map: WhiteMarble(), side: THREE.DoubleSide, wireframe: false}),
     floor = new THREE.Mesh( floorGeometry, floorMaterial );
     floorGeometry.rotateX( Math.PI / 2 );
-    floor.position.set(0, -tableLegDepth/2, 0); //This keeps the floor at bottom of the tableLegs
+    /* floor.position.set(0, -tableLegDepth/2, 0); */ //This keeps the floor at bottom of the tableLegs
 
     tableBoard.name = 'tableSurface'
     tableLeg1.name = 'tableLeg1'
@@ -44,7 +41,7 @@ export default ({ scene }) => {
 /*  tableBoard.roughness = 0.5;
     tableBoard.metalness = 0.51; */
 
-    tableLeg1.add(floor);
+    scene.add(floor);
     tableBoard.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
     scene.add(tableBoard);
   }

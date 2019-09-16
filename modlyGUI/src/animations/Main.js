@@ -39,14 +39,22 @@ componentDidMount() {
     this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     this.camera.position.x = 0; this.camera.position.y = 5; this.camera.position.z = 10;
     this.camera.lookAt(0, 0, 0);
-this.helper = new THREE.CameraHelper( this.camera );
-this.scene.add( this.helper );
+/*     this.helper = new THREE.CameraHelper( this.camera );
+    this.scene.add( this.helper ); */
     this.controls = new OrbitControls(this.camera, this.el);
     this.renderer = new THREE.WebGLRenderer({antialias: true});
     this.renderer.setSize(width, height);
     this.renderer.shadowMap.enabled = true;
     this.renderer.shadowMapType = THREE.PCFShadowMap;
     this.el.appendChild(this.renderer.domElement); // mount using React ref
+  };
+
+  handleWindowResize = () => {
+    const width = this.el.clientWidth;
+    const height = this.el.clientHeight;
+    this.renderer.setSize(width, height);
+    this.camera.aspect = width / height;
+    this.camera.updateProjectionMatrix();
   };
 
   startAnimationLoop = () => {
@@ -63,22 +71,15 @@ this.scene.add( this.helper );
 
     tableLeg1.position.x = -this.title.LegPositionX; tableLeg2.position.x = this.title.LegPositionX; tableLeg3.position.x = -this.title.LegPositionX; tableLeg4.position.x = this.title.LegPositionX;
     tableLeg1.position.z = this.title.LegPositionZ; tableLeg2.position.z = -this.title.LegPositionZ; tableLeg3.position.z = -this.title.LegPositionZ; tableLeg4.position.z = this.title.LegPositionZ;
-    tableLeg1.position.y = -this.title.LegsDepth * 0.67; tableLeg2.position.y = -this.title.LegsDepth * 0.67; tableLeg3.position.y = -this.title.LegsDepth * 0.67; tableLeg4.position.y = -this.title.LegsDepth * 0.67; 
-
-/*     const spotLight_01 = this.scene.getObjectByName('directionalLight');
-    spotLight_01.intensity += (Math.random() - 0.5) * 0.15;
-    spotLight_01.intensity = Math.abs(spotLight_01.intensity); */
+    
+    tableBoard.position.y = this.title.LegsDepth * 0.66;
+    tableLeg1.position.y = -this.title.LegsDepth * 0.66; 
+    tableLeg2.position.y = -this.title.LegsDepth * 0.66; 
+    tableLeg3.position.y = -this.title.LegsDepth * 0.66; 
+    tableLeg4.position.y = -this.title.LegsDepth * 0.66; 
 
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
-  };
-  
-  handleWindowResize = () => {
-    const width = this.el.clientWidth;
-    const height = this.el.clientHeight;
-    this.renderer.setSize(width, height);
-    this.camera.aspect = width / height;
-    this.camera.updateProjectionMatrix();
   };
 
   userGUI = () => {
@@ -92,7 +93,7 @@ this.scene.add( this.helper );
     this.LegsDepth = 1.3;
     this.LegPositionX = 0.65;
     this.LegPositionZ = 0.65;
-    this.LegPositionY = 0.65;
+    this.LegPositionY = 1.65;
     this.RotationSpeed = 0.00;
 }
 
