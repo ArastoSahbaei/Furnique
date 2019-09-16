@@ -1,14 +1,18 @@
 import * as THREE from "three";
-import Tee from '../textures/DarkMarble'
+import WhiteMarble from '../textures/WhiteMarble'
 
-export default ({ scene, cube }) => {
+export default ({ scene }) => {
 
 const wallWidh = 600; const wallHeight = 30; const wallWidthSegments = 100; const wallHeightSegments = 100;
     const wallGeometry = new THREE.PlaneGeometry( wallWidh, wallHeight, wallWidthSegments, wallHeightSegments );
-    const wallMaterial = new THREE.MeshStandardMaterial({color: 0xFFFFFF, side: THREE.DoubleSide, wireframe: false}),
+    const wallMaterial = new THREE.MeshStandardMaterial({map: WhiteMarble(), side: THREE.DoubleSide, wireframe: false}),
     wall = new THREE.Mesh( wallGeometry, wallMaterial );
-/*     wallGeometry.rotateX( Math.PI / 2 ); */
-    wall.position.set(0, 12, -4);
+
+    /* wallGeometry.rotateY( Math.PI / 2 );  */
+
+    wall.receiveShadow = true;
+
+    wall.position.set(0, 12, -6);
     scene.add(wall)
 
 }

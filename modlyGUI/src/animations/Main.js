@@ -39,7 +39,8 @@ componentDidMount() {
     this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     this.camera.position.x = 0; this.camera.position.y = 5; this.camera.position.z = 10;
     this.camera.lookAt(0, 0, 0);
-
+this.helper = new THREE.CameraHelper( this.camera );
+this.scene.add( this.helper );
     this.controls = new OrbitControls(this.camera, this.el);
     this.renderer = new THREE.WebGLRenderer({antialias: true});
     this.renderer.setSize(width, height);
@@ -64,7 +65,7 @@ componentDidMount() {
     tableLeg1.position.z = this.title.LegPositionZ; tableLeg2.position.z = -this.title.LegPositionZ; tableLeg3.position.z = -this.title.LegPositionZ; tableLeg4.position.z = this.title.LegPositionZ;
     tableLeg1.position.y = -this.title.LegsDepth * 0.67; tableLeg2.position.y = -this.title.LegsDepth * 0.67; tableLeg3.position.y = -this.title.LegsDepth * 0.67; tableLeg4.position.y = -this.title.LegsDepth * 0.67; 
 
-/*     const spotLight_01 = this.scene.getObjectByName('spotLight_01');
+/*     const spotLight_01 = this.scene.getObjectByName('directionalLight');
     spotLight_01.intensity += (Math.random() - 0.5) * 0.15;
     spotLight_01.intensity = Math.abs(spotLight_01.intensity); */
 
