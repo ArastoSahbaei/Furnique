@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import Wood from '../../shared/images/wood.jpg'
+import Wood from '../../shared/images/tree.jpg'
 
 export default () => {
     const textureLoader = new THREE.TextureLoader();

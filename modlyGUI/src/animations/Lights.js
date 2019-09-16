@@ -13,8 +13,8 @@ export default ({ scene }) => {
     lights[2].position.set(-100, -200, -100);
     
     spotLight_01.castShadow = true;
-    spotLight_01.shadow.mapSize.width = 8192; //Change to 8192 for production
-    spotLight_01.shadow.mapSize.height = 8192;
+    spotLight_01.shadow.mapSize.width = 1024; //Change to 8192 for production
+    spotLight_01.shadow.mapSize.height = 1024;
     
 /*  spotLight_02.castShadow = true;
     spotLight_02.shadow.mapSize.width = 8192;

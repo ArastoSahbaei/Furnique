@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import addMesh from './mesh/Mesh'
+import addWallMesh from './mesh/Walls'
 import addMesh2 from './mesh/Mesh2'
 import addLights from './Lights'
 import * as dat from 'dat.gui';
@@ -15,6 +16,7 @@ export default class Main extends Component {
 componentDidMount() {
     this.sceneSetup();
    /*  addMesh({ scene: this.scene, cube: this.cube });  */
+    addWallMesh({ scene: this.scene })
     addMesh2({ scene: this.scene }); 
     addLights({ scene: this.scene });
     this.userGUI();
@@ -90,7 +92,7 @@ componentDidMount() {
     this.LegPositionX = 0.65;
     this.LegPositionZ = 0.65;
     this.LegPositionY = 0.65;
-    this.RotationSpeed = 0.005;
+    this.RotationSpeed = 0.00;
 }
 
     this.title = new controls();

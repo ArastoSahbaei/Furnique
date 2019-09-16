@@ -20,12 +20,12 @@ export default ({ scene }) => {
     tableLeg3.position.set(-boxWidth * 0.40, -tableLegDepth/2, 0.6); 
     tableLeg4.position.set(boxWidth * 0.40, -tableLegDepth/2, 0.6);
 
-    const floorWidh = 200; const floorHeight = 200; const floorWidthSegments = 100; const floorHeightSegments = 100;
+    const floorWidh = 400; const floorHeight = 30; const floorWidthSegments = 100; const floorHeightSegments = 100;
     const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidthSegments, floorHeightSegments );
-    const floorMaterial = new THREE.MeshStandardMaterial({color: 0x6E6D74, side: THREE.DoubleSide, wireframe: false}),
+    const floorMaterial = new THREE.MeshStandardMaterial({color: 0xFFFFFF, side: THREE.DoubleSide, wireframe: false}),
     floor = new THREE.Mesh( floorGeometry, floorMaterial );
     floorGeometry.rotateX( Math.PI / 2 );
-    floor.position.set(0, -tableLegDepth/2, 0); //This keeps the floor at bottom of the tableLegs
+    floor.position.set(0, -tableLegDepth/2, 4); //This keeps the floor at bottom of the tableLegs
 
     tableBoard.name = 'tableSurface'
     tableLeg1.name = 'tableLeg1'
