@@ -8,6 +8,7 @@ const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidt
 const floorMaterial = new THREE.MeshStandardMaterial({map: WhiteMarble(), side: THREE.DoubleSide, wireframe: false}),
 floor = new THREE.Mesh( floorGeometry, floorMaterial );
 floorGeometry.rotateX( Math.PI / 2 );
+floor.receiveShadow = true;
 
 scene.add(floor);
 

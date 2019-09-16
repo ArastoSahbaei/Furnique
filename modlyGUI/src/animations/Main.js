@@ -16,7 +16,7 @@ export default class Main extends Component {
   
 componentDidMount() {
     this.sceneSetup();
-   /*  addMesh({ scene: this.scene, cube: this.cube });  */
+/*  addMesh({ scene: this.scene, cube: this.cube });  */
     addWallMesh({ scene: this.scene })
     addFloor({ scene: this.scene })
     addTable({ scene: this.scene }); 
