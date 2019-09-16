@@ -86,10 +86,10 @@ this.scene.add( this.helper );
     const controls = function() {
     this.TableWidth = 1.5;
     this.TableHeight = 1.5;
-    this.TableDepth = 0.8;
-    this.LegsWidth = 1;
-    this.LegsHeight = 1;
-    this.LegsDepth = 2;
+    this.TableDepth = 0.6;
+    this.LegsWidth = 2;
+    this.LegsHeight = 2;
+    this.LegsDepth = 1.3;
     this.LegPositionX = 0.65;
     this.LegPositionZ = 0.65;
     this.LegPositionY = 0.65;
