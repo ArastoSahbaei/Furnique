@@ -7,10 +7,7 @@ const wallWidh = 600; const wallHeight = 30; const wallWidthSegments = 100; cons
     const wallGeometry = new THREE.PlaneGeometry( wallWidh, wallHeight, wallWidthSegments, wallHeightSegments );
     const wallMaterial = new THREE.MeshStandardMaterial({map: WhiteMarble(), side: THREE.DoubleSide, wireframe: false}),
     wall = new THREE.Mesh( wallGeometry, wallMaterial );
-
-    /* wallGeometry.rotateY( Math.PI / 2 );  */
-
-    wall.receiveShadow = true;
+    wall.receiveShadow = false;
 
     wall.position.set(0, 12, -6);
     scene.add(wall)
