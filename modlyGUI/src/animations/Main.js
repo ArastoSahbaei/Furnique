@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import addMesh from './mesh/Mesh'
+import addFloor from './mesh/Floor'
 import addWallMesh from './mesh/Walls'
-import addMesh2 from './mesh/Mesh2'
+import addTable from './mesh/Table'
 import addLights from './Lights'
 import * as dat from 'dat.gui';
 
@@ -17,7 +18,8 @@ componentDidMount() {
     this.sceneSetup();
    /*  addMesh({ scene: this.scene, cube: this.cube });  */
     addWallMesh({ scene: this.scene })
-    addMesh2({ scene: this.scene }); 
+    addFloor({ scene: this.scene })
+    addTable({ scene: this.scene }); 
     addLights({ scene: this.scene });
     this.userGUI();
     this.startAnimationLoop();
@@ -72,11 +74,11 @@ componentDidMount() {
     tableLeg1.position.x = -this.title.LegPositionX; tableLeg2.position.x = this.title.LegPositionX; tableLeg3.position.x = -this.title.LegPositionX; tableLeg4.position.x = this.title.LegPositionX;
     tableLeg1.position.z = this.title.LegPositionZ; tableLeg2.position.z = -this.title.LegPositionZ; tableLeg3.position.z = -this.title.LegPositionZ; tableLeg4.position.z = this.title.LegPositionZ;
     
-    tableBoard.position.y = this.title.LegsDepth * 0.66;
-    tableLeg1.position.y = -this.title.LegsDepth * 0.66; 
-    tableLeg2.position.y = -this.title.LegsDepth * 0.66; 
-    tableLeg3.position.y = -this.title.LegsDepth * 0.66; 
-    tableLeg4.position.y = -this.title.LegsDepth * 0.66; 
+    tableBoard.position.y = this.title.LegsDepth * 0.65;
+    tableLeg1.position.y = -this.title.LegsDepth * 0.65; 
+    tableLeg2.position.y = -this.title.LegsDepth * 0.65; 
+    tableLeg3.position.y = -this.title.LegsDepth * 0.65; 
+    tableLeg4.position.y = -this.title.LegsDepth * 0.65; 
 
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
