@@ -1,12 +1,14 @@
-import React, { Component } from "react";
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import React, { Component } from "react"
+import * as THREE from "three"
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+import texture1 from './textures/DarkMarble'
+import texture2 from './textures/WhiteMarble'
 import addMesh from './mesh/Mesh'
 import addFloor from './mesh/Floor'
 import addWallMesh from './mesh/Walls'
 import addTable from './mesh/Table'
 import addLights from './Lights'
-import * as dat from 'dat.gui';
+import * as dat from 'dat.gui'
 
 const style = {
   height: 740
@@ -58,6 +60,7 @@ componentDidMount() {
     this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
   };
+  
 
   startAnimationLoop = () => {
     const tableBoard = this.scene.getObjectByName('tableSurface');
@@ -85,8 +88,25 @@ componentDidMount() {
   };
 
   userGUI = () => {
+    const getTableSurface = this.scene.getObjectByName('tableSurface');
+
+    const params = [
+      texture1(),
+      texture2()
+    ]
+    
+    const update = {
+      updateMaterial: function() {
+        getTableSurface.material.dispose()
+        getTableSurface.material.map = params[0];
+        getTableSurface.material.map.needsUpdate = true;
+      }
+    }
+
     this.gui = new dat.GUI();
     const controls = function() {
+
+
     this.TableWidth = 1.5;
     this.TableHeight = 1.5;
     this.TableDepth = 0.6;
@@ -101,6 +121,7 @@ componentDidMount() {
 
     this.title = new controls();
     this.surface = this.gui.addFolder('Surface')
+
     this.surface.add(this.title, 'TableWidth', 0.5, 3);
     this.surface.add(this.title, 'TableHeight', 0.5, 3);
     this.surface.add(this.title, 'TableDepth', 0.5, 2);
@@ -114,6 +135,7 @@ componentDidMount() {
     this.legs.add(this.title, 'LegPositionY', 0.5, 1.67);
 
     this.gui.add(this.title, 'RotationSpeed', 0.0, 0.025);
+    this.gui.add(update, 'updateMaterial')
   }
 
   render() {

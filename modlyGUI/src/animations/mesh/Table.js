@@ -5,7 +5,7 @@ import WoodTexture from '../textures/Wood'
 export default ({ scene }) => {
     const boxWidth = 1.5; const boxDepth = 0.1; const boxHeight = 1.5;
     const tableBoardGeometry = new THREE.BoxGeometry(boxWidth, boxDepth, boxHeight);
-    const tableBoardMaterial = new THREE.MeshLambertMaterial({map: DarkMarbleTexture(), wireframe: false});
+    const tableBoardMaterial = new THREE.MeshStandardMaterial({map: WoodTexture(), wireframe: false});
     const tableBoard = new THREE.Mesh(tableBoardGeometry, tableBoardMaterial);
    
     const tableLegsGeometry = new THREE.BoxGeometry(0.05, 1.3, 0.05);
