@@ -3,11 +3,10 @@ import * as THREE from "three"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import texture1 from './textures/DarkMarble'
 import texture2 from './textures/WhiteMarble'
-import addMesh from './mesh/Mesh'
 import addFloor from './mesh/Floor'
-import addWallMesh from './mesh/Walls'
+import addWallMesh from './mesh/Wall'
 import addTable from './mesh/Table'
-import addLights from './Lights'
+import addLights from './lightning/Lights'
 import * as dat from 'dat.gui'
 
 const style = {
@@ -18,11 +17,10 @@ export default class Main extends Component {
   
 componentDidMount() {
     this.sceneSetup();
-/*  addMesh({ scene: this.scene, cube: this.cube });  */
+    addLights({ scene: this.scene });
     addWallMesh({ scene: this.scene })
     addFloor({ scene: this.scene })
     addTable({ scene: this.scene }); 
-    addLights({ scene: this.scene });
     this.userGUI();
     this.startAnimationLoop();
     window.addEventListener("resize", this.handleWindowResize);
@@ -115,7 +113,6 @@ componentDidMount() {
     this.LegsDepth = 1.3;
     this.LegPositionX = 0.65;
     this.LegPositionZ = 0.65;
-    this.LegPositionY = 1.65;
     this.RotationSpeed = 0.00;
 }
 
@@ -132,7 +129,6 @@ componentDidMount() {
     this.legs.add(this.title, 'LegsDepth', 0.1, 2);
     this.legs.add(this.title, 'LegPositionX', 0.5, 0.67);
     this.legs.add(this.title, 'LegPositionZ', 0.5, 0.67);
-    this.legs.add(this.title, 'LegPositionY', 0.5, 1.67);
 
     this.gui.add(this.title, 'RotationSpeed', 0.0, 0.025);
     this.gui.add(update, 'updateMaterial')
