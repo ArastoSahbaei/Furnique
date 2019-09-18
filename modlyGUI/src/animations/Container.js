@@ -1,17 +1,11 @@
-import React from 'react'
-import Main from './Main'
+import React, {lazy} from 'react'
+const Main = lazy(() => import('./Main'));
 
 export default function Container() {
 
-    /* const [isMounted, setisMounted] = useState(true); */
-
-    return (
-        <>
-{/*        <button
-            onClick={() => setisMounted( {isMounted} == !isMounted )}> {isMounted ? "Unmount" : "Mount"}
-          </button> */}
-         {/*  {isMounted && <Main />} */}
-         <Main />
-        </>
+return (
+        <div>
+              <Main/>
+        </div>
       );
 }
