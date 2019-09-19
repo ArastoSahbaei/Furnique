@@ -1,11 +1,23 @@
 .test {
-    background-color: #efeee6;
+    background-color: #292929;
     grid-row: 5/5;
     grid-column: 1/10;
  }
 
-/* .swiperImage {
+/*  .swiperImage {
     border-style: solid;
-    border-width: 4px;
+    border-width: 2px;
     border-color: black;
-} */
+}  */
+
+
+.test2 {
+    margin-left: 20%;
+    text-align: center;
+    letter-spacing: 3px;
+    width: 60%;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'Sriracha', cursive;
+    border-bottom: 1px solid white;
+}

@@ -22,7 +22,7 @@ const MutipleSlidesPerView = () => {
         delay: 2500,
         disableOnInteraction: false
       },
-      slidesPerView: 4,
+      slidesPerView: 6,
       coverflowEffect: {
         rotate: 40,
         stretch: -30,
@@ -35,7 +35,11 @@ const MutipleSlidesPerView = () => {
         el: '.swiper-pagination',
         clickable: true
       },
-/*       breakpoints: {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+     /*   breakpoints: {
         1024: {
           slidesPerView: 6,
           spaceBetween: 40
@@ -52,14 +56,14 @@ const MutipleSlidesPerView = () => {
           slidesPerView: 1,
           spaceBetween: 10
         }
-      } */
+      }  */
       
       
       
     }
     return (
       <div className="test">
-      <h1>Templates. Why dont you put some of your flavour upon it?</h1>
+      <p className="test2">REDAKTIONENS FAVORITER</p> 
       <Swiper {...params}>
             <img className="swiperImage" src={table1}   alt="SpinnerLogo"/>
             <img className="swiperImage" src={table2}   alt="SpinnerLogo"/>
