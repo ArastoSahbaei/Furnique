@@ -17,7 +17,7 @@ export default function SubHeader() {
 
                 <li className="miljoSmart"> <i class="fab fa-pagelines"></i>     
                 <span className="headerSubTitle">Miljösmart</span> 
-                <p className="fraktFrittSubTitle">Vartenda köp bidrar till miljön. Läs mer om hur här</p>
+                <p className="fraktFrittSubTitle">Vartenda köp bidrar till miljön. Läs mer om hur <span className="miljoInfo">här</span></p>
                 </li>
 
                 <li className="betalningsMetoder"> <i class="fab fa-bitcoin"></i>       

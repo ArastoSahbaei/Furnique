@@ -44,6 +44,10 @@
         margin-left: 0.5em;
     }
 
+    .miljoInfo {
+        border-bottom: 1px solid white;
+    }
+
     .fraktFrittSubTitle {
         font-size: 16px;
     }
