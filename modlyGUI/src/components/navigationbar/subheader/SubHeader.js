@@ -5,10 +5,25 @@ export default function SubHeader() {
     return (
         <div>
             <ul className="subHeader">
-                <li className="subHeaderListItem"> <i class="fa fa-arrows-h" aria-hidden="true"></i> FRI FRAKT & FRIA RETURER</li>
-                <li className="subHeaderListItem"> <i class="fa fa-clock-o"  aria-hidden="true"></i> LEVERANS 3-4 VECKOR</li>
-                <li className="subHeaderListItem"> <i class="fa fa-tree"     aria-hidden="true"></i> MILJÖSMART</li>
-                <li className="subHeaderListItem"> <i class="fa fa-star"     aria-hidden="true"></i> NÖJDA KUNDER</li>
+                <li className="fraktFritt"> <i class="fas fa-truck"></i>         
+                <span className="headerSubTitle">Frakfritt</span> 
+                <p className="fraktFrittSubTitle">2-3 Veckors leveranstid</p>
+                </li>
+
+                <li className="trygghetsGaranti"> <i class="far fa-smile-beam"></i>    
+                <span className="headerSubTitle">Trygghetsgaranti</span> 
+                <p className="fraktFrittSubTitle">100 dagars returrätt</p>
+                </li>
+
+                <li className="miljoSmart"> <i class="fab fa-pagelines"></i>     
+                <span className="headerSubTitle">Miljösmart</span> 
+                <p className="fraktFrittSubTitle">Vartenda köp bidrar till miljön, läs mer om hur här.</p>
+                </li>
+
+                <li className="betalningsMetoder"> <i class="fab fa-bitcoin"></i>       
+                <span className="headerSubTitle">Säkra betalningsmetoder</span> 
+                <p className="fraktFrittSubTitle">Säkert, tryggt & smidigt oavsett kort eller faktura.</p>
+                </li>
             </ul>
         </div>
     )
