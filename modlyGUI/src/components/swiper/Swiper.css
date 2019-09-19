@@ -1,0 +1,11 @@
+.test {
+    background-color: #efeee6;
+    grid-row: 5/5;
+    grid-column: 1/10;
+ }
+
+/* .swiperImage {
+    border-style: solid;
+    border-width: 4px;
+    border-color: black;
+} */

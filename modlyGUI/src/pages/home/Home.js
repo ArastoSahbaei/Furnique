@@ -4,6 +4,7 @@ import TreeLogo from '../../shared/images/denne.jpg';
 import DesignSection from './designsection/DesignSection'
 import RecommendationSection from './recommendationsection/RecommendationSection'
 import NewsLetterSection from './newslettersection/NewsLetterSection'
+import Swiper from '../../components/swiper/Swiper'
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
             <DesignSection/>
             <RecommendationSection/>
             <NewsLetterSection/>
+            <Swiper/>
         </div>
     )
 }
