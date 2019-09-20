@@ -87,6 +87,6 @@
     -o-transform: rotate(180deg);          /* Opera */
     -ms-transform: rotate(180deg);         /* IE9 */
     transform: rotate(180deg);             /* W3C compliant browsers */
-  
+    cursor: pointer;
 }
 
