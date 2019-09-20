@@ -5,6 +5,7 @@ import Spinner from '../../shared/images/spinner.gif'
 import SubHeader from './subheader/SubHeader.js'
 const Home = lazy(() => import('../../pages/home/Home'));
 const Container = lazy(() => import('../../animations/Container'));
+const Tables = lazy(() => import('../../pages/tables/Tables'));
 
 export default function NavigationBar() {
     return (
@@ -24,8 +25,8 @@ export default function NavigationBar() {
                 <Suspense fallback={<img src={Spinner} alt="SpinnerLogo"/>}>
                     <Switch>
                         <Route exact path="/home"       component={Home} />
-                        <Route exact path="/tables"     component={Container} />
-                        <Route exact path="/inspiration"  component={Home} />
+                        <Route exact path="/tables"     component={Tables} />
+                        <Route exact path="/inspiration"  component={Container} />
                         <Route exact path="/kontakt"    component={Home} />
                         <Route component={Home} />
                     </Switch>
