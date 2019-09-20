@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <div className="footerWrapper">
                <ul className="footerList">
-                    <li className="footerList"> COPYRIGHT © 2019, MODLIFY AB</li>
+                    <li className="footerList"> COPYRIGHT © 2019, NyttNamn AB</li>
                     <SocialMedia/>
                 </ul>
         </div>

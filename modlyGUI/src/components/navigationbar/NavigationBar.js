@@ -11,7 +11,7 @@ export default function NavigationBar() {
         <Router>            
             <div className="navigationBarWrapper">
                 <ul className="navigationList">
-                    <span className="logotype">Modlify</span>
+                    <span className="logotype">NyttNamn</span>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/home">          Hem          </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tables">        Bord         </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/inspiration">   Inspiration  </NavLink> </li>
