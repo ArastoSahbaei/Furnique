@@ -1,0 +1,58 @@
+.tableSectionWrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    background-color: #292929;
+    grid-gap: 30px;
+}
+
+.tableImages {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    background-clip: padding-box;
+}
+
+.tableSectionTitle { 
+    font-size: 30px;
+    color: #ffffff;
+    grid-column: 1/10;
+    justify-self: center;
+}
+
+.firstTable {
+    background-color: white;
+    grid-column: 2/4;
+    border-radius: 30px;
+    background-clip: padding-box;
+}
+.secondTable {
+    background-color: white;
+    grid-column: 4/6;
+    border-radius: 30px;
+    background-clip: padding-box;
+}
+.thirdTable {
+    background-color: white;
+    grid-column: 6/8;
+    border-radius: 30px;
+    background-clip: padding-box;
+}
+.fourthTable {
+    background-color: white;
+    grid-column: 2/4;
+    border-radius: 30px;
+    background-clip: padding-box;
+}
+.fifthTable {
+    background-color: white;
+    grid-column: 4/6;
+    border-radius: 30px;
+    background-clip: padding-box;
+}
+.sixthTable {
+    background-color: white;
+    grid-column: 6/8;
+    border-radius: 30px;
+    background-clip: padding-box;
+}
+
