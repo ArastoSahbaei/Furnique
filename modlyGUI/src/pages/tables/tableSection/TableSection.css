@@ -2,57 +2,80 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     background-color: #292929;
-    grid-gap: 30px;
+    grid-gap: 2%;
 }
 
 .tableImages {
     width: 100%;
     height: auto;
-    border-radius: 30px;
-    background-clip: padding-box;
+    border-top-left-radius: 40%;
+    border-bottom-right-radius: 50%;
 }
 
 .tableSectionTitle { 
-    font-size: 30px;
+    font-size: 22px;
     color: #ffffff;
     grid-column: 1/10;
     justify-self: center;
 }
 
-.firstTable {
+.toBeChanged {
+    font-size: 22px;
+    margin-left: 10%;
+}
+
+.r1c1 {
     background-color: white;
     grid-column: 2/4;
-    border-radius: 30px;
-    background-clip: padding-box;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 50%;
 }
-.secondTable {
+.r1c2 {
     background-color: white;
     grid-column: 4/6;
-    border-radius: 30px;
-    background-clip: padding-box;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 50%;
 }
-.thirdTable {
+.r1c3 {
     background-color: white;
     grid-column: 6/8;
-    border-radius: 30px;
-    background-clip: padding-box;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 50%;
 }
-.fourthTable {
+.r2c1 {
     background-color: white;
     grid-column: 2/4;
-    border-radius: 30px;
-    background-clip: padding-box;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 50%;
 }
-.fifthTable {
+.r2c2 {
     background-color: white;
     grid-column: 4/6;
-    border-radius: 30px;
-    background-clip: padding-box;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 50%;
 }
-.sixthTable {
+.r2c3 {
     background-color: white;
     grid-column: 6/8;
-    border-radius: 30px;
-    background-clip: padding-box;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 50%;
+}
+.r3c1 {
+    background-color: white;
+    grid-column: 2/4;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 50%;
+}
+.r3c2 {
+    background-color: white;
+    grid-column: 4/6;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 50%;
+}
+.r3c3 {
+    background-color: white;
+    grid-column: 6/8;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 50%;
 }
 

@@ -12,40 +12,49 @@ export default function TableSection() {
         <div className="tableSectionWrapper">
             <span className="tableSectionTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa</span>
 
-            <div className="firstTable">
+            <div className="r1c1">
             <img className="tableImages" src={lmao}   alt="SpinnerLogo"/>
-            <p>Walnut Dream</p>
-            <button>hejsan</button>
+            <p className="toBeChanged"> <i class="fas fa-sliders-h"></i> Coconut Dream</p>
             </div>
 
-            <div className="secondTable">
+            <div className="r1c2">
             <img className="tableImages" src={lmao2}   alt="SpinnerLogo"/>
-            <p>Walnut Dream</p>
-            <button>hejsan</button>
+            <p className="toBeChanged"> <i class="fas fa-sliders-h"></i> Coconut Dream</p>
             </div>
 
-            <div className="thirdTable">
+            <div className="r1c3">
             <img className="tableImages" src={lmao3}   alt="SpinnerLogo"/>
-            <p>Walnut Dream</p>
-            <button>hejsan</button>
+            <p className="toBeChanged"> <i class="fas fa-sliders-h"></i> Coconut Dream</p>
             </div>
 
-            <div className="fourthTable">
+            <div className="r2c1">
             <img className="tableImages" src={lmao4}   alt="SpinnerLogo"/>
-            <p>Walnut Dream</p>
-            <button>hejsan</button>
+            <p className="toBeChanged"> <i class="fas fa-sliders-h"></i> Coconut Dream</p>
             </div>
 
-            <div className="fifthTable">
+            <div className="r2c2">
             <img className="tableImages" src={lmao5}   alt="SpinnerLogo"/>
-            <p>Walnut Dream</p>
-            <button>hejsan</button>
+            <p className="toBeChanged"> <i class="fas fa-sliders-h"></i> Coconut Dream</p>
             </div>
 
-            <div className="sixthTable">
+            <div className="r2c3">
             <img className="tableImages" src={lmao6}   alt="SpinnerLogo"/>
-            <p>Walnut Dream</p>
-            <button>hejsan</button>
+            <p className="toBeChanged"> <i class="fas fa-sliders-h"></i> Coconut Dream</p>
+            </div>
+
+            <div className="r3c1">
+            <img className="tableImages" src={lmao4}   alt="SpinnerLogo"/>
+            <p className="toBeChanged"> <i class="fas fa-sliders-h"></i> Coconut Dream</p>
+            </div>
+
+            <div className="r3c2">
+            <img className="tableImages" src={lmao5}   alt="SpinnerLogo"/>
+            <p className="toBeChanged"> <i class="fas fa-sliders-h"></i> Coconut Dream</p>
+            </div>
+
+            <div className="r3c3">
+            <img className="tableImages" src={lmao6}   alt="SpinnerLogo"/>
+            <p className="toBeChanged"> <i class="fas fa-sliders-h"></i> Coconut Dream</p>
             </div>
 
 
