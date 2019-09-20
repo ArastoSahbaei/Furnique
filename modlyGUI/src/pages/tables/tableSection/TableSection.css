@@ -2,7 +2,8 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     background-color: #292929;
-    grid-gap: 2%;
+    grid-gap: 50px;
+    padding: 1%;
 }
 
 .tableImages {
