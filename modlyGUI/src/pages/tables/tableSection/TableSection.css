@@ -83,19 +83,7 @@
     -webkit-transition:.5s;
 }
 
-.fa-sliders-h:hover {
-    color: rgb(255, 0, 0);
-    -webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
-    -moz-transform: rotate(180deg);        /* FF */
-    -o-transform: rotate(180deg);          /* Opera */
-    -ms-transform: rotate(180deg);         /* IE9 */
-    transform: rotate(180deg);             /* W3C compliant browsers */
-    cursor: pointer;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-}
+
 
 .r1c1, .r1c2, .r1c3, .r2c1, .r2c2, .r2c3, .r3c1, .r3c2, .r3c3 {
     background-color: white;
@@ -116,4 +104,14 @@
     -moz-transition:.5s;
     -webkit-transition:.5s;
 } 
+
+.r1c1:hover .fa-sliders-h {
+    color: rgb(255, 0, 0);
+    -webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
+    -moz-transform: rotate(180deg);        /* FF */
+    -o-transform: rotate(180deg);          /* Opera */
+    -ms-transform: rotate(180deg);         /* IE9 */
+    transform: rotate(180deg);             /* W3C compliant browsers */
+}
+
 
