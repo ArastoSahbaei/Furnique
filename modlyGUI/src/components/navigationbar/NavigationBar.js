@@ -14,6 +14,7 @@ export default function NavigationBar() {
     return (
         <Router>   
             <div className="navigationBarWrapper">
+            <Cart/>
                 <ul className="navigationList">
                     <span className="logotype">NyttNamn</span>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/home">          Hem          </NavLink> </li>
@@ -23,7 +24,7 @@ export default function NavigationBar() {
                     {/* <li  className="shoppingCartIcon"> <i className="fa fa-shopping-cart" aria-hidden="true"> </i> </li> */}
                  {/*    <li className="myLikesIcon">      <i className="fa fa-user"          aria-hidden="true"> </i></li> */}
                 <li className="itemList"><User/></li>
-                <Cart/>
+              
                 </ul>
 
                 <Suspense fallback={<img src={Spinner} alt="SpinnerLogo"/>}>

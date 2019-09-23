@@ -8,10 +8,8 @@
 }
 
 .bm-burger-button {
-    width: 36px;
-    height: 30px;
-    left: 36px;
-    top: 36px;
+    left: 90%;
+    top: 1.5%;
   }
   
   /* Color/shape of burger icon bars */
