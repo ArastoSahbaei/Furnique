@@ -2,7 +2,6 @@ import React, {Suspense, lazy} from 'react'
 import { Route, NavLink, Switch, BrowserRouter as Router } from 'react-router-dom'
 import './NavigationBar.css'
 import Spinner from '../../shared/images/spinner.gif'
-import SubHeader from './subheader/SubHeader.js'
 import Cart from '../cart/Cart'
 import User from '../user/User'
 const Home = lazy(() => import('../../pages/home/Home'));
@@ -14,17 +13,16 @@ export default function NavigationBar() {
     return (
         <Router>   
             <div className="navigationBarWrapper">
-            <Cart/>
+            
                 <ul className="navigationList">
                     <span className="logotype">NyttNamn</span>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/home">          Hem          </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tables">        Bord         </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/inspiration">   Inspiration  </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/kontakt">       Kontakt      </NavLink> </li>
-                    {/* <li  className="shoppingCartIcon"> <i className="fa fa-shopping-cart" aria-hidden="true"> </i> </li> */}
-                 {/*    <li className="myLikesIcon">      <i className="fa fa-user"          aria-hidden="true"> </i></li> */}
-                <li className="itemList"><User/></li>
-              
+                    <User/>
+                    <Cart/>
+               
                 </ul>
 
                 <Suspense fallback={<img src={Spinner} alt="SpinnerLogo"/>}>
