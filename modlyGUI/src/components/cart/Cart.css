@@ -1,7 +1,9 @@
 .fa-shopping-cart {
-    color: white;
     font-size: 30px;
+}
 
+.cartButton {
+    color: white;
 }
 
 .bm-burger-button {
