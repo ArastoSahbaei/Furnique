@@ -30,7 +30,7 @@
 }
 
 .r1c1:hover .tableImages, .r1c2:hover .tableImages, .r1c3:hover .tableImages,
-.r2c1:hover .tableImages, .r2c2:hover .tableImages, .r2c3:hover .tableImages
+.r2c1:hover .tableImages, .r2c2:hover .tableImages, .r2c3:hover .tableImages,
 .r3c1:hover .tableImages, .r3c2:hover .tableImages, .r3c3:hover .tableImages {
     border-top-left-radius: 30%;
     border-bottom-right-radius: 30%;
