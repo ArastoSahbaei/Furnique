@@ -6,17 +6,6 @@
     padding: 2%;
 }
 
-.tableImages {
-    width: 100%;
-    height: auto;
-    border-top-left-radius: 40%;
-    border-bottom-right-radius: 50%;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-}
-
 .tableSectionTitle { 
     font-size: 22px;
     color: #ffffff;
@@ -29,7 +18,20 @@
     margin-left: 10%;
 }
 
-.tableImages:hover {
+.tableImages {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 40%;
+    border-bottom-right-radius: 50%;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+}
+
+.r1c1:hover .tableImages, .r1c2:hover .tableImages, .r1c3:hover .tableImages,
+.r2c1:hover .tableImages, .r2c2:hover .tableImages, .r2c3:hover .tableImages
+.r3c1:hover .tableImages, .r3c2:hover .tableImages, .r3c3:hover .tableImages {
     border-top-left-radius: 30%;
     border-bottom-right-radius: 30%;
     -o-transition:.5s;
@@ -38,15 +40,16 @@
     -webkit-transition:.5s;
 }
 
-.r1c1:hover {
+.r1c1, .r1c2, .r1c3, .r2c1, .r2c2, .r2c3, .r3c1, .r3c2, .r3c3 {
     background-color: white;
-    border-top-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 50%;
+    box-shadow: 10px 20px 7px #000000;
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
     -webkit-transition:.5s;
-}
+} 
 
 .r1c1 {
     grid-column: 2/4;
@@ -76,26 +79,6 @@
     grid-column: 6/8;
 }
 
-.fa-sliders-h {
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-}
-
-
-
-.r1c1, .r1c2, .r1c3, .r2c1, .r2c2, .r2c3, .r3c1, .r3c2, .r3c3 {
-    background-color: white;
-    border-top-left-radius: 25%;
-    border-bottom-right-radius: 50%;
-    box-shadow: 10px 20px 7px #000000;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-} 
-
 .r1c1:hover, .r1c2:hover, .r1c3:hover, .r2c1:hover, .r2c2:hover, .r2c3:hover, .r3c1:hover, .r3c2:hover, .r3c3:hover {
     border-top-left-radius: 10%;
     border-bottom-right-radius: 10%;
@@ -105,7 +88,16 @@
     -webkit-transition:.5s;
 } 
 
-.r1c1:hover .fa-sliders-h {
+.fa-sliders-h {
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+}
+
+.r1c1:hover .fa-sliders-h, .r1c2:hover .fa-sliders-h, .r1c3:hover .fa-sliders-h,
+.r2c1:hover .fa-sliders-h, .r2c2:hover .fa-sliders-h, .r2c3:hover .fa-sliders-h,
+.r3c1:hover .fa-sliders-h, .r3c2:hover .fa-sliders-h, .r3c3:hover .fa-sliders-h {
     color: rgb(255, 0, 0);
     -webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
     -moz-transform: rotate(180deg);        /* FF */
