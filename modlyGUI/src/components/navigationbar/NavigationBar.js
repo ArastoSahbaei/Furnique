@@ -6,6 +6,7 @@ import SubHeader from './subheader/SubHeader.js'
 const Home = lazy(() => import('../../pages/home/Home'));
 const Container = lazy(() => import('../../animations/Container'));
 const Tables = lazy(() => import('../../pages/tables/Tables'));
+const Contact = lazy(() => import('../../pages/contact/Contact'));
 
 export default function NavigationBar() {
     return (
@@ -24,10 +25,10 @@ export default function NavigationBar() {
 
                 <Suspense fallback={<img src={Spinner} alt="SpinnerLogo"/>}>
                     <Switch>
-                        <Route exact path="/home"       component={Home} />
-                        <Route exact path="/tables"     component={Tables} />
+                        <Route exact path="/home"         component={Home} />
+                        <Route exact path="/tables"       component={Tables} />
                         <Route exact path="/inspiration"  component={Container} />
-                        <Route exact path="/kontakt"    component={Home} />
+                        <Route exact path="/kontakt"      component={Contact} />
                         <Route component={Home} />
                     </Switch>
                 </Suspense>
