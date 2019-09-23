@@ -11,9 +11,12 @@ export default function Cart() {
                   customBurgerIcon={<i className="fa fa-shopping-cart" aria-hidden="true"/>}
                   burgerButtonClassName={ "cartButton" }>
 
-                    <a id="home" className="menu-item" href="/">Home</a>
-                    <a id="about" className="menu-item" href="/about">About</a>
-                    <a id="contact" className="menu-item" href="/contact">Contact</a>
+                      <h1>Your Cart</h1>
+                      <span>Item: Black Marble table</span>
+                      <span>Price: £325.99</span>
+
+                      <span> <button>Keep Shopping</button> <button>Checkout</button> </span>
+                   
                   </Menu>  
         </div>
     )
