@@ -4,6 +4,7 @@
 
 .cartButton {
     color: white;
+    position: absolute !important;
 }
 
 .bm-burger-button {
