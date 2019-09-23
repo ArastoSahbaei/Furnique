@@ -1,5 +1,10 @@
+.fa-shopping-cart {
+    color: white;
+    font-size: 30px;
+
+}
+
 .bm-burger-button {
-    position: fixed;
     width: 36px;
     height: 30px;
     left: 36px;

@@ -3,6 +3,8 @@ import { Route, NavLink, Switch, BrowserRouter as Router } from 'react-router-do
 import './NavigationBar.css'
 import Spinner from '../../shared/images/spinner.gif'
 import SubHeader from './subheader/SubHeader.js'
+import Cart from '../cart/Cart'
+import User from '../user/User'
 const Home = lazy(() => import('../../pages/home/Home'));
 const Container = lazy(() => import('../../animations/Container'));
 const Tables = lazy(() => import('../../pages/tables/Tables'));
@@ -10,7 +12,7 @@ const Contact = lazy(() => import('../../pages/contact/Contact'));
 
 export default function NavigationBar() {
     return (
-        <Router>            
+        <Router>   
             <div className="navigationBarWrapper">
                 <ul className="navigationList">
                     <span className="logotype">NyttNamn</span>
@@ -18,10 +20,11 @@ export default function NavigationBar() {
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tables">        Bord         </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/inspiration">   Inspiration  </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/kontakt">       Kontakt      </NavLink> </li>
-                    <li className="shoppingCartIcon"> <i className="fa fa-shopping-cart" aria-hidden="true"> </i></li>
-                    <li className="myLikesIcon">      <i className="fa fa-user"          aria-hidden="true"> </i></li>
+                    {/* <li  className="shoppingCartIcon"> <i className="fa fa-shopping-cart" aria-hidden="true"> </i> </li> */}
+                 {/*    <li className="myLikesIcon">      <i className="fa fa-user"          aria-hidden="true"> </i></li> */}
+                <li className="itemList"><User/></li>
+                <Cart/>
                 </ul>
-                <SubHeader/>
 
                 <Suspense fallback={<img src={Spinner} alt="SpinnerLogo"/>}>
                     <Switch>
