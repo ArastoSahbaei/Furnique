@@ -7,7 +7,6 @@ export default function Cart() {
         <div>
             <Menu right width={350} 
                   isOpen={false} 
-                  id={"testi"} className={ "my-menu" } 
                   customBurgerIcon={<i className="fa fa-shopping-cart" aria-hidden="true"/>}
                   burgerButtonClassName={ "cartButton" }>
 

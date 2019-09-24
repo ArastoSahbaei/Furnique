@@ -16,7 +16,7 @@ const style = {
 };
 
 export default class Main extends Component {
-  
+
   componentDidMount() {
     this.sceneSetup();
     addLights({ scene: this.scene });
@@ -63,24 +63,26 @@ export default class Main extends Component {
 
   startAnimationLoop = () => {
     const tableSurface = this.scene.getObjectByName('tableSurface');
-    tableSurface.rotation.y += this.title.Rotation;
-    tableSurface.scale.x = this.title.Bordsbredd;
-    tableSurface.scale.z = this.title.Bordslängd;
-    tableSurface.scale.y = this.title.Bordsdjup;
+    tableSurface.rotation.y += this.settings.Rotation;
+    tableSurface.scale.x = this.settings.Bordsbredd;
+    tableSurface.scale.z = this.settings.Bordslängd;
+    tableSurface.scale.y = this.settings.Bordsdjup;
 
     const tableLeg1 = this.scene.getObjectByName('tableLeg1');const tableLeg2 = this.scene.getObjectByName('tableLeg2');const tableLeg3 = this.scene.getObjectByName('tableLeg3');const tableLeg4 = this.scene.getObjectByName('tableLeg4');
-    tableLeg1.scale.x = this.title.BenBredd;  tableLeg2.scale.x = this.title.BenBredd;  tableLeg3.scale.x = this.title.BenBredd;  tableLeg4.scale.x = this.title.BenBredd;
-    tableLeg1.scale.z = this.title.BenLängd; tableLeg2.scale.z = this.title.BenLängd; tableLeg3.scale.z = this.title.BenLängd; tableLeg4.scale.z = this.title.BenLängd;
-    tableLeg1.scale.y = this.title.BenHöjd;  tableLeg2.scale.y = this.title.BenHöjd;  tableLeg3.scale.y = this.title.BenHöjd;  tableLeg4.scale.y = this.title.BenHöjd;
+    tableLeg1.scale.x = this.settings.BenBredd;  tableLeg2.scale.x = this.settings.BenBredd;  tableLeg3.scale.x = this.settings.BenBredd;  tableLeg4.scale.x = this.settings.BenBredd;
+    tableLeg1.scale.z = this.settings.BenLängd; tableLeg2.scale.z = this.settings.BenLängd; tableLeg3.scale.z = this.settings.BenLängd; tableLeg4.scale.z = this.settings.BenLängd;
+    tableLeg1.scale.y = this.settings.BenHöjd;  tableLeg2.scale.y = this.settings.BenHöjd;  tableLeg3.scale.y = this.settings.BenHöjd;  tableLeg4.scale.y = this.settings.BenHöjd;
 
-    tableLeg1.position.x = -this.title.BenPositionX; tableLeg2.position.x = this.title.BenPositionX; tableLeg3.position.x = -this.title.BenPositionX; tableLeg4.position.x = this.title.BenPositionX;
-    tableLeg1.position.z = this.title.BenPositionY; tableLeg2.position.z = -this.title.BenPositionY; tableLeg3.position.z = -this.title.BenPositionY; tableLeg4.position.z = this.title.BenPositionY;
+    tableLeg1.position.x = -this.settings.BenPositionX; tableLeg2.position.x = this.settings.BenPositionX; tableLeg3.position.x = -this.settings.BenPositionX; tableLeg4.position.x = this.settings.BenPositionX;
+    tableLeg1.position.z = this.settings.BenPositionY; tableLeg2.position.z = -this.settings.BenPositionY; tableLeg3.position.z = -this.settings.BenPositionY; tableLeg4.position.z = this.settings.BenPositionY;
     
-    tableSurface.position.y = this.title.BenHöjd * 0.65;
-    tableLeg1.position.y = -this.title.BenHöjd * 0.65; 
-    tableLeg2.position.y = -this.title.BenHöjd * 0.65; 
-    tableLeg3.position.y = -this.title.BenHöjd * 0.65; 
-    tableLeg4.position.y = -this.title.BenHöjd * 0.65; 
+    tableSurface.position.y = this.settings.BenHöjd * 0.65;
+    tableLeg1.position.y = -this.settings.BenHöjd * 0.65; 
+    tableLeg2.position.y = -this.settings.BenHöjd * 0.65; 
+    tableLeg3.position.y = -this.settings.BenHöjd * 0.65; 
+    tableLeg4.position.y = -this.settings.BenHöjd * 0.65; 
+
+    console.log(this.settings)
 
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
@@ -107,21 +109,21 @@ export default class Main extends Component {
     this.Rotation = 0.001;
 }
 
-    this.title = new controls();
+    this.settings = new controls();
     this.surface = this.gui.addFolder('Yta')
 
-    this.surface.add(this.title, 'Bordsbredd', 0.5, 3);
-    this.surface.add(this.title, 'Bordslängd', 0.5, 3);
-    this.surface.add(this.title, 'Bordsdjup', 0.5, 2);
+    this.surface.add(this.settings, 'Bordsbredd', 0.5, 3);
+    this.surface.add(this.settings, 'Bordslängd', 0.5, 3);
+    this.surface.add(this.settings, 'Bordsdjup', 0.5, 2);
 
     this.legs = this.gui.addFolder('Ben')
-    this.legs.add(this.title, 'BenBredd', 1, 3);
-    this.legs.add(this.title, 'BenLängd', 1, 3);
-    this.legs.add(this.title, 'BenHöjd', 0.1, 2);
-    this.legs.add(this.title, 'BenPositionX', 0.5, 0.67);
-    this.legs.add(this.title, 'BenPositionY', 0.5, 0.67);
+    this.legs.add(this.settings, 'BenBredd', 1, 3);
+    this.legs.add(this.settings, 'BenLängd', 1, 3);
+    this.legs.add(this.settings, 'BenHöjd', 0.1, 2);
+    this.legs.add(this.settings, 'BenPositionX', 0.5, 0.67);
+    this.legs.add(this.settings, 'BenPositionY', 0.5, 0.67);
 
-    this.gui.add(this.title, 'Rotation', 0.0, 0.01);
+    this.gui.add(this.settings, 'Rotation', 0.0, 0.01);
     this.gui.add(update, 'updateMaterial')
   }
 
