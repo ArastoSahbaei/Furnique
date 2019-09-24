@@ -43,7 +43,7 @@ export default class Main extends Component {
     this.helper = new THREE.CameraHelper( this.camera );
     this.scene.add( this.helper ); 
     this.controls = new OrbitControls(this.camera, this.el);
-    this.renderer = new THREE.WebGLRenderer({antialias: true});
+    this.renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
     this.renderer.setSize(width, height);
     this.renderer.shadowMap.enabled = true;
     this.renderer.shadowMapType = THREE.PCFShadowMap;

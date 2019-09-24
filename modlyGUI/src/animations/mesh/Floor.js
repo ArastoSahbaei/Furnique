@@ -10,7 +10,7 @@ const floorHeightSegments = 100;
 
 const floorGeometry = new THREE.PlaneGeometry( floorWidh, floorHeight, floorWidthSegments, floorHeightSegments );
 floorGeometry.rotateX( Math.PI / 2 );
-const floorMaterial = new THREE.MeshStandardMaterial({map: WhiteMarble(), side: THREE.DoubleSide, wireframe: false}),
+const floorMaterial = new THREE.MeshStandardMaterial({color: 0xCECECE, side: THREE.DoubleSide, wireframe: false}),
 
 floor = new THREE.Mesh( floorGeometry, floorMaterial );
 floor.receiveShadow = true;

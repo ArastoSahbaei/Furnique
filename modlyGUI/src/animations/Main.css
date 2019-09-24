@@ -1,0 +1,9 @@
+canvas {
+    margin-left: 25%;
+}
+
+#gui { 
+    position: absolute;
+    top: 60px; 
+    right: 24%;
+ }
