@@ -83,6 +83,8 @@ export default class Main extends Component {
     tableLeg4.position.y = -this.settings.BenHöjd * 0.65; 
 
     console.log(this.settings)
+    sessionStorage.setItem("meshObject", JSON.stringify(this.settings));
+
 
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
