@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import * as THREE from "three"
+import './Main.css'
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import texture1 from './textures/DarkMarble'
 import texture2 from './textures/WhiteMarble'
@@ -10,7 +11,8 @@ import addLights from './lightning/Lights'
 import * as dat from 'dat.gui'
 
 const style = {
-  height: 740
+  height: 740,
+  width: 740
 };
 
 export default class Main extends Component {
@@ -40,8 +42,8 @@ export default class Main extends Component {
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     this.camera.position.x = 0; this.camera.position.y = 2; this.camera.position.z = 3;
-    this.helper = new THREE.CameraHelper( this.camera );
-    this.scene.add( this.helper ); 
+/*     this.helper = new THREE.CameraHelper( this.camera );
+    this.scene.add( this.helper );  */
     this.controls = new OrbitControls(this.camera, this.el);
     this.renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
     this.renderer.setSize(width, height);
