@@ -82,9 +82,7 @@ export default class Main extends Component {
     tableLeg3.position.y = -this.settings.BenHöjd * 0.65; 
     tableLeg4.position.y = -this.settings.BenHöjd * 0.65; 
 
-    console.log(this.settings)
-    sessionStorage.setItem("meshObject", JSON.stringify(this.settings));
-
+    sessionStorage.setItem("meshObject", JSON.stringify(this.settings));  /* REMINDER: Dont think i can use this for object reference */
 
     this.renderer.render(this.scene, this.camera);
     this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
@@ -129,7 +127,16 @@ export default class Main extends Component {
     this.gui.add(update, 'updateMaterial')
   }
 
+  displayMeshParameters = () => {
+    console.log(this.settings)
+  }
+
   render() {
-    return <div style={style} ref={ref => (this.el = ref)} />;
+    return(
+      <div>
+        <button onClick={this.displayMeshParameters}>Display Mesh Parameters</button>
+        <div style={style} ref={ref => (this.el = ref)} />
+      </div>
+    ) 
       }
 }
