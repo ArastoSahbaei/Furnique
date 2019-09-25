@@ -4,6 +4,7 @@ import './NavigationBar.css'
 import Spinner from '../../shared/images/spinner.gif'
 import Cart from '../cart/Cart'
 import User from '../user/User'
+import {CartMenuProvider} from '../../components/cart/CartMenuProvider'
 const Home = lazy(() => import('../../pages/home/Home'));
 const Container = lazy(() => import('../../animations/Container'));
 const Tables = lazy(() => import('../../pages/tables/Tables'));
@@ -21,7 +22,9 @@ export default function NavigationBar() {
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/inspiration">   Inspiration  </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/kontakt">       Kontakt      </NavLink> </li>
                     <User/>
+                    <CartMenuProvider>
                     <Cart/>
+                    </CartMenuProvider>
                
                 </ul>
 
