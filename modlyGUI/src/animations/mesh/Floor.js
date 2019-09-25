@@ -1,5 +1,4 @@
 import * as THREE from "three";
-import WhiteMarble from '../textures/WhiteMarble'
 
 export default ({ scene }) => {
 

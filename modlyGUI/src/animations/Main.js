@@ -48,7 +48,7 @@ export default class Main extends Component {
     this.renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
     this.renderer.setSize(width, height);
     this.renderer.shadowMap.enabled = true;
-    this.renderer.shadowMapType = THREE.PCFShadowMap;
+    this.renderer.shadowMap.type = THREE.PCFShadowMap;
     this.el.appendChild(this.renderer.domElement); // mount using React ref
   };
 
