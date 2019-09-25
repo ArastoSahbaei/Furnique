@@ -1,14 +1,14 @@
 import React from 'react'
 import './Contact.css'
 import { Cart } from './Cart.js'
-import { TshirtList } from './TshirtList'
+import { TableList } from './TableList'
 
 export default function Contact() {
 
     return (
         <div>
                 < Cart />
-                <TshirtList />
+                <TableList />
         </div>
     )
 }

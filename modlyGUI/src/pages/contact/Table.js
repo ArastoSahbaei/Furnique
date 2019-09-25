@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
 import Buttonz from '../../animations/addToCartButton/AddToCartButton'
 
-export const Tshirt = (props) => {
+export const Table = (props) => {
   const [cart, setCart] = useContext(CartContext);
 
   const addToCart = () => {
-    const tshirt = { name: props.name, price: props.price };
-    setCart(currentState => [...currentState, tshirt]);
+    const table = { name: props.name, price: props.price };
+    setCart(currentState => [...currentState, table]);
   }
 
   return (
