@@ -7,6 +7,10 @@ export default function AddToCartButton() {
 
     return (
         <div>
+            {/* TODO:
+             1. Add the object to cart
+             2. Display the object in the cart menu 
+             */}
             <button onClick={menuHandler.toggleMenu}>Add to cart</button>
         </div>
     )
