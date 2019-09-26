@@ -4,7 +4,7 @@ export const MeshContext = createContext();
 
 export const MeshProvider = (props) => {
 
-  const [meshObjects, setMeshObjects] = useState({name: "roflmao", price: 13});
+  const [meshObjects, setMeshObjects] = useState({});
 
   return (
     <MeshContext.Provider value={[meshObjects, setMeshObjects]}>

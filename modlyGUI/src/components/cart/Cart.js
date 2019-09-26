@@ -4,10 +4,15 @@ import {CartContext} from '../../pages/contact/CartContext';
 import { slide as Menu } from 'react-burger-menu'
 import './Cart.css'
 
-export default function Cart() {
+export default function Cart(props) {
     const [cart, setCart] = useContext(CartContext);
 /*     const totalPrice = cart.reduce((acc, curr) => acc + curr.price, 0); */
     const menuHandler = useContext(CartMenuContext)
+
+    const displayMyCart = () => {
+        {console.log(cart[0].Bordsbredd)}
+        {console.log(cart)}
+    }
 
         return (
         <div>
@@ -21,6 +26,9 @@ export default function Cart() {
                     <span>items in cart : {cart.length}</span>
                {/*      <span>total price : {totalPrice}£</span> */}
                     <span><button onClick={menuHandler.toggleMenu}>Keep Shopping</button> <button>Checkout</button></span>
+
+                   <button onClick={displayMyCart}>DISPLAY MY CART</button>
+
                 </Menu>  
         </div>
     )

@@ -22,8 +22,8 @@ export default function AddToCartButton(props) {
              1. Add the object to cart
              2. Display the object in the cart menu 
              */}
-            <button onClick={menuHandler.toggleMenu}>Add to cart</button>
-            <button onClick={display}>Add Mesh To Array</button>
+            <button onClick={menuHandler.toggleMenu}>Open Cart</button>
+            <button onClick={display}>Add Mesh to Cart</button>
         </div>
     )
 }
