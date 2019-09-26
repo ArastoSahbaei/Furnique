@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import SocialMedia from './socialmedia/SocialMedia'
-import SubHeader from '../../components/navigationbar/subheader/SubHeader'
+import SubHeader from '../../components/subheader/SubHeader'
 
 export default function Footer() {
     return (
