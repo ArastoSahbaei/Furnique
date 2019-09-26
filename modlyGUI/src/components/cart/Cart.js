@@ -25,6 +25,7 @@ export default function Cart(props) {
                     <span> BordsBredd: {item.Bordsbredd} </span>
                     <span> Bordslängd: {item.Bordslängd} </span>
                     <span> Bordsdjup:  {item.Bordsdjup}  </span>
+                    <hr />
                 </div>
                 ))}
 
