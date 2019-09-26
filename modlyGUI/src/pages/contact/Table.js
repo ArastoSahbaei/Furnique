@@ -8,6 +8,7 @@ export const Table = (props) => {
   const addToCart = () => {
     const table = { name: props.name, price: props.price };
     setCart(currentState => [...currentState, table]);
+    console.log({cart})
   }
 
   return (

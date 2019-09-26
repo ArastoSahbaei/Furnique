@@ -1,9 +1,20 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import {CartMenuContext} from '../../components/cart/CartMenuProvider'
+import {CartContext} from '../../pages/contact/CartContext';
+import {MeshContext} from './MeshContext'
 
-export default function AddToCartButton() {
+export default function AddToCartButton(props) {
+    
+    const menuHandler = useContext(CartMenuContext);
+    const [meshObjects, setMeshObjects] = useContext(MeshContext);
+    const [cart, setCart] = useContext(CartContext);
 
-    const menuHandler = useContext(CartMenuContext)
+    const display = () => {
+        /* setMeshObjects(props.meshObjectValues) */
+        setCart(currentState => [...currentState, props.meshObjectValues])
+       /*  console.log(props.meshObjectValues) */
+       /*  console.log({meshObjects}) */
+    }
 
     return (
         <div>
@@ -12,6 +23,7 @@ export default function AddToCartButton() {
              2. Display the object in the cart menu 
              */}
             <button onClick={menuHandler.toggleMenu}>Add to cart</button>
+            <button onClick={display}>Add Mesh To Array</button>
         </div>
     )
 }

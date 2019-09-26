@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import * as THREE from "three"
 import './Main.css'
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+import AddToCartButton from './addToCartButton/AddToCartButton'
 import texture1 from './textures/DarkMarble'
 import texture2 from './textures/WhiteMarble'
 import addFloor from './mesh/Floor'
@@ -16,6 +17,10 @@ const style = {
 };
 
 export default class Main extends Component {
+
+  state = {
+    data: []
+}
 
   componentDidMount() {
     this.sceneSetup();
@@ -129,12 +134,16 @@ export default class Main extends Component {
 
   displayMeshParameters = () => {
     console.log(this.settings)
+    this.setState({
+      data: {...this.settings}
+    })
   }
 
   render() {
     return(
       <div>
         <button onClick={this.displayMeshParameters}>Display Mesh Parameters</button>
+        <AddToCartButton meshObjectValues={this.state.data} />
         <div style={style} ref={ref => (this.el = ref)} />
       </div>
     ) 
