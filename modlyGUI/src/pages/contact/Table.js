@@ -13,8 +13,8 @@ export const Table = (props) => {
 
   return (
     <div>
-      <h2>{props.name}</h2>
-      <h4>{props.price}</h4>
+       <h2>{props.name}</h2>
+     {/*  <h4>{props.price}</h4> */}
       <button onClick={addToCart}><Buttonz/></button>
       <hr />
     </div>
