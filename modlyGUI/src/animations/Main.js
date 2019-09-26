@@ -142,7 +142,7 @@ export default class Main extends Component {
   render() {
     return(
       <div>
-        <button onClick={this.displayMeshParameters}>Display Mesh Parameters</button>
+        <button onClick={this.displayMeshParameters}>SetParametersToState</button>
         <AddToCartButton meshObjectValues={this.state.data} />
         <div style={style} ref={ref => (this.el = ref)} />
       </div>
