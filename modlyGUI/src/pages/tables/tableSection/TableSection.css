@@ -89,21 +89,21 @@
 } 
 
 .fa-sliders-h {
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
+    -o-transition: .7s;
+    -ms-transition: .7s;
+    -moz-transition: .7s;
+    -webkit-transition: .7s;
 }
 
 .r1c1:hover .fa-sliders-h, .r1c2:hover .fa-sliders-h, .r1c3:hover .fa-sliders-h,
 .r2c1:hover .fa-sliders-h, .r2c2:hover .fa-sliders-h, .r2c3:hover .fa-sliders-h,
 .r3c1:hover .fa-sliders-h, .r3c2:hover .fa-sliders-h, .r3c3:hover .fa-sliders-h {
-    color: rgb(255, 0, 0);
-    -webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
-    -moz-transform: rotate(180deg);        /* FF */
-    -o-transform: rotate(180deg);          /* Opera */
-    -ms-transform: rotate(180deg);         /* IE9 */
-    transform: rotate(180deg);             /* W3C compliant browsers */
+    color: #427271;
+    -webkit-transform: rotate(90deg);     /* Chrome and other webkit browsers */
+    -moz-transform: rotate(90deg);        /* FF */
+    -o-transform: rotate(90deg);          /* Opera */
+    -ms-transform: rotate(90deg);         /* IE9 */
+    transform: rotate(90deg);             /* W3C compliant browsers */
 }
 
 
