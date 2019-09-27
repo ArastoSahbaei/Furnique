@@ -135,16 +135,13 @@ export default class Main extends Component {
 
   displayMeshParameters = () => {
     console.log(this.settings)
-    this.setState({
-      data: {...this.settings}
-    })
+    this.setState({ data: {...this.settings} })
   }
 
   render() {
     return(
       <div>
-        <button onClick={this.displayMeshParameters}>SetParametersToState</button>
-        <AddToCartButton meshObjectValues={this.state.data} />
+        <AddToCartButton meshObjectValues={this.state.data} updateMeshState={() => this.displayMeshParameters()}/>
         <div style={style} ref={ref => (this.el = ref)} />
       </div>
     ) 
