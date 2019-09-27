@@ -1,11 +1,11 @@
 import React,  {useContext} from 'react'
 import {CartMenuContext} from './CartMenuProvider'
-import {CartContext} from '../../pages/contact/CartContext';
+import {CartContext} from '../addToCartButton/CartContext';
 import { slide as Menu } from 'react-burger-menu'
 import './Cart.css'
 
 export default function Cart(props) {
-    const [cart, setCart] = useContext(CartContext);
+    const [cart] = useContext(CartContext);
     const menuHandler = useContext(CartMenuContext)
 
         return (

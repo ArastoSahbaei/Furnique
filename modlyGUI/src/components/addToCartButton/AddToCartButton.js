@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
-import {CartMenuContext} from '../../components/cart/CartMenuProvider'
-import {CartContext} from '../../pages/contact/CartContext';
+import {CartMenuContext} from '../cart/CartMenuProvider'
+import {CartContext} from './CartContext';
 
 export default function AddToCartButton(props) {
     

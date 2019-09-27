@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import * as THREE from "three"
 import './Main.css'
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
-import AddToCartButton from './addToCartButton/AddToCartButton'
+import AddToCartButton from '../components/addToCartButton/AddToCartButton'
 import texture1 from './textures/DarkMarble'
 import texture2 from './textures/WhiteMarble'
 import addFloor from './mesh/Floor'
@@ -29,6 +29,7 @@ export default class Main extends Component {
     addFloor({ scene: this.scene })
     addTable({ scene: this.scene }); 
     this.userGUI();
+    this.setState({data: {...this.settings}})
     this.startAnimationLoop();
     window.addEventListener("resize", this.handleWindowResize);
   }
