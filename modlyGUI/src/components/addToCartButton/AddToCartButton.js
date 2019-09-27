@@ -9,13 +9,13 @@ export default function AddToCartButton(props) {
 
     const addMeshToCart = () => {
         setCart(currentState => [...currentState, props.meshObjectValues])
+        menuHandler.toggleMenu()
     }
 
     return (
         <div>
             <button onClick={props.updateMeshState}>Set Mesh To State</button>
-            <button onClick={addMeshToCart}>Add Mesh State To Cart</button>
-            <button onClick={menuHandler.toggleMenu}>Open Cart</button>
+            <button onClick={addMeshToCart}>Add To Cart</button>
         </div>
     )
 }
