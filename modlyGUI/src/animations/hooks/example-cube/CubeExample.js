@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SceneManager from '../ThreeJSManager';
 import Cube from './Cube';
+import TableSurface from './TableSurface';
 import Grid from './Grid';
 import CameraControls from './CameraControls';
 import { getCamera, getRenderer, getScene } from './threeSetup';
@@ -15,6 +16,7 @@ const CubeExample = () => {
       <CameraControls />
       {showGrid && <Grid />}
       {showCube && <Cube color={Number(`0x${color}`)} />}
+      {showCube && <TableSurface />}
 
       <div>
           <input type="text" placeholder="enter a hex color" onChange={e => changeColor(e.target.value)} />
