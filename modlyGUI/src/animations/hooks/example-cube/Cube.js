@@ -13,22 +13,19 @@ const Cube = props => {
     cube.castShadow = true;
     cube.position.y = 50;
     scene.add(cube);
-
     return cube;
   };
 
   const { getEntity, timer } = useThree(setup);
 
-  useEffect(
-    () => {
+  useEffect(() => {
       const cube = getEntity();
       cube.material.color.setHex(props.color);
     },
     [props.color],
   );
 
-  useEffect(
-    () => {
+  useEffect(() => {
       const cube = getEntity();
       const oscillator = Math.sin(timer / 1000) * Math.PI - Math.PI;
       cube.rotation.y = oscillator;

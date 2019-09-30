@@ -8,7 +8,7 @@ const Canvas = ({ style }, ref) => {
   };
 
   useEffect(() => {
-    window.addEventListener('resize', onWindowResize);
+      window.addEventListener('resize', onWindowResize);
     return () => {
       window.removeEventListener('resize', onWindowResize);
     };

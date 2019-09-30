@@ -11,49 +11,23 @@ const CubeExample = () => {
   const [showCube, toggleShowCube] = useState(true);
 
   return (
-    <SceneManager
-      getCamera={getCamera}
-      getRenderer={getRenderer}
-      getScene={getScene}
-      canvasStyle={{
-        height: '40%',
-        width: '40%',
-      }}
-    >
+    <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '40%', width: '40%'}}>
       <CameraControls />
       {showGrid && <Grid />}
       {showCube && <Cube color={Number(`0x${color}`)} />}
-      <div
-       
-      >
-        <div
-         
-        >
-          <input
-            type="text"
-            placeholder="enter a hex color"
-            onChange={e => changeColor(e.target.value)}
-          />
 
+      <div>
+          <input type="text" placeholder="enter a hex color" onChange={e => changeColor(e.target.value)} />
           <label>
-            <input
-              type="checkbox"
-              checked={showGrid}
-              onChange={() => toggleShowGrid(!showGrid)}
-            />
-            show grid
+            <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> 
+            show grid 
           </label>
 
           <label>
-            <input
-              type="checkbox"
-              checked={showCube}
-              onChange={() => toggleShowCube(!showCube)}
-            />
+            <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} />
             show cube
           </label>
         </div>
-      </div>
     </SceneManager>
   );
 };
