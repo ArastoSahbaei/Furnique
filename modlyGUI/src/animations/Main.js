@@ -18,9 +18,7 @@ const style = {
 
 export default class Main extends Component {
 
-  state = {
-    data: []
-}
+  state = { data: [] }
 
   componentDidMount() {
     this.sceneSetup();
