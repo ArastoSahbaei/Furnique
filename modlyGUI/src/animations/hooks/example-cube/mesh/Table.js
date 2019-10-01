@@ -30,8 +30,8 @@ const TableSurface = props => {
 
     useEffect(() => {
         const tableSurface = getEntity();
-        /* tableSurface.rotation.y += 0.001;
-        tableSurface.rotation.z += -0.001; */
+        tableSurface.rotation.y += props.rotationSpeed;
+        tableSurface.rotation.z += -props.rotationSpeed;
       },
       [timer],
     );
