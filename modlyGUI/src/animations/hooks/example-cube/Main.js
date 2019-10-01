@@ -15,20 +15,13 @@ const CubeExample = () => {
     <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '40%', width: '40%'}}>
       <CameraControls />
       {showGrid && <Grid />}
-      {showCube && <Cube color={Number(`0x${color}`)} />}
       {showCube && <Table />}
+     {/*  {showCube && <Cube color={Number(`0x${color}`)} />} */}
 
       <div>
           <input type="text" placeholder="enter a hex color" onChange={e => changeColor(e.target.value)} />
-          <label>
-            <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> 
-            show grid 
-          </label>
-
-          <label>
-            <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} />
-            show cube
-          </label>
+            <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid 
+            <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table 
         </div>
     </SceneManager>
   );
