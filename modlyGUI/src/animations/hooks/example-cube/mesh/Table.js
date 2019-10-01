@@ -32,6 +32,8 @@ const TableSurface = props => {
         const tableSurface = getEntity();
         tableSurface.rotation.y += props.rotationSpeed;
         tableSurface.rotation.z += -props.rotationSpeed;
+        tableSurface.scale.x = props.bordsBredd;
+        tableSurface.scale.z = props.Bordslängd;
       },
       [timer],
     );
