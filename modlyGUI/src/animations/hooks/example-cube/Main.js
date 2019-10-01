@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import SceneManager from '../threejsconfigurations';
+import SceneManager from '../ThreeJSManager';
 import Cube from './Cube';
-import TableSurface from './TableSurface';
+import Table from './Table';
 import Grid from './Grid';
-import CameraControls from '../threejsconfigurations/CameraControls';
+import CameraControls from './CameraControls';
 import { getCamera, getRenderer, getScene } from './threeSetup';
 
-const Main = () => {
+const CubeExample = () => {
   const [color, changeColor] = useState('0000ff');
   const [showGrid, toggleShowGrid] = useState(true);
   const [showCube, toggleShowCube] = useState(true);
@@ -16,7 +16,7 @@ const Main = () => {
       <CameraControls />
       {showGrid && <Grid />}
       {showCube && <Cube color={Number(`0x${color}`)} />}
-      {showCube && <TableSurface />}
+      {showCube && <Table />}
 
       <div>
           <input type="text" placeholder="enter a hex color" onChange={e => changeColor(e.target.value)} />
@@ -34,4 +34,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default CubeExample;
