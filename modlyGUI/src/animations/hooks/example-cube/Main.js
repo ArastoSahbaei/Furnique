@@ -16,6 +16,9 @@ const CubeExample = () => {
   const [BenBredd, setBenBredd] = useState(2)
   const [BenLängd, setBenLängd] = useState(2)
   const [BenHöjd, setBenHöjd] = useState(1.3)
+  const [BenPositionX, setBenPositionX] = useState(0.65)
+  const [BenPositionY, setBenPositionY] = useState(0.65)
+
 
   return (
     <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '40%', width: '40%'}}>
@@ -27,7 +30,10 @@ const CubeExample = () => {
                           Bordsdjup={Bordsdjup}
                           BenBredd={BenBredd}
                           BenLängd={BenLängd}
-                          BenHöjd={BenHöjd} />}
+                          BenHöjd={BenHöjd} 
+                          BenPositionX={BenPositionX} 
+                          BenPositionY={BenPositionY} 
+                          />}
 
       <div>
             <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br />
@@ -40,6 +46,8 @@ const CubeExample = () => {
             <input type="range" name="points" min="0" max="10" onChange={e => setBenBredd(e.target.value)} /> setBenBredd <br />
             <input type="range" name="points" min="0" max="10" onChange={e => setBenLängd(e.target.value)} /> setBenLängd <br />
             <input type="range" name="points" min="0" max="10" onChange={e => setBenHöjd(e.target.value)} />  setBenHöjd  <br />
+            <input type="range" name="points" min="0" max="10" onChange={e => setBenPositionX(e.target.value)} />  setBenPositionX  <br />
+            <input type="range" name="points" min="0" max="10" onChange={e => setBenPositionY(e.target.value)} />  setBenPositionY  <br />
 
         </div>
     </SceneManager>

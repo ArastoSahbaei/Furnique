@@ -23,26 +23,39 @@ const TableSurface = props => {
 
         tableSurface.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
         scene.add(tableSurface);
-        return tableSurface;
+        return [tableSurface, tableLeg1, tableLeg2, tableLeg3, tableLeg4];
     };
+
 
     const { getEntity, timer } = useThree(setup);
 
     useEffect(() => {
-        const tableSurface = getEntity();
-        const tableLeg1 = getEntity();
+        const table = getEntity();
 
-        tableSurface.rotation.y += -props.rotationSpeed;
-        tableSurface.scale.x = props.bordsBredd;
-        tableSurface.scale.z = props.Bordslängd;
-        tableSurface.scale.y = props.Bordsdjup
+        table[0].rotation.y += -props.rotationSpeed;
+        table[0].scale.x = props.bordsBredd;
+        table[0].scale.z = props.Bordslängd;
+        table[0].scale.y = props.Bordsdjup
 
-        tableLeg1.scale.x = props.BenBredd;
-        tableLeg1.scale.z = props.BenLängd;
-        tableLeg1.scale.y = props.BenHöjd
+        table[1].scale.x = props.BenBredd; table[2].scale.x = props.BenBredd; table[3].scale.x = props.BenBredd; table[4].scale.x = props.BenBredd;
+        table[1].scale.z = props.BenLängd; table[2].scale.z = props.BenLängd; table[3].scale.z = props.BenLängd; table[4].scale.z = props.BenLängd;
+        table[1].scale.y = props.BenHöjd;  table[2].scale.y = props.BenHöjd;  table[3].scale.y = props.BenHöjd;  table[4].scale.y = props.BenHöjd;
 
-      /*   tableLeg1.position.x = props.benBredd;
-        tableLeg1.position.z = props.benBredd; */
+        table[1].position.x = -props.BenPositionX; 
+        table[2].position.x = -props.BenPositionX; 
+        table[3].position.x = props.BenPositionX; 
+        table[4].position.x = props.BenPositionX;
+
+        table[1].position.z = -props.BenPositionY; 
+        table[2].position.z = props.BenPositionY; 
+        table[3].position.z = props.BenPositionY; 
+        table[4].position.z = -props.BenPositionY; 
+        
+        table[0].position.y =  props.BenHöjd * 0.65;
+        table[1].position.y = -props.BenHöjd * 0.65;
+        table[2].position.y = -props.BenHöjd * 0.65;
+        table[3].position.y = -props.BenHöjd * 0.65;
+        table[4].position.y = -props.BenHöjd * 0.65;
 
       },
       [timer],
