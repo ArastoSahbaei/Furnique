@@ -2,7 +2,7 @@ import * as THREE from 'three';
 
 export const getCamera = ({ offsetWidth, offsetHeight }) => {
   const camera = new THREE.PerspectiveCamera(75, offsetWidth / offsetHeight, 0.1, 1000);
-  camera.position.set(50, 150, 0);
+  camera.position.set(0, 2, 3);
   return camera;
 };
 

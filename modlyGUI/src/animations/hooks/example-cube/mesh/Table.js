@@ -11,7 +11,6 @@ const TableSurface = props => {
         const tableSurfaceGeometry = new THREE.BoxGeometry(boxWidth, boxDepth, boxHeight);
         const tableSurfaceMaterial = new THREE.MeshStandardMaterial({map: WoodTexture(), wireframe: false});
         const tableSurface = new THREE.Mesh(tableSurfaceGeometry, tableSurfaceMaterial);
-        tableSurface.name = 'tableSurface'
         tableSurface.castShadow = true;
 
         const tableLegsGeometry = new THREE.BoxGeometry(0.05, 1.3, 0.05);
@@ -20,10 +19,7 @@ const TableSurface = props => {
         const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
         const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
         const tableLeg4 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial);
-        tableLeg1.name = 'tableLeg1'
-        tableLeg2.name = 'tableLeg2'
-        tableLeg3.name = 'tableLeg3'
-        tableLeg4.name = 'tableLeg4'
+
 
         tableSurface.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
         scene.add(tableSurface);
@@ -34,14 +30,8 @@ const TableSurface = props => {
 
     useEffect(() => {
         const tableSurface = getEntity();
-      },
-      [],
-    );
-
-    useEffect(() => {
-        const tableSurface = getEntity();
-        tableSurface.rotation.y += 0.001;
-        tableSurface.rotation.z += -0.001;
+        /* tableSurface.rotation.y += 0.001;
+        tableSurface.rotation.z += -0.001; */
       },
       [timer],
     );
