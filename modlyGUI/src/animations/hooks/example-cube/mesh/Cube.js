@@ -28,8 +28,8 @@ const Cube = props => {
   useEffect(() => {
       const cube = getEntity();
       const oscillator = Math.sin(timer / 1000) * Math.PI - Math.PI;
-      cube.rotation.y += 0.001;
-      cube.rotation.z += -0.001;
+      cube.rotation.y += 0.01;
+      cube.rotation.z += -0.01;
     },
     [timer],
   );
