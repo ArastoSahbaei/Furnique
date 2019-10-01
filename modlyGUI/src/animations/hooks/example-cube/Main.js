@@ -3,7 +3,7 @@ import SceneManager from '../ThreeJSManager';
 import Cube from './Cube';
 import Table from './Table';
 import Grid from './Grid';
-import CameraControls from './CameraControls';
+import CameraControls from '../ThreeJSManager/CameraControls'
 import { getCamera, getRenderer, getScene } from './threeSetup';
 
 const CubeExample = () => {
