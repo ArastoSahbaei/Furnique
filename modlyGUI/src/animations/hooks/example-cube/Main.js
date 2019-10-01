@@ -13,12 +13,13 @@ const CubeExample = () => {
   const [rotationSpeed, setRotationSpeed] = useState(0.01)
   const [bordsBredd, setBordsBredd] = useState(1.5)
   const [Bordslängd, setBordslängd] = useState(1.5)
+  const [Bordsdjup, setBordsdjup] = useState(0.6)
 
   return (
     <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '40%', width: '40%'}}>
       <CameraControls />
       {showGrid && <Grid />}
-      {showCube && <Table rotationSpeed={rotationSpeed} bordsBredd={bordsBredd} Bordslängd={Bordslängd} />}
+      {showCube && <Table rotationSpeed={rotationSpeed} bordsBredd={bordsBredd} Bordslängd={Bordslängd} Bordsdjup={Bordsdjup} />}
      {/*  {showCube && <Cube color={Number(`0x${color}`)} />} */}
 
       <div>
@@ -27,7 +28,8 @@ const CubeExample = () => {
             <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br />
             <input type="range" name="points" min="0" max="10" onChange={e => setRotationSpeed(e.target.value)} /> RotationSpeed <br />
             <input type="range" name="points" min="0" max="10" onChange={e => setBordsBredd(e.target.value)} /> setBordsBredd  <br />
-            <input type="range" name="points" min="0" max="10" onChange={e => setBordslängd(e.target.value)} /> setBordslängd 
+            <input type="range" name="points" min="0" max="10" onChange={e => setBordslängd(e.target.value)} /> setBordslängd <br/>
+            <input type="range" name="points" min="0" max="10" onChange={e => setBordsdjup(e.target.value)} /> setBordsdjup 
         </div>
     </SceneManager>
   );
