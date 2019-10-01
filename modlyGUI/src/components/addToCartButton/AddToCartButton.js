@@ -8,14 +8,14 @@ export default function AddToCartButton(props) {
     const [cart, setCart] = useContext(CartContext);
 
     const addMeshToCart = () => {
-        props.updateMeshState()
+       /*  props.updateMeshState() */
         setCart(currentState => [...currentState, props.meshObjectValues])
         menuHandler.toggleMenu()
     }
 
     return (
         <div>
-            <button onClick={props.updateMeshState}>Set Mesh To State</button>
+            {/* <button onClick={props.updateMeshState}>Set Mesh To State</button> */}
             <button onClick={addMeshToCart}>Add To Cart</button>
         </div>
     )

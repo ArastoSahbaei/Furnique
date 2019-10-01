@@ -8,6 +8,9 @@ export default function Cart(props) {
     const [cart] = useContext(CartContext);
     const menuHandler = useContext(CartMenuContext)
 
+    const lol = () => {
+        console.log({cart})
+    }
         return (
         <div>
                 <Menu right width={350} 
@@ -19,16 +22,16 @@ export default function Cart(props) {
                         <h1>Your Cart</h1>
                         <span>items in cart : {cart.length}</span>
 
+
                 {cart.map(item => (
                 <div>
                     <h1>Marble Table</h1>
-                    <span> BordsBredd: {item.Bordsbredd} </span>
-                    <span> Bordslängd: {item.Bordslängd} </span>
-                    <span> Bordsdjup:  {item.Bordsdjup}  </span>
+                    <span> BordsBredd: {item} </span>
+                    <span> Bordslängd: {item} </span>
                     <hr />
                 </div>
                 ))}
-
+<button onClick={lol}>ddddddd</button>
                     <span><button onClick={menuHandler.toggleMenu}>Keep Shopping</button> <button>Checkout</button></span>
                 </Menu>  
         </div>

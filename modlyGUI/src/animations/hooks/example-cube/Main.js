@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import SceneManager from '../ThreeJSManager';
-import Cube from './mesh/Cube';
 import Table from './mesh/Table';
 import Grid from './mesh/Grid';
+import AddToCartButton from '../../../components/addToCartButton/AddToCartButton'
 import CameraControls from '../ThreeJSManager/CameraControls'
 import { getCamera, getRenderer, getScene } from './threeSetup';
 
@@ -18,7 +18,6 @@ const CubeExample = () => {
   const [BenHöjd, setBenHöjd] = useState(1.3)
   const [BenPositionX, setBenPositionX] = useState(0.65)
   const [BenPositionY, setBenPositionY] = useState(0.65)
-
 
   return (
     <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '40%', width: '40%'}}>
@@ -50,7 +49,8 @@ const CubeExample = () => {
             <input type="range" name="points" min="0" max="10" onChange={e => setBenPositionY(e.target.value)} />  setBenPositionY  <br />
 
         </div>
-    </SceneManager>
+        <AddToCartButton meshObjectValues={bordsBredd}/>
+    </SceneManager >
   );
 };
 
