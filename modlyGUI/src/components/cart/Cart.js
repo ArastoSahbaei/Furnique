@@ -26,8 +26,8 @@ export default function Cart(props) {
                 {cart.map(item => (
                 <div>
                     <h1>Marble Table</h1>
-                    <span> BordsBredd: {item} </span>
-                    <span> Bordslängd: {item} </span>
+                    <span> BordsBredd: {item.bordsBredd} </span>
+                    <span> Bordslängd: {item.bordsBredd} </span>
                     <hr />
                 </div>
                 ))}

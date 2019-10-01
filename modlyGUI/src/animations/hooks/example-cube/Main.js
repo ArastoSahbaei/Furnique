@@ -19,6 +19,8 @@ const CubeExample = () => {
   const [BenPositionX, setBenPositionX] = useState(0.65)
   const [BenPositionY, setBenPositionY] = useState(0.65)
 
+  const [cartObject] = useState({bordsBredd: {bordsBredd}})
+
   return (
     <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '40%', width: '40%'}}>
       <CameraControls />
@@ -49,7 +51,7 @@ const CubeExample = () => {
             <input type="range" name="points" min="0" max="10" onChange={e => setBenPositionY(e.target.value)} />  setBenPositionY  <br />
 
         </div>
-        <AddToCartButton meshObjectValues={bordsBredd}/>
+        <AddToCartButton meshObjectValues={cartObject}/>
     </SceneManager >
   );
 };
