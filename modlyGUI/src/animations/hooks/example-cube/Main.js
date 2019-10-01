@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import SceneManager from '../ThreeJSManager';
-import Cube from './Cube';
-import Table from './Table';
-import Grid from './Grid';
+import Cube from './mesh/Cube';
+import Table from './mesh/Table';
+import Grid from './mesh/Grid';
 import CameraControls from '../ThreeJSManager/CameraControls'
 import { getCamera, getRenderer, getScene } from './threeSetup';
 

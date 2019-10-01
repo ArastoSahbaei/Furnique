@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import OrbitControlsDefault from 'three-orbit-controls';
-import { useThree } from '../ThreeJSManager/';
+import { useThree } from '.';
 
 const OrbitControls = OrbitControlsDefault(THREE);
 
