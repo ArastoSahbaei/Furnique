@@ -30,11 +30,20 @@ const TableSurface = props => {
 
     useEffect(() => {
         const tableSurface = getEntity();
-        tableSurface.rotation.y += props.rotationSpeed;
-        tableSurface.rotation.z += -props.rotationSpeed;
+        const tableLeg1 = getEntity();
+
+        tableSurface.rotation.y += -props.rotationSpeed;
         tableSurface.scale.x = props.bordsBredd;
         tableSurface.scale.z = props.Bordslängd;
         tableSurface.scale.y = props.Bordsdjup
+
+        tableLeg1.scale.x = props.BenBredd;
+        tableLeg1.scale.z = props.BenLängd;
+        tableLeg1.scale.y = props.BenHöjd
+
+      /*   tableLeg1.position.x = props.benBredd;
+        tableLeg1.position.z = props.benBredd; */
+
       },
       [timer],
     );
