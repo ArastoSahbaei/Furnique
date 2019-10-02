@@ -10,6 +10,7 @@ const CubeExample = () => {
   const [showGrid, toggleShowGrid] = useState(true);
   const [showCube, toggleShowCube] = useState(true);
   const [cartObject, setCartObject] = useState({
+    id: null,
     bordsBredd: 1.5,
     Bordslängd: 1.5,
     Bordsdjup: 0.6,
