@@ -21,7 +21,8 @@ const CubeExample = () => {
 
   const [cartObject, setCartObject] = useState({
     bordsBredd: 1.5,
-    Bordsdjup: 1.35,
+    Bordslängd: 1.5,
+    Bordsdjup: 0.6,
     rotationSpeed: 0.05
   })
 
@@ -44,10 +45,10 @@ const CubeExample = () => {
       <div>
             <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br />
             <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br />
-            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject,rotationSpeed:e.target.value})} /> RotationSpeed <br />
-            <input type="range" name="points" min="0" max="10" onChange={e => setBordsBredd(e.target.value)} /> setBordsBredd  <br />
-            <input type="range" name="points" min="0" max="10" onChange={e => setBordslängd(e.target.value)} /> setBordslängd <br/>
-            <input type="range" name="points" min="0" max="10" onChange={e => setBordsdjup(e.target.value)} /> setBordsdjup 
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value})} /> RotationSpeed <br />
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, bordsBredd: e.target.value})} /> setBordsBredd  <br />
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, Bordslängd: e.target.value})} /> setBordslängd <br/>
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, Bordsdjup: e.target.value})} /> setBordsdjup 
       <br /> <h3>legs</h3>
             <input type="range" name="points" min="0" max="10" onChange={e => setBenBredd(e.target.value)} /> setBenBredd <br />
             <input type="range" name="points" min="0" max="10" onChange={e => setBenLängd(e.target.value)} /> setBenLängd <br />

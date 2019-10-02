@@ -33,9 +33,9 @@ const TableSurface = props => {
         const table = getEntity();
 
         table[0].rotation.y += -props.cartObject.rotationSpeed;
-        table[0].scale.x = props.bordsBredd;
-        table[0].scale.z = props.Bordslängd;
-        table[0].scale.y = props.Bordsdjup
+        table[0].scale.x = props.cartObject.bordsBredd;
+        table[0].scale.z = props.cartObject.Bordslängd;
+        table[0].scale.y = props.cartObject.Bordsdjup
 
         table[1].scale.x = props.BenBredd; table[2].scale.x = props.BenBredd; table[3].scale.x = props.BenBredd; table[4].scale.x = props.BenBredd;
         table[1].scale.z = props.BenLängd; table[2].scale.z = props.BenLängd; table[3].scale.z = props.BenLängd; table[4].scale.z = props.BenLängd;
