@@ -19,13 +19,18 @@ const CubeExample = () => {
   const [BenPositionX, setBenPositionX] = useState(0.65)
   const [BenPositionY, setBenPositionY] = useState(0.65)
 
-  const [cartObject] = useState({bordsBredd: {bordsBredd}})
+  const [cartObject, setCartObject] = useState({
+    bordsBredd: 1.5,
+    Bordsdjup: 1.35,
+    rotationSpeed: 0.05
+  })
 
   return (
     <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '40%', width: '40%'}}>
       <CameraControls />
       {showGrid && <Grid />}
-      {showCube && <Table rotationSpeed={rotationSpeed} 
+      {showCube && <Table cartObject={cartObject}
+                          rotationSpeed={rotationSpeed} 
                           bordsBredd={bordsBredd} 
                           Bordslängd={Bordslängd} 
                           Bordsdjup={Bordsdjup}
@@ -39,7 +44,7 @@ const CubeExample = () => {
       <div>
             <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br />
             <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br />
-            <input type="range" name="points" min="0" max="10" onChange={e => setRotationSpeed(e.target.value)} /> RotationSpeed <br />
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject,rotationSpeed:e.target.value})} /> RotationSpeed <br />
             <input type="range" name="points" min="0" max="10" onChange={e => setBordsBredd(e.target.value)} /> setBordsBredd  <br />
             <input type="range" name="points" min="0" max="10" onChange={e => setBordslängd(e.target.value)} /> setBordslängd <br/>
             <input type="range" name="points" min="0" max="10" onChange={e => setBordsdjup(e.target.value)} /> setBordsdjup 

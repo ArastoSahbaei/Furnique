@@ -32,7 +32,7 @@ const TableSurface = props => {
     useEffect(() => {
         const table = getEntity();
 
-        table[0].rotation.y += -props.rotationSpeed;
+        table[0].rotation.y += -props.cartObject.rotationSpeed;
         table[0].scale.x = props.bordsBredd;
         table[0].scale.z = props.Bordslängd;
         table[0].scale.y = props.Bordsdjup

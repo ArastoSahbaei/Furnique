@@ -27,7 +27,8 @@ export default function Cart(props) {
                 <div>
                     <h1>Marble Table</h1>
                     <span> BordsBredd: {item.bordsBredd} </span>
-                    <span> Bordslängd: {item.bordsBredd} </span>
+                    <span> Bordslängd: {item.Bordsdjup} </span>
+                    <span> rotationSpeed: {item.rotationSpeed} </span>
                     <hr />
                 </div>
                 ))}
