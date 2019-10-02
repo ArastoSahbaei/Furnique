@@ -37,25 +37,25 @@ const TableSurface = props => {
         table[0].scale.z = props.cartObject.Bordslängd;
         table[0].scale.y = props.cartObject.Bordsdjup
 
-        table[1].scale.x = props.BenBredd; table[2].scale.x = props.BenBredd; table[3].scale.x = props.BenBredd; table[4].scale.x = props.BenBredd;
-        table[1].scale.z = props.BenLängd; table[2].scale.z = props.BenLängd; table[3].scale.z = props.BenLängd; table[4].scale.z = props.BenLängd;
-        table[1].scale.y = props.BenHöjd;  table[2].scale.y = props.BenHöjd;  table[3].scale.y = props.BenHöjd;  table[4].scale.y = props.BenHöjd;
+        table[1].scale.x = props.cartObject.BenBredd; table[2].scale.x = props.cartObject.BenBredd; table[3].scale.x = props.cartObject.BenBredd; table[4].scale.x = props.cartObject.BenBredd;
+        table[1].scale.z = props.cartObject.BenLängd; table[2].scale.z = props.cartObject.BenLängd; table[3].scale.z = props.cartObject.BenLängd; table[4].scale.z = props.cartObject.BenLängd;
+        table[1].scale.y = props.cartObject.BenHöjd;  table[2].scale.y = props.cartObject.BenHöjd;  table[3].scale.y = props.cartObject.BenHöjd;  table[4].scale.y = props.cartObject.BenHöjd;
 
         table[1].position.x = -props.BenPositionX; 
         table[2].position.x = -props.BenPositionX; 
         table[3].position.x = props.BenPositionX; 
         table[4].position.x = props.BenPositionX;
 
-        table[1].position.z = -props.BenPositionY; 
-        table[2].position.z = props.BenPositionY; 
-        table[3].position.z = props.BenPositionY; 
-        table[4].position.z = -props.BenPositionY; 
+        table[1].position.z = -props.cartObject.BenPositionY; 
+        table[2].position.z = props.cartObject.BenPositionY; 
+        table[3].position.z = props.cartObject.BenPositionY; 
+        table[4].position.z = -props.cartObject.BenPositionY; 
         
-        table[0].position.y =  props.BenHöjd * 0.65;
-        table[1].position.y = -props.BenHöjd * 0.65;
-        table[2].position.y = -props.BenHöjd * 0.65;
-        table[3].position.y = -props.BenHöjd * 0.65;
-        table[4].position.y = -props.BenHöjd * 0.65;
+        table[0].position.y =  props.cartObject.BenHöjd * 0.65;
+        table[1].position.y = -props.cartObject.BenHöjd * 0.65;
+        table[2].position.y = -props.cartObject.BenHöjd * 0.65;
+        table[3].position.y = -props.cartObject.BenHöjd * 0.65;
+        table[4].position.y = -props.cartObject.BenHöjd * 0.65;
 
       },
       [timer],
