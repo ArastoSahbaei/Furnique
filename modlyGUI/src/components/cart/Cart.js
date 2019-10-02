@@ -8,9 +8,10 @@ export default function Cart(props) {
     const [cart] = useContext(CartContext);
     const menuHandler = useContext(CartMenuContext)
 
-    const lol = () => {
-        console.log({cart})
+    const displayMeshParameters = () => {
+        console.log(cart)
     }
+
         return (
         <div>
                 <Menu right width={350} 
@@ -32,7 +33,7 @@ export default function Cart(props) {
                     <hr />
                 </div>
                 ))}
-                    <button onClick={lol}>Show Parameters</button>
+                    <button onClick={displayMeshParameters}>Show Parameters</button>
                     <span><button onClick={menuHandler.toggleMenu}>Keep Shopping</button> <button>Checkout</button></span>
                 </Menu>  
         </div>

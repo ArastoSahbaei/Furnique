@@ -20,10 +20,9 @@ const TableSurface = props => {
         const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
         const tableLeg4 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial);
 
-
         tableSurface.add(tableLeg1, tableLeg2, tableLeg3, tableLeg4);
         scene.add(tableSurface);
-        return [tableSurface, tableLeg1, tableLeg2, tableLeg3, tableLeg4];
+        return [tableSurface, tableLeg1, tableLeg2, tableLeg3, tableLeg4]; //TODO: This is the cause of the 'show table' bug
     };
 
 
