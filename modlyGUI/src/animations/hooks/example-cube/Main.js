@@ -9,16 +9,6 @@ import { getCamera, getRenderer, getScene } from './threeSetup';
 const CubeExample = () => {
   const [showGrid, toggleShowGrid] = useState(true);
   const [showCube, toggleShowCube] = useState(true);
-  const [rotationSpeed, setRotationSpeed] = useState(0.01)
-  const [bordsBredd, setBordsBredd] = useState(1.5)
-  const [Bordslängd, setBordslängd] = useState(1.5)
-  const [Bordsdjup, setBordsdjup] = useState(0.6)
-  const [BenBredd, setBenBredd] = useState(2)
-  const [BenLängd, setBenLängd] = useState(2)
-  const [BenHöjd, setBenHöjd] = useState(1.3)
-  const [BenPositionX, setBenPositionX] = useState(0.65)
-  const [BenPositionY, setBenPositionY] = useState(0.65)
-
   const [cartObject, setCartObject] = useState({
     bordsBredd: 1.5,
     Bordslängd: 1.5,
@@ -35,17 +25,7 @@ const CubeExample = () => {
     <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '40%', width: '40%'}}>
       <CameraControls />
       {showGrid && <Grid />}
-      {showCube && <Table cartObject={cartObject}
-                          rotationSpeed={rotationSpeed} 
-                          bordsBredd={bordsBredd} 
-                          Bordslängd={Bordslängd} 
-                          Bordsdjup={Bordsdjup}
-                          BenBredd={BenBredd}
-                          BenLängd={BenLängd}
-                          BenHöjd={BenHöjd} 
-                          BenPositionX={BenPositionX} 
-                          BenPositionY={BenPositionY} 
-                          />}
+      {showCube && <Table cartObject={cartObject}/>}
 
       <div>
             <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br />

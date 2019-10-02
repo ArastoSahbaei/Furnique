@@ -32,7 +32,7 @@ export default function Cart(props) {
                     <hr />
                 </div>
                 ))}
-<button onClick={lol}>ddddddd</button>
+                    <button onClick={lol}>Display the cart in console</button>
                     <span><button onClick={menuHandler.toggleMenu}>Keep Shopping</button> <button>Checkout</button></span>
                 </Menu>  
         </div>

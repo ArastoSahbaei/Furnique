@@ -41,10 +41,10 @@ const TableSurface = props => {
         table[1].scale.z = props.cartObject.BenLängd; table[2].scale.z = props.cartObject.BenLängd; table[3].scale.z = props.cartObject.BenLängd; table[4].scale.z = props.cartObject.BenLängd;
         table[1].scale.y = props.cartObject.BenHöjd;  table[2].scale.y = props.cartObject.BenHöjd;  table[3].scale.y = props.cartObject.BenHöjd;  table[4].scale.y = props.cartObject.BenHöjd;
 
-        table[1].position.x = -props.BenPositionX; 
-        table[2].position.x = -props.BenPositionX; 
-        table[3].position.x = props.BenPositionX; 
-        table[4].position.x = props.BenPositionX;
+        table[1].position.x = -props.cartObject.BenPositionX; 
+        table[2].position.x = -props.cartObject.BenPositionX; 
+        table[3].position.x = props.cartObject.BenPositionX; 
+        table[4].position.x = props.cartObject.BenPositionX;
 
         table[1].position.z = -props.cartObject.BenPositionY; 
         table[2].position.z = props.cartObject.BenPositionY; 
