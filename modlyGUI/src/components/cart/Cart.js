@@ -1,8 +1,8 @@
 import React,  {useContext} from 'react'
 import {CartMenuContext} from './CartMenuProvider'
 import {CartContext} from '../addToCartButton/CartContext';
-import CartIsEmpty from './CartIsEmpty'
-import CartWithItems from './CartWithItems'
+import CartIsEmpty from './cartisempty/CartIsEmpty'
+import CartWithItems from './cartwithitems/CartWithItems'
 import { slide as Menu } from 'react-burger-menu'
 import './Cart.css'
 
