@@ -19,20 +19,34 @@ const CartWithItems = (props) => {
 
     return (
         <div>
-            <span className="itemsInCart">Items in cart: {cart.length} </span> 
+            <span className="itemsInCart">Your cart contains {cart.length} item </span> 
             {cart.map((item, index) => (
-                <div key={item.id}>
-                    <span>Customized Table <i onClick={() => deleteItem(item.id)} className="fas fa-trash"/></span> <br/>
-                    <img className="cartImage" src={Spinner} alt="SpinnerLogo"/>
-                    <span className="statHolder"> Price: £236 <br/></span>
-                    <span className="statHolder"> BordsBredd: {item.bordsBredd} <br/></span>
+                <div className="itemsInCartDisplay" key={item.id}>
+                    <i onClick={() => deleteItem(item.id)} className="fas fa-trash"/>
+
+                    <ul className="displayItemsInCartUL">
+                        <li><img className="cartImage" src={Spinner} alt="SpinnerLogo"/></li>
+                        <li>Customized Table</li>
+                        <li>Price: £236</li>
+                        <li><button className="inspectDimensionsButton"><span>Inspect measurements</span></button></li>
+                    </ul>
+                    <hr/>
+
+                    {/* <span className="statHolder"> BordsBredd: {item.bordsBredd} <br/></span>
                     <span className="statHolder"> Bordslängd: {item.Bordsdjup}  <br/></span>
-                    <span className="statHolder"> rotationSpeed: {item.rotationSpeed} </span> 
-                    <hr />
+                <span className="statHolder"> rotationSpeed: {item.rotationSpeed} </span>  */}                  
                 </div>
                 ))}
-                    <button className="keepShoppingButton" onClick={menuHandler.toggleMenu}>< span>Keep Shopping</span> </button> 
-                    <NavLink to="/checkout"> <button className="checkoutButton" onClick={menuHandler.toggleMenu}> <span>Checkout</span> </button> </NavLink>
+
+
+                    <button className="keepShoppingButton" onClick={menuHandler.toggleMenu}>
+                        <span>Keep Shopping</span> 
+                    </button> 
+                    <NavLink to="/checkout"> 
+                     <button className="checkoutButton" onClick={menuHandler.toggleMenu}> 
+                        <span>Checkout</span> 
+                     </button> 
+                    </NavLink>
 
                     
                  {/* <button onClick={displayMeshParameters}>Show Parameters</button> */}

@@ -2,6 +2,11 @@
   .itemsInCart {
     border-bottom: 3px solid #ffffff;
     font-size: 30px;
+    margin: 10px;
+  }
+
+  .itemsInCartDisplay {
+    margin-top: 1em;
   }
 
   .fa-trash {
@@ -20,17 +25,57 @@
     cursor: pointer;
   }
 
-  .statHolder {
-    font-size: 20px;
-  }
-
   .cartImage {
     position: absolute;
-    float: left;
-    margin-left: 140px;
-    height: 70px;
-    width: 70px;
+    height: 4em;
+    width: 4em;
+    margin-left: 180px;
+    margin-top: 12px;
   }
+
+  .displayItemsInCartUL {
+    text-align: left;
+    list-style: none;
+  }
+
+.inspectDimensionsButton {
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 12px 4px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.inspectDimensionsButton span {
+  position: relative; 
+  z-index: 1;
+}
+
+.inspectDimensionsButton:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.inspectDimensionsButton:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
 
   .checkoutButton, .keepShoppingButton {
     text-align: center;
@@ -86,3 +131,4 @@
   .keepShoppingButton:hover span {
     padding-left: 25px;
   }
+
