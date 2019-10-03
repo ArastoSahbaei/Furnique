@@ -37,7 +37,6 @@
     cursor: pointer;
     font-size:22px;
     border-radius: 4px;
-    background-color:#d35400;
     border: none;
     padding: 10px;
     transition: all 0.5s;
@@ -45,6 +44,7 @@
     
   .checkoutButton {
     margin: 0 0 0 6px; 
+    background-color: #29b57c;
   }
 
   .checkoutButton  span, .keepShoppingButton span {
@@ -59,7 +59,7 @@
     position: absolute;
     opacity: 0;
     top: 0;
-    right: -20px;
+    right: -14px;
     transition: 0.5s;
   }
 
@@ -74,7 +74,8 @@
 
   .keepShoppingButton {
      margin: 0 0 0 -6px; 
- }
+     background-color:#d35400;
+  }
 
 
   .keepShoppingButton span:after {
