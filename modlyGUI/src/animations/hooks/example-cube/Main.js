@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SceneManager from '../ThreeJSManager';
+import './Main.css'
 import Table from './mesh/Table';
 import Grid from './mesh/Grid';
 import AddToCartButton from '../../../components/addToCartButton/AddToCartButton'
@@ -28,7 +29,7 @@ const CubeExample = () => {
       {showGrid && <Grid />}
       {showCube && <Table cartObject={cartObject}/>}
 
-      <div>
+      <div className="adjustmentSection">
             <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br />
             <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br />
             <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value})} /> RotationSpeed <br />
@@ -42,8 +43,8 @@ const CubeExample = () => {
             <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, BenPositionX: e.target.value})} />  setBenPositionX  <br />
             <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, BenPositionY: e.target.value})} />  setBenPositionY  <br />
 
+            <AddToCartButton meshObjectValues={cartObject}/>
         </div>
-        <AddToCartButton meshObjectValues={cartObject}/>
     </SceneManager >
   );
 };
