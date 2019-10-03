@@ -132,3 +132,24 @@
     padding-left: 25px;
   }
 
+  .bottomPartUL {
+    text-align: center;
+    list-style: none;
+  }
+
+  .displayRight {
+    float: left;
+  }
+
+  .displayLeft {
+    float: right;
+    margin-right: 40px;
+  }
+
+  .bottomPart {
+    color: white;
+  }
+
+  .bottomButtons {
+    margin-top: 0.5em;
+  }

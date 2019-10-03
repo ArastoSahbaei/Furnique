@@ -17,6 +17,9 @@ const CartWithItems = (props) => {
         setCart(remainingItems) 
     }
 
+
+    
+
     return (
         <div>
             <span className="itemsInCart">Your cart contains {cart.length} item </span> 
@@ -27,7 +30,8 @@ const CartWithItems = (props) => {
                     <ul className="displayItemsInCartUL">
                         <li><img className="cartImage" src={Spinner} alt="SpinnerLogo"/></li>
                         <li>Customized Table</li>
-                        <li>Price: £236</li>
+                        <li>Price: £1294</li>
+                        
                         <li><button className="inspectDimensionsButton"><span>Inspect measurements</span></button></li>
                     </ul>
                     <hr/>
@@ -38,15 +42,25 @@ const CartWithItems = (props) => {
                 </div>
                 ))}
 
-
-                    <button className="keepShoppingButton" onClick={menuHandler.toggleMenu}>
-                        <span>Keep Shopping</span> 
-                    </button> 
-                    <NavLink to="/checkout"> 
-                     <button className="checkoutButton" onClick={menuHandler.toggleMenu}> 
-                        <span>Checkout</span> 
-                     </button> 
-                    </NavLink>
+                <div className="bottomPart">
+                    <ul className="bottomPartUL">
+                        <li> 
+                            <span className="displayRight">Total:</span> 
+                            <span className="displayLeft">£{cart.length  * 1294}</span> <br/>
+                        </li> 
+                        <li>   
+                            <span className="displayRight">Shipping:</span> 
+                            <span className="displayLeft">Free</span>
+                        </li>
+                    </ul>
+                    <br/>
+                    <div className="bottomButtons">
+                        <button className="keepShoppingButton" onClick={menuHandler.toggleMenu}> <span>Keep Shopping</span> </button> 
+                        <NavLink to="/checkout"> 
+                        <button className="checkoutButton" onClick={menuHandler.toggleMenu}> <span>Checkout</span> </button> 
+                        </NavLink>
+                    </div>
+                </div>
 
                     
                  {/* <button onClick={displayMeshParameters}>Show Parameters</button> */}
