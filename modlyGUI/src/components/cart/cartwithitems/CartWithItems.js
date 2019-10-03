@@ -32,7 +32,7 @@ const CartWithItems = (props) => {
                 </div>
                 ))}
                     <button className="keepShoppingButton" onClick={menuHandler.toggleMenu}>< span>Keep Shopping</span> </button> 
-                    <NavLink to="/checkout"> <button className="checkoutButton"> <span>Checkout</span> </button> </NavLink>
+                    <NavLink to="/checkout"> <button className="checkoutButton" onClick={menuHandler.toggleMenu}> <span>Checkout</span> </button> </NavLink>
 
                     
                  {/* <button onClick={displayMeshParameters}>Show Parameters</button> */}
