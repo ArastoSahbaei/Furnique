@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import {CartMenuContext} from '../CartMenuProvider'
 import {CartContext} from '../../addToCartButton/CartContext';
+import './CartWithItems.css'
 import Spinner from '../../../shared/images/marble.jpg'
 const CartWithItems = (props) => {
     const [cart, setCart] = useContext(CartContext);
@@ -17,7 +18,7 @@ const CartWithItems = (props) => {
 
     return (
         <div>
-            <span className="itemsInCart">Items in cart: {cart.length}</span>
+            <span className="itemsInCart">Items in cart: {cart.length} </span> 
             {cart.map((item, index) => (
                 <div key={item.id}>
                     <span>Customized Table <i onClick={() => deleteItem(item.id)} className="fas fa-trash"/></span> <br/>

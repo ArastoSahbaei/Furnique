@@ -1,0 +1,33 @@
+
+  .itemsInCart {
+    border-bottom: 3px solid #ffffff;
+    font-size: 30px;
+  }
+
+  .fa-trash {
+    font-size: 24px;
+    float: left;
+    color: white;
+    transform: rotateZ(14deg);
+    transition: .5s;
+    cursor: pointer;
+  }
+
+  .fa-trash:hover {
+    color: #FF4500;
+    transform: rotateZ(140deg);
+    transition: .5s;
+    cursor: pointer;
+  }
+
+  .statHolder {
+    font-size: 20px;
+  }
+
+  .cartImage {
+    position: absolute;
+    float: left;
+    margin-left: 140px;
+    height: 70px;
+    width: 70px;
+  }
