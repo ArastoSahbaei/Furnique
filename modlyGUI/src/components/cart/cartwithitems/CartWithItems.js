@@ -30,7 +30,10 @@ const CartWithItems = (props) => {
                     <hr />
                 </div>
                 ))}
-                <span><button onClick={menuHandler.toggleMenu}>Keep Shopping</button> <button>Checkout</button></span>
+                <span>
+                    <button className="keepShoppingButton" onClick={menuHandler.toggleMenu}>Keep Shopping</button> 
+                    <button className="checkoutButton"> Checkout</button>
+                </span>
                  {/* <button onClick={displayMeshParameters}>Show Parameters</button> */}
         </div>
     )

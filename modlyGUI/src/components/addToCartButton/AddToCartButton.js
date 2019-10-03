@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import {CartMenuContext} from '../cart/CartMenuProvider'
 import {CartContext} from './CartContext';
+import './AddToCartButton.css'
 
 export default function AddToCartButton(props) {
     
@@ -14,7 +15,7 @@ export default function AddToCartButton(props) {
 
     return (
         <div>
-            <button onClick={addMeshToCart}>Add To Cart</button>
+            <button className="addToCartButton" onClick={addMeshToCart}><span>Add to cart</span></button>
         </div>
     )
 }
