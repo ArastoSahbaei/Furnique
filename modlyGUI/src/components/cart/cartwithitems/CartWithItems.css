@@ -32,37 +32,29 @@
     width: 70px;
   }
 
-
-
-
-
-.buttonWrapper {
-    display: inline-block;
-}
-  
-    
-  .checkoutButton {
+  .checkoutButton, .keepShoppingButton {
     text-align: center;
     cursor: pointer;
     font-size:22px;
-     margin: 0 0 0 6px; 
     border-radius: 4px;
     background-color:#d35400;
     border: none;
-     padding: 10px;
-   /*  width: 200px; */
+    padding: 10px;
     transition: all 0.5s;
-  /*   margin: 20px; */
+  }
+    
+  .checkoutButton {
+    margin: 0 0 0 6px; 
   }
 
-  .checkoutButton span {
+  .checkoutButton  span, .keepShoppingButton span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
 
-  .checkoutButton span:after {
+  .checkoutButton span:after, .keepShoppingButton span:after  {
     content: '»';
     position: absolute;
     opacity: 0;
@@ -75,53 +67,21 @@
     padding-right: 25px;
   }
 
-  .checkoutButton:hover span:after {
+  .checkoutButton:hover span:after, .keepShoppingButton:hover span:after {
     opacity: 1;
     right: 0;
   }
 
-
-
-
-
-
-
-
   .keepShoppingButton {
-    text-align: center;
-    cursor: pointer;
-    font-size:22px;
      margin: 0 0 0 -6px; 
-    border-radius: 4px;
-    background-color:#d35400;
-    border: none;
-     padding: 10px;
-    /* width: 200px;  */
-    transition: all 0.5s;
  }
 
-  .keepShoppingButton span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
 
   .keepShoppingButton span:after {
     content: '«';
-    position: absolute;
-    opacity: 0; 
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
     margin-right: 160px;
   }
 
   .keepShoppingButton:hover span {
     padding-left: 25px;
-  }
-
-  .keepShoppingButton:hover span:after {
-    opacity: 1;
-    right: 0;
   }
