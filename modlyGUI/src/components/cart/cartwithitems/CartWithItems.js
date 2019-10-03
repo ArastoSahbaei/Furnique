@@ -24,9 +24,9 @@ const CartWithItems = (props) => {
                     <span>Customized Table <i onClick={() => deleteItem(item.id)} className="fas fa-trash"/></span> <br/>
                     <img className="cartImage" src={Spinner} alt="SpinnerLogo"/>
                     <span className="statHolder"> Price: £236 <br/></span>
-                 {/*    <span className="statHolder"> BordsBredd: {item.bordsBredd} <br/></span>
+                    <span className="statHolder"> BordsBredd: {item.bordsBredd} <br/></span>
                     <span className="statHolder"> Bordslängd: {item.Bordsdjup}  <br/></span>
-                    <span className="statHolder"> rotationSpeed: {item.rotationSpeed} </span> */}
+                    <span className="statHolder"> rotationSpeed: {item.rotationSpeed} </span> 
                     <hr />
                 </div>
                 ))}
