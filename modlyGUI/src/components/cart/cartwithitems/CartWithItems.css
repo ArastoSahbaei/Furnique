@@ -110,15 +110,15 @@
   .keepShoppingButton span:after {
     content: '«';
     position: absolute;
-    opacity: 0;
+    opacity: 0; 
     top: 0;
     right: -20px;
     transition: 0.5s;
-    float: left
+    margin-right: 160px;
   }
 
   .keepShoppingButton:hover span {
-    padding-right: 25px;
+    padding-left: 25px;
   }
 
   .keepShoppingButton:hover span:after {
