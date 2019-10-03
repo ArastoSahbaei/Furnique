@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import {CartMenuContext} from '../CartMenuProvider'
 import {CartContext} from '../../addToCartButton/CartContext';
+import { NavLink } from 'react-router-dom'
 import './CartWithItems.css'
 import Spinner from '../../../shared/images/marble.jpg'
 const CartWithItems = (props) => {
@@ -10,7 +11,7 @@ const CartWithItems = (props) => {
     const displayMeshParameters = () => {
         console.log({cart})
     }
-    
+
     const deleteItem = (uniqueId) => {
         const remainingItems = cart.filter(item=>item.id !== uniqueId)
         setCart(remainingItems) 
@@ -31,7 +32,9 @@ const CartWithItems = (props) => {
                 </div>
                 ))}
                     <button className="keepShoppingButton" onClick={menuHandler.toggleMenu}>< span>Keep Shopping</span> </button> 
-                    <button className="checkoutButton"> <span>Checkout</span> </button>
+                    <NavLink to="/checkout"> <button className="checkoutButton"> <span>Checkout</span> </button> </NavLink>
+
+                    
                  {/* <button onClick={displayMeshParameters}>Show Parameters</button> */}
         </div>
     )

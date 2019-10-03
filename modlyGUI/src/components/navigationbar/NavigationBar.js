@@ -8,6 +8,7 @@ const Home = lazy(() => import('../../pages/home/Home'));
 const Container = lazy(() => import('../../animations/Container'));
 const Tables = lazy(() => import('../../pages/tables/Tables'));
 const Contact = lazy(() => import('../../pages/contact/Contact'));
+const Checkout = lazy(() => import('../../pages/checkout/Checkout'));
 
 export default function NavigationBar() {
     return (
@@ -30,6 +31,7 @@ export default function NavigationBar() {
                         <Route exact path="/tables"       component={Tables} />
                         <Route exact path="/inspiration"  component={Container} />
                         <Route exact path="/kontakt"      component={Contact} />
+                        <Route exact path="/checkout"     component={Checkout} />
                         <Route component={Home} />
                     </Switch>
                 </Suspense>
