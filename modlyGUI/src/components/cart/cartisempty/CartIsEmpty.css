@@ -56,10 +56,15 @@
   }
 
 
-.browseProducts span:after, .createYourOwn span:after, .getInspired span:after {
+.browseProducts span:after, .createYourOwn span:after {
     content: '«';
-    margin-right: 170px;
+    margin-right: 8em;
   }
+
+.getInspired span:after {
+    content: '«';
+    margin-right: 7.3em;
+}
 
 .browseProducts:hover span, .createYourOwn:hover span, .getInspired:hover span {
     padding-left: 25px;
