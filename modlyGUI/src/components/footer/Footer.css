@@ -1,14 +1,28 @@
-.footerWrapper {
-    bottom: 0;
+.footerContainer {
     width: 100%;
-}
-
-.footerList {
     background-color: #427271;
     color: white;
-    text-align: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     }
     
+.helpLI, .aboutLI {
+    list-style: none;
+}
+
+.helpLI {
+    color: red;
+
+}
+
+.aboutLI {
+    color: orange;
+    margin-left: 10%;
+}
+
+.OLhelp {
+}
+
+.OLAbout {
+
+}
