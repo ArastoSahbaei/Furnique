@@ -6,23 +6,26 @@
     grid-template-columns: repeat(6, 1fr);
     }
     
-.helpLI, .aboutLI {
+.OLhelp, .OLAbout, .OLCompany {
     list-style: none;
+    font-size: 1em;
 }
 
 .helpLI {
-    color: red;
-
+    color: white;
 }
 
 .aboutLI {
-    color: orange;
-    margin-left: 10%;
+    color: white;
 }
 
 .OLhelp {
 }
 
 .OLAbout {
+
+}
+
+.OLCompany {
 
 }

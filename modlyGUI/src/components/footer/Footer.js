@@ -18,14 +18,27 @@ export default function Footer() {
 
                     <ol className="OLAbout">
                     <li className="aboutLI">MODON</li>
-                    <li className="aboutLI">Om Oss</li>
-                    <li className="aboutLI">Jobba hos oss</li>
-                    <li className="aboutLI">Press & Media</li>
+                    <li className="aboutLI">Vårat arbete</li>
                     <li className="aboutLI">Miljöarbete</li>
+                    <li className="aboutLI">Press & Media</li>
+                    <li className="aboutLI">Jobb</li>
+                    <li className="aboutLI">App</li>
                     </ol>
-<SocialMedia/>
-<li className="footerList"> COPYRIGHT © 2019, Modon AB</li>
-<li className="footerList"> Adress</li>
+
+                    <ol className="OLAbout">
+                    <li className="aboutLI">Kontakt</li>
+                    <li className="aboutLI">Direktlinje +46 722 92 1983</li>
+                    <li className="aboutLI">Veckodagar: 10:00 - 23:00</li>
+                    <li className="aboutLI">Helgdagar: 12:00 - 16:00</li>
+                    <li className="aboutLI">Kontaktform</li>
+                    </ol>
+
+                    <SocialMedia/>
+                    <ol className="OLCompany">
+                    <input></input>
+                    <li className="footerList"> Mom's incubator, Gothenburg, Sweden.</li>
+                    <li className="footerList"> COPYRIGHT © 2019, Modon AB</li>
+                    </ol>
         </div>
     )
 }
