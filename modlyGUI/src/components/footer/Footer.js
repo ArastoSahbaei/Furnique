@@ -18,7 +18,7 @@ export default function Footer() {
 
                     <ol className="OLAbout">
                     <li className="OLAboutTitle">MODON</li>
-                    <li className="aboutLI"><span>Vårat arbete</span></li>
+                    <li className="aboutLI"><span>Om Oss</span></li>
                     <li className="aboutLI"><span>Miljöarbete</span></li>
                     <li className="aboutLI"><span>Press & Media</span></li>
                     <li className="aboutLI"><span>Jobb</span></li>
@@ -33,7 +33,11 @@ export default function Footer() {
                     <li className="ContactLIminor">Helgdagar: 12:00 - 16:00</li>
                     </ol>
 
-                    <SocialMedia/>
+                    <ol className="OLConnect">
+                    <li>Connect with us!</li>
+                        <li><SocialMedia/></li>
+                    </ol>
+
                     <ol className="OLCompany">
                     <input></input>
                     <li className="footerList"> Mom's incubator, Gothenburg, Sweden.</li>

@@ -38,7 +38,7 @@
 }
 
 .OLhelp {
-
+    list-style: none;
 }
 
 .OLAbout {
@@ -47,6 +47,13 @@
 
 .OLCompany {
 
+}
+
+.OLConnect {
+    list-style: none;
+    text-align: center;
+    font-size: 34px;
+    font-family: 'Mansalva', cursive;
 }
 
 .helpLI span, .aboutLI span, .ContactLI span {
