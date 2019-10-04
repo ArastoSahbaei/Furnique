@@ -32,6 +32,10 @@
     color: white;
     margin-top: 0.3em;
 }
+.ContactLIminor {
+    color: white;
+    font-size: 0.8em;
+}
 
 .OLhelp {
 
@@ -45,14 +49,14 @@
 
 }
 
-.helpLI span {
+.helpLI span, .aboutLI span, .ContactLI span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
 
-.helpLI span:after {
+.helpLI span:after, .aboutLI span:after, .ContactLI span:after {
     content: '»';
     position: absolute;
     opacity: 0;
@@ -61,11 +65,11 @@
     transition: 0.5s;
   }
 
-  .helpLI:hover span {
+  .helpLI:hover span, .aboutLI:hover span, .ContactLI:hover span {
     padding-right: 20px;
   }
 
-  .helpLI:hover span:after {
+  .helpLI:hover span:after, .aboutLI:hover span:after, .ContactLI:hover span:after {
     opacity: 1;
     right: 0;
   }

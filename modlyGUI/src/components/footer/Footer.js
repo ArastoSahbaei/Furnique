@@ -18,19 +18,19 @@ export default function Footer() {
 
                     <ol className="OLAbout">
                     <li className="OLAboutTitle">MODON</li>
-                    <li className="aboutLI">Vårat arbete</li>
-                    <li className="aboutLI">Miljöarbete</li>
-                    <li className="aboutLI">Press & Media</li>
-                    <li className="aboutLI">Jobb</li>
-                    <li className="aboutLI">App</li>
+                    <li className="aboutLI"><span>Vårat arbete</span></li>
+                    <li className="aboutLI"><span>Miljöarbete</span></li>
+                    <li className="aboutLI"><span>Press & Media</span></li>
+                    <li className="aboutLI"><span>Jobb</span></li>
+                    <li className="aboutLI"><span>App</span></li>
                     </ol>
 
                     <ol className="OLContact">
                     <li className="OLContactTitle">KONTAKT</li>
-                    <li className="ContactLI">Kontaktform</li>
+                    <li className="ContactLI"><span>Kontaktform</span></li>
                     <li className="ContactLI">Direktlinje +46 722 92 1983</li>
-                    <li className="ContactLI">Veckodagar: 10:00 - 23:00</li>
-                    <li className="ContactLI">Helgdagar: 12:00 - 16:00</li>
+                    <li className="ContactLIminor">Veckodagar: 10:00 - 23:00</li>
+                    <li className="ContactLIminor">Helgdagar: 12:00 - 16:00</li>
                     </ol>
 
                     <SocialMedia/>
