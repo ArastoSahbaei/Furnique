@@ -17,12 +17,9 @@ const CartWithItems = (props) => {
         setCart(remainingItems) 
     }
 
-
-    
-
     return (
         <div>
-            <span className="itemsInCart">Your cart contains {cart.length} item </span> 
+            <span className="itemsInCart">Your cart contains {cart.length} {(cart.length === 1 ? "item" : "items")} </span> 
             {cart.map((item, index) => (
                 <div className="itemsInCartDisplay" key={item.id}>
                     <i onClick={() => deleteItem(item.id)} className="fas fa-trash"/>
