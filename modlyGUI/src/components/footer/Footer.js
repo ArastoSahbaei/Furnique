@@ -9,11 +9,11 @@ export default function Footer() {
             <div className="footerContainer">
                     <ol className="OLhelp">
                     <li className="OLhelpTitle">INFORMATION</li>
-                    <li className="helpLI">Cookies</li>
-                    <li className="helpLI">Köpvilkor</li>
-                    <li className="helpLI">Medlemsvilkor</li>
-                    <li className="helpLI">Integritetspolicy</li>
-                    <li className="helpLI">Returnera en vara</li>
+                    <li className="helpLI"><span>Cookies</span></li>
+                    <li className="helpLI"><span>Köpvilkor</span></li>
+                    <li className="helpLI"><span>Medlemsvilkor</span></li>
+                    <li className="helpLI"><span>Integritetspolicy</span></li>
+                    <li className="helpLI"><span>Returnera en vara</span></li>
                     </ol>
 
                     <ol className="OLAbout">
@@ -25,12 +25,12 @@ export default function Footer() {
                     <li className="aboutLI">App</li>
                     </ol>
 
-                    <ol className="OLAbout">
-                    <li className="OLCompanyTitle">KONTAKT</li>
-                    <li className="aboutLI">Kontaktform</li>
-                    <li className="aboutLI">Direktlinje +46 722 92 1983</li>
-                    <li className="aboutLI">Veckodagar: 10:00 - 23:00</li>
-                    <li className="aboutLI">Helgdagar: 12:00 - 16:00</li>
+                    <ol className="OLContact">
+                    <li className="OLContactTitle">KONTAKT</li>
+                    <li className="ContactLI">Kontaktform</li>
+                    <li className="ContactLI">Direktlinje +46 722 92 1983</li>
+                    <li className="ContactLI">Veckodagar: 10:00 - 23:00</li>
+                    <li className="ContactLI">Helgdagar: 12:00 - 16:00</li>
                     </ol>
 
                     <SocialMedia/>
