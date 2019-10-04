@@ -34,12 +34,11 @@ export default function Footer() {
                     </ol>
 
                     <ol className="OLConnect">
-                    <li>Connect with us!</li> {/* 'FÖR OSS SAMMAN' ? */}
+                    <li>Connect with us!</li> {/* 'FÖR OSS SAMMAN', 'WORD!' ? */}
                     <li><SocialMedia/></li>
                     </ol>
 
                     <ol className="OLCompany">
-                    <input></input> <br/><br/><br/>
                     <li className="footerList"><i class="fas fa-map-marker-alt"></i> Mom's incubatorgatan 47B, Göteborg, Sverige.</li> <br/>
                     <li className="footerList"> © Upphovsrätt 2019, Modon AB. Alla rättigheter förbehålls.</li>
                     </ol>
