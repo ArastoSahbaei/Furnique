@@ -6,22 +6,31 @@
     grid-template-columns: repeat(6, 1fr);
     }
     
-.OLhelp, .OLAbout, .OLCompany {
+.OLhelp, .OLAbout, .OLCompany, .OLContact {
     list-style: none;
     font-size: 1em;
+    font-family: sans-serif;
 }
 
-.OLhelpTitle, .OLAboutTitle, .OLCompanyTitle {
+.OLhelpTitle, .OLAboutTitle, .OLCompanyTitle, .OLContactTitle {
     font-size: 1.3em;
     border-bottom: 0.1em solid #ffffff;
+    font-family: sans-serif;
 }
 
 .helpLI {
     color: white;
+    margin-top: 0.3em;
 }
 
 .aboutLI {
     color: white;
+    margin-top: 0.3em;
+}
+
+.ContactLI {
+    color: white;
+    margin-top: 0.3em;
 }
 
 .OLhelp {
