@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footerWrapper">
             <SubHeader/>
                <ul className="footerList">
-                    <li className="footerList"> COPYRIGHT © 2019, NyttNamn AB</li>
+                    <li className="footerList"> COPYRIGHT © 2019, Modon AB</li>
                     <SocialMedia/>
                 </ul>
         </div>
