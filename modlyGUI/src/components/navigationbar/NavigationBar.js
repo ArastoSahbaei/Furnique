@@ -25,7 +25,7 @@ export default function NavigationBar() {
                     <Cart/>
                 </ul>
 
-                <Suspense fallback={<img src={Spinner} alt="SpinnerLogo"/>}>
+                <Suspense fallback={<img className="spinnerImage" src={Spinner} alt="SpinnerLogo"/>}>
                     <Switch>
                         <Route exact path="/home"         component={Home} />
                         <Route exact path="/tables"       component={Tables} />
