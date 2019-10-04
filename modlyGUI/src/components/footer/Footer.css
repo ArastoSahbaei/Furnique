@@ -11,6 +11,11 @@
     font-size: 1em;
 }
 
+.OLhelpTitle, .OLAboutTitle, .OLCompanyTitle {
+    font-size: 1.3em;
+    border-bottom: 0.1em solid #ffffff;
+}
+
 .helpLI {
     color: white;
 }
@@ -20,6 +25,7 @@
 }
 
 .OLhelp {
+
 }
 
 .OLAbout {

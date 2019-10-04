@@ -8,7 +8,7 @@ export default function Footer() {
 
             <div className="footerContainer">
                     <ol className="OLhelp">
-                    <li className="helpLI">Information</li>
+                    <li className="OLhelpTitle">INFORMATION</li>
                     <li className="helpLI">Cookies</li>
                     <li className="helpLI">Köpvilkor</li>
                     <li className="helpLI">Medlemsvilkor</li>
@@ -17,7 +17,7 @@ export default function Footer() {
                     </ol>
 
                     <ol className="OLAbout">
-                    <li className="aboutLI">MODON</li>
+                    <li className="OLAboutTitle">MODON</li>
                     <li className="aboutLI">Vårat arbete</li>
                     <li className="aboutLI">Miljöarbete</li>
                     <li className="aboutLI">Press & Media</li>
@@ -26,7 +26,7 @@ export default function Footer() {
                     </ol>
 
                     <ol className="OLAbout">
-                    <li className="aboutLI">Kontakt</li>
+                    <li className="OLCompanyTitle">KONTAKT</li>
                     <li className="aboutLI">Direktlinje +46 722 92 1983</li>
                     <li className="aboutLI">Veckodagar: 10:00 - 23:00</li>
                     <li className="aboutLI">Helgdagar: 12:00 - 16:00</li>
