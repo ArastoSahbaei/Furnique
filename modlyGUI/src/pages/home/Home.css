@@ -46,45 +46,6 @@
    height: 3.5em;
 }
 
-.treeLogo {
-    grid-column: 1 / 10;
-    grid-row: 2/2;
-    justify-self: center;
-    height: 50vh;
-}
-
-.title {
-    font-size: 42px;
-    color:#6abb20;
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-weight: 700;
-    grid-column: 1/4;
-    grid-row: 2/2;
-    justify-self: center;
-    animation-name: leftToRight;
-    animation-duration: 1.7s;
-}
-
-.subTitle {
-    font-size: 24px;
-    cursor: pointer;
-    color:#6abb20;
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-weight: 600;
-    grid-column: 5/5;
-    grid-row: 2/2;
-    justify-self: center;
-    align-self: end;
-    border-bottom: 2px solid#78c7d2;
-    animation-name: fadeInEffect;
-    animation-duration: 2s;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition:.5s;
-}
-
 .subTitle:hover {
    letter-spacing: 4px;
    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
