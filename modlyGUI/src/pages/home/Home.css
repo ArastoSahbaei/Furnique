@@ -9,7 +9,41 @@
     grid-row: 1/1;
     justify-self: center;
     width: 100%;
-    height: 80vh;
+    height: 84vh;
+}
+
+.mainPicTitle {
+   font-size: 40px;
+   color: white;
+   background-color: transparent;
+   grid-column: 4 / 10;
+   grid-row: 1/1;
+   margin-top: 1em;
+   justify-self: center;
+   font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.createTableButton {
+   grid-column: 4 / 10;
+   grid-row: 1/1;
+   cursor: pointer;
+   width: 10em;
+   height: 3em;
+   font-size: 36px;
+   color: white;
+   background-color: transparent;
+   justify-self: center;
+   font-family: 'Alegreya Sans SC', sans-serif;
+   margin-top: 5em;
+   border: 3px solid #ffffff;
+   border-radius: 25px;
+   transition: all 0.5s;
+}
+
+.createTableButton:hover {
+   transition: all 0.5s;
+   width: 11em;
+   height: 3.5em;
 }
 
 .treeLogo {
