@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
 import TreeLogo from '../../shared/images/haha.gif';
-import MainPic from '../../shared/images/room.jpg';
+import MainPic from '../../shared/images/omg.jpg';
 import Swiper from '../../components/swiper/Swiper'
 
 
