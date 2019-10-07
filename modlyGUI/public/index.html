@@ -17,6 +17,26 @@
       <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
       <title>Modon | Perfectly Fit Measurements For Your Home</title>
   </head>
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+  <script type="text/JavaScript">
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 20) {
+          $(".navigationList").css({"background-color" : "rgb(41, 182, 219, 0.5)"}) /* färgen när man scrollar */
+          $(".navigationList").css({"-webkit-box-shadow" : "0 4px 4px -2px #000000"}) 
+          $(".navigationList").css({"-moz-box-shadow" : "0 4px 4px -2px #000000"}) 
+          $(".navigationList").css({"box-shadow" : "0 4px 4px -2px #000000"}) 
+        }
+        else {
+          $(".navigationList").css({"background-color" : "#429CD8"}) 
+          $(".navigationList").css({"-webkit-box-shadow" : "none"}) 
+          $(".navigationList").css({"-moz-box-shadow" : "none"}) 
+          $(".navigationList").css({"box-shadow" : "none"}) 
+        }
+      })
+    })
+</script>
 
   <body>
       <div id="root"></div>

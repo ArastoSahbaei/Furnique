@@ -11,8 +11,14 @@
     list-style-type: none;
     font-family: 'Oswald', sans-serif;
     font-size: 22px;
-    background-color: #29b6db;
+    background-color: #429cd8;
     text-align: center;
+    transition: all 0.8s;
+    }
+
+    .navigationList:hover {
+      background-color: rgb(66, 156, 216, 1) !important;
+      transition: all 0.5s;
     }
 
     .logotype {
