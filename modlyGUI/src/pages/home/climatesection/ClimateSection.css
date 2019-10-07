@@ -4,6 +4,8 @@
     justify-self: center;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='119' height='119' viewBox='0 0 100 100'%3E%3Cg stroke='%23000000' stroke-width='2.1' stroke-opacity='0.7'%3E%3Crect fill='%2378c7d2' x='-60' y='-60' width='83' height='240'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .treeLogo {
@@ -17,6 +19,8 @@
     font-size: 42px;
     z-index: 1;
     color:#6abb20;
+    background-color: #ffffff;
+    height: 100px;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: 700;
     grid-column: 2/6;
@@ -30,14 +34,16 @@
     font-size: 24px;
     cursor: pointer;
     color:#6abb20;
+    background-color: #ffffff;
+    height: 30px;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: 600;
     grid-column: 7/9;
+    margin-right: 3em;
     grid-row: 1/1;
     z-index: 1;
     justify-self: center;
     align-self: end;
-    border-bottom: 2px solid#78c7d2;
     animation-name: fadeInEffect;
     animation-duration: 2s;
     -o-transition:.5s;
