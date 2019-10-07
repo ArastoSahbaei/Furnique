@@ -2,7 +2,7 @@
     top: 0;
     width: 100%;
     position: sticky;
-    border-bottom: 1px solid;
+    border-bottom: 2px solid;
    }
 
   .navigationList {
@@ -16,9 +16,11 @@
     }
 
     .logotype {
-        float: left;
-        margin-top: 12px;
-        color: white;
+      position: absolute;
+      left: 0;
+      margin-left: 2%;
+      margin-top: 12px;
+      color: white;
     }
 
     .itemList {
