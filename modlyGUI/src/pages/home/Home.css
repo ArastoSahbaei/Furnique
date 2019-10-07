@@ -60,7 +60,6 @@
     font-weight: 700;
     grid-column: 1/4;
     grid-row: 2/2;
-    z-index: 1;
     justify-self: center;
     animation-name: leftToRight;
     animation-duration: 1.7s;
