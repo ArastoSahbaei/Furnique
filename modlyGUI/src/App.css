@@ -8,6 +8,6 @@ width: 0.5em;
 }
  
 body::-webkit-scrollbar-thumb {
-  background-color: #FF9300;
+  background-color: #2abace;
   outline: 1px solid slategrey;
 }
