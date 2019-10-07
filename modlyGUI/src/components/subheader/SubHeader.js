@@ -12,7 +12,7 @@ export default function SubHeader() {
 
                 <li className="trygghetsGaranti"> <i className="far fa-smile-beam"></i>    
                 <span className="headerSubTitle">Trygghetsgaranti</span> 
-                <p className="fraktFrittSubTitle">Alltid 100 dagars returrätt</p>
+                <p className="fraktFrittSubTitle">Skulle du bli missnöjd? Alltid 30 dagars returrätt!</p>
                 </li>
 
                 <li className="miljoSmart"> <i className="fab fa-pagelines"></i>     
