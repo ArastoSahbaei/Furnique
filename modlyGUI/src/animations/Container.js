@@ -5,7 +5,7 @@ const Mainer = lazy(() => import('./hooks/example-cube/Main'));
 export default function Container() {
 
 return (
-        <div>
+        <div className="containerWrapper">
               {/* <Main/> */}
               <Mainer/>
         </div>
