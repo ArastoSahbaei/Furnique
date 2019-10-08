@@ -18,7 +18,7 @@ canvas {
 }
 
 input[type='range']  {
-    margin: 20px;
+    margin: 22px;
     width: 400px;
     height: 2px;
     background: #111;

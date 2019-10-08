@@ -32,7 +32,6 @@ const CubeExample = () => {
       <div className="adjustmentSection">
            {/*  <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br /> */}
           {/*   <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br /> */}
-          <span id="rs-bullet" class="rs-label">0</span>
             <input type="range" id="rs-range-line" className="rs-range" min="0" max="10" onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value/200})} />  
             <span>RotationSpeed: {cartObject.rotationSpeed}</span>   <br />
             <input type="range" id="rs-range-line" min="0" max="10" onChange={e => setCartObject({...cartObject, bordsBredd: e.target.value})} />        
@@ -53,8 +52,10 @@ const CubeExample = () => {
             <input type="range" id="rs-range-line" min="0" max="10" onChange={e => setCartObject({...cartObject, BenPositionY: e.target.value})} />  
             setBenPositionY: {cartObject.BenPositionY}cm <br />
 
-            <span>price: {(cartObject.bordsBredd + cartObject.Bordslängd) * 11}€</span>
+<br/>
+<hr/>
 
+            <span>price: {(cartObject.bordsBredd + cartObject.Bordslängd) * 111}€</span>
             <AddToCartButton meshObjectValues={cartObject}/>
         </div>
     </SceneManager >
