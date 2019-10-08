@@ -31,44 +31,45 @@ const CubeExample = () => {
 
       <div className="adjustmentSection">
            {/*  <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br /> */}
-          {/*   <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br /> */}
-            <input type="range" id="rs-range-line" className="rs-range" min="0" max="10"
-            onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value/200})} />  
-            <span>RotationSpeed: {cartObject.rotationSpeed}</span>   <br />
-
-            <input type="range" id="rs-range-line" min="0" max="10"  value={cartObject.bordsBredd}
-            onChange={e => setCartObject({...cartObject, bordsBredd: e.target.value})} />        
-            setBordsBredd: {cartObject.bordsBredd}cm <br />
+           {/*   <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br /> */}
             
-            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.Bordslängd}
+            <span>setBordsBredd:</span> <input type="range" id="rs-range-line" min="0" max="1000"  value={cartObject.bordsBredd}
+            onChange={e => setCartObject({...cartObject, bordsBredd: e.target.value})} />        
+             {cartObject.bordsBredd} cm <br />
+            
+             <span>setBordslängd:</span> <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.Bordslängd}
              onChange={e => setCartObject({...cartObject, Bordslängd: e.target.value})} />        
-            setBordslängd: {cartObject.Bordslängd}cm <br/>
+             {cartObject.Bordslängd} cm <br/>
 
-            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.Bordsdjup}
+             <span>setBordsdjup:</span> <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.Bordsdjup}
             onChange={e => setCartObject({...cartObject, Bordsdjup: e.target.value})} />         
-            setBordsdjup: {cartObject.Bordsdjup}cm 
+             {cartObject.Bordsdjup} cm 
 
             <br /> <h3>legs</h3>
-            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenBredd}
+            <span>setBenBredd:</span> <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenBredd}
             onChange={e => setCartObject({...cartObject, BenBredd: e.target.value})} />      
-            setBenBredd: {cartObject.BenBredd}cm <br />
+             {cartObject.BenBredd} cm <br />
 
-            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenLängd}
+             <span>setBenLängd:</span> <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenLängd}
             onChange={e => setCartObject({...cartObject, BenLängd: e.target.value})} />      
-            setBenLängd: {cartObject.BenLängd}cm <br />
+             {cartObject.BenLängd} cm <br />
 
-            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenHöjd}
+             <span>setBenHöjd:</span> <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenHöjd}
             onChange={e => setCartObject({...cartObject, BenHöjd: e.target.value})} />       
-            setBenHöjd:  {cartObject.BenHöjd}cm <br />
+              {cartObject.BenHöjd} cm <br />
 
-            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenPositionX}
+            <span>setBenPositionX:</span> <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenPositionX}
             onChange={e => setCartObject({...cartObject, BenPositionX: e.target.value})} />  
-            setBenPositionX: {cartObject.BenPositionX}cm <br />
+             {cartObject.BenPositionX} cm <br />
 
-            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenPositionY} 
+            <span>setBenPositionY:</span> <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenPositionY} 
             onChange={e => setCartObject({...cartObject, BenPositionY: e.target.value})} />  
-            setBenPositionY: {cartObject.BenPositionY}cm <br />
+             {cartObject.BenPositionY} cm <br />
 
+            <h3>Other:</h3>
+            <span>RotationSpeed:</span> <input type="range" id="rs-range-line" className="rs-range" min="0" max="10"
+            onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value/200})} />  
+            <span> {cartObject.rotationSpeed}</span>
 <br/>
 <hr/>
 
