@@ -32,24 +32,41 @@ const CubeExample = () => {
       <div className="adjustmentSection">
            {/*  <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br /> */}
           {/*   <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br /> */}
-            <input type="range" id="rs-range-line" className="rs-range" min="0" max="10" onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value/200})} />  
+            <input type="range" id="rs-range-line" className="rs-range" min="0" max="10"
+            onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value/200})} />  
             <span>RotationSpeed: {cartObject.rotationSpeed}</span>   <br />
-            <input type="range" id="rs-range-line" min="0" max="10" onChange={e => setCartObject({...cartObject, bordsBredd: e.target.value})} />        
+
+            <input type="range" id="rs-range-line" min="0" max="10"  value={cartObject.bordsBredd}
+            onChange={e => setCartObject({...cartObject, bordsBredd: e.target.value})} />        
             setBordsBredd: {cartObject.bordsBredd}cm <br />
-            <input type="range" id="rs-range-line" min="0" max="10" onChange={e => setCartObject({...cartObject, Bordslängd: e.target.value})} />        
+            
+            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.Bordslängd}
+             onChange={e => setCartObject({...cartObject, Bordslängd: e.target.value})} />        
             setBordslängd: {cartObject.Bordslängd}cm <br/>
-            <input type="range" id="rs-range-line" min="0" max="10" onChange={e => setCartObject({...cartObject, Bordsdjup: e.target.value})} />         
+
+            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.Bordsdjup}
+            onChange={e => setCartObject({...cartObject, Bordsdjup: e.target.value})} />         
             setBordsdjup: {cartObject.Bordsdjup}cm 
+
             <br /> <h3>legs</h3>
-            <input type="range" id="rs-range-line" min="0" max="10" onChange={e => setCartObject({...cartObject, BenBredd: e.target.value})} />      
+            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenBredd}
+            onChange={e => setCartObject({...cartObject, BenBredd: e.target.value})} />      
             setBenBredd: {cartObject.BenBredd}cm <br />
-            <input type="range" id="rs-range-line" min="0" max="10" onChange={e => setCartObject({...cartObject, BenLängd: e.target.value})} />      
+
+            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenLängd}
+            onChange={e => setCartObject({...cartObject, BenLängd: e.target.value})} />      
             setBenLängd: {cartObject.BenLängd}cm <br />
-            <input type="range" id="rs-range-line" min="0" max="10" onChange={e => setCartObject({...cartObject, BenHöjd: e.target.value})} />       
+
+            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenHöjd}
+            onChange={e => setCartObject({...cartObject, BenHöjd: e.target.value})} />       
             setBenHöjd:  {cartObject.BenHöjd}cm <br />
-            <input type="range" id="rs-range-line" min="0" max="10" onChange={e => setCartObject({...cartObject, BenPositionX: e.target.value})} />  
+
+            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenPositionX}
+            onChange={e => setCartObject({...cartObject, BenPositionX: e.target.value})} />  
             setBenPositionX: {cartObject.BenPositionX}cm <br />
-            <input type="range" id="rs-range-line" min="0" max="10" onChange={e => setCartObject({...cartObject, BenPositionY: e.target.value})} />  
+
+            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.BenPositionY} 
+            onChange={e => setCartObject({...cartObject, BenPositionY: e.target.value})} />  
             setBenPositionY: {cartObject.BenPositionY}cm <br />
 
 <br/>
