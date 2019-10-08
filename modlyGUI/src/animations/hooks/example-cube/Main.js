@@ -32,16 +32,17 @@ const CubeExample = () => {
       <div className="adjustmentSection">
             <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br />
             <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br />
-            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value})} /> RotationSpeed <br />
-            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, bordsBredd: e.target.value})} /> setBordsBredd  <br />
-            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, Bordslängd: e.target.value})} /> setBordslängd <br/>
-            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, Bordsdjup: e.target.value})} /> setBordsdjup 
-      <br /> <h3>legs</h3>
-            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, BenBredd: e.target.value})} /> setBenBredd <br />
-            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, BenLängd: e.target.value})} /> setBenLängd <br />
-            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, BenHöjd: e.target.value})} />  setBenHöjd  <br />
-            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, BenPositionX: e.target.value})} />  setBenPositionX  <br />
-            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, BenPositionY: e.target.value})} />  setBenPositionY  <br />
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value/200})} /> RotationSpeed: {cartObject.rotationSpeed}   <br />
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, bordsBredd: e.target.value})} />        setBordsBredd: {cartObject.bordsBredd}cm <br />
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, Bordslängd: e.target.value})} />        setBordslängd: {cartObject.Bordslängd}cm <br/>
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, Bordsdjup: e.target.value})} />         setBordsdjup: {cartObject.Bordsdjup}cm 
+
+            <br /> <h3>legs</h3>
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, BenBredd: e.target.value})} />      setBenBredd: {cartObject.BenBredd}cm <br />
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, BenLängd: e.target.value})} />      setBenLängd: {cartObject.BenLängd}cm <br />
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, BenHöjd: e.target.value})} />       setBenHöjd:  {cartObject.BenHöjd}cm <br />
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, BenPositionX: e.target.value})} />  setBenPositionX: {cartObject.BenPositionX}cm <br />
+            <input type="range" name="points" min="0" max="10" onChange={e => setCartObject({...cartObject, BenPositionY: e.target.value})} />  setBenPositionY: {cartObject.BenPositionY}cm <br />
 
             <AddToCartButton meshObjectValues={cartObject}/>
         </div>
