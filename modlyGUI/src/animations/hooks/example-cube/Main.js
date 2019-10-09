@@ -73,7 +73,7 @@ const CubeExample = () => {
 <br/>
 <hr/>
 
-            <span>price: {(cartObject.tableWidth + cartObject.tableLength) * 111}€</span>
+            <span className="finalPriceSpan">Price: {(cartObject.tableWidth + cartObject.tableLength) * 111}€</span>
             <AddToCartButton meshObjectValues={cartObject}/>
         </div>
     </SceneManager >
