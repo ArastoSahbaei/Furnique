@@ -6,6 +6,7 @@ import Grid from './mesh/Grid';
 import AddToCartButton from '../../../components/addToCartButton/AddToCartButton'
 import CameraControls from '../ThreeJSManager/CameraControls'
 import { getCamera, getRenderer, getScene } from './threeSetup';
+import Accordion from './Accordion'
 
 const CubeExample = () => {
   const [showGrid, toggleShowGrid] = useState(true);
@@ -32,11 +33,10 @@ const CubeExample = () => {
       <div className="adjustmentSection">
            {/*  <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br /> */}
            {/*   <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br /> */}
-            <h3 className="adjustmentTitle">Surface</h3>
+            <Accordion title="Surface">
             <p className="testo">Width:</p> 
             <input type="range" id="rs-range-line" min="0" max="1000" step="10"  value={cartObject.tableWidth} onChange={e => setCartObject({...cartObject, tableWidth: e.target.value})} />        
             <p className="defege">{cartObject.tableWidth} cm</p> <br />
-            
             <p className="testo">Length:</p> 
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.tableLength} onChange={e => setCartObject({...cartObject, tableLength: e.target.value})} />        
             <p className="defege">{cartObject.tableLength} cm</p> <br/>
@@ -44,8 +44,9 @@ const CubeExample = () => {
             <p className="testo">Height:</p>
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.tableHeight} onChange={e => setCartObject({...cartObject, tableHeight: e.target.value})} />         
             <p className="defege">{cartObject.tableHeight} cm</p> 
+            </Accordion>
 
-     <br /> <h3 className="adjustmentTitle">Legs</h3>
+     <br />  <Accordion title="Legs">
             <p className="testo">Width:</p> 
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.legWidth} onChange={e => setCartObject({...cartObject, legWidth: e.target.value})} />      
             <p className="defege">{cartObject.legWidth} cm</p> <br />
@@ -65,10 +66,12 @@ const CubeExample = () => {
             <p className="testo">Y-Axis:</p> 
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.legAxisY} onChange={e => setCartObject({...cartObject, legAxisY: e.target.value})} />  
             <p className="defege">{cartObject.legAxisY} cm</p> <br />
+            </Accordion>
 
-            <h3 className="adjustmentTitle">Other</h3>
+            <Accordion title="Other">
             <p className="testo">RotationSpeed:</p> <input type="range" id="rs-range-line" className="rs-range" min="0" max="10" onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value/200})} />  
             <p className="testo"> {cartObject.rotationSpeed}</p>
+            </Accordion>
 <br/>
 <hr/>
                 <AddToCartButton meshObjectValues={cartObject}/>
