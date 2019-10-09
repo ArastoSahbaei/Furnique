@@ -67,19 +67,20 @@ input[type='range']::-moz-range-track {
     font-size: 2em;
 }
 
-.testo {
+.adjustTitle {
     color: #000000;
     display: inline-block;
-    width: 4.4em;
+    width: 6em;
+    margin-left: 0.5em;
     font-family: suisseintlregular ,Helvetica ,Arial;
     font-size: 17px;
     font-weight: 800;
 }
 
-.defege {
+.adjustmentValue {
     color: #000000;
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 0.5em;
     font-family: suisseintlregular ,Helvetica ,Arial;
     font-weight: 800;
 }

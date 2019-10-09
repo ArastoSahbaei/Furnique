@@ -34,43 +34,44 @@ const CubeExample = () => {
            {/*  <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br /> */}
            {/*   <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br /> */}
             <Accordion title="Surface">
-            <p className="testo">Width:</p> 
+            <p className="adjustTitle">Width</p> 
             <input type="range" id="rs-range-line" min="0" max="1000" step="10"  value={cartObject.tableWidth} onChange={e => setCartObject({...cartObject, tableWidth: e.target.value})} />        
-            <p className="defege">{cartObject.tableWidth} cm</p> <br />
-            <p className="testo">Length:</p> 
+            <p className="adjustmentValue">{cartObject.tableWidth} cm</p> <br />
+            <p className="adjustTitle">Length</p> 
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.tableLength} onChange={e => setCartObject({...cartObject, tableLength: e.target.value})} />        
-            <p className="defege">{cartObject.tableLength} cm</p> <br/>
+            <p className="adjustmentValue">{cartObject.tableLength} cm</p> <br/>
 
-            <p className="testo">Height:</p>
+            <p className="adjustTitle">Height</p>
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.tableHeight} onChange={e => setCartObject({...cartObject, tableHeight: e.target.value})} />         
-            <p className="defege">{cartObject.tableHeight} cm</p> 
+            <p className="adjustmentValue">{cartObject.tableHeight} cm</p> 
             </Accordion>
 
      <br />  <Accordion title="Legs">
-            <p className="testo">Width:</p> 
+            <p className="adjustTitle">Width</p> 
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.legWidth} onChange={e => setCartObject({...cartObject, legWidth: e.target.value})} />      
-            <p className="defege">{cartObject.legWidth} cm</p> <br />
+            <p className="adjustmentValue">{cartObject.legWidth} cm</p> <br />
 
-            <p className="testo">Length:</p> 
+            <p className="adjustTitle">Length</p> 
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.legLength} onChange={e => setCartObject({...cartObject, legLength: e.target.value})} />      
-            <p className="defege">{cartObject.legLength} cm</p> <br />
+            <p className="adjustmentValue">{cartObject.legLength} cm</p> <br />
 
-            <p className="testo">Height:</p> 
+            <p className="adjustTitle">Height</p> 
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.legHeight} onChange={e => setCartObject({...cartObject, legHeight: e.target.value})} />       
-            <p className="defege">{cartObject.legHeight} cm</p> <br />
+            <p className="adjustmentValue">{cartObject.legHeight} cm</p> <br />
 
-            <p className="testo">X-Axis:</p> 
+            <p className="adjustTitle"> <i class="fas fa-question-circle"></i> X-Axis</p> 
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.legAxisX} onChange={e => setCartObject({...cartObject, legAxisX: e.target.value})} />  
-            <p className="defege">{cartObject.legAxisX} cm</p> <br />
+            <p className="adjustmentValue">{cartObject.legAxisX} cm</p> <br />
 
-            <p className="testo">Y-Axis:</p> 
+            <p className="adjustTitle"> <i class="fas fa-question-circle"></i> Y-Axis</p> 
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.legAxisY} onChange={e => setCartObject({...cartObject, legAxisY: e.target.value})} />  
-            <p className="defege">{cartObject.legAxisY} cm</p> <br />
+            <p className="adjustmentValue">{cartObject.legAxisY} cm</p> <br />
             </Accordion>
 
             <br />  <Accordion title="Other">
-            <p className="testo">RotationSpeed:</p> <input type="range" id="rs-range-line" className="rs-range" min="0" max="10" onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value/200})} />  
-            <p className="testo"> {cartObject.rotationSpeed}</p>
+            <p className="adjustTitle">Rotation</p> 
+            <input type="range" id="rs-range-line" className="rs-range" min="0" max="10" onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value/200})} />  
+            <p className="adjustmentValue"> {cartObject.rotationSpeed}</p>
             </Accordion>
 <br/>
 <hr/>
