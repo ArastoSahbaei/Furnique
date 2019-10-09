@@ -68,7 +68,7 @@ const CubeExample = () => {
             <p className="defege">{cartObject.legAxisY} cm</p> <br />
             </Accordion>
 
-            <Accordion title="Other">
+            <br />  <Accordion title="Other">
             <p className="testo">RotationSpeed:</p> <input type="range" id="rs-range-line" className="rs-range" min="0" max="10" onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value/200})} />  
             <p className="testo"> {cartObject.rotationSpeed}</p>
             </Accordion>

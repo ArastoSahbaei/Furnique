@@ -70,7 +70,6 @@ input[type='range']::-moz-range-track {
 .testo {
     color: #000000;
     display: inline-block;
-    margin-right: 70px;
     width: 4.4em;
     font-family: suisseintlregular ,Helvetica ,Arial;
     font-size: 17px;
