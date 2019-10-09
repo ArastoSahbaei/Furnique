@@ -23,7 +23,7 @@ const Accordion = props => {
       <button className="accordion-title" onClick={toogleActive}>
         <p style={titleStyle}>{props.title}</p>
         <span className={active ? 'accordion-icon rotate': 'accordion-icon'}>
-        <i class="fas fa-arrow-right"></i>
+        <i className="fas fa-chevron-right"></i>
         </span>
       </button>
 
