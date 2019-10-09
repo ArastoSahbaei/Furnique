@@ -6,7 +6,7 @@ import Grid from './mesh/Grid';
 import AddToCartButton from '../../../components/addToCartButton/AddToCartButton'
 import CameraControls from '../ThreeJSManager/CameraControls'
 import { getCamera, getRenderer, getScene } from './threeSetup';
-import Accordion from './Accordion'
+import Accordion from '../../../components/accordion/Accordion'
 
 const CubeExample = () => {
   const [showGrid, toggleShowGrid] = useState(true);
