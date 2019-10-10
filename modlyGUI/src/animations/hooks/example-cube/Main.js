@@ -50,7 +50,7 @@ const CubeExample = () => {
       </div>
 
       <div className="isParent2">
-            <p id="rs-bullet" className="adjustmentValue"> {cartObject.tableLength}</p> <br/>
+            <p id="rs-bullet" className="adjustmentValue"> {cartObject.tableLength}</p>
             <p className="adjustTitle">Length</p> 
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.tableLength} onChange={e => setCartObject({...cartObject, tableLength: e.target.value})} />        
       </div>

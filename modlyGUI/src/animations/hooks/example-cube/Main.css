@@ -1,5 +1,5 @@
 .containerWrapper {
-    background-color: #f5f5f5;
+    background-color:#f5f5f5;
 }
 
 .adjustmentSection {
@@ -96,6 +96,7 @@ input[type='range']::-moz-range-track {
     font-size: 22px;
     font-family: suisseintlregular, Helvetica, Arial;
     margin-left: 60px;
+    margin-bottom: -1px;
 }
 
 .adjustmentValue::after {
