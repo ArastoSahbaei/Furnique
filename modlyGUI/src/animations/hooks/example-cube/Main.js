@@ -55,9 +55,11 @@ const CubeExample = () => {
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.tableLength} onChange={e => setCartObject({...cartObject, tableLength: e.target.value})} />        
       </div>
 
-            <p className="adjustTitle">Height</p>
+      <div className="isParent3">
+            <p className="adjustmentValue">{cartObject.tableHeight}</p> 
+            <p id="rs-bullet" className="adjustTitle">Height</p>
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.tableHeight} onChange={e => setCartObject({...cartObject, tableHeight: e.target.value})} />         
-            <p className="adjustmentValue">{cartObject.tableHeight} cm</p> 
+      </div>
             </Accordion>
 
      <br />  <Accordion title="Legs">
