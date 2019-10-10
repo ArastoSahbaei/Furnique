@@ -49,9 +49,11 @@ const CubeExample = () => {
             <input type="range" ref={rangeSlider} min="0" max="1000" step="1"  value={cartObject.tableWidth} onChange={e => setCartObject({...cartObject, tableWidth: e.target.value})} />        
       </div>
 
+      <div className="isParent2">
+            <p id="rs-bullet" className="adjustmentValue"> {cartObject.tableLength}</p> <br/>
             <p className="adjustTitle">Length</p> 
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.tableLength} onChange={e => setCartObject({...cartObject, tableLength: e.target.value})} />        
-            <p id="rs-bullet" className="adjustmentValue">{cartObject.tableLength} cm</p> <br/>
+      </div>
 
             <p className="adjustTitle">Height</p>
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.tableHeight} onChange={e => setCartObject({...cartObject, tableHeight: e.target.value})} />         

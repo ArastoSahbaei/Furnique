@@ -10,8 +10,9 @@
     -webkit-box-shadow: 5px 5px 15px 5px #000000; 
     box-shadow: 5px 5px 15px 5px #000000;
     transform: translate(0px, -10px);
-    border-radius: 1%;
-    padding: 1%;
+    border-radius: 10px;
+    padding: 20px;
+    width: 410px;
 }
 
 canvas {
@@ -19,7 +20,7 @@ canvas {
 }
 
 input[type='range']  {
-    margin: 22px;
+    margin: 20px;
     width: 300px;
     height: 2px;
     background: #111;
@@ -36,7 +37,7 @@ input[type='range']::-webkit-slider-thumb {
     background: rgba(255,255,255,1);
     cursor: pointer;
     -webkit-appearance: none;
-    margin-top: -20px;
+    margin-top: -25px;
 }
 
 input[type='range']:focus {
@@ -66,7 +67,7 @@ input[type='range']::-moz-range-track {
 .adjustTitle {
     color: #000000;
     display: inline-block;
-    width: 6em;
+    width: 3em;
     margin-left: 0.5em;
     font-family: suisseintlregular ,Helvetica ,Arial;
     font-size: 17px;
@@ -76,25 +77,25 @@ input[type='range']::-moz-range-track {
     position: relative;
     transform-origin: center center;
     display: block;
-    width: 98px;
-    height: 98px;
+    width: 65px;
+    height: 65px;
     background: transparent;
     border-radius: 50%;
     line-height: 30px;
     text-align: center;
     font-weight: bold;
-    padding-top: 22px;
+    padding-top: 12px;
     box-sizing: border-box;
     border: 2px solid #fff;
-    margin-top: 20px;
-    margin-left: 90px;
+    margin-top: 10px;
     left: attr(value);
     color: #fff;
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 36px;
-    font-family: suisseintlregular ,Helvetica ,Arial;
+    font-size: 22px;
+    font-family: suisseintlregular, Helvetica, Arial;
+    margin-left: 60px;
 }
 
 .adjustmentValue::after {
@@ -115,5 +116,9 @@ input[type='range']::-moz-range-track {
 }
 
 .isParent {
-    background-color: pink;
+    background: linear-gradient(180deg,rgb(167, 188, 231) 0%,#62186B 100%) no-repeat;
+}
+
+.isParent2 {
+    background-color: hotpink;
 }
