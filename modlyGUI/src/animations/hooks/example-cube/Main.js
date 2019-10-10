@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import SceneManager from '../ThreeJSManager';
 import './Main.css'
 import Table from './mesh/Table';
@@ -8,7 +8,32 @@ import CameraControls from '../ThreeJSManager/CameraControls'
 import { getCamera, getRenderer, getScene } from './threeSetup';
 import Accordion from '../../../components/accordion/Accordion'
 
+
+/* 
+var rangeSlider = document.getElementById("rs-range-line");
+var rangeBullet = document.getElementById("rs-bullet");
+rangeSlider.addEventListener("input", showSliderValue, false);
+
+function showSliderValue() {
+  rangeBullet.innerHTML = rangeSlider.value;
+  var bulletPosition = (rangeSlider.value /rangeSlider.max);
+  rangeBullet.style.left = (bulletPosition * 578) + "px";
+} */
+
+
+
 const CubeExample = () => {
+  
+  const rangeSlider = useRef();
+  const rangeBullet = useRef();
+  window.addEventListener("input", showSliderValue, false);
+
+  function showSliderValue() {
+    var bulletPosition = (rangeSlider.current.value /rangeSlider.current.max);
+    rangeBullet.current.style.left = (bulletPosition * 275) + "px";
+  }
+  
+  
   const [showGrid, toggleShowGrid] = useState(true);
   const [showCube, toggleShowCube] = useState(true);
   const [cartObject, setCartObject] = useState({
@@ -34,12 +59,16 @@ const CubeExample = () => {
            {/*  <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br /> */}
            {/*   <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br /> */}
             <Accordion title="Surface">
+
+      <div className="isParent">
+            <p className="adjustmentValue" ref={rangeBullet}>{cartObject.tableWidth}</p>
             <p className="adjustTitle">Width</p> 
-            <input type="range" id="rs-range-line" min="0" max="1000" step="10"  value={cartObject.tableWidth} onChange={e => setCartObject({...cartObject, tableWidth: e.target.value})} />        
-            <p className="adjustmentValue">{cartObject.tableWidth} cm</p> <br />
+            <input type="range" ref={rangeSlider} min="0" max="1000" step="1"  value={cartObject.tableWidth} onChange={e => setCartObject({...cartObject, tableWidth: e.target.value})} />        
+      </div>
+
             <p className="adjustTitle">Length</p> 
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.tableLength} onChange={e => setCartObject({...cartObject, tableLength: e.target.value})} />        
-            <p className="adjustmentValue">{cartObject.tableLength} cm</p> <br/>
+            <p id="rs-bullet" className="adjustmentValue">{cartObject.tableLength} cm</p> <br/>
 
             <p className="adjustTitle">Height</p>
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.tableHeight} onChange={e => setCartObject({...cartObject, tableHeight: e.target.value})} />         
