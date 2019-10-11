@@ -31,8 +31,7 @@ const CubeExample = () => {
 
       function showSliderValue() {
       const bulletPosition = (rangeSlider.current.value /rangeSlider.current.max);
-      console.log(rangeSlider.current.value /rangeSlider.current.max)
-      rangeBullet.current.style.left = (bulletPosition * 275) + "px";
+      rangeBullet.current.style.left = ((bulletPosition*1.15)  * 270)  + "px";
       }
 
       function realisticMeasurements(measurements) {
@@ -51,12 +50,12 @@ const CubeExample = () => {
 
       <div className="adjustmentSection">
               
-            <Accordion title="Surface">
+            <Accordion title="1. Surface">
 
       <div className="isParent">
             <p className="adjustmentValue" ref={rangeBullet}>{realisticMeasurements(cartObject.tableWidth)}</p>
             <p className="adjustTitle">Width</p> 
-            <input type="range" ref={rangeSlider} min="0.0" max="3" step="0.01"  value={cartObject.tableWidth} onChange={e => setCartObject({...cartObject, tableWidth: e.target.value})} />        
+            <input type="range" ref={rangeSlider} min="0.3" max="3" step="0.01"  value={cartObject.tableWidth} onChange={e => setCartObject({...cartObject, tableWidth: e.target.value})} />        
       </div>
 
       <div className="isParent2">
@@ -72,7 +71,7 @@ const CubeExample = () => {
       </div>
             </Accordion>
 
-     <br />  <Accordion title="Legs">
+     <br />  <Accordion title="2. Legs">
             <p className="adjustmentValue">{cartObject.legWidth}</p> <br />
             <p className="adjustTitle">Width</p> 
             <input type="range" id="rs-range-line" min="0.0" max="3" step="0.01" value={cartObject.legWidth} onChange={e => setCartObject({...cartObject, legWidth: e.target.value})} />      
@@ -91,10 +90,10 @@ const CubeExample = () => {
 
             <p className="adjustmentValue">{cartObject.legAxisY}</p> <br />
             <p className="adjustTitle"> <i class="fas fa-question-circle"></i> Y-Axis</p> 
-            <input type="range" id="rs-range-line" min="0.0" max="3" step="0.01" value={cartObject.legAxisY} onChange={e => setCartObject({...cartObject, legAxisY: e.target.value})} />  
+            <input type="range" id="rs-range-line" min={"0.0"} max="3" step="0.01" value={cartObject.legAxisY} onChange={e => setCartObject({...cartObject, legAxisY: e.target.value})} />  
             </Accordion>
 
-            <br />  <Accordion title="Other">
+            <br />  <Accordion title="3. Other">
             <p className="adjustmentValue"> {cartObject.rotationSpeed * 100}</p>
             <p className="adjustTitle">Rotation</p> 
             <input type="range" id="rs-range-line" min="0" max="0.005" step="0.001" value={cartObject.rotationSpeed} onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value})} />  
