@@ -24,7 +24,7 @@ const CubeExample = () => {
     tableWidth: 1.5,
     tableLength: 1.5,
     tableHeight: 0.6,
-    rotationSpeed: 0.05,
+    rotationSpeed: 0.005,
     legWidth: 2,
     legLength: 2,
     legHeight: 1.3,
@@ -85,7 +85,7 @@ const CubeExample = () => {
 
             <br />  <Accordion title="Other">
             <p className="adjustTitle">Rotation</p> 
-            <input type="range" id="rs-range-line" className="rs-range" min="0" max="10" onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value/200})} />  
+            <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.rotationSpeed} onChange={e => setCartObject({...cartObject, rotationSpeed: e.target.value/200})} />  
             <p className="adjustmentValue"> {cartObject.rotationSpeed}</p>
             <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br /> 
             <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br /> 
