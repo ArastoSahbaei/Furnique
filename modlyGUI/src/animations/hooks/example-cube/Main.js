@@ -8,29 +8,32 @@ import CameraControls from '../ThreeJSManager/CameraControls'
 import { getCamera, getRenderer, getScene } from './threeSetup';
 import Accordion from '../../../components/accordion/Accordion'
 
+
 const CubeExample = () => {
-   const rangeSlider = useRef();
-  const rangeBullet = useRef();
-  window.addEventListener("input", showSliderValue, false);
-  function showSliderValue() {
-    var bulletPosition = (rangeSlider.current.value /rangeSlider.current.max);
-    rangeBullet.current.style.left = (bulletPosition * 275) + "px";
-  }
-  
-  const [showGrid, toggleShowGrid] = useState(true);
-  const [showCube, toggleShowCube] = useState(true);
-  const [cartObject, setCartObject] = useState({
-    id: null,
-    tableWidth: 1.5,
-    tableLength: 1.5,
-    tableHeight: 0.6,
-    rotationSpeed: 0.005,
-    legWidth: 2,
-    legLength: 2,
-    legHeight: 1.3,
-    legAxisX: 0.65,
-    legAxisY: 0.65,
-  })
+      const [showGrid, toggleShowGrid] = useState(true);
+      const [showCube, toggleShowCube] = useState(true);
+      const [cartObject, setCartObject] = useState({
+        id: null,
+        tableWidth: 1.5,
+        tableLength: 1.5,
+        tableHeight: 0.6,
+        rotationSpeed: 0.005,
+        legWidth: 2,
+        legLength: 2,
+        legHeight: 1.3,
+        legAxisX: 0.65,
+        legAxisY: 0.65,
+      })
+
+      const rangeSlider = useRef();
+      const rangeBullet = useRef();
+      window.addEventListener("input", showSliderValue, false);
+
+      function showSliderValue() {
+      const bulletPosition = (rangeSlider.current.value /rangeSlider.current.max);
+      console.log(rangeSlider.current.value /rangeSlider.current.max)
+      rangeBullet.current.style.left = (bulletPosition * 275) + "px";
+      }
 
   return (
     <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '40%', width: '40%'}}>
@@ -43,13 +46,13 @@ const CubeExample = () => {
             <Accordion title="Surface">
 
       <div className="isParent">
-            <p className="adjustmentValue" ref={rangeBullet}>{cartObject.tableWidth}</p>
+            <p className="adjustmentValue" ref={rangeBullet}>{Math.round(cartObject.tableWidth*100)}</p>
             <p className="adjustTitle">Width</p> 
-            <input type="range" ref={rangeSlider} min="0" max="1000" step="1"  value={cartObject.tableWidth} onChange={e => setCartObject({...cartObject, tableWidth: e.target.value})} />        
+            <input type="range" ref={rangeSlider} min="0.0" max="3" step="0.01"  value={cartObject.tableWidth} onChange={e => setCartObject({...cartObject, tableWidth: e.target.value})} />        
       </div>
 
       <div className="isParent2">
-            <p id="rs-bullet" className="adjustmentValue"> {cartObject.tableLength}</p>
+            <p className="adjustmentValue"> {cartObject.tableLength}</p>
             <p className="adjustTitle">Length</p> 
             <input type="range" id="rs-range-line" min="0" max="10" value={cartObject.tableLength} onChange={e => setCartObject({...cartObject, tableLength: e.target.value})} />        
       </div>
@@ -93,7 +96,7 @@ const CubeExample = () => {
 <br/>
 <hr/>
                 <AddToCartButton meshObjectValues={cartObject}/>
-                <p className="finalPrice">{(cartObject.tableWidth + cartObject.tableLength) * 111} €</p>
+                <p className="finalPrice">{Math.round(cartObject.tableWidth * 100)} €</p>
         </div>
     </SceneManager >
   );
