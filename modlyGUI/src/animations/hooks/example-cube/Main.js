@@ -35,6 +35,14 @@ const CubeExample = () => {
       rangeBullet.current.style.left = (bulletPosition * 275) + "px";
       }
 
+      function realisticMeasurements(measurements) {
+            return Math.round(measurements*100)
+      }
+
+      function priceCalculattion() {
+            return Math.round((cartObject.tableWidth * 100) + (cartObject.tableLength * 100) + (cartObject.tableHeight * 100))
+      }
+
   return (
     <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '40%', width: '40%'}}>
       <CameraControls />
@@ -46,7 +54,7 @@ const CubeExample = () => {
             <Accordion title="Surface">
 
       <div className="isParent">
-            <p className="adjustmentValue" ref={rangeBullet}>{Math.round(cartObject.tableWidth*100)}</p>
+            <p className="adjustmentValue" ref={rangeBullet}>{realisticMeasurements(cartObject.tableWidth)}</p>
             <p className="adjustTitle">Width</p> 
             <input type="range" ref={rangeSlider} min="0.0" max="3" step="0.01"  value={cartObject.tableWidth} onChange={e => setCartObject({...cartObject, tableWidth: e.target.value})} />        
       </div>
@@ -93,10 +101,9 @@ const CubeExample = () => {
             <input type="checkbox" checked={showGrid} onChange={() => toggleShowGrid(!showGrid)} /> show grid   <br /> 
             <input type="checkbox" checked={showCube} onChange={() => toggleShowCube(!showCube)} /> show table  <br /> 
             </Accordion>
-<br/>
 <hr/>
                 <AddToCartButton meshObjectValues={cartObject}/>
-                <p className="finalPrice">{Math.round(cartObject.tableWidth * 100)} €</p>
+                <p className="finalPrice">{priceCalculattion()} €</p>
         </div>
     </SceneManager >
   );
