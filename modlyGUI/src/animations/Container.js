@@ -1,4 +1,5 @@
 import React, {lazy} from 'react'
+import './Container.css'
 const Main = lazy(() => import('./Main'));
 const Mainer = lazy(() => import('./hooks/example-cube/Main'));
 
