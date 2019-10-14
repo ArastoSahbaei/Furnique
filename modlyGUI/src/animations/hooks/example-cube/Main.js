@@ -17,10 +17,10 @@ const CubeExample = () => {
         tableWidth: 1.5,
         tableLength: 1.5,
         tableHeight: 0.6,
-        rotationSpeed: 0.001,
+        rotationSpeed: 0.000,
         legWidth: 2,
         legLength: 2,
-        legHeight: 1.3,
+        legHeight: 5,
         legAxisX: 0.65,
         legAxisY: 0.65,
       })
@@ -67,7 +67,7 @@ const CubeExample = () => {
       <div className="isParent3">
             <p className="adjustmentValue">{realisticMeasurements(cartObject.tableHeight)}</p> 
             <p id="rs-bullet" className="adjustTitle">Height</p>
-            <input type="range" id="rs-range-line" min="0.1" max="1" step="0.01" value={cartObject.tableHeight} onChange={e => setCartObject({...cartObject, tableHeight: e.target.value})} />         
+            <input type="range" id="rs-range-line" min="0.10" max="1.0" step="0.01" value={cartObject.tableHeight} onChange={e => setCartObject({...cartObject, tableHeight: e.target.value})} />         
       </div>
             </Accordion>
 
@@ -82,7 +82,7 @@ const CubeExample = () => {
 
             <p className="adjustmentValue">{realisticMeasurements(cartObject.legHeight)}</p> <br />
             <p className="adjustTitle">Height</p> 
-            <input type="range" id="rs-range-line" min="0.5" max="1.5" step="0.01" value={cartObject.legHeight} onChange={e => setCartObject({...cartObject, legHeight: e.target.value})} />       
+            <input type="range" id="rs-range-line" min="1.5" max="6" step="0.01" value={cartObject.legHeight} onChange={e => setCartObject({...cartObject, legHeight: e.target.value})} />       
 
             <p className="adjustmentValue">{realisticMeasurements(cartObject.legAxisX)}</p> <br />
             <p className="adjustTitle"> <i class="fas fa-question-circle"></i> X-Axis</p> 

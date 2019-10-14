@@ -27,14 +27,13 @@ const TableSurface = props => {
 
 
     const { getEntity, timer } = useThree(setup);
-
     useEffect(() => {
         const table = getEntity();
 
         table[0].rotation.y += -props.cartObject.rotationSpeed;
         table[0].scale.x = props.cartObject.tableWidth;
         table[0].scale.z = props.cartObject.tableLength;
-        table[0].scale.y = props.cartObject.tableHeight
+        table[0].scale.y = props.cartObject.tableHeight;
 
         table[1].scale.x = props.cartObject.legWidth; table[2].scale.x = props.cartObject.legWidth; table[3].scale.x = props.cartObject.legWidth; table[4].scale.x = props.cartObject.legWidth;
         table[1].scale.z = props.cartObject.legLength; table[2].scale.z = props.cartObject.legLength; table[3].scale.z = props.cartObject.legLength; table[4].scale.z = props.cartObject.legLength;
@@ -50,7 +49,7 @@ const TableSurface = props => {
         table[3].position.z = props.cartObject.legAxisY; 
         table[4].position.z = -props.cartObject.legAxisY; 
         
-        table[0].position.y =  props.cartObject.legHeight * 0.65;
+        table[0].position.y =  props.cartObject.legHeight * 0.12;
         table[1].position.y = -props.cartObject.legHeight * 0.65;
         table[2].position.y = -props.cartObject.legHeight * 0.65;
         table[3].position.y = -props.cartObject.legHeight * 0.65;
