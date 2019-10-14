@@ -16,16 +16,16 @@ export const getRenderer = canvas => {
 
 export const getScene = () => {
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xcccccc);
+  scene.background = new THREE.Color(0xFFFFFF);
   scene.fog = new THREE.FogExp2(0xcccccc, 0.002);
 
   const light = new THREE.SpotLight(0xffffff, 1, 750, 1);
-  light.position.set(50, 200, 0);
+  light.position.set(0, 50, 0);
   light.rotation.z = (90 * Math.PI) / 180;
   scene.add(light);
 
   const planeGeometry = new THREE.PlaneBufferGeometry(10000, 10000, 32, 32);
-  const planeMaterial = new THREE.MeshPhongMaterial({ color: 0xcccccc });
+  const planeMaterial = new THREE.MeshPhongMaterial({ color: 0xFFFFFF });
   const plane = new THREE.Mesh(planeGeometry, planeMaterial);
 
   plane.rotation.x = (-90 * Math.PI) / 180;
