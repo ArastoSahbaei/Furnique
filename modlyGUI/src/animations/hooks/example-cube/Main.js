@@ -43,7 +43,7 @@ const CubeExample = () => {
       }
 
   return (
-    <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '40%', width: '40%'}}>
+    <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '90%', width: '40%'}}>
       <CameraControls />
       {showGrid && <Grid />}
       {showCube && <Table cartObject={cartObject}/>}
