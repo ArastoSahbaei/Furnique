@@ -4,7 +4,7 @@
 }
 
 .adjustmentSection {
-    background: linear-gradient(180deg,#DB302A 0%,#62186B 100%) no-repeat;
+    background: linear-gradient(180deg,rgba(219, 48, 42, 0.4) 0%,rgba(98, 24, 107, 1) 100%) no-repeat;
     float: right;
     margin-right: 20em;
     margin-top: 1em;
