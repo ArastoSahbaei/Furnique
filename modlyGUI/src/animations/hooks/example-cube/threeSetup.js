@@ -8,7 +8,7 @@ export const getCamera = ({ offsetWidth, offsetHeight }) => {
 
 export const getRenderer = canvas => {
   const context = canvas.getContext('webgl');
-  const renderer = new THREE.WebGLRenderer({canvas, context});
+  const renderer = new THREE.WebGLRenderer({antialias: true, canvas, context});
   renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
   return renderer;
