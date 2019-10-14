@@ -115,16 +115,16 @@ input[type='range']::-moz-range-track {
 }
 
 .isParent {
-    background: linear-gradient(180deg,rgb(167, 188, 231) 0%,#62186B 100%) no-repeat;
+    background-color: #375e97;
     padding: 1px;
 }
 
 .isParent2 {
-    background: linear-gradient(180deg,#62186B 0%,rgb(24, 70, 107) 100%) no-repeat;
+    background-color: #FB6542;
     padding: 1px;
 }
 
 .isParent3 {
+    background-color: #FFBB00;
     padding: 1px;
-    background: linear-gradient(180deg,rgb(24, 70, 107) 0%,rgb(167, 188, 231) 100%) no-repeat;
 }

@@ -15,7 +15,7 @@ export default function AddToCartButton(props) {
 
     return (
         <div>
-            <button className="addToCartButton" onClick={addMeshToCart}><span>Add to cart</span></button>
+            <button className="addToCartButton" onClick={addMeshToCart}><span>Purchase</span></button>
         </div>
     )
 }
