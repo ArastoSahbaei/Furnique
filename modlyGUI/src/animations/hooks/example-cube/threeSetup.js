@@ -19,14 +19,14 @@ export const getRenderer = canvas => {
 export const getScene = () => {
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0xFFFFFF);
-  scene.fog = new THREE.FogExp2(0xcccccc, 0.002);
+  /* scene.fog = new THREE.FogExp2(0xcccccc, 0.002); */
 
   const light = new THREE.SpotLight(0xffffff, 1, 750, 1);
   light.position.set(0, 30, 0);
   light.rotation.z = (90 * Math.PI) / 180;
   scene.add(light);
 
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
   directionalLight.position.set(6, 20, 20)
   directionalLight.castShadow = true;
   directionalLight.shadow.mapSize.width = 1024;  //Change to 8192 for production

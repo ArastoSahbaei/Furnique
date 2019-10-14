@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import textureLoader from '../../shared/images/concrete.jpg'
+import textureLoader from '../../shared/images/whiiteMarble.jpg'
 
 export default () => {
     const wallTexture = new THREE.TextureLoader().load(textureLoader);
