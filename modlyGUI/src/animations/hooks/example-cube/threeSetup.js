@@ -24,13 +24,21 @@ export const getScene = () => {
   light.rotation.z = (90 * Math.PI) / 180;
   scene.add(light);
 
-  const planeGeometry = new THREE.PlaneBufferGeometry(10000, 10000, 32, 32);
-  const planeMaterial = new THREE.MeshPhongMaterial({ color: 0xFFFFFF });
-  const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+  const floorGeometry = new THREE.PlaneBufferGeometry(100, 100, 32, 32);
+  const floorMaterial = new THREE.MeshPhongMaterial({ color: 0xFFFFFF });
+  const floor = new THREE.Mesh(floorGeometry, floorMaterial);
 
-  plane.rotation.x = (-90 * Math.PI) / 180;
-  plane.receiveShadow = true;
-  scene.add(plane);
+  floor.rotation.x = (-90 * Math.PI) / 180;
+  floor.receiveShadow = true;
+  scene.add(floor);
+
+  const wallGeometry = new THREE.PlaneGeometry( 600, 140, 100, 100 );
+  const wallMaterial = new THREE.MeshStandardMaterial({color: 0xCECECE, side: THREE.DoubleSide, wireframe: false}),
+  wall = new THREE.Mesh( wallGeometry, wallMaterial );
+  wall.receiveShadow = false;
+
+  wall.position.set(0, 12, -4);
+  scene.add(wall)
 
   return scene;
 };
