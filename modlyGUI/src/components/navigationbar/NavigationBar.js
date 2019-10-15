@@ -9,6 +9,7 @@ const Container = lazy(() => import('../../animations/Container'));
 const Tables = lazy(() => import('../../pages/tables/Tables'));
 const Contact = lazy(() => import('../../pages/contact/Contact'));
 const Checkout = lazy(() => import('../../pages/checkout/Checkout'));
+const Authentication = lazy(() => import('../../pages/authentication/Authentication'));
 
 export default function NavigationBar() {
     return (
@@ -27,11 +28,12 @@ export default function NavigationBar() {
 
                 <Suspense fallback={<img className="spinnerImage" src={Spinner} alt="SpinnerLogo"/>}>
                     <Switch>
-                        <Route exact path="/home"         component={Home} />
-                        <Route exact path="/tables"       component={Tables} />
-                        <Route exact path="/inspiration"  component={Container} />
-                        <Route exact path="/kontakt"      component={Contact} />
-                        <Route exact path="/checkout"     component={Checkout} />
+                        <Route exact path="/home"                component={Home} />
+                        <Route exact path="/tables"              component={Tables} />
+                        <Route exact path="/inspiration"         component={Container} />
+                        <Route exact path="/kontakt"             component={Contact} />
+                        <Route exact path="/checkout"            component={Checkout} />
+                        <Route exact path="/authentication"      component={Authentication} />
                         <Route component={Home} />
                     </Switch>
                 </Suspense>
