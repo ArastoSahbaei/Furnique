@@ -17,10 +17,10 @@ const CubeExample = () => {
         tableWidth: 1.5,
         tableLength: 1.5,
         tableHeight: 0.6,
-        rotationSpeed: 0.001,
+        rotationSpeed: 0.000,
         legWidth: 2,
         legLength: 2,
-        legHeight: 1.3,
+        legHeight: 5,
         legAxisX: 0.65,
         legAxisY: 0.65,
       })
@@ -43,7 +43,7 @@ const CubeExample = () => {
       }
 
   return (
-    <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '40%', width: '40%'}}>
+    <SceneManager getCamera={getCamera} getRenderer={getRenderer} getScene={getScene} canvasStyle={{height: '90%', width: '40%'}}>
       <CameraControls />
       {showGrid && <Grid />}
       {showCube && <Table cartObject={cartObject}/>}
@@ -61,36 +61,36 @@ const CubeExample = () => {
       <div className="isParent2">
             <p className="adjustmentValue"> {realisticMeasurements(cartObject.tableLength)}</p>
             <p className="adjustTitle">Length</p> 
-            <input type="range" id="rs-range-line" min="0.0" max="3" step="0.01" value={cartObject.tableLength} onChange={e => setCartObject({...cartObject, tableLength: e.target.value})} />        
+            <input type="range" id="rs-range-line" min="0.3" max="3" step="0.01" value={cartObject.tableLength} onChange={e => setCartObject({...cartObject, tableLength: e.target.value})} />        
       </div>
 
       <div className="isParent3">
             <p className="adjustmentValue">{realisticMeasurements(cartObject.tableHeight)}</p> 
             <p id="rs-bullet" className="adjustTitle">Height</p>
-            <input type="range" id="rs-range-line" min="0.0" max="3" step="0.01" value={cartObject.tableHeight} onChange={e => setCartObject({...cartObject, tableHeight: e.target.value})} />         
+            <input type="range" id="rs-range-line" min="0.10" max="1.0" step="0.01" value={cartObject.tableHeight} onChange={e => setCartObject({...cartObject, tableHeight: e.target.value})} />         
       </div>
             </Accordion>
 
      <br />  <Accordion title="2. Legs">
-            <p className="adjustmentValue">{cartObject.legWidth}</p> <br />
+            <p className="adjustmentValue">{realisticMeasurements(cartObject.legWidth)}</p> <br />
             <p className="adjustTitle">Width</p> 
-            <input type="range" id="rs-range-line" min="0.0" max="3" step="0.01" value={cartObject.legWidth} onChange={e => setCartObject({...cartObject, legWidth: e.target.value})} />      
+            <input type="range" id="rs-range-line" min="0.5" max="3" step="0.01" value={cartObject.legWidth} onChange={e => setCartObject({...cartObject, legWidth: e.target.value})} />      
 
-            <p className="adjustmentValue">{cartObject.legLength}</p> <br />
+            <p className="adjustmentValue">{realisticMeasurements(cartObject.legLength)}</p> <br />
             <p className="adjustTitle">Length</p> 
-            <input type="range" id="rs-range-line" min="0.0" max="3" step="0.01" value={cartObject.legLength} onChange={e => setCartObject({...cartObject, legLength: e.target.value})} />      
+            <input type="range" id="rs-range-line" min="0.5" max="3" step="0.01" value={cartObject.legLength} onChange={e => setCartObject({...cartObject, legLength: e.target.value})} />      
 
-            <p className="adjustmentValue">{cartObject.legHeight}</p> <br />
+            <p className="adjustmentValue">{realisticMeasurements(cartObject.legHeight)}</p> <br />
             <p className="adjustTitle">Height</p> 
-            <input type="range" id="rs-range-line" min="0.0" max="3" step="0.01" value={cartObject.legHeight} onChange={e => setCartObject({...cartObject, legHeight: e.target.value})} />       
+            <input type="range" id="rs-range-line" min="1.5" max="6" step="0.01" value={cartObject.legHeight} onChange={e => setCartObject({...cartObject, legHeight: e.target.value})} />       
 
-            <p className="adjustmentValue">{cartObject.legAxisX}</p> <br />
+            <p className="adjustmentValue">{realisticMeasurements(cartObject.legAxisX)}</p> <br />
             <p className="adjustTitle"> <i class="fas fa-question-circle"></i> X-Axis</p> 
-            <input type="range" id="rs-range-line" min="0.0" max="3" step="0.01" value={cartObject.legAxisX} onChange={e => setCartObject({...cartObject, legAxisX: e.target.value})} />  
+            <input type="range" id="rs-range-line" min="0.3" max="0.65" step="0.01" value={cartObject.legAxisX} onChange={e => setCartObject({...cartObject, legAxisX: e.target.value})} />  
 
-            <p className="adjustmentValue">{cartObject.legAxisY}</p> <br />
+            <p className="adjustmentValue">{realisticMeasurements(cartObject.legAxisY)}</p> <br />
             <p className="adjustTitle"> <i class="fas fa-question-circle"></i> Y-Axis</p> 
-            <input type="range" id="rs-range-line" min={"0.0"} max="3" step="0.01" value={cartObject.legAxisY} onChange={e => setCartObject({...cartObject, legAxisY: e.target.value})} />  
+            <input type="range" id="rs-range-line" min="0.3" max="0.65" step="0.01" value={cartObject.legAxisY} onChange={e => setCartObject({...cartObject, legAxisY: e.target.value})} />  
             </Accordion>
 
             <br />  <Accordion title="3. Other">
