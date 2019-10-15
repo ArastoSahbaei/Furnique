@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import FloorTexture from '../../textures/FloorTexture'
-import WallTexture from '../../textures/WallTexture'
+import FloorTexture from '../textures/FloorTexture'
+import WallTexture from '../textures/WallTexture'
 
 export const getCamera = ({ offsetWidth, offsetHeight }) => {
   const camera = new THREE.PerspectiveCamera(75, offsetWidth / offsetHeight, 0.1, 1000);

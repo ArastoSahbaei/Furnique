@@ -1,6 +1,6 @@
 import React, {lazy} from 'react'
 import './AnimationContainer.css'
-const Mainer = lazy(() => import('./hooks/firstmodel/Main'));
+const Mainer = lazy(() => import('./firstmodel/Main'));
 
 export default function Container() {
 
