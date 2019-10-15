@@ -4,6 +4,8 @@ import './NavigationBar.css'
 import Spinner from '../../shared/images/spinner.gif'
 import Cart from '../cart/Cart'
 import User from '../user/User'
+import Footer from '../../components/footer/Footer'
+import SubFooter from '../../components/subheader/SubHeader'
 const Home = lazy(() => import('../../pages/home/Home'));
 const Container = lazy(() => import('../../animations/Container'));
 const Tables = lazy(() => import('../../pages/tables/Tables'));
@@ -25,6 +27,7 @@ export default function NavigationBar() {
                     <User/>
                     <Cart/>
                 </ul>
+                
 
                 <Suspense fallback={<img className="spinnerImage" src={Spinner} alt="SpinnerLogo"/>}>
                     <Switch>
@@ -38,6 +41,8 @@ export default function NavigationBar() {
                     </Switch>
                 </Suspense>
             </div>
+            <Footer/>
+            <SubFooter/>
         </Router>
     )
 }
