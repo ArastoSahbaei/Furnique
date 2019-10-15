@@ -1,13 +1,11 @@
 import React, {lazy} from 'react'
-import './Container.css'
-const Main = lazy(() => import('./Main'));
-const Mainer = lazy(() => import('./hooks/example-cube/Main'));
+import './AnimationContainer.css'
+const Mainer = lazy(() => import('./hooks/firstmodel/Main'));
 
 export default function Container() {
 
 return (
         <div className="containerWrapper">
-              {/* <Main/> */}
               <Mainer/>
         </div>
       );

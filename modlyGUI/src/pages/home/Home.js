@@ -12,7 +12,7 @@ export default function Home() {
             <span className="mainPicTitle">Självvalda mått, <br/> med hjälp ifrån utvalda hantverkare.</span>
             <button className="createTableButton"><i class="fas fa-hammer"></i> SKAPA DITT BORD</button>
             <ClimateSection/>
-           {/*  <Swiper/> */}
+            <Swiper/> 
         </div>
     )
 }

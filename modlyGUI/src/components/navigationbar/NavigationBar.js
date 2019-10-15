@@ -7,7 +7,7 @@ import User from '../user/User'
 import Footer from '../../components/footer/Footer'
 import SubFooter from '../../components/subheader/SubHeader'
 const Home = lazy(() => import('../../pages/home/Home'));
-const Container = lazy(() => import('../../animations/Container'));
+const AnimationContainer = lazy(() => import('../../animations/AnimationContainer'));
 const Tables = lazy(() => import('../../pages/tables/Tables'));
 const Contact = lazy(() => import('../../pages/contact/Contact'));
 const Checkout = lazy(() => import('../../pages/checkout/Checkout'));
@@ -33,7 +33,7 @@ export default function NavigationBar() {
                     <Switch>
                         <Route exact path="/home"                component={Home} />
                         <Route exact path="/tables"              component={Tables} />
-                        <Route exact path="/inspiration"         component={Container} />
+                        <Route exact path="/inspiration"         component={AnimationContainer} />
                         <Route exact path="/kontakt"             component={Contact} />
                         <Route exact path="/checkout"            component={Checkout} />
                         <Route exact path="/authentication"      component={Authentication} />
