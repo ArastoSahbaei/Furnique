@@ -1,5 +1,4 @@
-package com.modon.customisation.modon.user;
-
+package com.modon.customisation.user;
 import javax.persistence.*;
 
 @Entity
