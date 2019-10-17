@@ -2,6 +2,7 @@ package com.modon.customisation.entity;
 import com.modon.customisation.model.UserModel;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "USER")
@@ -12,10 +13,8 @@ public class User {
     @Column(name = "USER_ID", updatable = false, nullable = false)
     private Long userId;
 
-/*
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<UserOrder> orders;
-*/
 
     @Column(name = "FIRST_NAME", length = 50, nullable = false)
     private String firstName;
