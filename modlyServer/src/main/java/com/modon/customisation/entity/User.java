@@ -50,18 +50,6 @@ public class User {
     public User() { }
 
     public User(UserModel userModel){
-        this.userId = userModel.getUserId();
-        this.firstName = userModel.getFirstName();
-        this.lastName = userModel.getLastName();
-        this.email = userModel.getEmail();
-        this.password = userModel.getPassword();
-        this.address = userModel.getAddress();
-        this.city = userModel.getCity();
-        this.postalCode = userModel.getPostalCode();
-        this.country = userModel.getCountry();
-        this.phone = userModel.getPhone();
-        this.isDeleted = userModel.getDeleted();
-
     }
 
     public Long getUserId() {
@@ -72,14 +60,13 @@ public class User {
         this.userId = userId;
     }
 
-/*    public List<UserOrder> getOrders() {
+    public List<UserOrder> getOrders() {
         return orders;
     }
 
     public void setOrders(List<UserOrder> orders) {
         this.orders = orders;
     }
-*/
 
     public String getFirstName() {
         return firstName;
@@ -153,7 +140,7 @@ public class User {
         this.phone = phone;
     }
 
-    public Boolean getDeleted() {
+    public Boolean isDeleted() {
         return isDeleted;
     }
 

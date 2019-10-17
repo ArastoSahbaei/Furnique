@@ -6,39 +6,35 @@ import com.modon.customisation.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService {
+
     @Autowired
     private UserRepository userRepository;
 
-    public UserModel registerNewUser(UserModel userModel) {
+    public UserModel saveUser(UserModel userModel) {
         User newUser = new User(userModel);
         return new UserModel(userRepository.save(newUser));
     }
 
     public List<UserModel> getAllUsers() {
         List<User> userList = userRepository.findAll();
-        return convertToModelList(userList);
+        return convertToModel(userList);
     }
 
-    public UserModel findUserByID(Long id) {
+    public UserModel findUserById(Long id) {
         User user = userRepository.getOne(id);
         return new UserModel(user);
     }
 
-    public void deleteAllUser() {
-        userRepository.deleteAll();
+    public void deleteUserById(Long id) {
+        userRepository.deleteById(id);
     }
 
-    private List<UserModel> convertToModelList(List<User>planesList){
-        List<UserModel> planesModelList = new ArrayList<>();
-        for(User user : planesList){
-            planesModelList.add(new UserModel(user));
-        }
-        return planesModelList;
+    private List<UserModel> convertToModel(List<User> userList){
+        return userList.stream().map(UserModel::new).collect(Collectors.toList());
     }
-
 }
