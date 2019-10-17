@@ -25,7 +25,7 @@ public class UserController {
 
     @CrossOrigin
     @GetMapping("/user")
-    public ResponseEntity<List<UserModel>> getAllPlanes(){
+    public ResponseEntity<List<UserModel>> findAllUsers(){
         List<UserModel> resultList = userService.getAllUsers();
         return new ResponseEntity<>(resultList, HttpStatus.OK);
     }

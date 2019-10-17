@@ -33,12 +33,12 @@ public class UserService {
         userRepository.deleteAll();
     }
 
-    private List<UserModel> convertToModelList(List<User>planesList){
-        List<UserModel> planesModelList = new ArrayList<>();
-        for(User user : planesList){
-            planesModelList.add(new UserModel(user));
+    private List<UserModel> convertToModelList(List<User> userList){
+        List<UserModel> userModelList = new ArrayList<>();
+        for(User user : userList){
+            userModelList.add(new UserModel(user));
         }
-        return planesModelList;
+        return userModelList;
     }
 
 }
