@@ -9,22 +9,21 @@ import java.util.List;
 
 @RestController
 
-@RequestMapping("/login")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
     private UserService userService = new UserService();
 
     @CrossOrigin
-    @PostMapping("/planes")
+    @PostMapping("")
     public ResponseEntity<UserModel> registerNewUser(@RequestBody UserModel userModel){
-        System.out.println("hej");
         UserModel newUser = userService.registerNewUser(userModel);
         return new ResponseEntity<>(newUser, HttpStatus.OK);
     }
 
     @CrossOrigin
-    @GetMapping("/hehe")
+    @GetMapping("")
     public ResponseEntity<List<UserModel>> getAllPlanes(){
         List<UserModel> resultList = userService.getAllUsers();
         return new ResponseEntity<>(resultList, HttpStatus.OK);
