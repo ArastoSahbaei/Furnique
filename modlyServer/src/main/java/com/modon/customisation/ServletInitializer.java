@@ -1,4 +1,4 @@
-package com.modon.customisation.modon;
+package com.modon.customisation;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
