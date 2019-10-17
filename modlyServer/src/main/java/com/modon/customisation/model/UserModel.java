@@ -1,67 +1,38 @@
-package com.modon.customisation.user;
-import javax.persistence.*;
+package com.modon.customisation.model;
 
-@Entity
-@Table(name = "USER")
-public class User {
+import com.modon.customisation.entity.User;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "USER_ID", updatable = false, nullable = false)
+import java.io.Serializable;
+
+public class UserModel implements Serializable {
+
     private Long userId;
-
-/*
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    private List<UserOrder> orders;
-*/
-
-    @Column(name = "FIRST_NAME", length = 50, nullable = false)
     private String firstName;
-
-    @Column(name = "LAST_NAME", length = 50, nullable = false)
     private String lastName;
-
-    @Column(name = "EMAIL", length = 50, nullable = false)
     private String email;
-
-    @Transient
-    @Column(name = "PASSWORD", length = 100, nullable = false)
     private String password;
-
-    @Column(name = "ADDRESS", length = 60, nullable = false)
     private String address;
-
-    @Column(name = "CITY", length = 25, nullable = false)
     private String city;
-
-    @Column(name = "POSTAL_CODE", length = 15, nullable = false)
     private Integer postalCode;
-
-    @Column(name = "COUNTRY", length = 50, nullable = false)
     private String country;
-
-    @Column(name = "PHONE", length = 30)
     private String phone;
-
-    @Column(name = "DELETED")
     private Boolean isDeleted;
 
-    public User() { }
-
-    public User(UserModel userModel){
-        this.userId = userModel.getUserId();
-        this.firstName = userModel.getFirstName();
-        this.lastName = userModel.getLastName();
-        this.email = userModel.getEmail();
-        this.password = userModel.getPassword();
-        this.address = userModel.getAddress();
-        this.city = userModel.getCity();
-        this.postalCode = userModel.getPostalCode();
-        this.country = userModel.getCountry();
-        this.phone = userModel.getPhone();
-        this.isDeleted = userModel.getDeleted();
-
+    public UserModel(User user) {
+        this.userId = user.getUserId();
+        this.firstName = user.getFirstName();
+        this.lastName = user.getLastName();
+        this.email = user.getEmail();
+        this.password = user.getPassword();
+        this.address = user.getAddress();
+        this.city = user.getCity();
+        this.postalCode = user.getPostalCode();
+        this.country = user.getCountry();
+        this.phone = user.getPhone();
+        this.isDeleted = user.getDeleted();
     }
+
+    public UserModel() {}
 
     public Long getUserId() {
         return userId;
@@ -70,15 +41,6 @@ public class User {
     public void setUserId(Long userId) {
         this.userId = userId;
     }
-
-/*    public List<UserOrder> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<UserOrder> orders) {
-        this.orders = orders;
-    }
-*/
 
     public String getFirstName() {
         return firstName;
@@ -103,7 +65,6 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
     public String getPassword() {
         return password;
     }

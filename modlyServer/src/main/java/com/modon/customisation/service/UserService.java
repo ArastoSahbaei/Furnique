@@ -1,5 +1,8 @@
-package com.modon.customisation.user;
+package com.modon.customisation.service;
 
+import com.modon.customisation.entity.User;
+import com.modon.customisation.model.UserModel;
+import com.modon.customisation.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
