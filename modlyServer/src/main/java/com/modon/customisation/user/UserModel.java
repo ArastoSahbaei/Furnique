@@ -4,8 +4,7 @@ import java.io.Serializable;
 
 public class UserModel implements Serializable {
 
-
-    private Integer userId;
+    private Long userId;
     private String firstName;
     private String lastName;
     private String email;
@@ -33,11 +32,11 @@ public class UserModel implements Serializable {
 
     public UserModel() {}
 
-    public Integer getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 

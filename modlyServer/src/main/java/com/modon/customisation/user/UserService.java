@@ -21,7 +21,12 @@ public class UserService {
         return convertToModelList(userList);
     }
 
-    public void deleteUser() {
+    public UserModel findUserByID(Long id) {
+        User user = userRepository.getOne(id);
+        return new UserModel(user);
+    }
+
+    public void deleteAllUser() {
         userRepository.deleteAll();
     }
 
