@@ -18,7 +18,7 @@ public class UserController {
 
     @CrossOrigin
     @PostMapping
-    public ResponseEntity<UserModel> saveUser(@RequestBody UserModel userModel){
+    public ResponseEntity<UserModel> registerNewUser(@RequestBody UserModel userModel){
         UserModel newUser = userService.saveUser(userModel);
         return new ResponseEntity<>(newUser, HttpStatus.OK);
     }
