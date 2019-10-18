@@ -11,20 +11,21 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/products")
 public class ProductController {
 
     @Autowired
     private ProductService productService = new ProductService();
 
     @CrossOrigin
-    @PostMapping("/product")
+    @PostMapping
     public ResponseEntity<ProductModel> registerNewProduct(@RequestBody ProductModel productModel) {
         ProductModel newProduct = productService.registerNewProduct(productModel);
         return new ResponseEntity<>(newProduct, HttpStatus.OK);
     }
 
     @CrossOrigin
-    @GetMapping("/product")
+    @GetMapping
     public ResponseEntity<List<ProductModel>> findAllProducts(){
         List<ProductModel> resultList = productService.getAllProducts();
         return new ResponseEntity<>(resultList, HttpStatus.OK);
