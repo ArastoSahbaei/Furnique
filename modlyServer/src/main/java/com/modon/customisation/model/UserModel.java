@@ -3,10 +3,21 @@ package com.modon.customisation.model;
 import com.modon.customisation.entity.User;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 public class UserModel implements Serializable {
 
     private Long userId;
+
+    public LocalDateTime getTimeOfRegistration() {
+        return timeOfRegistration;
+    }
+
+    public void setTimeOfRegistration(LocalDateTime timeOfRegistration) {
+        this.timeOfRegistration = timeOfRegistration;
+    }
+
+    private LocalDateTime timeOfRegistration;
     private String firstName;
     private String lastName;
     private String email;
@@ -20,6 +31,7 @@ public class UserModel implements Serializable {
 
     public UserModel(User user) {
         this.userId = user.getUserId();
+        this.timeOfRegistration = user.getTimeOfRegistration();
         this.firstName = user.getFirstName();
         this.lastName = user.getLastName();
         this.email = user.getEmail();

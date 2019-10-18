@@ -1,7 +1,9 @@
 package com.modon.customisation.entity;
 import com.modon.customisation.model.UserModel;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -12,6 +14,10 @@ public class User {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "USER_ID", updatable = false, nullable = false)
     private Long userId;
+
+    @Column(name = "TIME_OF_REGISTRATION", updatable = false, nullable = false)
+    @CreationTimestamp
+    private LocalDateTime timeOfRegistration;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<UserOrder> orders;
@@ -51,6 +57,7 @@ public class User {
 
     public User(UserModel userModel){
         this.userId = userModel.getUserId();
+        this.timeOfRegistration = userModel.getTimeOfRegistration();
         this.firstName = userModel.getFirstName();
         this.lastName = userModel.getLastName();
         this.email = userModel.getEmail();
@@ -158,4 +165,7 @@ public class User {
     public void setDeleted(Boolean deleted) {
         isDeleted = deleted;
     }
+
+    public LocalDateTime getTimeOfRegistration() { return timeOfRegistration; }
+
 }

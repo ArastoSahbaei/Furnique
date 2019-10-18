@@ -6,6 +6,7 @@ import com.modon.customisation.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,6 +33,10 @@ public class UserService {
 
     public void deleteUserById(Long id) {
         userRepository.deleteById(id);
+    }
+
+    public Integer amountOfUsersInDB() {
+        return userRepository.findAllActiveUsers();
     }
 
     private List<UserModel> convertToModel(List<User> userList){
