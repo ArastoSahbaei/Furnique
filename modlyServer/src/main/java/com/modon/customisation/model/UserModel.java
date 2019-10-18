@@ -19,17 +19,6 @@ public class UserModel implements Serializable {
     private Boolean isDeleted;
 
     public UserModel(User user) {
-        this.userId = user.getUserId();
-        this.firstName = user.getFirstName();
-        this.lastName = user.getLastName();
-        this.email = user.getEmail();
-        this.password = user.getPassword();
-        this.address = user.getAddress();
-        this.city = user.getCity();
-        this.postalCode = user.getPostalCode();
-        this.country = user.getCountry();
-        this.phone = user.getPhone();
-        this.isDeleted = user.getDeleted();
     }
 
     public UserModel() {}
@@ -113,7 +102,7 @@ public class UserModel implements Serializable {
         this.phone = phone;
     }
 
-    public Boolean getDeleted() {
+    public Boolean isDeleted() {
         return isDeleted;
     }
 

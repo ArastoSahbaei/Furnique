@@ -83,7 +83,7 @@ public class UserOrder {
         this.shipDate = shipDate;
     }
 
-    public Boolean getDeleted() {
+    public Boolean isDeleted() {
         return isDeleted;
     }
 

@@ -10,35 +10,35 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-//@RequestMapping("/user")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
     private UserService userService = new UserService();
 
     @CrossOrigin
-    @PostMapping("/user")
-    public ResponseEntity<UserModel> registerNewUser(@RequestBody UserModel userModel){
-        UserModel newUser = userService.registerNewUser(userModel);
+    @PostMapping(value = "/saveUser")
+    public ResponseEntity<UserModel> saveUser(@RequestBody UserModel userModel){
+        UserModel newUser = userService.saveUser(userModel);
         return new ResponseEntity<>(newUser, HttpStatus.OK);
     }
 
     @CrossOrigin
-    @GetMapping("/user")
+    @GetMapping("/findAllUsers")
     public ResponseEntity<List<UserModel>> findAllUsers(){
         List<UserModel> resultList = userService.getAllUsers();
         return new ResponseEntity<>(resultList, HttpStatus.OK);
     }
 
     @CrossOrigin
-    @GetMapping("/user/{id}")
-    public ResponseEntity<UserModel> findUserByID(@PathVariable Long id){
-        return new ResponseEntity<>(userService.findUserByID(id), HttpStatus.OK);
+    @GetMapping("/findUser/{id}")
+    public ResponseEntity<UserModel> findUserById(@PathVariable Long id){
+        return new ResponseEntity<>(userService.findUserById(id), HttpStatus.OK);
     }
 
-    @DeleteMapping("/user")
-    public ResponseEntity deleteAllUser() {
-        userService.deleteAllUser();
+    @DeleteMapping("/deleteUser/{id}")
+    public ResponseEntity deleteUser(@PathVariable Long id) {
+        userService.deleteUserById(id);
         return ResponseEntity.ok(HttpStatus.OK);
     }
 }
