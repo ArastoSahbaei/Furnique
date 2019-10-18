@@ -17,26 +17,26 @@ public class UserController {
     private UserService userService = new UserService();
 
     @CrossOrigin
-    @PostMapping(value = "/saveUser")
+    @PostMapping
     public ResponseEntity<UserModel> saveUser(@RequestBody UserModel userModel){
         UserModel newUser = userService.saveUser(userModel);
         return new ResponseEntity<>(newUser, HttpStatus.OK);
     }
 
     @CrossOrigin
-    @GetMapping("/findAllUsers")
+    @GetMapping
     public ResponseEntity<List<UserModel>> findAllUsers(){
         List<UserModel> resultList = userService.getAllUsers();
         return new ResponseEntity<>(resultList, HttpStatus.OK);
     }
 
     @CrossOrigin
-    @GetMapping("/findUser/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<UserModel> findUserById(@PathVariable Long id){
         return new ResponseEntity<>(userService.findUserById(id), HttpStatus.OK);
     }
 
-    @DeleteMapping("/deleteUser/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity deleteUser(@PathVariable Long id) {
         userService.deleteUserById(id);
         return ResponseEntity.ok(HttpStatus.OK);
