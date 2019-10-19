@@ -1,10 +1,9 @@
 package com.modon.customisation.entity;
 
-import com.modon.customisation.model.UserOrderModel;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -14,7 +13,7 @@ public class UserOrder {
     @Id
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @Column(name = "USER_ORDER_ID", updatable = false, nullable = false)
-    private Integer orderId;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER__ID", nullable = false)
@@ -28,11 +27,11 @@ public class UserOrder {
 
     @CreationTimestamp
     @Column(name = "ORDER_DATE", nullable = true)
-    private Date orderDate;
+    private LocalDateTime orderDate;
 
     @CreationTimestamp
     @Column(name = "SHIP_DATE", nullable = true)
-    private Date shipDate;
+    private LocalDateTime shipDate;
 
     @Column(name = "DELETED")
     private Boolean isDeleted;
@@ -40,15 +39,12 @@ public class UserOrder {
     public UserOrder() {
     }
 
-    public UserOrder(UserOrderModel userOrderModel) {
+    public Long getId() {
+        return id;
     }
 
-    public Integer getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(Integer orderId) {
-        this.orderId = orderId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public User getUser() {
@@ -75,19 +71,19 @@ public class UserOrder {
         this.products = products;
     }
 
-    public Date getOrderDate() {
+    public LocalDateTime getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(LocalDateTime orderDate) {
         this.orderDate = orderDate;
     }
 
-    public Date getShipDate() {
+    public LocalDateTime getShipDate() {
         return shipDate;
     }
 
-    public void setShipDate(Date shipDate) {
+    public void setShipDate(LocalDateTime shipDate) {
         this.shipDate = shipDate;
     }
 

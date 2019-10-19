@@ -1,7 +1,5 @@
 package com.modon.customisation.entity;
 
-import com.modon.customisation.model.ProductModel;
-
 import javax.persistence.*;
 
 @Entity
@@ -36,16 +34,6 @@ public class Product {
     private String color;
 
     public Product() {}
-
-    public Product(ProductModel productModel) {
-        this.productId = productModel.getProductId();
-        this.productName = productModel.getProductName();
-        this.productDescription = productModel.getProductDescription();
-        this.height = productModel.getHeight();
-        this.width = productModel.getWidth();
-        this.depth = productModel.getDepth();
-        this.color = productModel.getColor();
-    }
 
     public Integer getProductId() {
         return productId;

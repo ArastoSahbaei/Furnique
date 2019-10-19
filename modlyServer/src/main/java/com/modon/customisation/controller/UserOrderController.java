@@ -1,7 +1,8 @@
 package com.modon.customisation.controller;
 
-import com.modon.customisation.model.UserOrderModel;
+import com.modon.customisation.entity.UserOrder;
 import com.modon.customisation.service.UserOrderService;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,26 +19,26 @@ public class UserOrderController {
 
     @CrossOrigin
     @PostMapping
-    public ResponseEntity<UserOrderModel> saveUserOrder(@RequestBody UserOrderModel userOrderModel) {
-        UserOrderModel newUser = userOrderService.saveUserOrder(userOrderModel);
-        return new ResponseEntity<>(newUser, HttpStatus.OK);
+    public ResponseEntity<UserOrder> saveUserOrder(@RequestParam(value = "id") Long userId, @RequestBody UserOrder userOrder) throws NotFoundException {
+        userOrderService.saveUserOrder(userOrder, userId);
+        return new ResponseEntity<>(userOrder, HttpStatus.OK);
     }
 
     @CrossOrigin
     @GetMapping
-    public ResponseEntity<List<UserOrderModel>> findAllUserOrders(){
-        List<UserOrderModel> resultList = userOrderService.getAllUserOrders();
+    public ResponseEntity<List<UserOrder>> findAllUserOrders(){
+        List<UserOrder> resultList = userOrderService.getAllUserOrders();
         return new ResponseEntity<>(resultList, HttpStatus.OK);
     }
 
     @CrossOrigin
     @GetMapping("/finduserorder")
-    public ResponseEntity<UserOrderModel> findUserById(@RequestParam Long id){
-        return new ResponseEntity<>(userOrderService.findUserOrderById(id), HttpStatus.OK);
+    public ResponseEntity<List<UserOrder>> findUserOrderById(@RequestParam(value = "id") Long userId){
+        return new ResponseEntity<>(userOrderService.findUserOrderById(userId), HttpStatus.OK);
     }
 
     @DeleteMapping
-    public ResponseEntity deleteUser(@RequestParam Long id) {
+    public ResponseEntity deleteUserOrder(@RequestParam Long id) {
         userOrderService.deleteUserOrderById(id);
         return ResponseEntity.ok(HttpStatus.OK);
     }

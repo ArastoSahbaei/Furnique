@@ -1,5 +1,7 @@
 package com.modon.customisation.entity;
-import com.modon.customisation.model.UserModel;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -8,18 +10,20 @@ import java.util.List;
 
 @Entity
 @Table(name = "USER")
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "USER_ID", updatable = false, nullable = false)
-    private Long userId;
+    private Long id;
 
     @CreationTimestamp
     @Column(name = "TIME_OF_REGISTRATION", updatable = false, nullable = false)
     private LocalDateTime timeOfRegistration;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    @JsonIgnore
     private List<UserOrder> orders;
 
     @Column(name = "FIRST_NAME", length = 50, nullable = false)
@@ -55,27 +59,12 @@ public class User {
 
     public User() { }
 
-    public User(UserModel userModel){
-        this.userId = userModel.getUserId();
-        this.timeOfRegistration = userModel.getTimeOfRegistration();
-        this.firstName = userModel.getFirstName();
-        this.lastName = userModel.getLastName();
-        this.email = userModel.getEmail();
-        this.password = userModel.getPassword();
-        this.address = userModel.getAddress();
-        this.city = userModel.getCity();
-        this.postalCode = userModel.getPostalCode();
-        this.country = userModel.getCountry();
-        this.phone = userModel.getPhone();
-        this.isDeleted = userModel.isDeleted();
+    public Long getId() {
+        return id;
     }
 
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public List<UserOrder> getOrders() {
