@@ -8,15 +8,6 @@ import java.time.LocalDateTime;
 public class UserModel implements Serializable {
 
     private Long userId;
-
-    public LocalDateTime getTimeOfRegistration() {
-        return timeOfRegistration;
-    }
-
-    public void setTimeOfRegistration(LocalDateTime timeOfRegistration) {
-        this.timeOfRegistration = timeOfRegistration;
-    }
-
     private LocalDateTime timeOfRegistration;
     private String firstName;
     private String lastName;
@@ -28,6 +19,8 @@ public class UserModel implements Serializable {
     private String country;
     private String phone;
     private Boolean isDeleted;
+
+    public UserModel() {}
 
     public UserModel(User user) {
         this.userId = user.getUserId();
@@ -44,14 +37,20 @@ public class UserModel implements Serializable {
         this.isDeleted = user.isDeleted();
     }
 
-    public UserModel() {}
-
     public Long getUserId() {
         return userId;
     }
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public LocalDateTime getTimeOfRegistration() {
+        return timeOfRegistration;
+    }
+
+    public void setTimeOfRegistration(LocalDateTime timeOfRegistration) {
+        this.timeOfRegistration = timeOfRegistration;
     }
 
     public String getFirstName() {

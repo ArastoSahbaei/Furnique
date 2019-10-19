@@ -33,18 +33,18 @@ public class UserController {
     }
 
     @CrossOrigin
-    @GetMapping("/{id}")
-    public ResponseEntity<UserModel> findUserById(@PathVariable Long id){
+    @GetMapping("/finduser")
+    public ResponseEntity<UserModel> findUserById(@RequestParam Long id){
         return new ResponseEntity<>(userService.findUserById(id), HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity deleteUser(@PathVariable Long id) {
+    @DeleteMapping
+    public ResponseEntity deleteUser(@RequestParam Long id) {
         userService.deleteUserById(id);
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
-    @GetMapping("/t")
+    @GetMapping("/count")
     public ResponseEntity amountOfUsers() {
         System.out.println(userService.amountOfUsersInDB());
         return ResponseEntity.ok(userService.amountOfUsersInDB());

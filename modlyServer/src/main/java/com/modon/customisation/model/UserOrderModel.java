@@ -1,46 +1,27 @@
-package com.modon.customisation.entity;
+package com.modon.customisation.model;
 
-import com.modon.customisation.model.UserOrderModel;
-import org.hibernate.annotations.CreationTimestamp;
+import com.modon.customisation.entity.OrderDetails;
+import com.modon.customisation.entity.Product;
+import com.modon.customisation.entity.User;
+import com.modon.customisation.entity.UserOrder;
 
-import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
-@Entity
-@Table(name = "USER_ORDER")
-public class UserOrder {
+public class UserOrderModel {
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
-    @Column(name = "USER_ORDER_ID", updatable = false, nullable = false)
     private Integer orderId;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USER__ID", nullable = false)
     private User user;
-
-    @OneToOne(mappedBy = "userOrder")
     private OrderDetails orderDetails;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "userOrder")
     private List<Product> products;
-
-    @CreationTimestamp
-    @Column(name = "ORDER_DATE", nullable = true)
     private Date orderDate;
-
-    @CreationTimestamp
-    @Column(name = "SHIP_DATE", nullable = true)
     private Date shipDate;
-
-    @Column(name = "DELETED")
     private Boolean isDeleted;
 
-    public UserOrder() {
+    public UserOrderModel() {
     }
 
-    public UserOrder(UserOrderModel userOrderModel) {
+    public UserOrderModel(UserOrder userOrder) {
     }
 
     public Integer getOrderId() {

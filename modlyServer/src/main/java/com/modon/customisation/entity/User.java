@@ -15,8 +15,8 @@ public class User {
     @Column(name = "USER_ID", updatable = false, nullable = false)
     private Long userId;
 
-    @Column(name = "TIME_OF_REGISTRATION", updatable = false, nullable = false)
     @CreationTimestamp
+    @Column(name = "TIME_OF_REGISTRATION", updatable = false, nullable = false)
     private LocalDateTime timeOfRegistration;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")

@@ -14,6 +14,8 @@ public class ProductModel implements Serializable {
     private Integer depth;
     private String color;
 
+    public ProductModel() {}
+
     public ProductModel(Product product) {
         this.productId = product.getProductId();
         this.productName = product.getProductName();
@@ -23,8 +25,6 @@ public class ProductModel implements Serializable {
         this.depth = product.getDepth();
         this.color = product.getColor();
     }
-
-    public ProductModel() {}
 
     public Integer getProductId() {
         return productId;
