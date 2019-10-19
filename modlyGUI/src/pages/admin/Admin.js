@@ -1,22 +1,46 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-function App() {
-  const [data, setData] = useState({ hits: [] });
 
-  useEffect(async () => {
-    const result = await axios('https://hn.algolia.com/api/v1/search?query=redux',);
-    setData(result.data);
-    console.log(result.data)
-  }, []);
+function Admin() {
+  const [hasError, setErrors] = useState(false);
+  const [users, setUsers] = useState([]);
+
+  async function fetchData() {
+    const res = await fetch("http://localhost:8080/users");
+    res.json()
+       .then(res => setUsers(res))
+       .catch(err => setErrors(err));
+  }
+
+  useEffect(() => {
+    fetchData();
+  });
   
   return (
-    <ul>
-      {data.hits.map(item => (
-        <li key={item.objectID}>
-          <a href={item.url}>{item.title}</a>
-        </li>
-      ))}
-    </ul>
+    <div>
+
+        <h1>Amount of registered users: {users.length}</h1>
+    {users.map((item, index) => (
+      
+      <ul className="displayUsers">
+                        <li>UserID:       {item.userId}</li>
+                        <li>First Name:   {item.firstName}</li>
+                        <li>Last Name:    {item.lastName}</li>
+                        <li>Email:        {item.lastName}</li>
+                        <li>Country:      {item.country}</li>
+                        <li>City:         {item.city}</li>
+                        <li>Phone:        {item.phone}</li>
+                        <hr/>
+                    </ul>
+    ))}
+
+
+
+      {console.log(users)}
+   {/*  <span>{JSON.stringify(users)}</span> */}
+      <hr />
+      <span>Has error: {JSON.stringify(hasError)}</span>
+    </div>
   );
 }
-export default App;
+export default Admin;
+
