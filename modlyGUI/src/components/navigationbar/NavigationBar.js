@@ -11,6 +11,7 @@ const AnimationContainer = lazy(() => import('../../animations/AnimationContaine
 const Tables = lazy(() => import('../../pages/tables/Tables'));
 const Contact = lazy(() => import('../../pages/contact/Contact'));
 const Checkout = lazy(() => import('../../pages/checkout/Checkout'));
+const Admin = lazy(() => import('../../pages/admin/Admin'));
 const Authentication = lazy(() => import('../../pages/authentication/Authentication'));
 
 export default function NavigationBar() {
@@ -37,6 +38,7 @@ export default function NavigationBar() {
                         <Route exact path="/kontakt"             component={Contact} />
                         <Route exact path="/checkout"            component={Checkout} />
                         <Route exact path="/authentication"      component={Authentication} />
+                        <Route exact path="/admin"               component={Admin} />
                         <Route component={Home} />
                     </Switch>
                 </Suspense>
