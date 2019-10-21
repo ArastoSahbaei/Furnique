@@ -1,0 +1,39 @@
+.loginCard {
+    width: 40vh;
+    height: 50vh;
+    background: orange;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    left: 65%;
+    top: 25%;
+}
+
+.wellcomeBackTitle {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.emailInput, .passwordInput {
+    border-radius: 25px;
+    outline: none;
+    color: #666666;
+    display: block;
+    background: #e6e6e6;
+    height: 50px;
+    padding: 0 30px 0 68px;
+    margin-left: 6vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.loginButton {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 80%;
+    margin-left: 10%;
+    height: 50px;
+    border-radius: 25px;
+    background: #57b846;
+}

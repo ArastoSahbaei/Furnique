@@ -1,10 +1,13 @@
 import React from 'react'
+import './Authentication.css'
+import LoginForm from './loginform/LoginForm'
+import RegisterForm from './registerform/RegisterForm'
 
 const Authentication = () => {
     return (
-        <div>
-            <h1>This is the authentication page</h1>
-            <h2>Login/Register</h2>
+        <div className="authenticationLoginContainer">
+          <LoginForm />
+          <RegisterForm />
         </div>
     )
 }
