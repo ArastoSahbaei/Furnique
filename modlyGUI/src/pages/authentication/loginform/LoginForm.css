@@ -1,17 +1,20 @@
 .loginCard {
     width: 40vh;
-    height: 50vh;
-    background: orange;
+    height: 60vh;
+    background: #fff;
     border-radius: 10px;
     overflow: hidden;
     position: absolute;
     left: 65%;
     top: 25%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 16px 16px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .wellcomeBackTitle {
-    color: #ffffff;
-    font-size: 14px;
+    color: #000000;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    margin-left: 10%;
 }
 
 .emailInput, .passwordInput {
@@ -21,9 +24,11 @@
     display: block;
     background: #e6e6e6;
     height: 50px;
-    padding: 0 30px 0 68px;
-    margin-left: 6vh;
+    width: 300px;
+    padding: 4px;
     font-family: 'Poppins', sans-serif;
+    margin-left: 26px;
+    font-size: 14px;
 }
 
 .loginButton {
@@ -35,5 +40,11 @@
     margin-left: 10%;
     height: 50px;
     border-radius: 25px;
-    background: #57b846;
+    background: linear-gradient(-135deg, #4158d0,#c850c0);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.loginButton:hover {
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }

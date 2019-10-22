@@ -4,7 +4,7 @@ import './LoginForm.css'
 const Login = () => {
     return (
         <div className="loginCard">
-            <span className="wellcomeBackTitle">Hey! We're glad to see you again.</span>
+            <span className="wellcomeBackTitle">Hey! we're glad to see you again.</span>
             <form action="action_page.php" method="post">
 
                 <input className="emailInput" name="email" type="text" placeholder="Email" required/> <br/>
