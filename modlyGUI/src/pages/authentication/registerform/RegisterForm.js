@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import {registerNewUser} from '../../../shared/api/UserAPI'
 import './RegisterForm.css'
-import Axios from 'axios'
 
 const RegisterForm = () => {
 
