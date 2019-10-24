@@ -25,9 +25,9 @@ public class UserController {
     @PostMapping
     public ResponseEntity<User> registerNewUser(@RequestBody User user) throws MessagingException {
         User newUser = userService.saveUser(user);
-        smtpMailSender.send("arasto.developer@gmail.com",
-                            "Wellcome to Modon :)",
-                             "Thank you for signing up.");
+        smtpMailSender.send(user.getEmail(),
+                            "Welcome to Uniqfied!",
+                             "Uniqueness starts here. 'The quality of being the only one of its kind'");
         return new ResponseEntity<>(newUser, HttpStatus.OK);
     }
 

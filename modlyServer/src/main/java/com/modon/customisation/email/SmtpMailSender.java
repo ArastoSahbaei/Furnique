@@ -17,12 +17,12 @@ public class SmtpMailSender {
     public void send(String to, String subject, String body) throws MessagingException {
 
         MimeMessage message = javaMailSender.createMimeMessage();
-        MimeMessageHelper helper;
+        MimeMessageHelper mimeMessageHelper;
 
-        helper = new MimeMessageHelper(message, true);
-        helper.setSubject(subject);
-        helper.setTo(to);
-        helper.setText(body, true);
+        mimeMessageHelper = new MimeMessageHelper(message, true);
+        mimeMessageHelper.setSubject(subject);
+        mimeMessageHelper.setTo(to);
+        mimeMessageHelper.setText(body, true);
 
         javaMailSender.send(message);
 
