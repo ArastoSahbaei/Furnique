@@ -2,9 +2,11 @@ package com.modon.customisation.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.modon.customisation.email.ValidEmail;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -33,6 +35,7 @@ public class User {
     private String lastName;
 
     @Column(name = "EMAIL", length = 50, nullable = false)
+    @ValidEmail
     private String email;
 
     @Transient
