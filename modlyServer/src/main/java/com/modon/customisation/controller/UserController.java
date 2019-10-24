@@ -24,7 +24,7 @@ public class UserController {
     @CrossOrigin
     @PostMapping
     public ResponseEntity<User> registerNewUser(@RequestBody User user) throws MessagingException {
-        User newUser = userService.saveUser(user);
+        User newUser = userService.registerNewUserAccount(user);
         smtpMailSender.send(user.getEmail(),
                             "Welcome to Uniqfied!",
                              "Uniqueness starts here. 'The quality of being the only one of its kind'");

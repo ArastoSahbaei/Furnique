@@ -33,7 +33,7 @@ public class User {
     @Column(name = "LAST_NAME", length = 50, nullable = false)
     private String lastName;
 
-    @Column(name = "EMAIL", length = 50, nullable = false)
+    @Column(name = "EMAIL", length = 50, nullable = false, unique = true)
     @Email(message = "Email contains invalid characters")
     private String email;
 

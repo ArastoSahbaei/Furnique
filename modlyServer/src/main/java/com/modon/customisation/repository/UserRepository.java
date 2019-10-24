@@ -8,4 +8,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     @Query(value = "select COUNT(*) from user", nativeQuery = true)
     Integer findAllActiveUsers();
+
+    User findByEmail(String email);
+
 }
