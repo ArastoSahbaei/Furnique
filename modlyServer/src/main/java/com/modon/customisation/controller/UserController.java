@@ -1,5 +1,6 @@
 package com.modon.customisation.controller;
 
+import com.modon.customisation.email.SmtpMailSender;
 import com.modon.customisation.entity.User;
 import com.modon.customisation.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import java.util.List;
 
 @RestController
@@ -16,10 +18,16 @@ public class UserController {
     @Autowired
     private UserService userService = new UserService();
 
+    @Autowired
+    private SmtpMailSender smtpMailSender;
+
     @CrossOrigin
     @PostMapping
-    public ResponseEntity<User> registerNewUser(@RequestBody User user){
+    public ResponseEntity<User> registerNewUser(@RequestBody User user) throws MessagingException {
         User newUser = userService.saveUser(user);
+        smtpMailSender.send("arasto.developer@gmail.com",
+                            "Wellcome to Modon :)",
+                             "Thank you for signing up.");
         return new ResponseEntity<>(newUser, HttpStatus.OK);
     }
 
