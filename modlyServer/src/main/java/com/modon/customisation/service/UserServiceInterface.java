@@ -1,7 +1,7 @@
 package com.modon.customisation.service;
 
 import com.modon.customisation.entity.User;
-import com.modon.customisation.error.UserAlreadyExistException;
+import com.modon.customisation.exception.UserAlreadyExistException;
 
 public interface UserServiceInterface {
 

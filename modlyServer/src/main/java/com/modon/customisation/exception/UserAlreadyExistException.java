@@ -1,4 +1,4 @@
-package com.modon.customisation.error;
+package com.modon.customisation.exception;
 
 public final class UserAlreadyExistException extends RuntimeException {
 

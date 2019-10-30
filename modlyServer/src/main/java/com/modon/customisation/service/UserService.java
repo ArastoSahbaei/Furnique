@@ -1,12 +1,11 @@
 package com.modon.customisation.service;
 
 import com.modon.customisation.entity.User;
-import com.modon.customisation.error.UserAlreadyExistException;
+import com.modon.customisation.exception.UserAlreadyExistException;
 import com.modon.customisation.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
