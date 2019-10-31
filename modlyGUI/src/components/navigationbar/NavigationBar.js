@@ -11,6 +11,7 @@ const AnimationContainer = lazy(() => import('../../animations/AnimationContaine
 const Tables = lazy(() => import('../../pages/tables/Tables'));
 const Contact = lazy(() => import('../../pages/contact/Contact'));
 const Checkout = lazy(() => import('../../pages/checkout/Checkout'));
+const EmailVerification = lazy(() => import('../../pages/authentication/emailverification/EmailVerification'));
 const Admin = lazy(() => import('../../pages/admin/Admin'));
 const Authentication = lazy(() => import('../../pages/authentication/Authentication'));
 
@@ -32,13 +33,14 @@ export default function NavigationBar() {
 
                 <Suspense fallback={<img className="spinnerImage" src={Spinner} alt="SpinnerLogo"/>}>
                     <Switch>
-                        <Route exact path="/home"                component={Home} />
-                        <Route exact path="/tables"              component={Tables} />
-                        <Route exact path="/inspiration"         component={AnimationContainer} />
-                        <Route exact path="/kontakt"             component={Contact} />
-                        <Route exact path="/checkout"            component={Checkout} />
-                        <Route exact path="/authentication"      component={Authentication} />
-                        <Route exact path="/admin"               component={Admin} />
+                        <Route exact path="/home"                 component={Home} />
+                        <Route exact path="/tables"               component={Tables} />
+                        <Route exact path="/inspiration"          component={AnimationContainer} />
+                        <Route exact path="/kontakt"              component={Contact} />
+                        <Route exact path="/checkout"             component={Checkout} />
+                        <Route exact path="/authentication"       component={Authentication} />
+                        <Route exact path="/admin"                component={Admin} />
+                        <Route exact path="/emailverification"    component={EmailVerification} />
                         <Route component={Home} />
                     </Switch>
                 </Suspense>

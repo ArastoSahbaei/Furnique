@@ -8,3 +8,12 @@ import Axios from 'axios'
          console.log(error);
        });
      }
+
+     export const verifyEmail = (token) => { Axios.get('http://localhost:8080/confirm-account?token=' + token)
+        .then(function (response) {
+         console.log(response + "Account verified");
+       })
+       .catch(function (error) {
+         console.log(error);
+       });
+     }
