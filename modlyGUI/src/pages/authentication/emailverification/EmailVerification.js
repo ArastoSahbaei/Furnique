@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import {verifyEmail} from '../../../shared/api/UserAPI'
 import './EmailVerification.css'
 
@@ -18,6 +18,9 @@ const EmailVerification = () => {
             1. Get user By verificationToken
             2. check if user boolean is true
             3. display 'account verified'
+
+        {/* (userByToken.isEnabled) ? 'Success' : 'Failed' */}
+
         </div>
     )
 }
