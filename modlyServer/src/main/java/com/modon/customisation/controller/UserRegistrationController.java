@@ -1,6 +1,5 @@
 package com.modon.customisation.controller;
 
-import com.modon.customisation.email.SmtpMailSender;
 import com.modon.customisation.entity.ConfirmationToken;
 import com.modon.customisation.entity.User;
 import com.modon.customisation.repository.ConfirmationTokenRepository;
@@ -11,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.SimpleMailMessage;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -49,16 +47,13 @@ public class UserRegistrationController {
         mailMessage.setTo(user.getEmail());
         mailMessage.setSubject("Complete Registration!");
         mailMessage.setFrom("arasto.developer@gmail.com");
-        mailMessage.setText("To confirm your account, please click here : "
-                +"http://localhost:8080/confirm-account?token="+confirmationToken.getConfirmationToken());
-
+        mailMessage.setText("To confirm your account, please click here : " +"http://localhost:3000/emailverification?"+confirmationToken.getConfirmationToken());
         emailSenderService.sendEmail(mailMessage);
-        modelAndView.addObject("emailId", user.getEmail());
-        modelAndView.setViewName("successfulRegisteration");
 
         return new ResponseEntity<>(newUser, HttpStatus.OK);
     }
 
+    @CrossOrigin
     @RequestMapping(value="/confirm-account", method= {RequestMethod.GET, RequestMethod.POST})
     public ModelAndView confirmUserAccount(ModelAndView modelAndView, @RequestParam("token")String confirmationToken)
     {
@@ -67,9 +62,10 @@ public class UserRegistrationController {
             User user = userRepository.findByEmail(token.getUser().getEmail());
             user.setEnabled(true);
             userRepository.save(user);
-            modelAndView.setViewName("accountVerified");
+            modelAndView.addObject("message","Your account has been verified!");
+            modelAndView.setViewName("error");
         } else {
-            modelAndView.addObject("message","The link is invalid or broken!");
+            modelAndView.addObject("message","TheLOL link is invalid or broken!");
             modelAndView.setViewName("error");
         }
         return modelAndView;
