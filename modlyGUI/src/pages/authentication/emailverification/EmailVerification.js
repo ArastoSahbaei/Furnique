@@ -3,26 +3,43 @@ import {verifyEmail} from '../../../shared/api/UserAPI'
 import './EmailVerification.css'
 
 const EmailVerification = () => {
-    const [loading, setLoading] = useState(true);
-
+    const [hasError, setErrors] = useState(false);
+    const [user, setUser] = useState({});
+    const getTokenIdFromURL = window.location.href.split('?').reverse()[0];
+    let URL = `http://localhost:8080/users/finduserbytoken?id=`;
+      
+    async function checkIfUserIsEnabled() {
+        const res = await fetch(URL + getTokenIdFromURL);
+        res.json()
+           .then(res => setUser(res))
+           .catch(err => setErrors(err));
+      }
+    
     useEffect(() => {
-        verifyEmail(window.location.href.split('?').reverse()[0])
-        setLoading(false)
+        verifyEmail(getTokenIdFromURL);
+        checkIfUserIsEnabled();
         return () => {
-            /* cleanup */
+            /* */
         };
-    }, [/* input */])
+    }, []);
+
+        useEffect(() => {
+        const abortController = new AbortController();
+        checkIfUserIsEnabled();
+        return () => {
+        if(user.enabled) {abortController.abort();}
+        };
+      });
+
+    const cons = () => {
+        console.log(user);
+    }
 
     return (
-        <div>
-            <h1>Your email has been verified.</h1> <br/>
-            Todo:
-            1. Get user By verificationToken
-            2. check if user boolean is true
-            3. display 'account verified'
-        {/* (userByToken.isEnabled) ? 'Success' : 'Failed' */}
-        
-        {loading ? <h1>Account verification ongoing</h1> : <h1>Account Verified</h1>}
+        <div className="emailVerificationWrapper">
+        {user.enabled ? <h1>Thank you for registrating, {user.firstName}.Account is verified!</h1> 
+            : <h1>Attempting to verify account...</h1>}
+        <button onClick={cons}>LOL</button>
 
         </div>
     )
