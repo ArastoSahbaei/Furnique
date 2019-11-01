@@ -7,4 +7,6 @@ public interface UserServiceInterface {
 
     User registerNewUserAccount(User user) throws UserAlreadyExistException;
 
+    User getUserByConfirmationToken(String confirmationToken);
+
 }

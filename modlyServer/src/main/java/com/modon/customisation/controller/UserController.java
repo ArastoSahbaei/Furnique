@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -23,7 +24,7 @@ public class UserController {
 
     @CrossOrigin
     @PostMapping
-    public ResponseEntity<User> registerNewUser(@RequestBody User user) throws MessagingException {
+    public ResponseEntity<User> registerNewUser(@Valid @RequestBody User user) throws MessagingException {
         User newUser = userService.registerNewUserAccount(user);
         smtpMailSender.send(user.getEmail(),
                             "Welcome to Uniqfied!",
@@ -42,6 +43,12 @@ public class UserController {
     @GetMapping("/finduser")
     public ResponseEntity<User> findUserById(@RequestParam Long id){
         return new ResponseEntity<>(userService.findUserById(id), HttpStatus.OK);
+    }
+
+    @CrossOrigin
+    @GetMapping("/finduserbytoken")
+    public ResponseEntity<User> findUserByConfirmationToken(@RequestParam String id){
+        return new ResponseEntity<>(userService.getUserByConfirmationToken(id), HttpStatus.OK);
     }
 
     @DeleteMapping
