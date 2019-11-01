@@ -11,7 +11,7 @@ import Axios from 'axios'
 
      export const verifyEmail = (token) => { Axios.get('http://localhost:8080/confirm-account?token=' + token)
         .then(function (response) {
-         console.log(response + "Account verified");
+         console.log(response);
        })
        .catch(function (error) {
          console.log(error);
