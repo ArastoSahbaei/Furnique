@@ -28,7 +28,7 @@ export default function Footer() {
                     </ol>
 
                     <ol className="OLAbout">
-                    <li className="OLAboutTitle">MODON</li>
+                    <li className="OLAboutTitle">Furnique</li>
                     <NavLink to="/checkout"> 
                     <li className="aboutLI"><span>Om Oss</span></li>
                     </NavLink>
@@ -63,7 +63,7 @@ export default function Footer() {
 
                     <ol className="OLCompany">
                     <li className="footerList"><i class="fas fa-map-marker-alt"></i> Mom's incubatorgatan 47B, Göteborg, Sverige.</li> <br/>
-                    <li className="footerList"> © Upphovsrätt 2019, Modon AB. Alla rättigheter förbehålls.</li>
+                    <li className="footerList"> © Upphovsrätt 2019, Furnique AB. Alla rättigheter förbehålls.</li>
                     </ol>
         </div>
     )

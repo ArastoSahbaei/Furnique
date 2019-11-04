@@ -21,7 +21,7 @@ export default function NavigationBar() {
             <div className="navigationBarWrapper">
             
                 <ul className="navigationList">
-                    <span className="logotype">MODON</span>
+                    <span className="logotype">Furnique</span>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/home">          Hem          </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tables">        Bord         </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/inspiration">   Inspiration  </NavLink> </li>

@@ -23,7 +23,7 @@ const RegisterForm = () => {
 
     return (
         <div className="registerAccountContainer">
-             <p className="registerAccountTitle">New to Modon?</p>
+             <p className="registerAccountTitle">New to Furnique?</p>
              <input className="input-field1" type="text"     placeholder="Firstname (Optional)"     onChange={handleChange('firstName')}/>
              <input className="input-field2" type="text"     placeholder="Surname (Optional)"       onChange={handleChange('lastName')}/>
              <input className="input-field3" type="text"     placeholder="Email (Required)" name="email"      onChange={handleChange('email')}/>
