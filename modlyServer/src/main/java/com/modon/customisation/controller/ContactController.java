@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/contact")
 public class ContactController {
@@ -13,6 +14,7 @@ public class ContactController {
     @Autowired
     private EmailSenderService emailSenderService;
 
+    @CrossOrigin
     @PostMapping("/send")
     public void sendEmail(@RequestBody Contact contact) {
         try {
