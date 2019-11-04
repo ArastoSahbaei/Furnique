@@ -4,14 +4,12 @@ import {sendEmail} from '../../shared/api/ContactAPI'
 
 export default function Contact() {
 
-    const [email, setEmail] = useState(
-        {
+    const [email, setEmail] = useState({
             name : "",
             email : "",
             subject : "",
             message : ""
-        }              
-    )
+        })
 
      const handleChange = key => event => {
         setEmail({...email, [key]: event.target.value});
