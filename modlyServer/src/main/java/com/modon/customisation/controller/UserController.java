@@ -1,15 +1,11 @@
 package com.modon.customisation.controller;
 
-import com.modon.customisation.email.SmtpMailSender;
 import com.modon.customisation.entity.User;
 import com.modon.customisation.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import javax.mail.MessagingException;
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -18,19 +14,6 @@ public class UserController {
 
     @Autowired
     private UserService userService = new UserService();
-
-    @Autowired
-    private SmtpMailSender smtpMailSender;
-
-    @CrossOrigin
-    @PostMapping
-    public ResponseEntity<User> registerNewUser(@Valid @RequestBody User user) throws MessagingException {
-        User newUser = userService.registerNewUserAccount(user);
-        smtpMailSender.send(user.getEmail(),
-                            "Welcome to Uniqfied!",
-                             "Uniqueness starts here. 'The quality of being the only one of its kind'");
-        return new ResponseEntity<>(newUser, HttpStatus.OK);
-    }
 
     @CrossOrigin
     @GetMapping
@@ -51,7 +34,7 @@ public class UserController {
         return new ResponseEntity<>(userService.getUserByConfirmationToken(id), HttpStatus.OK);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/delete")
     public ResponseEntity deleteUser(@RequestParam Long id) {
         userService.deleteUserById(id);
         return ResponseEntity.ok(HttpStatus.OK);
