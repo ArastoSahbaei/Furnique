@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import './Contact.css'
-import Axios from 'axios'
+import {sendEmail} from '../../shared/api/ContactAPI'
 
 export default function Contact() {
 
-    const [email, setemail] = useState(
+    const [email, setEmail] = useState(
         {
             email : "",
             subject : "",
@@ -12,22 +12,13 @@ export default function Contact() {
         }              
     )
 
-    const sendEmail = () => { Axios.post('http://localhost:8080/contact/send', email)
-        .then(function (response) {
-         console.log(response + "LOL");
-       })
-        .catch(function (error) {
-         console.log(error);
-       });
-     }
-
      const handleChange = key => event => {
-        setemail({...email, [key]: event.target.value});
+        setEmail({...email, [key]: event.target.value});
      }
 
     return (
         <div className="contactContainer">  
-        <form id="contact" action="" method="post">
+        <form id="contact" method="post">
             <h3>Furnique Contact Form</h3>
             <h4>We're always glad to help.</h4>
             <fieldset> 
@@ -43,7 +34,8 @@ export default function Contact() {
             <textarea placeholder="Type your message here...." onChange={handleChange('message')} tabindex="4" required></textarea>
             </fieldset>
             <fieldset>
-             <button name="submit" onClick={() => sendEmail()} type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+             <button name="submit" onClick={() => sendEmail(email)} type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+             <button onClick={() => sendEmail(email)}>sendEmailsendEmailsendEmailS</button>
             </fieldset>
         </form>
     </div>
