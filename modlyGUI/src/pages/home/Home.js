@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css'
-import MainPic from '../../shared/images/sharp.jpg';
+import MainPic from '../../shared/images/defege.jpg';
 import Swiper from '../../components/swiper/Swiper'
 import ClimateSection from './climatesection/ClimateSection'
 
