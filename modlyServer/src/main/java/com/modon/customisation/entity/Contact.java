@@ -2,6 +2,7 @@ package com.modon.customisation.entity;
 
 public class Contact {
 
+    private String name;
     private String email;
     private String subject;
     private String message;
@@ -30,5 +31,13 @@ public class Contact {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
