@@ -48,7 +48,7 @@ export default function Footer() {
 
                     <ol className="OLContact">
                     <li className="OLContactTitle">KONTAKT</li>
-                    <NavLink to="/checkout"> 
+                    <NavLink to="/kontakt"> 
                     <li className="ContactLI"><span>Kontaktform</span></li>
                     </NavLink>
                     <li className="ContactLI">Direktlinje +46 722 92 1983</li>

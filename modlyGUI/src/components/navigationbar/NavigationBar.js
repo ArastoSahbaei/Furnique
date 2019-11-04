@@ -25,7 +25,6 @@ export default function NavigationBar() {
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/home">          Hem          </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tables">        Bord         </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/inspiration">   Inspiration  </NavLink> </li>
-                    <li className="itemList"> <NavLink activeClassName='is-active' to="/kontakt">       Kontakt      </NavLink> </li>
                     <User/>
                     <Cart/>
                 </ul>
