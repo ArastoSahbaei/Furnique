@@ -23,6 +23,7 @@
 
     .logotype {
       position: absolute;
+      font-family: 'Pacifico', cursive;
       left: 0;
       margin-left: 2%;
       margin-top: 12px;
@@ -33,6 +34,7 @@
       display: inline-block;
       margin: 14px;
       color: #ffffff;
+      font-family: 'Oswald', sans-serif;
     }
   
     a {
