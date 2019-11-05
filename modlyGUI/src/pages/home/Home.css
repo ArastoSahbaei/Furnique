@@ -62,7 +62,7 @@
 
 .you {
    animation: change-color 5s ease;
-   color: red;
+   color: #d80013;
 }
 
 @keyframes change-color {
