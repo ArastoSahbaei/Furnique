@@ -22,11 +22,11 @@ export default function NavigationBar() {
             
                 <ul className="navigationList">
                     <li className="logotype">Furnique</li>
-                    <li className="itemList"> <NavLink activeClassName='is-active' to="/home">          Home          </NavLink> </li>
-                    <li className="itemList"> <NavLink activeClassName='is-active' to="/tables">        Shop          </NavLink> </li>
-                    <li className="itemList"> <NavLink activeClassName='is-active' to="/inspiration">   Design        </NavLink> </li>
-                    <li className="itemList"> <NavLink activeClassName='is-active' to="/tableees">        Inspiration   </NavLink> </li>
-                    <li className="itemList"> <NavLink activeClassName='is-active' to="/tabeeles">        Mission       </NavLink> </li>
+                    <li className="itemList"> <NavLink activeClassName='is-active' to="/home">           Home          </NavLink> </li>
+                    <li className="itemList"> <NavLink activeClassName='is-active' to="/tables">         Shop          </NavLink> </li>
+                    <li className="itemList"> <NavLink activeClassName='is-active' to="/inspiration">    Design        </NavLink> </li>
+                    <li className="itemList"> <NavLink activeClassName='is-active' to="/tableees">       Inspiration   </NavLink> </li>
+                    <li className="itemList"> <NavLink activeClassName='is-active' to="/tabeeles">       Mission       </NavLink> </li>
                     <li><User/></li>
                     <li><Cart/></li>
                 </ul>

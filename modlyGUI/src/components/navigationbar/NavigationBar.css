@@ -35,18 +35,9 @@
       padding: 20px;
       color: #ffffff;
       font-family: 'Josefin Sans', sans-serif;
-
     }
   
-    a {
-      text-decoration: none;
-      color:inherit;
-      -o-transition:.5s;
-      -ms-transition:.5s;
-      -moz-transition:.5s;
-      -webkit-transition:.5s;
-      transition:.5s;
-    }
+
   
     .is-active {
     letter-spacing: 4px;
