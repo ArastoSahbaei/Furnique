@@ -60,6 +60,20 @@
    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 }
 
+.you {
+   animation: change-color 5s ease;
+   color: red;
+}
+
+@keyframes change-color {
+   0% {
+     color: #414747;
+   }
+   50% {
+      color: #414747;
+    }
+}
+
 @keyframes leftToRight {
     0% {
        opacity: 0;
