@@ -9,8 +9,8 @@ export default function Home() {
     return (
         <div className="homeWrapper">
             <img className="mainPic" src={MainPic} alt=""/>
-            <span className="mainPicTitle">Självvalda mått, <br/> med hjälp ifrån utvalda hantverkare.</span>
-            <button className="createTableButton"><i class="fas fa-hammer"></i> SKAPA DITT BORD</button>
+            <p className="mainPicTitle">Unique furniture for your home, designed by you.</p>
+            <button className="createTableButton">Try now..</button>
             <ClimateSection/>
             <Swiper/> 
         </div>
