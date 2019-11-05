@@ -21,6 +21,7 @@
    margin-top: 1em;
    justify-self: center;
    font-family: 'Pacifico', cursive;
+   animation: leftToRight 1s;
 }
 
 .createTableButton {
@@ -38,14 +39,13 @@
    border: 2px solid #414747;
    border-radius: 15px;
    transition: all 0.5s;
-   transform: rotateZ(-1deg);
+   animation: leftToRight 2s;
 }
 
 .createTableButton:hover {
    transition: all 0.5s;
    color: white;
    background-color: rgb(110, 145, 110, 0.5);
-   height: 3.5em;
 }
 
 .subTitle:hover {
