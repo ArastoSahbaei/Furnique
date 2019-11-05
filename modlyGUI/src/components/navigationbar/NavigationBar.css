@@ -2,7 +2,6 @@
     top: 0;
     width: 100%;
     position: sticky;
-    border-bottom: 2px solid;
    }
 
   .navigationList {
@@ -11,14 +10,14 @@
     list-style-type: none;
     font-family: 'Oswald', sans-serif;
     font-size: 22px;
-    background-color: #429cd8;
+    background-color : rgb(64, 66, 78);
     text-align: center;
     transition: all 0.8s;
     z-index: 10;
     }
 
     .navigationList:hover {
-      background-color: rgb(66, 156, 216, 1) !important;
+      background-color: rgb(64, 66, 78, 1) !important;
       transition: all 0.5s;
     }
 
@@ -33,6 +32,7 @@
     .itemList {
       display: inline-block;
       margin: 14px;
+      color: #ffffff;
     }
   
     a {
