@@ -10,7 +10,7 @@ export default function Home() {
         <div className="homeWrapper">
             <img className="mainPic" src={MainPic} alt=""/>
             <p className="mainPicTitle">Unique furniture for your home, designed by you.</p>
-            <button className="createTableButton">Try now..</button>
+            <button className="createTableButton">Create your own design</button>
             <ClimateSection/>
             <Swiper/> 
         </div>

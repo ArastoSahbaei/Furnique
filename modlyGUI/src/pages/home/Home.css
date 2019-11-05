@@ -21,30 +21,30 @@
    margin-top: 1em;
    justify-self: center;
    font-family: 'Pacifico', cursive;
-   transform: rotateZ(-0.5deg);
 }
 
 .createTableButton {
    grid-column: 1 / 4;
    grid-row: 1/1;
    cursor: pointer;
-   width: 10em;
+   width: 12em;
    height: 3em;
-   font-size: 36px;
+   font-size: 32px;
    color: #414747;
    background-color: transparent;
    justify-self: center;
    font-family: 'Oswald', sans-serif;
    margin-top: 5em;
-   border: 3px solid #414747;
-   border-radius: 25px;
+   border: 2px solid #414747;
+   border-radius: 15px;
    transition: all 0.5s;
-   transform: rotateZ(-0.5deg);
+   transform: rotateZ(-1deg);
 }
 
 .createTableButton:hover {
    transition: all 0.5s;
-   width: 11em;
+   color: white;
+   background-color: rgb(110, 145, 110, 0.5);
    height: 3.5em;
 }
 
