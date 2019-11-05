@@ -11,3 +11,7 @@ body::-webkit-scrollbar-thumb {
   background-color: slategray;
   outline: 1px solid slategrey;
 }
+
+button {
+  outline: none !important;
+}
