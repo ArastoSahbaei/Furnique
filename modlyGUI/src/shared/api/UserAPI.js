@@ -1,6 +1,6 @@
 import Axios from 'axios'
 
-      export const registerNewUser = (user) => { Axios.post('http://localhost:8080/users', user)
+      export const registerNewUser = (user) => { Axios.post('http://localhost:8080/register', user)
         .then(function (response) {
          console.log(response);
        })
