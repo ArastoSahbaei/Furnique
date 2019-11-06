@@ -18,11 +18,4 @@ import Axios from 'axios'
        });
      }
 
-     export const getAllEmailsFromConfirmedUsers = () => { Axios.get('http://localhost:8080/users/confirmedusers')
-     .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  }
+     export const getAllEmailsFromConfirmedUsers = () => { return Axios.get('http://localhost:8080/users/confirmedusers') }

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import {getAllEmailsFromConfirmedUsers} from '../../shared/api/UserAPI'
 
 function Admin() {
   const [hasError, setErrors] = useState(false);
   const [users, setUsers] = useState([]);
+  const [confirmedEmails, setConfirmedEmails] = useState([]);
 
   async function fetchData() {
     const res = await fetch("http://localhost:8080/users");
@@ -13,6 +15,12 @@ function Admin() {
 
   useEffect(() => {
     fetchData();
+    getAllEmailsFromConfirmedUsers().then(function (response) {
+      setConfirmedEmails(response);
+      })
+    .catch(function (error) {
+      console.log(error);
+      });
   });
   
   return (
@@ -32,7 +40,7 @@ function Admin() {
                         <hr/>
                     </ul>
     ))}
-
+          <h1>{confirmedEmails.data}</h1>
 
 
       {console.log(users)}
