@@ -42,7 +42,7 @@ public class UserService implements UserServiceInterface {
         userRepository.deleteById(id);
     }
 
-    public Integer amountOfUsersInDB() {
-        return userRepository.findAllActiveUsers();
-    }
+    public Integer amountOfUsersInDB() { return userRepository.findAllActiveUsers(); }
+
+    public List getEmailFromConfirmedUsers() { return userRepository.getEmailFromConfirmedUsers(); }
 }

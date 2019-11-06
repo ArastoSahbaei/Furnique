@@ -33,10 +33,7 @@ public class UserRegistrationController {
     @CrossOrigin
     @PostMapping
     @RequestMapping("/register")
-    public ResponseEntity<User> registerUser(@RequestBody User user, ModelAndView modelAndView) {
-
-        // User existingUser = userRepository.findByEmailIdIgnoreCase(user.getEmail());
-
+    public ResponseEntity<User> registerUser(@RequestBody User user) {
         User newUser = userService.registerNewUserAccount(user);
 
         userRepository.save(user);

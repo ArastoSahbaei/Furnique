@@ -42,8 +42,12 @@ public class UserController {
 
     @GetMapping("/count")
     public ResponseEntity amountOfUsers() {
-        System.out.println(userService.amountOfUsersInDB());
         return ResponseEntity.ok(userService.amountOfUsersInDB());
+    }
+
+    @GetMapping("/confirmedusers")
+    public ResponseEntity getEmailFromConfirmedUsers() {
+        return ResponseEntity.ok(userService.getEmailFromConfirmedUsers());
     }
 
 }
