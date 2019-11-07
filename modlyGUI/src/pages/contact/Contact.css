@@ -126,12 +126,11 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 1;
-    margin-top: -410px !important;
+    top: 0;
     margin: auto;
   }
   .envelope.front {
-    width: 110rem;
+    width: 10rem;
     height: 6rem;
     border-radius: 0 0 1rem 1rem;
     overflow: hidden;
