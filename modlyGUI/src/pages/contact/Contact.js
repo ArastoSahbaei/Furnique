@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Contact.css'
+import FAQ from './faq/FAQ'
 import {sendEmail} from '../../shared/api/ContactAPI'
 
 export default function Contact() {
@@ -17,9 +18,10 @@ export default function Contact() {
 
     return (
         <div className="contactContainer">  
+        <FAQ/>
         <form id="contact" method="post">
-            <h3>Furnique Contact Form</h3>
-            <h4>We're always glad to help.</h4>
+            <h3>Couldnt find your answer?</h3>
+            <h4>We're always glad to help! Submit your issue and we'll get in touch.</h4>
             <fieldset> 
              <input placeholder="Your name" onChange={handleChange('name')} type="text" tabindex="1" required autofocus/> 
             </fieldset>
