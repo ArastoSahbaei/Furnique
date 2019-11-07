@@ -13,6 +13,12 @@ export default function Contact() {
             message : ""
         })
 
+    function addClass() {
+        document.body.classList.add("sent");
+        }
+        
+    window.addEventListener("click", addClass);
+
      const handleChange = key => event => {
         setEmail({...email, [key]: event.target.value});
      }
@@ -20,9 +26,9 @@ export default function Contact() {
     return (
         <div className="contactContainer">  
         <img className="faqCabinetImage" src={Cabinet} alt="cabinet"/>
-        <FAQ/>
-        <form id="contact" method="post">
-            <span className="helpTitle">Couldnt find your answer?</span> <br/>
+       {/*  <FAQ/> */}
+        <span className="helpTitle">Couldnt find your answer?</span> <br/>
+       {/*  <form id="contact" method="post">
             <span className="helpTitleSub">We're always glad to help! Submit your issue and we'll get in touch.</span>
             <fieldset> 
              <input placeholder="Your name" onChange={handleChange('name')} type="text" tabindex="1" required autofocus/> 
@@ -39,7 +45,31 @@ export default function Contact() {
             <fieldset>
              <button onClick={() => sendEmail(email)} type="button">Submit</button>
             </fieldset>
-        </form>
+        </form> */}
+
+  <article class="letter">
+    <div class="side">
+      <h1 className="contactTitle">Contact us</h1>
+      <p className="contactTitle">
+        <textarea className="textareaLetter" placeholder="Your message" />
+      </p>
     </div>
+    <div class="side">
+      <p className="contactTitle">
+        <input className="inputLetter" type="text" placeholder="Your name" />
+      </p>
+      <p className="contactTitle">
+        <input className="inputLetter" type="email" placeholder="Your email" />
+      </p>
+      <p className="contactTitle">
+        <button className="buttonLetter" id="sendLetter">Send</button>
+      </p>
+    </div>
+  </article>
+  <div className="envelope front"></div>
+  <div className="envelope back"></div>
+  
+<p className="result-message centered">Thank you for your message</p>
+</div>
     )
 }
