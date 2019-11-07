@@ -1,13 +1,13 @@
 .faqContainer {
-    position: absolute;
-    margin-top: -25%;
+    margin-top: -10%;
     z-index: 1;
-    width: 30%;
-    margin-left: 45%;
+    width: 50%;
+    margin-left: 25%;
 }
 
 .faqTitle {
     font-family: pxgrotesklight web,helvetica neue,Arial,sans-serif;
     color: #ffffff;
+    background: #585d72;
     font-size: 48px;
 }

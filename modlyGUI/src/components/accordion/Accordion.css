@@ -29,8 +29,11 @@
   }
   
   .accordion-content {
-    background-color: rgb(243, 136, 136);
+    background-color: #40424e;
+    font-family: pxgrotesklight web,helvetica neue,Arial,sans-serif;
+    color: #ffffff;
     overflow: hidden;
     transition: max-height 0.6s ease;
   }
+
   
