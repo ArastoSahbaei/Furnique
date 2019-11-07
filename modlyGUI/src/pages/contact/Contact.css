@@ -8,3 +8,19 @@
     height: 50%;
     z-index: -1;
 }
+
+.helpTitle {
+    font-family: pxgrotesklight web,helvetica neue,Arial,sans-serif;
+    color: #ffffff;
+    background: rgb(88, 93, 114, 0.8);
+    font-size: 48px;
+    margin-left: 36%;
+}
+
+.helpTitleSub {
+    font-family: pxgrotesklight web,helvetica neue,Arial,sans-serif;
+    color: #ffffff;
+    background: rgb(88, 93, 114, 0.8);
+    font-size: 28px;
+    margin-left: 30%;
+}

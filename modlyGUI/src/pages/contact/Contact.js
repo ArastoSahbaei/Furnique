@@ -22,8 +22,8 @@ export default function Contact() {
         <img className="faqCabinetImage" src={Cabinet} alt="cabinet"/>
         <FAQ/>
         <form id="contact" method="post">
-            <h3>Couldnt find your answer?</h3>
-            <h4>We're always glad to help! Submit your issue and we'll get in touch.</h4>
+            <span className="helpTitle">Couldnt find your answer?</span> <br/>
+            <span className="helpTitleSub">We're always glad to help! Submit your issue and we'll get in touch.</span>
             <fieldset> 
              <input placeholder="Your name" onChange={handleChange('name')} type="text" tabindex="1" required autofocus/> 
             </fieldset>
