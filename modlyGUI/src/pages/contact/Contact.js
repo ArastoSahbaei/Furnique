@@ -26,7 +26,7 @@ export default function Contact() {
     return (
         <div className="contactContainer">  
         <img className="faqCabinetImage" src={Cabinet} alt="cabinet"/>
-       {/*  <FAQ/> */}
+         <FAQ/>
         <span className="helpTitle">Couldnt find your answer?</span> <br/>
        {/*  <form id="contact" method="post">
             <span className="helpTitleSub">We're always glad to help! Submit your issue and we'll get in touch.</span>

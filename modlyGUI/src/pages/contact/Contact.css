@@ -126,8 +126,9 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
+    top: 1;
     margin: auto;
+    margin-top: -410px;
   }
   .envelope.front {
     width: 10rem;
