@@ -4,7 +4,7 @@
   }
   
   .accordion-title {
-    background-color: #eee;
+    background-color: #ffffff;
     color: #000000;
     cursor: pointer;
     display: flex;
@@ -12,8 +12,6 @@
     border: none;
     outline: none;
     transition: background-color 0.6s ease;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
   }
   
   .accordion-title:hover, .active {
@@ -23,7 +21,7 @@
   .accordion-icon {
     margin-left: auto;
     margin-right: 20px;
-    transition: transform 0.6s ease;
+    transition: transform 0.4s ease;
   }
   
   .rotate {

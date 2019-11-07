@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Contact.css'
 import FAQ from './faq/FAQ'
 import {sendEmail} from '../../shared/api/ContactAPI'
+import Cabinet from '../../shared/images/moderncabinet.jpg'
 
 export default function Contact() {
 
@@ -18,6 +19,7 @@ export default function Contact() {
 
     return (
         <div className="contactContainer">  
+        <img className="faqCabinetImage" src={Cabinet} alt="cabinet"/>
         <FAQ/>
         <form id="contact" method="post">
             <h3>Couldnt find your answer?</h3>

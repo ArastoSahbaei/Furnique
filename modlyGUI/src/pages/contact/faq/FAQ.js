@@ -5,7 +5,7 @@ import Accordion from '../../../components/accordion/Accordion'
 export default function FAQ() {
     return (
         <div className="faqContainer">
-        <h1>Most Common Frequently Asked Questions</h1>
+        <span className="faqTitle">Frequently Asked Questions</span>
            <Accordion title="Where is Furnique furniture made?">
                 <span>Answer</span>
            </Accordion>
