@@ -25,22 +25,6 @@
     margin-left: 30%;
 }
 
-/* h1, p {
-    margin: 0;
-    padding: 0;
-  }
-  h1 {
-    font-size: 2rem;
-    font-family: 'Dancing Script';
-  } */
-  
-/*   small {
-    display: block;
-    padding: 1rem 0;
-    font-size: 0.8rem;
-    transition: opacity 0.33s;
-  } */
-
   .contactTitle {
     font-family: 'Dancing Script', cursive;
     color:#4e5e72;
@@ -72,19 +56,12 @@
 
   .inputLetter {
    width: 50%;
-   
-  /*  margin-bottom: 1rem; */
   }
 
   .inputLetter2 {
     margin-top: 20px;
     width: 50%;
   }
-
-/*   .inputLetter[type=text]:invalid, [type=email]:invalid,  .inputLetter2[type=text]:invalid {
-    box-shadow: none;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgba(240, 132, 114, 0.5)' x='0' y='23' width='10' height='1'/></svg>");
-  } */
 
   .buttonLetter {
    padding: 0.5rem 1rem;
@@ -240,7 +217,6 @@
   }
   @keyframes fadeInEnvelope {
     0% {opacity: 0; transform: translateY(8rem);}
-    /*90% {opacity: 1; transform: translateY(4rem);}*/
     100% {opacity: 1; transform: translateY(4.5rem);}
   }
   @keyframes scaleLetter {
