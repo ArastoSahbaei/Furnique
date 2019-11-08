@@ -44,7 +44,7 @@ export default function Contact() {
              <button onClick={() => sendEmail(email)} type="button">Submit</button>
             </fieldset>
         </form> */}
-
+<div className="letterWrapper">
   <article className="letter">
     <div className="side">
       <h1 className="contactTitle">Contact us</h1>
@@ -67,7 +67,7 @@ export default function Contact() {
   </article>
   <div className="envelope front"></div>
   <div className="envelope back"></div>
-  
+</div>
 <p className="result-message centered">Thank you for your message</p>
 </div>
     )
