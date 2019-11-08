@@ -41,6 +41,11 @@
     transition: opacity 0.33s;
   } */
 
+  .contactTitle {
+    font-family: 'Dancing Script', cursive;
+    color:#4e5e72;
+  }
+
   .textareaLetter, .inputLetter, .buttonLetter {
     line-height: 1.5rem;
     border: 0;
