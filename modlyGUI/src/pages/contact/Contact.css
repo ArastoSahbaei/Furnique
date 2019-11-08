@@ -78,6 +78,7 @@
 
   .inputLetter2 {
     margin-top: 20px;
+    width: 50%;
   }
 
 /*   .inputLetter[type=text]:invalid, [type=email]:invalid,  .inputLetter2[type=text]:invalid {
