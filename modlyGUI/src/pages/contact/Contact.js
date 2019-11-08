@@ -55,10 +55,10 @@ export default function Contact() {
     </div>
     <div className="side">
       <p className="contactTitle">
-        <input className="inputLetter" type="text" placeholder="Your name" onChange={handleChange('name')} required  />
+        <input className="inputLetter2" type="text" placeholder="Your name" onChange={handleChange('name')} required  />
       </p>
       <p className="contactTitle">
-        <input className="inputLetter" type="email" placeholder="Your email" onChange={handleChange('email')} required/>
+        <input className="inputLetter2" type="email" placeholder="Your email" onChange={handleChange('email')} required/>
       </p>
       <p className="contactTitle">
         <button className="buttonLetter" onClick={() => sendEmail(email)}>Send</button>

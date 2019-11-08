@@ -50,16 +50,15 @@
     padding: 1%;
   }
 
-  .textareaLetter, .inputLetter, .buttonLetter {
+  .textareaLetter, .inputLetter, .buttonLetter, .inputLetter2 {
     line-height: 1.5rem;
     border: 0;
     outline: none;
-    font-family: inherit;
     appearance: none;
     font-family: monospace;
   }
 
-  .textareaLetter, .inputLetter {
+  .textareaLetter, .inputLetter, .inputLetter2 {
     color: #4e5e72;
     background-color: transparent;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgb(229, 225, 187)' x='0' y='23' width='10' height='1'/></svg>");
@@ -73,13 +72,18 @@
 
   .inputLetter {
    width: 50%;
-   margin-bottom: 1rem;
+   
+  /*  margin-bottom: 1rem; */
   }
 
-  .inputLetter[type=text]:invalid, [type=email]:invalid {
+  .inputLetter2 {
+    margin-top: 20px;
+  }
+
+/*   .inputLetter[type=text]:invalid, [type=email]:invalid,  .inputLetter2[type=text]:invalid {
     box-shadow: none;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgba(240, 132, 114, 0.5)' x='0' y='23' width='10' height='1'/></svg>");
-  }
+  } */
 
   .buttonLetter {
    padding: 0.5rem 1rem;
@@ -90,6 +94,7 @@
    font-size: 1.5rem;
    transition: background-color 0.2s;
    cursor: pointer;
+   margin-top: 10px;
   }
 
   .buttonLetter:hover,:focus {
@@ -98,7 +103,9 @@
   }
 
   .inputLetter[type=text]:focus,
+  .inputLetter2[type=text]:focus,
   .inputLetter[type=email]:focus,
+  .inputLetter2[type=email]:focus,
   .textareaLetter:focus {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgba(78, 94, 114, 0.3)' x='0' y='23' width='10' height='1'/></svg>");
     outline: none;
