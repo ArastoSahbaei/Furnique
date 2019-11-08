@@ -16,8 +16,6 @@ export default function Contact() {
     function addClass() {
         document.body.classList.add("sent");
         }
-        
-    window.addEventListener("click", addClass);
 
      const handleChange = key => event => {
         setEmail({...email, [key]: event.target.value});
@@ -47,14 +45,14 @@ export default function Contact() {
             </fieldset>
         </form> */}
 
-  <article class="letter">
-    <div class="side">
+  <article className="letter">
+    <div className="side">
       <h1 className="contactTitle">Contact us</h1>
       <p className="contactTitle">
         <textarea className="textareaLetter" placeholder="Your message" />
       </p>
     </div>
-    <div class="side">
+    <div className="side">
       <p className="contactTitle">
         <input className="inputLetter" type="text" placeholder="Your name" />
       </p>
@@ -62,7 +60,7 @@ export default function Contact() {
         <input className="inputLetter" type="email" placeholder="Your email" />
       </p>
       <p className="contactTitle">
-        <button className="buttonLetter" id="sendLetter">Send</button>
+        <button className="buttonLetter" onClick={addClass}>Send</button>
       </p>
     </div>
   </article>

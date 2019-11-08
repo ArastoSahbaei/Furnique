@@ -189,7 +189,7 @@
              animation: closeLetter 0.66s forwards ease-in; 
           }
           .sent .side:nth-of-type(1) h1, .side:nth-of-type(1) .textareaLetter {
-             animation: fadeOutText 0.66s forwards linear; 
+      /*        animation: fadeOutText 0.66s forwards linear;  */
           }
           .sent .buttonLetter {
             background-color: rgba(78, 94, 114, 0.2);
