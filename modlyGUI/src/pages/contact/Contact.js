@@ -9,7 +9,7 @@ export default function Contact() {
     const [email, setEmail] = useState({
             name : "",
             email : "",
-            subject : "",
+            subject : "er",
             message : ""
         })
 
@@ -48,19 +48,20 @@ export default function Contact() {
   <article className="letter">
     <div className="side">
       <h1 className="contactTitle">Contact us</h1>
+      <input className="inputLetter" placeholder="The Subject" onChange={handleChange('subject')} type="text" tabindex="3" required/>
       <p className="contactTitle">
-        <textarea className="textareaLetter" placeholder="Your message" />
+        <textarea className="textareaLetter" placeholder="Your message" onChange={handleChange('message')} required />
       </p>
     </div>
     <div className="side">
       <p className="contactTitle">
-        <input className="inputLetter" type="text" placeholder="Your name" />
+        <input className="inputLetter" type="text" placeholder="Your name" onChange={handleChange('name')} required  />
       </p>
       <p className="contactTitle">
-        <input className="inputLetter" type="email" placeholder="Your email" />
+        <input className="inputLetter" type="email" placeholder="Your email" onChange={handleChange('email')} required/>
       </p>
       <p className="contactTitle">
-        <button className="buttonLetter" onClick={addClass}>Send</button>
+        <button className="buttonLetter" onClick={() => sendEmail(email)}>Send</button>
       </p>
     </div>
   </article>
