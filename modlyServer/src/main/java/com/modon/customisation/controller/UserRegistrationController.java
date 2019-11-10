@@ -36,7 +36,6 @@ public class UserRegistrationController {
     public ResponseEntity<User> registerUser(@RequestBody User user) {
         User newUser = userService.registerNewUserAccount(user);
 
-        userRepository.save(user);
         ConfirmationToken confirmationToken = new ConfirmationToken(user);
         confirmationTokenRepository.save(confirmationToken);
 

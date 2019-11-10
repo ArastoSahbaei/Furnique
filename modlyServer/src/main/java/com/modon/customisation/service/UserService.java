@@ -30,8 +30,7 @@ public class UserService implements UserServiceInterface {
     public User saveUser(User user) { return userRepository.save(user); }
 
     public User getUserByConfirmationToken(String confirmationToken) {
-        User user = confirmationTokenRepository.findByConfirmationToken(confirmationToken).getUser();
-        return user;
+        return confirmationTokenRepository.findByConfirmationToken(confirmationToken).getUser();
     }
 
     public List<User> getAllUsers() { return userRepository.findAll(); }

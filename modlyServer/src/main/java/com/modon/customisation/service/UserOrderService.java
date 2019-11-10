@@ -21,7 +21,6 @@ public class UserOrderService {
     public UserOrder saveUserOrder(UserOrder userOrder, Long userId) throws NotFoundException {
         return userRepository.findById(userId).map(user -> {
             userOrder.setUser(user);
-            userOrderRepository.save(userOrder);
             return userOrderRepository.save(userOrder);
         }).orElseThrow(() -> new NotFoundException("User not found"));
     }

@@ -1,5 +1,7 @@
 package com.modon.customisation.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,12 +9,13 @@ import javax.persistence.*;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
+    @GeneratedValue(generator = "product_sequence", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "product_sequence", sequenceName = "product_id_sq")
     @Column(name = "PRODUCT_ID", updatable = false, nullable = false)
-    private Integer productId;
+    private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "USER_ORDER__ID")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER_ORDER__ID", nullable = false)
     private UserOrder userOrder;
 
     @Column(length = 100, nullable = false)
@@ -64,12 +67,12 @@ public class Product {
 
     public void setSurfaceMaterial(String surfaceMaterial) { this.surfaceMaterial = surfaceMaterial; }
 
-    public Integer getProductId() {
-        return productId;
+    public Long getId() {
+        return id;
     }
 
-    public void setProductId(Integer productId) {
-        this.productId = productId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public UserOrder getUserOrder() {

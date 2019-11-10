@@ -1,5 +1,7 @@
 package com.modon.customisation.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -8,10 +10,12 @@ import java.util.List;
 
 @Entity
 @Table(name = "USER_ORDER")
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class UserOrder {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
+    @GeneratedValue(generator = "userOrder_sequence", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "userOrder_sequence", sequenceName = "user_order_id_sq")
     @Column(name = "USER_ORDER_ID", updatable = false, nullable = false)
     private Long id;
 
@@ -23,6 +27,7 @@ public class UserOrder {
     private OrderDetails orderDetails;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "userOrder")
+    @JsonIgnore
     private List<Product> products;
 
     @CreationTimestamp

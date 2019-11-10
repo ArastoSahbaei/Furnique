@@ -2,6 +2,7 @@ package com.modon.customisation.controller;
 
 import com.modon.customisation.entity.Product;
 import com.modon.customisation.service.ProductService;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,9 +19,9 @@ public class ProductController {
 
     @CrossOrigin
     @PostMapping
-    public ResponseEntity<Product> registerNewProduct(@RequestBody Product productModel) {
-        Product newProduct = productService.registerNewProduct(productModel);
-        return new ResponseEntity<>(newProduct, HttpStatus.OK);
+    public ResponseEntity<Product> registerNewProduct(@RequestParam(value = "id") Long userOrderId, @RequestBody Product productModel) throws NotFoundException {
+        productService.registerNewProduct(productModel, userOrderId);
+        return new ResponseEntity<>(productModel, HttpStatus.OK);
     }
 
     @CrossOrigin
