@@ -46,8 +46,8 @@ export default function NavigationBar() {
                     </Switch>
                 </Suspense>
             </div>
-            <Footer/>
             <SubFooter/>
+            <Footer/>
         </Router>
     )
 }
