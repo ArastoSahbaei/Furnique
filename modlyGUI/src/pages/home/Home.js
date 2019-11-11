@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <div className="homeWrapper">
             <img className="mainPic" src={MainPic} alt=""/>
-            <span className="mainPicTitle">Unique furniture for your home, <span className="you">designed by you</span>.</span>
+            <span className="mainPicTitle">Unique furniture, <span className="you">designed by you</span>.</span>
             <button className="createTableButton">GET STARTED</button>
             <ClimateSection/>
            {/*  <Swiper/>  */}
