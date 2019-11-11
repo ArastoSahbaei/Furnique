@@ -3,7 +3,7 @@ import { Route, NavLink, Switch, BrowserRouter as Router } from 'react-router-do
 import './NavigationBar.css'
 import Spinner from '../../shared/images/spinner.gif'
 import Cart from '../cart/Cart'
-import ToggleCart from '../toggleCart/ToggleCart'
+import ToggleCartButton from '../toggleCartButton/ToggleCartButton'
 import User from '../user/User'
 import Footer from '../../components/footer/Footer'
 import SubFooter from '../../components/subheader/SubHeader'
@@ -22,14 +22,16 @@ export default function NavigationBar() {
             <div className="navigationBarWrapper">
             
                 <ul className="navigationList">
-                    <li className="logotype">Furnique</li>
+                    <li className="itemList logotype">Furnique</li>
+                    <div className="navigationLinks">
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/home">           Home          </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tables">         Shop          </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/inspiration">    Design        </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tableees">       Inspiration   </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tabeeles">       Mission       </NavLink> </li>
-                    <li className="itemList"> <ToggleCart/> </li>
-                    <li><User/></li>
+                    </div>
+                    <li className="itemList toggleShopCart"> <ToggleCartButton/> </li>
+                    <li className="itemList toggleUser"> <User/> </li>
                     <li><Cart/></li>
                 </ul>
                 

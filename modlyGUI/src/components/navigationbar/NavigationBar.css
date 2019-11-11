@@ -2,9 +2,6 @@
     top: 0;
     width: 100%;
     position: sticky;
-   }
-
-  .navigationList {
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -21,13 +18,32 @@
       transition: all 0.5s;
     }
 
+    .navigationLinks {
+      margin-right: 25%;
+    }
+
     .logotype {
       position: absolute;
-      font-family: 'Pacifico', cursive;
       left: 0;
+      font-family: 'Pacifico', cursive !important;
       margin-left: 6%;
+      margin-top: -17px;
       font-size: 30px;
       color: white;
+    }
+
+    .toggleShopCart {
+      position: absolute;
+      right: 0;
+      margin-right: 6%;
+      margin-top: -69px;
+    }
+    
+    .toggleUser {
+      position: absolute;
+      right: 0;
+      margin-right: 10%;
+      margin-top: -69px;
     }
 
     .itemList {

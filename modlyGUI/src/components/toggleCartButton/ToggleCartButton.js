@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import {CartMenuContext} from '../cart/CartMenuProvider'
-import './ToggleCart.css'
+import './ToggleCartButton.css'
 
 const ToggleCart = () => {
     const menuHandler = useContext(CartMenuContext);

@@ -1,0 +1,12 @@
+.fa-shopping-cart {
+    font-size: 32px;
+    transition: 0.2s;
+}
+
+.fa-shopping-cart:hover {
+    cursor: pointer;
+    border-bottom: solid 1px;
+    transform: rotate(-3deg);
+    font-size: 34px;
+    transition: 0.2s;
+}
