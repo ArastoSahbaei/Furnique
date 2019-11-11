@@ -18,14 +18,15 @@
 }
 
 .mainPicTitle {
-   font-size: 40px;
+   font-size: 46px;
    color: #414747;
    background-color: transparent;
    grid-column: 1 / 4;
    grid-row: 1/1;
    margin-top: 1em;
    justify-self: center;
-   font-family: 'Pacifico', cursive;
+   font-family: 'Parisienne', cursive;
+   font-weight: 1000;
    animation: leftToRight 1s;
 }
 
@@ -61,7 +62,7 @@
 }
 
 .you {
-   animation: change-color 5s ease;
+   animation: change-color 3.5s ease;
    color: #d80013;
 }
 
