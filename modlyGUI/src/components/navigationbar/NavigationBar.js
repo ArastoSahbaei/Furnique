@@ -3,6 +3,7 @@ import { Route, NavLink, Switch, BrowserRouter as Router } from 'react-router-do
 import './NavigationBar.css'
 import Spinner from '../../shared/images/spinner.gif'
 import Cart from '../cart/Cart'
+import ToggleCart from '../toggleCart/ToggleCart'
 import User from '../user/User'
 import Footer from '../../components/footer/Footer'
 import SubFooter from '../../components/subheader/SubHeader'
@@ -27,6 +28,7 @@ export default function NavigationBar() {
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/inspiration">    Design        </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tableees">       Inspiration   </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tabeeles">       Mission       </NavLink> </li>
+                    <li className="itemList"> <ToggleCart/> </li>
                     <li><User/></li>
                     <li><Cart/></li>
                 </ul>
