@@ -1,12 +1,13 @@
 .userIcon {
     color: #ffffff;
     font-size: 32px;
-    transition: all 0.3s;
+    transition: 0.5s;
+    border-bottom: solid 1px transparent;
 }
 
 .userIcon:hover {
     cursor: pointer;
-    border-bottom: solid 1px;
+    border-bottom: solid 1px #ffffff;
     font-size: 34px;
     transition: 0.3s;
 }
