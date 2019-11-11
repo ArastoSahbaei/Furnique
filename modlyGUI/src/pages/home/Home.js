@@ -12,7 +12,7 @@ export default function Home() {
             <span className="mainPicTitle">Unique furniture for your home, <span className="you">designed by you</span>.</span>
             <button className="createTableButton">GET STARTED</button>
             <ClimateSection/>
-            <Swiper/> 
+           {/*  <Swiper/>  */}
         </div>
     )
 }
