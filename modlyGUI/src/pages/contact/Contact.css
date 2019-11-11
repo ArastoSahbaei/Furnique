@@ -75,7 +75,7 @@
    margin-top: 10px;
   }
 
-  .buttonLetter:hover,:focus {
+  .buttonLetter:hover, .buttonLetter:focus {
     outline: none;
     background-color: rgba(78, 94, 114, 1);
   }
