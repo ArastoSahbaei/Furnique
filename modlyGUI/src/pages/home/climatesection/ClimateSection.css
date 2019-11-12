@@ -10,6 +10,11 @@
     grid-column: 2 / 6;
     grid-row: 1/1;
     justify-self: center;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .fa-heartbeat {
