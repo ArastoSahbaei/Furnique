@@ -25,7 +25,7 @@ export default function NavigationBar() {
                 <ul className="navigationList">
                     <li className="itemList logotype">Furnique</li>
                     <div className="navigationLinks">
-                    <li className="itemList"> <NavLink activeClassName='is-active' to="/home">           Home          </NavLink> </li>
+                    <li className="itemList"> <NavLink activeClassName='is-active' to="">                Home          </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tables">         Shop          </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/inspiration">    Design        </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tableees">       Inspiration   </NavLink> </li>
@@ -40,14 +40,14 @@ export default function NavigationBar() {
 
                 <Suspense fallback={<img className="spinnerImage" src={Spinner} alt="SpinnerLogo"/>}>
                     <Switch>
-                        <Route exact path="/home"                 component={Home} />
-                        <Route exact path="/tables"               component={Tables} />
-                        <Route exact path="/inspiration"          component={AnimationContainer} />
-                        <Route exact path="/kontakt"              component={Contact} />
-                        <Route exact path="/checkout"             component={Checkout} />
-                        <Route exact path="/authentication"       component={Authentication} />
-                        <Route exact path="/admin"                component={Admin} />
-                        <Route exact path="/emailverification"    component={EmailVerification} />
+                        <Route component={Home} />
+                            <Route exact path="/tables"               component={Tables} />
+                            <Route exact path="/inspiration"          component={AnimationContainer} />
+                            <Route exact path="/kontakt"              component={Contact} />
+                            <Route exact path="/checkout"             component={Checkout} />
+                            <Route exact path="/authentication"       component={Authentication} />
+                            <Route exact path="/admin"                component={Admin} />
+                            <Route exact path="/emailverification"    component={EmailVerification} />
                         <Route component={Home} />
                     </Switch>
                 </Suspense>
