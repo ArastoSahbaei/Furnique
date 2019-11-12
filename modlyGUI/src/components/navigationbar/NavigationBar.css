@@ -35,15 +35,22 @@
     .toggleShopCart {
       position: absolute;
       right: 0;
-      margin-right: 6%;
+      margin-right: 11%;
       margin-top: -67px;
     }
     
     .toggleUser {
       position: absolute;
       right: 0;
-      margin-right: 10%;
+      margin-right: 15%;
       margin-top: -69px;
+    }
+    
+    .toggleFlag {
+      position: absolute;
+      right: 0;
+      margin-right: 5%;
+      margin-top: -63px;
     }
 
     .itemList {

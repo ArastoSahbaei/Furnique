@@ -5,6 +5,7 @@ import Spinner from '../../shared/images/spinner.gif'
 import Cart from '../cart/Cart'
 import ToggleCartButton from '../toggleCartButton/ToggleCartButton'
 import User from '../user/User'
+import LanguagePicker from '../languageHandler/LanguageHandler'
 import Footer from '../../components/footer/Footer'
 import SubFooter from '../../components/subheader/SubHeader'
 const Home = lazy(() => import('../../pages/home/Home'));
@@ -32,6 +33,7 @@ export default function NavigationBar() {
                     </div>
                     <li className="itemList toggleShopCart"> <ToggleCartButton/> </li>
                     <li className="itemList toggleUser"> <User/> </li>
+                    <li className="itemList toggleFlag"> <LanguagePicker/> </li>
                     <li><Cart/></li>
                 </ul>
                 
