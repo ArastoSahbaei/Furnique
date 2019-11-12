@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import {verifyEmail} from '../../../shared/api/UserAPI'
 import './EmailVerification.css'
+import EmailVerificationSuccess from '../../../error/emailVerification/EmailVerificationSuccess';
+import EmailVerificationFailed from '../../../error/emailVerification/EmailVerificationFailed';
 
 const EmailVerification = () => {
     const [user, setUser] = useState({});
@@ -26,7 +28,7 @@ const EmailVerification = () => {
 
     return (
        <div className="emailVerificationWrapper">
-        {user.enabled ? <h1>Your account is verified</h1> : <h1>NOT VERIFIED</h1>}
+        {user.enabled ? <EmailVerificationSuccess /> : <EmailVerificationFailed /> }
        </div>
     )
 }
