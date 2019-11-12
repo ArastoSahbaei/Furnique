@@ -66,6 +66,30 @@
    color: #d80013;
 }
 
+.homeArrow {
+   position: absolute;
+   margin-left: 50%;
+   margin-bottom: 20px;
+   bottom: 0;
+   color: white;
+   animation: MoveUpDown 2s linear infinite;
+   transition: 0.8s;
+}
+
+.fa-chevron-down {
+   animation: fadeInEffect 4s;
+   opacity: 0.8;
+}
+
+@keyframes MoveUpDown {
+   0%, 100% {
+     bottom: 0;
+   }
+   50% {
+     bottom: 50px;
+   }
+ }
+
 @keyframes change-color {
    0% {
      color: #414747;

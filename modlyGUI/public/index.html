@@ -44,6 +44,20 @@
     })
 </script>
 
+  <script type="text/JavaScript">
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 20) {
+          $(".homeArrow").css({"opacity" : "0"}) /* färgen när man scrollar */
+        
+        }
+        else {
+          $(".homeArrow").css({"opacity" : "0"}) 
+        }
+      })
+    })
+</script>
+
   <body>
       <div id="root"></div>
   </body>

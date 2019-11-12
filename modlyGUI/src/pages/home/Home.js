@@ -11,6 +11,9 @@ export default function Home() {
             <img className="mainPic" src={MainPic} alt=""/>
             <span className="mainPicTitle">Unique furniture, <span className="you">designed by you</span>.</span>
             <button className="createTableButton">GET STARTED</button>
+            <div className="homeArrow">
+              <i className="fas fa-chevron-down"></i>
+            </div>
             <ClimateSection/>
            {/*  <Swiper/>  */}
         </div>
