@@ -25,7 +25,7 @@ export default function NavigationBar() {
                 <ul className="navigationList">
                     <li className="itemList logotype">Furnique</li>
                     <div className="navigationLinks">
-                    <li className="itemList"> <NavLink activeClassName='is-active' to="/home">               Home          </NavLink> </li>
+                    <li className="itemList"> <NavLink activeClassName='is-active' to="/home">           Home          </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tables">         Shop          </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/inspiration">    Design        </NavLink> </li>
                     <li className="itemList"> <NavLink activeClassName='is-active' to="/tableees">       Inspiration   </NavLink> </li>
