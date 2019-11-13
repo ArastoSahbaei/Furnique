@@ -3,32 +3,29 @@ import {verifyEmail} from '../../../shared/api/UserAPI'
 import './EmailVerification.css'
 import EmailVerificationSuccess from '../../../error/emailVerification/EmailVerificationSuccess';
 import EmailVerificationFailed from '../../../error/emailVerification/EmailVerificationFailed';
+import Axios from 'axios'
 
 const EmailVerification = () => {
-    const [user, setUser] = useState({});
+    const [isEnabled, setIsEnabled] = useState(false);
     let getTokenIdFromURL = window.location.href.split('?').reverse()[0];
     let URL = `http://localhost:8080/users/finduserbytoken?id=`;
-      
-    const checkIfUserIsEnabled = (user) => {
-        if (user) setUser({ enabled: true, ...user })
-    }
-
-    async function getUser() {
-        const res = await fetch(URL + getTokenIdFromURL);
-        checkIfUserIsEnabled(res.json())
-    }
     
     useEffect(() => {
-        verifyEmail(getTokenIdFromURL);
         getUser();
         return () => {
             /* */
         };
     }, []);
 
+    async function getUser() {
+         verifyEmail(getTokenIdFromURL);
+         const response = await Axios.get(URL+getTokenIdFromURL)
+         setIsEnabled(response.data.enabled)
+    }
+
     return (
        <div className="emailVerificationWrapper">
-        {user.enabled ? <EmailVerificationSuccess /> : <EmailVerificationFailed /> }
+        {isEnabled ? <EmailVerificationSuccess /> : <EmailVerificationFailed /> }
        </div>
     )
 }
