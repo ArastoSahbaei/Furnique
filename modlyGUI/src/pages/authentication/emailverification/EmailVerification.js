@@ -11,13 +11,13 @@ const EmailVerification = () => {
     let URL = `http://localhost:8080/users/finduserbytoken?id=`;
     
     useEffect(() => {
-        getUser();
+        validateAndConfirmUser();
         return () => {
             /* */
         };
     }, []);
 
-    async function getUser() {
+    async function validateAndConfirmUser() {
          verifyEmail(getTokenIdFromURL);
          const response = await Axios.get(URL+getTokenIdFromURL)
          setIsEnabled(response.data.enabled)
