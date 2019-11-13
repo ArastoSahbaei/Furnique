@@ -1,0 +1,21 @@
+.emailVerificationFailedWrapper {
+    background-color: #ff7f7f;
+    color: #ffffff;
+    height: 65.3vh;
+    text-align: center;
+    font-family: monospace;
+}
+
+.verificationFailedTitle {
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+.verificationFailedSubTitle {
+    font-size: 1.5rem;
+    color: #ffffff;
+    
+}
+
+.sendNewVerificationMailButton {
+}
