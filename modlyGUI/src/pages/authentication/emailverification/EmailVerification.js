@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import {verifyEmail} from '../../../shared/api/UserAPI'
 import './EmailVerification.css'
-import EmailVerificationSuccess from '../../../error/emailVerification/EmailVerificationSuccess';
-import EmailVerificationFailed from '../../../error/emailVerification/EmailVerificationFailed';
+import EmailVerificationSuccess from '../../../components/emailVerificationSuccess/EmailVerificationSuccess';
+import EmailVerificationFailed from '../../../error/emailVerificationFailed/EmailVerificationFailed';
 import Axios from 'axios'
 
 const EmailVerification = () => {
