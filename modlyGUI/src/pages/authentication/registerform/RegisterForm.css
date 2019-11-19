@@ -14,13 +14,13 @@
     color: #40424e;
     position:absolute;
     left: 0;
-    margin-left: 10%;
+    margin-left: 14%;
     margin-top: 5%;
-    animation: mymove 3s linear infinite;
+    animation: upDown 3s linear infinite;
 }
 
 .registerAccountTitle {
-    margin-left: 14%;
+    margin-left: 24%;
     font-size: 42px;
     color: #ffffff;
     font-family: 'Pacifico', cursive !important;
@@ -71,7 +71,7 @@
     box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
 }
 
-@keyframes mymove /* <--- here */
+@keyframes upDown 
 {
     0%   {top: 0%;}
     25%  {top: 2%;}
