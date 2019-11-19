@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Axios from 'axios'
 import {ThankYouMessage} from '../../../components/thankYouMessage/ThankYouMessage'
+import LoadingBar from '../../../shared/images/loadingbar.gif'
 import './RegisterForm.css'
 
 const RegisterForm = () => {
@@ -38,7 +39,7 @@ const RegisterForm = () => {
             <i className="fas fa-signature" />  <input className="input-field1" type="text"      placeholder="Firstname"            required       onChange={handleChange('firstName')}/>
             <i className="far fa-envelope" />   <input className="input-field3" type="email"     placeholder="Email"                required       onChange={handleChange('email')}/>
             <i className="fas fa-lock" />       <input className="input-field4" type="password"  placeholder="Password" pattern=".{8,}" required title="8 characters minimum" onChange={handleChange('password')}/>   
-            <button type="submit" className="registerAccountButton"> {loading ? <span>LOADING</span> : <span>Register Account</span> } </button>
+            {loading ? <img src={LoadingBar} alt="DEDE"/> : <button className="registerAccountButton">Register Account</button>}
         </form>
     )
 }
