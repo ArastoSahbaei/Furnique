@@ -25,7 +25,7 @@ const RegisterForm = () => {
             <input className="input-field1" type="text"      placeholder="Firstname (Optional)" required       onChange={handleChange('firstName')}/>
             <input className="input-field3" type="email"     placeholder="Email"                required       onChange={handleChange('email')}/>
             <input className="input-field4" type="password"  placeholder="Password"             required       onChange={handleChange('password')}/>   
-        <button onClick={() => handleSubmit()} type="submit" className="registerAccountButton"> Register Account </button>
+        <button /* onClick={() => handleSubmit()} */ type="submit" className="registerAccountButton"> Register Account </button>
     </form>
     )
 }

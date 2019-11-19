@@ -2,11 +2,10 @@ import Axios from 'axios'
 
       export const registerNewUser = (user) => { Axios.post('http://localhost:8080/register', user)
       .then(function (response) {
-        if(response=200)
         return alert("We've sent you mail! Please confirm your user.");
        })
        .catch(function (error) {
-         return console.log(error);
+         return alert(error);
        });
      }
 
