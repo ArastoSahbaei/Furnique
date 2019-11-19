@@ -16,7 +16,7 @@ const RegisterForm = () => {
 
     return (
         <div className="registerAccountContainer">
-             <p className="registerAccountTitle">New to Furnique?</p>
+             <p className="registerAccountTitle"><i className="fas fa-reply-all"/>New to <span className="registerAccountTitle2">Furnique</span> ?</p>
              <input className="input-field1" type="text"     placeholder="Firstname (Optional)"     onChange={handleChange('firstName')}/>
              <input className="input-field3" type="text"     placeholder="Email" name="email"       onChange={handleChange('email')}/>
              <input className="input-field4" type="password" placeholder="Password" name="psw"      onChange={handleChange('password')}/>   

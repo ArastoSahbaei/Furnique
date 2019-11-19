@@ -1,14 +1,37 @@
 .registerAccountContainer {
     width: 500px;
     position: absolute;
-    left: 10%;
-    top: 10%;
+    left: 14%;
+    top: 22%;
+}
+
+.fa-reply-all {
+    -webkit-transform: rotate(270deg);     /* Chrome and other webkit browsers */
+    -moz-transform: rotate(270deg);        /* FF */
+    -o-transform: rotate(270deg);          /* Opera */
+    -ms-transform: rotate(270deg);         /* IE9 */
+    transform: rotate(270deg);             /* W3C compliant browsers */
+    color: #40424e;
+    position:absolute;
+    left: 0;
+    margin-left: 10%;
+    margin-top: 5%;
+    animation: mymove 3s linear infinite;
 }
 
 .registerAccountTitle {
+    margin-left: 14%;
     font-size: 42px;
     color: #ffffff;
+    font-family: 'Pacifico', cursive !important;
     text-align: center;
+    letter-spacing: 3px;
+}
+
+.registerAccountTitle2 { 
+    font-family: 'Pacifico', cursive !important;
+    color: #40424e;
+    letter-spacing: 2px;
 }
 
 .input-field1, .input-field2, .input-field3, .input-field4 {
@@ -46,4 +69,13 @@
 .registerAccountButton:hover {
     color: #fff;
     box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes mymove /* <--- here */
+{
+    0%   {top: 0%;}
+    25%  {top: 2%;}
+    50%  {top: 4%;}
+    75%  {top: 2%;} 
+    100% {top: 0%;}
 }
