@@ -1,0 +1,55 @@
+.thankYouMessage {
+    color: #ffffff;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    position: absolute;
+    animation: fromLeftToRight 0.5s;
+    margin-left: 25.5%;
+    margin-top: 9%;
+    text-align: center;
+}
+
+.confirmYourMail {
+    font-size: 1rem;
+    color: rgb(221, 210, 210);
+}
+
+.thankYouMessageButton1, .thankYouMessageButton2, .thankYouMessageButton3 {
+    list-style: none;
+}
+
+.thankYouMessageButton1 {
+    animation: fromLeftToRight 1s;
+    
+}
+
+.thankYouMessageButton2 {
+    animation: fromLeftToRight 2s;
+    
+}
+
+.thankYouMessageButton3 {
+    animation: fromLeftToRight 3s;
+
+}
+
+.thankYouMessageButtonContainer {
+    margin-left: 26%;
+    margin-top: 16%;
+    position: absolute;
+}
+
+@keyframes fromLeftToRight {
+    0% {
+       opacity: 0;
+       transform: translateX(-300px);
+    }
+    50% {
+       opacity: 0;
+       transform: translateX(-150px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
