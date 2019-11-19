@@ -4,8 +4,8 @@ import './LoginForm.css'
 const Login = () => {
     return (
         <div className="loginCard">
-            <span className="wellcomeBackTitle">Hey! we're glad to see you again.</span>
-            <form action="action_page.php" method="post">
+            <span className="wellcomeBackTitle">Hey, we're glad to see you again!</span>
+            <form method="post">
              <div className="inputFields">
                 <label><i className="far fa-envelope fa-2x"/></label>
                  <input className="emailInput" name="email" type="text" placeholder="Email" required/> <br/>
