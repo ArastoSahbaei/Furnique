@@ -1,7 +1,7 @@
 .registerAccountContainer {
     width: 500px;
     position: absolute;
-    left: 14%;
+    left: 16%;
     top: 22%;
     animation: fromLeftToRight 1s;
 }
@@ -70,7 +70,6 @@
 
 .registerAccountButton  span {
     font-weight: bold;
-    font-size: 1rem;
     position: relative;
     transition: 0.5s;
   }
