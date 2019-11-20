@@ -1,4 +1,5 @@
 .loginCard {
+    z-index: 1;
     width: 40vh;
     height: 50vh;
     background: #fff;

@@ -3,7 +3,7 @@ import './ThankYouMessage.css'
 
 export const ThankYouMessage = () => {
     return (
-        <div>
+        <div className="thankYouMessageContainer">
             <p className="thankYouMessage">Welcome to Furnique <br/> 
             <span className="confirmYourMail">We've sent you a mail, please confirm your account.</span>
             </p>

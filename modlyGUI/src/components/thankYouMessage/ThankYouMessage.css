@@ -1,3 +1,7 @@
+.thankYouMessageContainer, .thankYouMessageButtonContainer {
+    z-index: 1;
+}
+
 .thankYouMessage {
     color: #ffffff;
     font-family: 'Pacifico', cursive;
