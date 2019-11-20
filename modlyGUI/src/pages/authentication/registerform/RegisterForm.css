@@ -3,7 +3,7 @@
     position: absolute;
     left: 14%;
     top: 22%;
-    animation: fromLeftToRight 1.5s;
+    animation: fromLeftToRight 1s;
 }
 
 .fa-reply-all {
