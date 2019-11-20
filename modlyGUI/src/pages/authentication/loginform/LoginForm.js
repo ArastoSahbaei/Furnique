@@ -10,7 +10,7 @@ const Login = () => {
             <hr/>
             <form method="post">
              <div className="inputFields">
-                <label> <span className="loginFormEmail"><i className="fas fa-key"/> Email</span> </label>
+                <label> <span className="loginFormEmail"> <i class="fas fa-paper-plane"/> Email</span> </label>
                  <input className="emailInput" name="email" type="email" placeholder=" Your Email" required/> 
                  <br/>
                 <label> <span className="loginFormPassword"><i className="fas fa-key"/> Password</span> </label>
