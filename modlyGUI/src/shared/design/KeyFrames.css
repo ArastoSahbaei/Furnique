@@ -1,0 +1,127 @@
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+@keyframes fromLeftToRight {
+    0% {
+       opacity: 0;
+       transform: translateX(-300px);
+    }
+    50% {
+       opacity: 0;
+       transform: translateX(-150px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+@keyframes upDown 
+{
+    0%   {top: 0%;}
+    25%  {top: 2%;}
+    50%  {top: 4%;}
+    75%  {top: 2%;} 
+    100% {top: 0%;}
+}
+
+@keyframes closeLetter {
+    50% {transform: rotateX(-90deg);}
+    100% {transform: rotateX(-180deg);}
+ }
+
+ @keyframes fadeOutText {
+    49% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 0;}
+ }
+
+ @keyframes fadeInEnvelope {
+   0% {opacity: 0; transform: translateY(8rem);}
+   100% {opacity: 1; transform: translateY(4.5rem);}
+ }
+
+ @keyframes scaleLetter {
+   66% {transform: translateY(-8rem) scale(0.5, 0.5);}
+   75% {transform: translateY(-8rem) scale(0.5, 0.5);}
+   90% {transform: translateY(-8rem) scale(0.3, 0.5);}
+   97% {transform: translateY(-8rem) scale(0.33, 0.5);}
+   100%{transform: translateY(-8rem) scale(0.3, 0.5);}
+ }
+
+ @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 50px;
+    }
+  }
+
+ @keyframes fadeInFromTop {
+    0% {
+      top: -450px;
+      opacity: 0;
+    }
+    25% {
+       opacity: 0.25;
+    }
+    50% {
+       opacity: 0.55;
+    }
+  }
+ 
+ @keyframes change-color {
+    0% {
+      color: #414747;
+    }
+    50% {
+       color: #414747;
+     }
+ }
+ 
+ @keyframes leftToRight {
+     0% {
+        opacity: 0;
+        transform: translateX(-200px);
+     }
+     100% {
+        opacity: 1;
+        transform: translateX(0);
+     }
+  }
+ 
+  @keyframes fadeInEffect {
+     0% {
+        opacity: 0;
+        transform: translateX(0);
+     }
+     50% {
+        opacity: 0;
+        transform: translateX(0);
+     }
+     80% {
+        opacity: 0;
+        transform: translateX(0);
+     }
+     90% {
+        opacity: 0.5;
+        transform: translateX(0);
+     }
+     100% {
+        opacity: 1;
+        transform: translateX(0);
+     }
+  }
+ 

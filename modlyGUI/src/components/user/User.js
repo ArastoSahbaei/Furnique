@@ -6,7 +6,7 @@ export default function User() {
     return (
         <div>
             <NavLink to="/authentication"> 
-            <div className="userIcon"> <i className="fa fa-user" aria-hidden="true"> </i></div>
+            <div className="userIcon"> <i className="fa fa-user" aria-hidden="true"/> </div>
             </NavLink>
         </div>
     )

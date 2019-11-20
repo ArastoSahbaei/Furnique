@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css'
+import './shared/design/KeyFrames.css'
+import './shared/design/GlobalCSS.css'
 import NavigationBar from './components/navigationbar/NavigationBar'
 import { CartMenuProvider } from './components/cart/CartMenuProvider'
 import { CartProvider } from './components/addToCartButton/CartContext'

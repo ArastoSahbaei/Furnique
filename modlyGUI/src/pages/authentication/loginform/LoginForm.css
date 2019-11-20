@@ -8,6 +8,7 @@
     left: 62%;
     top: 28%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 16px 16px 20px 0 rgba(0, 0, 0, 0.4);
+    animation: fadeInFromTop 1s;
 }
 
 .titleDiv {
