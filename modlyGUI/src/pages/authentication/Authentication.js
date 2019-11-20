@@ -7,9 +7,9 @@ import RegisterForm from './registerform/RegisterForm'
 const Authentication = () => {
     return (
         <div className="authenticationLoginContainer">
-          <FloatingSquares />
           <LoginForm />
           <RegisterForm />
+          <FloatingSquares />
         </div>
     )
 }
