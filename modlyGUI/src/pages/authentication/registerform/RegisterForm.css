@@ -34,7 +34,7 @@
     letter-spacing: 2px;
 }
 
-.input-field1, .input-field2, .input-field3, .input-field4 {
+.input-field1, .input-field2, .input-field3 {
     margin: 50px;
     letter-spacing: 0.3em;
     background: none;
@@ -64,9 +64,12 @@
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
     width: 400px;
     margin-left: 20%;
+    animation: fromLeftToRight 0.5s;
 }
 
 .registerAccountButton  span {
+    font-weight: bold;
+    font-size: 1rem;
     position: relative;
     transition: 0.5s;
   }
@@ -99,6 +102,68 @@
     font-size: 30px;
     color: white;
 }
+
+.checkBoxContainer {
+    margin: 20px;
+    margin-top: -20px;
+    margin-left: 11vh;
+    width: 400px;
+}
+
+.newsLetterTitle, .termsTitle {
+    color: white;
+    font-size: 1.1rem;
+}
+
+input[type=checkbox] + label {
+    display: block;
+    margin: 0.2em;
+    cursor: pointer;
+    padding: 0.2em;
+  }
+  
+  input[type=checkbox] {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    margin: 10px;
+  }
+  
+  input[type=checkbox] + label:before {
+    content: "\2714";
+    border: 0.1em solid #000;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    padding-left: 0.2em;
+    padding-bottom: 0.3em;
+    margin-right: 0.2em;
+    vertical-align: bottom;
+    color: transparent;
+    transition: .2s;
+  }
+  
+  input[type=checkbox] + label:active:before {
+    transform: scale(0);
+  }
+  
+  input[type=checkbox]:checked + label:before {
+    background-color: MediumSeaGreen;
+    border-color: MediumSeaGreen;
+    color: #fff;
+  }
+  
+  input[type=checkbox]:disabled + label:before {
+    transform: scale(1);
+    border-color: #aaa;
+  }
+  
+  input[type=checkbox]:checked:disabled + label:before {
+    transform: scale(1);
+    background-color: #bfb;
+    border-color: #bfb;
+  }
 
 @keyframes upDown 
 {

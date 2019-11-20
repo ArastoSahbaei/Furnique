@@ -37,9 +37,15 @@ const RegisterForm = () => {
         <form onSubmit={handleSubmit} className="registerAccountContainer">
             <p className="registerAccountTitle"> <i className="fas fa-reply-all"/> New to <span className="registerAccountTitle2">Furnique</span> ?</p>
             <i className="fas fa-signature" />  <input className="input-field1" type="text"      placeholder="Firstname"            required       onChange={handleChange('firstName')}/>
-            <i className="far fa-envelope" />   <input className="input-field3" type="email"     placeholder="Email"                required       onChange={handleChange('email')}/>
-            <i className="fas fa-lock" />       <input className="input-field4" type="password"  placeholder="Password" pattern=".{8,}" required title="8 characters minimum" onChange={handleChange('password')}/>   
-            {loading ? <img src={LoadingBar} alt="DEDE"/> : <button className="registerAccountButton"><span>Register Account</span></button>}
+            <i className="far fa-envelope" />   <input className="input-field2" type="email"     placeholder="Email"                required       onChange={handleChange('email')}/>
+            <i className="fas fa-lock" />       <input className="input-field3" type="password"  placeholder="Password" pattern=".{8,}" required title="8 characters minimum" onChange={handleChange('password')}/>   
+              <div className="checkBoxContainer">
+                <input type="checkbox" id="newsLetter"/> 
+                <label for="newsLetter"> <span className="newsLetterTitle">Recieve the latest news, services & offers</span> </label> <br/>
+                <input type="checkbox" id="terms" required/> 
+                <label for="terms"> <span className="termsTitle">I agree to the terms and conditions of Furnique</span> </label>
+              </div>
+            {loading ? <img src={LoadingBar} alt=""/> : <button className="registerAccountButton"><span>Register Account</span></button>}
         </form>
     )
 }
