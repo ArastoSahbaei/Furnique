@@ -36,7 +36,20 @@
     margin: 10px;
     font-family: 'Poppins', sans-serif;
     margin-left: 30px;
-    font-size: 14px;
+    font-size: 1rem;
+}
+
+.passwordInput {
+    letter-spacing: 2px;
+}
+
+.emailInput:-webkit-autofill,
+.emailInput:-webkit-autofill:hover, 
+.emailInput:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000000;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  letter-spacing: 1px;
 }
 
 .inputFields {
