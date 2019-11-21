@@ -19,7 +19,7 @@
 
 .fa-heartbeat {
     color: #DB4437;
-    animation: heartbeat 2.5s infinite;
+    animation: heartFadeInOut 2s infinite;
 }
 
 .climateTitleContainer {
