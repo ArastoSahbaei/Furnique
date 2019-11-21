@@ -10,6 +10,10 @@
  .dropdown {
     position: relative;
     display: inline-block;
+  }
+
+ .dropdown:hover .dropdown-content {
+    animation: mymovees 0.4s;
   } 
   
   .dropdown-content {
