@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import './NewsLetterSignup.css'
 
 export const NewsLetterSignup = () => {
@@ -7,6 +7,7 @@ export const NewsLetterSignup = () => {
     const signUpToNewsLetter = () => { setLoading(true) }
 
     return (
+        loading ? <h1>Thank you for signing up</h1> :
         <div className="newsLetterSignupContainer">
             <hr className="newsLetterHR"/>
             <form className="newsLetterSignupForm">
