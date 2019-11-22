@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
+.newsLetterSignupContainer {
+    grid-column: 1 / 10;
+    grid-row: 3/3;
+    padding: 2%;
+}
+
+.newsLetterSignupForm {
+    margin-left: 68vh;
+    margin-top: 5%;
+}
+
+.newsLetterHeadTitle {
+    margin-left: 28%;
+    font-size: 2rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.newsLetterEmailInput {
+    font-weight: 600;
+    color: #382b22;
+    padding: 1.6em 2em;
+    width: 300px;
+    letter-spacing: 1.3px;
+    background: #fff0f0;
+    border: 2px solid #b18597;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    outline: none;
+}
+
+.unsubscribeMessage {
+    margin-left: 35.5%;
+    font-weight: bold;
+    font-style: italic;
+    color: #585d72;
+}
+
+.signMeUpButton {
+	 position: relative;
+	 display: inline-block;
+	 cursor: pointer;
+	 outline: none;
+	 border: 0;
+	 vertical-align: middle;
+	 text-decoration: none;
+	 font-size: inherit;
+     margin-top: -24px;
+     margin-left: 1%;
+     font-family: 'Rubik', sans-serif;
+     font-weight: 600;
+     color: #382b22;
+     text-transform: uppercase;
+     padding: 1.25em 2em;
+     background: #fff0f0;
+     border: 2px solid #b18597;
+     border-radius: 0.75em;
+     transform-style: preserve-3d;
+     transition: transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+ .signMeUpButton::before {
+	 position: absolute;
+	 content: '';
+	 width: 100%;
+	 height: 100%;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 background: #f9c4d2;
+	 border-radius: inherit;
+	 box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+	 transform: translate3d(0, 0.75em, -1em);
+	 transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+ .signMeUpButton:hover {
+	 background: #ffe9e9;
+	 transform: translate(0, 0.25em);
+}
+
+ .signMeUpButton:hover::before {
+	 box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+	 transform: translate3d(0, 0.5em, -1em);
+}
+
+ .signMeUpButton:active {
+	 background: #ffe9e9;
+	 transform: translate(0em, 0.75em);
+}
+
+ .signMeUpButton:active::before {
+	 box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+	 transform: translate3d(0, 0, -1em);
+}
+ 
