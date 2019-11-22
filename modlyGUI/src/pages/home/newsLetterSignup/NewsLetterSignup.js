@@ -8,9 +8,9 @@ export const NewsLetterSignup = () => {
 
     return (
         <div className="newsLetterSignupContainer">
-            <hr/>
+            <hr className="newsLetterHR"/>
             <form className="newsLetterSignupForm">
-            <span className="newsLetterHeadTitle">Inspiration & special offers? Sign up to our newsletter</span> <br/><br/>
+            <span className="newsLetterHeadTitle">Inspiration & special offers? Sign up to our newsletter</span> 
                     <input className="newsLetterEmailInput" name="email" type="email" placeholder=" Your Email" required/> 
                     <button onClick={() => signUpToNewsLetter()} className="signMeUpButton" type="submit"> { loading ? "LOADING..." : "SIGN ME UP !" } </button>
             </form>
