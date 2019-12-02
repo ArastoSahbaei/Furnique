@@ -9,7 +9,7 @@ export default function Footer() {
 
             <div className="footerContainer">
                     <ol className="OLhelp">
-                    <li className="OLhelpTitle">INFORMATION</li>
+                    <li className="OLhelpTitle">Information</li>
                     <NavLink to="/checkout"> 
                     <li className="helpLI"><span>Cookies</span></li>
                     </NavLink>
@@ -47,7 +47,7 @@ export default function Footer() {
                     </ol>
 
                     <ol className="OLContact">
-                    <li className="OLContactTitle">KONTAKT</li>
+                    <li className="OLContactTitle">Kontakt</li>
                     <NavLink to="/kontakt"> 
                     <li className="ContactLI"><span>Kontaktform</span></li>
                     </NavLink>
