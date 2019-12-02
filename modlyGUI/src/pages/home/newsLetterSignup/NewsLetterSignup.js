@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {SignUpSuccessMessage} from './signUpSuccessMessage/SignUpSuccessMessage'
 import './NewsLetterSignup.css'
 
 export const NewsLetterSignup = () => {
@@ -7,11 +8,11 @@ export const NewsLetterSignup = () => {
     const signUpToNewsLetter = () => { setLoading(true) }
 
     return (
-        loading ? <h1>Thank you for signing up</h1> :
+        loading ? <SignUpSuccessMessage /> :
         <div className="newsLetterSignupContainer">
             <hr className="newsLetterHR"/>
             <form className="newsLetterSignupForm">
-            <span className="newsLetterHeadTitle">Inspiration & special offers? Sign up to our newsletter</span> 
+            <p className="newsLetterHeadTitle">Inspiration & special offers? Sign up to our newsletter</p> 
                     <input className="newsLetterEmailInput" name="email" type="email" placeholder=" Your Email" required/> 
                     <button onClick={() => signUpToNewsLetter()} className="signMeUpButton" type="submit"> { loading ? "LOADING..." : "SUBSCRIBE" } </button>
             </form>
