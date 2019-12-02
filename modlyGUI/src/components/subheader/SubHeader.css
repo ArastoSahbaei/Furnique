@@ -46,12 +46,16 @@
         font-size: 16px;
     }
 
+    .fa-truck {
+        color: #8AC926;
+    }
+
     .fa-smile-beam {
-        color: brown;
+        color: rgb(10, 149, 236);
     }
 
     .fa-pagelines {
-        color: green;
+        color: #00c281;
     }
 
     .fa-bitcoin {
