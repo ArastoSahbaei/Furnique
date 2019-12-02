@@ -1,6 +1,6 @@
 .footerContainer {
     width: 100%;
-    background-color: #78c7d2;
+    background-color: #00c281;
     color: white;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
