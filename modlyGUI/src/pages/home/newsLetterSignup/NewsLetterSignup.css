@@ -10,7 +10,6 @@
 }
 
 .newsLetterSignupForm {
-    margin-top: 3%;
 }
 
 .newsLetterHR {
@@ -20,8 +19,9 @@
 }
 
 .newsLetterHeadTitle {
-    font-size: 1.5rem;
-    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+    color: #382b22;
     letter-spacing: 1px;
     width: 100%;
     text-align: center;
