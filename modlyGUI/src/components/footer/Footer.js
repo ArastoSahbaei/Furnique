@@ -2,7 +2,6 @@ import React from 'react'
 import './Footer.css'
 import SocialMedia from './socialmedia/SocialMedia'
 import { NavLink } from 'react-router-dom'
-import SubHeader from '../../components/subheader/SubHeader'
 
 export default function Footer() {
     return (

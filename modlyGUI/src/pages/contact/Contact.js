@@ -13,10 +13,6 @@ export default function Contact() {
             message : ""
         })
 
-    function addClass() {
-        document.body.classList.add("sent");
-        }
-
      const handleChange = key => event => {
         setEmail({...email, [key]: event.target.value});
      }
@@ -26,24 +22,7 @@ export default function Contact() {
         <img className="faqCabinetImage" src={Cabinet} alt="cabinet"/>
          <FAQ/>
         <span className="helpTitle">Couldnt find your answer?</span> <br/>
-       {/*  <form id="contact" method="post">
-            <span className="helpTitleSub">We're always glad to help! Submit your issue and we'll get in touch.</span>
-            <fieldset> 
-             <input placeholder="Your name" onChange={handleChange('name')} type="text" tabindex="1" required autofocus/> 
-            </fieldset>
-            <fieldset>
-             <input placeholder="*Your Email Address" onChange={handleChange('email')} type="email" tabindex="2" required />
-            </fieldset>
-            <fieldset>
-             <input placeholder="*Subject" onChange={handleChange('subject')} type="text" tabindex="3" required/>
-            </fieldset>
-            <fieldset>
-            <textarea placeholder="Type your message here...." onChange={handleChange('message')} tabindex="4" required></textarea>
-            </fieldset>
-            <fieldset>
-             <button onClick={() => sendEmail(email)} type="button">Submit</button>
-            </fieldset>
-        </form> */}
+     
 <div className="letterWrapper">
   <article className="letter">
     <div className="side">

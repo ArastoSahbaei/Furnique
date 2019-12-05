@@ -1,7 +1,6 @@
 import React from 'react'
 import './Home.css'
 import MainPic from '../../shared/images/defege.jpg';
-import Swiper from '../../components/swiper/Swiper'
 import ClimateSection from './climatesection/ClimateSection'
 import { NewsLetterSignup } from './newsLetterSignup/NewsLetterSignup';
 
@@ -17,7 +16,6 @@ export default function Home() {
             </div>
             <ClimateSection/>
             <NewsLetterSignup/>
-           {/*  <Swiper/>  */}
         </div>
     )
 }
