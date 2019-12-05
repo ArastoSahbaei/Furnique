@@ -1,9 +1,10 @@
 import React from 'react'
+import './SignUpSuccessMessage'
 
 export const SignUpSuccessMessage = () => {
     return (
-        <div>
-            <h1>You the man</h1>
+        <div className="signUpSuccessMessageContainer">
+            <p className="newsLetterThankYouMessage">You've signed up to the Furnique newsletter.</p>
         </div>
     )
 }

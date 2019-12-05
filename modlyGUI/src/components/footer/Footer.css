@@ -4,15 +4,21 @@
     color: white;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    }
-    
-.OLhelp, .OLAbout, .OLCompany, .OLContact {
+}
+
+.OLhelp,
+.OLAbout,
+.OLCompany,
+.OLContact {
     list-style: none;
     font-size: 1em;
     font-family: sans-serif;
 }
 
-.OLhelpTitle, .OLAboutTitle, .OLCompanyTitle, .OLContactTitle {
+.OLhelpTitle,
+.OLAboutTitle,
+.OLCompanyTitle,
+.OLContactTitle {
     font-size: 1.3em;
     border-bottom: 0.1em solid #ffffff;
     font-family: sans-serif;
@@ -32,8 +38,9 @@
     color: white;
     margin-top: 0.3em;
 }
+
 .ContactLIminor {
-    color:#D3D3D3;
+    color: #D3D3D3;
     font-size: 0.8em;
 }
 
@@ -41,9 +48,7 @@
     list-style: none;
 }
 
-.OLAbout {
-
-}
+.OLAbout {}
 
 .OLCompany {
     grid-column: 5/7;
@@ -58,30 +63,35 @@
     font-family: 'Mansalva', cursive;
 }
 
-.helpLI span, .aboutLI span, .ContactLI span {
+.helpLI span,
+.aboutLI span,
+.ContactLI span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
-  }
+}
 
-.helpLI span:after, .aboutLI span:after, .ContactLI span:after {
+.helpLI span:after,
+.aboutLI span:after,
+.ContactLI span:after {
     content: '»';
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
-  }
+}
 
-  .helpLI:hover span, .aboutLI:hover span, .ContactLI:hover span {
+.helpLI:hover span,
+.aboutLI:hover span,
+.ContactLI:hover span {
     padding-right: 20px;
-  }
+}
 
-  .helpLI:hover span:after, .aboutLI:hover span:after, .ContactLI:hover span:after {
+.helpLI:hover span:after,
+.aboutLI:hover span:after,
+.ContactLI:hover span:after {
     opacity: 1;
     right: 0;
-  }
-
-
-
+}
