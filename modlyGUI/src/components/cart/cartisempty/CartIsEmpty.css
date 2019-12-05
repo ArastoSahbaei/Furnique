@@ -1,13 +1,13 @@
 .cartIsEmptyLogo {
-    width: 100%;
-    margin-top: 3em;
-    z-index: 2;
-    margin-top: -80px;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+  width: 100%;
+  margin-top: 3em;
+  z-index: 2;
+  margin-top: -80px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .rainDropImage {
@@ -21,61 +21,72 @@
   -ms-user-select: none;
 }
 
-.browseProducts, .createYourOwn, .getInspired {
-    text-align: center;
-    cursor: pointer;
-    font-size:22px;
-    border-radius: 4px;
-    border: none;
-    padding: 20px;
-    transition: all 0.5s;
-    width: 13em;
-    margin: 20px;
-  }
-
-.browseProducts span, .createYourOwn span, .getInspired span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-
-.browseProducts span:after, .createYourOwn span:after, .getInspired span:after  {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -14px;
-    transition: 0.5s;
-  }
-
-.browseProducts:hover span:after, .createYourOwn:hover span:after, .getInspired:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-
-.browseProducts {
-     background-color:#78c7d2;
-  }
-
-.createYourOwn {
-     background-color:#d35c0c;
-  }
-
+.browseProducts,
+.createYourOwn,
 .getInspired {
-     background-color:#29b57c;
-  }
-
-
-.browseProducts span:after, .createYourOwn span:after {
-    content: '«';
-    margin-right: 8em;
-  }
-
-.getInspired span:after {
-    content: '«';
-    margin-right: 7.3em;
+  text-align: center;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 4px;
+  border: none;
+  padding: 20px;
+  transition: all 0.5s;
+  width: 13em;
+  margin: 20px;
 }
 
-.browseProducts:hover span, .createYourOwn:hover span, .getInspired:hover span {
-    padding-left: 25px;
-  }
+.browseProducts span,
+.createYourOwn span,
+.getInspired span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.browseProducts span:after,
+.createYourOwn span:after,
+.getInspired span:after {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -14px;
+  transition: 0.5s;
+}
+
+.browseProducts:hover span:after,
+.createYourOwn:hover span:after,
+.getInspired:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.browseProducts {
+  background-color: #78c7d2;
+}
+
+.createYourOwn {
+  background-color: #d35c0c;
+}
+
+.getInspired {
+  background-color: #29b57c;
+}
+
+
+.browseProducts span:after,
+.createYourOwn span:after {
+  content: '«';
+  margin-right: 8em;
+}
+
+.getInspired span:after {
+  content: '«';
+  margin-right: 7.3em;
+}
+
+.browseProducts:hover span,
+.createYourOwn:hover span,
+.getInspired:hover span {
+  padding-left: 25px;
+}

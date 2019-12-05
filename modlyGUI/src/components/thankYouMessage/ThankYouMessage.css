@@ -1,4 +1,5 @@
-.thankYouMessageContainer, .thankYouMessageButtonContainer {
+.thankYouMessageContainer,
+.thankYouMessageButtonContainer {
     z-index: 1;
 }
 
@@ -18,18 +19,20 @@
     color: rgb(221, 210, 210);
 }
 
-.thankYouMessageButton1, .thankYouMessageButton2, .thankYouMessageButton3 {
+.thankYouMessageButton1,
+.thankYouMessageButton2,
+.thankYouMessageButton3 {
     list-style: none;
 }
 
 .thankYouMessageButton1 {
     animation: fromLeftToRight 1s;
-    
+
 }
 
 .thankYouMessageButton2 {
     animation: fromLeftToRight 2s;
-    
+
 }
 
 .thankYouMessageButton3 {
@@ -42,4 +45,3 @@
     margin-top: 16%;
     position: absolute;
 }
-

@@ -1,69 +1,69 @@
     .socialMediaUL {
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-  }
-  
-  .socialMediaUL .socialMediaLI {
-    list-style: none;
-  }
-  
-  .socialMediaUL .socialMediaLI a {
-    width: 40px;
-    height: 40px;
-    background: #fff;
-    text-align: center;
-    line-height: 40px;
-    font-size: 28px;
-    margin: 12px;
-    display: block;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-    border: 3px solid #ffffff;
-    z-index: 1;
-  }
-  
-  .socialMediaUL .socialMediaLI a .fa {
-    position: relative;
-    color: #262626;
-    transition: .5s;
-    z-index: 3;
-  }
-  
-  .socialMediaUL .socialMediaLI a:hover .fa {
-    color: #fff;
-    transform: rotateY(360deg);
-  }
-  
-  .socialMediaUL .socialMediaLI a:before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #f00;
-    transition: .7s;
-    z-index: 1;
-  }
-  
-  .socialMediaUL .socialMediaLI a:hover:before {
-    top: 0;
-  }
-  
-  .socialMediaUL .socialMediaLI:nth-child(1) a:before {
-    background: #c8232c;
-  }
-  
-  .socialMediaUL .socialMediaLI:nth-child(2) a:before {
-    background: #3b5998;
-  }
-  
-  .socialMediaUL .socialMediaLI:nth-child(3) a:before {
-    background: #c32aa3;
-  }
-  
-  .socialMediaUL .socialMediaLI:nth-child(4) a:before {
-    background: #1DA1F2;
-  }
+      display: flex;
+      justify-content: center;
+      padding: 0px;
+    }
+
+    .socialMediaUL .socialMediaLI {
+      list-style: none;
+    }
+
+    .socialMediaUL .socialMediaLI a {
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      text-align: center;
+      line-height: 40px;
+      font-size: 28px;
+      margin: 12px;
+      display: block;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      border: 3px solid #ffffff;
+      z-index: 1;
+    }
+
+    .socialMediaUL .socialMediaLI a .fa {
+      position: relative;
+      color: #262626;
+      transition: .5s;
+      z-index: 3;
+    }
+
+    .socialMediaUL .socialMediaLI a:hover .fa {
+      color: #fff;
+      transform: rotateY(360deg);
+    }
+
+    .socialMediaUL .socialMediaLI a:before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #f00;
+      transition: .7s;
+      z-index: 1;
+    }
+
+    .socialMediaUL .socialMediaLI a:hover:before {
+      top: 0;
+    }
+
+    .socialMediaUL .socialMediaLI:nth-child(1) a:before {
+      background: #c8232c;
+    }
+
+    .socialMediaUL .socialMediaLI:nth-child(2) a:before {
+      background: #3b5998;
+    }
+
+    .socialMediaUL .socialMediaLI:nth-child(3) a:before {
+      background: #c32aa3;
+    }
+
+    .socialMediaUL .socialMediaLI:nth-child(4) a:before {
+      background: #1DA1F2;
+    }

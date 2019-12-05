@@ -1,42 +1,41 @@
+.itemsInCart {
+  border-bottom: 3px solid #ffffff;
+  font-size: 30px;
+  margin: 10px;
+}
 
-  .itemsInCart {
-    border-bottom: 3px solid #ffffff;
-    font-size: 30px;
-    margin: 10px;
-  }
+.itemsInCartDisplay {
+  margin-top: 1em;
+}
 
-  .itemsInCartDisplay {
-    margin-top: 1em;
-  }
+.fa-trash {
+  font-size: 24px;
+  float: left;
+  color: white;
+  transform: rotateZ(14deg);
+  transition: .5s;
+  cursor: pointer;
+}
 
-  .fa-trash {
-    font-size: 24px;
-    float: left;
-    color: white;
-    transform: rotateZ(14deg);
-    transition: .5s;
-    cursor: pointer;
-  }
+.fa-trash:hover {
+  color: #FF4500;
+  transform: rotateZ(140deg);
+  transition: .5s;
+  cursor: pointer;
+}
 
-  .fa-trash:hover {
-    color: #FF4500;
-    transform: rotateZ(140deg);
-    transition: .5s;
-    cursor: pointer;
-  }
+.cartImage {
+  position: absolute;
+  height: 4em;
+  width: 4em;
+  margin-left: 180px;
+  margin-top: 12px;
+}
 
-  .cartImage {
-    position: absolute;
-    height: 4em;
-    width: 4em;
-    margin-left: 180px;
-    margin-top: 12px;
-  }
-
-  .displayItemsInCartUL {
-    text-align: left;
-    list-style: none;
-  }
+.displayItemsInCartUL {
+  text-align: left;
+  list-style: none;
+}
 
 .inspectDimensionsButton {
   border: none;
@@ -50,11 +49,11 @@
   font-size: 15px;
   background-color: #222;
   padding: 12px 4px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
 }
 
 .inspectDimensionsButton span {
-  position: relative; 
+  position: relative;
   z-index: 1;
 }
 
@@ -77,79 +76,83 @@
   transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }
 
-  .checkoutButton, .keepShoppingButton {
-    text-align: center;
-    cursor: pointer;
-    font-size:22px;
-    border-radius: 4px;
-    border: none;
-    padding: 10px;
-    transition: all 0.5s;
-  }
-    
-  .checkoutButton {
-    margin: 0 0 0 6px; 
-    background-color: #29b57c;
-  }
+.checkoutButton,
+.keepShoppingButton {
+  text-align: center;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  transition: all 0.5s;
+}
 
-  .checkoutButton  span, .keepShoppingButton span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
+.checkoutButton {
+  margin: 0 0 0 6px;
+  background-color: #29b57c;
+}
 
-  .checkoutButton span:after, .keepShoppingButton span:after  {
-    content: '»';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -14px;
-    transition: 0.5s;
-  }
+.checkoutButton span,
+.keepShoppingButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
 
-  .checkoutButton:hover span {
-    padding-right: 25px;
-  }
+.checkoutButton span:after,
+.keepShoppingButton span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -14px;
+  transition: 0.5s;
+}
 
-  .checkoutButton:hover span:after, .keepShoppingButton:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+.checkoutButton:hover span {
+  padding-right: 25px;
+}
 
-  .keepShoppingButton {
-     margin: 0 0 0 -6px; 
-     background-color:#d35400;
-  }
+.checkoutButton:hover span:after,
+.keepShoppingButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.keepShoppingButton {
+  margin: 0 0 0 -6px;
+  background-color: #d35400;
+}
 
 
-  .keepShoppingButton span:after {
-    content: '«';
-    margin-right: 160px;
-  }
+.keepShoppingButton span:after {
+  content: '«';
+  margin-right: 160px;
+}
 
-  .keepShoppingButton:hover span {
-    padding-left: 25px;
-  }
+.keepShoppingButton:hover span {
+  padding-left: 25px;
+}
 
-  .bottomPartUL {
-    text-align: center;
-    list-style: none;
-  }
+.bottomPartUL {
+  text-align: center;
+  list-style: none;
+}
 
-  .displayRight {
-    float: left;
-  }
+.displayRight {
+  float: left;
+}
 
-  .displayLeft {
-    float: right;
-    margin-right: 40px;
-  }
+.displayLeft {
+  float: right;
+  margin-right: 40px;
+}
 
-  .bottomPart {
-    color: white;
-  }
+.bottomPart {
+  color: white;
+}
 
-  .bottomButtons {
-    margin-top: 0.5em;
-  }
+.bottomButtons {
+  margin-top: 0.5em;
+}

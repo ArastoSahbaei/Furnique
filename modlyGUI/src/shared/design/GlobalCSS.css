@@ -1,12 +1,13 @@
-html, body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body::-webkit-scrollbar {
-width: 0.5em;
+  width: 0.5em;
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: slategray;
   outline: 1px solid slategrey;
@@ -18,22 +19,24 @@ button {
 
 a {
   text-decoration: none;
-  color:inherit;
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  transition:.5s;
+  color: inherit;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+  /* Code for Firefox */
   color: #585d72;
-  background: #ffffff;;
+  background: #ffffff;
+  ;
 }
 
 ::selection {
   color: #585d72;
-  background:#ffffff;
+  background: #ffffff;
 }
 
 /* Change Autocomplete styles in Chrome*/

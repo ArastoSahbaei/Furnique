@@ -7,67 +7,67 @@
     list-style-type: none;
     font-family: 'Oswald', sans-serif;
     font-size: 22px;
-    background-color : rgb(64, 66, 78);
+    background-color: rgb(64, 66, 78);
     text-align: center;
     transition: all 0.8s;
     z-index: 10;
-    }
+  }
 
-    .navigationList:hover {
-      background-color: rgb(64, 66, 78, 1) !important;
-      transition: all 0.5s;
-    }
+  .navigationList:hover {
+    background-color: rgb(64, 66, 78, 1) !important;
+    transition: all 0.5s;
+  }
 
-    .navigationLinks {
-      margin-right: 25%;
-    }
+  .navigationLinks {
+    margin-right: 25%;
+  }
 
-    .logotype {
-      position: absolute;
-      left: 0;
-      font-family: 'Pacifico', cursive !important;
-      margin-left: 6%;
-      margin-top: -17px;
-      font-size: 30px;
-      color: #ffffff !important;
-    }
+  .logotype {
+    position: absolute;
+    left: 0;
+    font-family: 'Pacifico', cursive !important;
+    margin-left: 6%;
+    margin-top: -17px;
+    font-size: 30px;
+    color: #ffffff !important;
+  }
 
-    .toggleShopCart {
-      position: absolute;
-      right: 0;
-      margin-right: 11%;
-      margin-top: -67px;
-    }
-    
-    .toggleUser {
-      position: absolute;
-      right: 0;
-      margin-right: 15%;
-      margin-top: -69px;
-    }
-    
-    .toggleFlag {
-      position: absolute;
-      right: 0;
-      margin-right: 5%;
-      margin-top: -63px;
-    }
+  .toggleShopCart {
+    position: absolute;
+    right: 0;
+    margin-right: 11%;
+    margin-top: -67px;
+  }
 
-    .itemList {
-      display: inline-block;
-      padding: 20px;
-      color: #a9a9b6;
-      font-family: 'Clarkson',Helvetica,sans-serif;
-    }
-  
-    .is-active {
+  .toggleUser {
+    position: absolute;
+    right: 0;
+    margin-right: 15%;
+    margin-top: -69px;
+  }
+
+  .toggleFlag {
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+    margin-top: -63px;
+  }
+
+  .itemList {
+    display: inline-block;
+    padding: 20px;
+    color: #a9a9b6;
+    font-family: 'Clarkson', Helvetica, sans-serif;
+  }
+
+  .is-active {
     letter-spacing: 4px;
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
     color: rgba(255, 255, 255, 0.89);
-    }
+  }
 
-    .spinnerImage {
-      margin-left: 40%;
-    }
+  .spinnerImage {
+    margin-left: 40%;
+  }

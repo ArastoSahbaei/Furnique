@@ -42,7 +42,7 @@
     font-family: 'Pacifico', cursive;
     font-size: 22px;
     z-index: 1;
-    color:#585d72;
+    color: #585d72;
 }
 
 
@@ -50,7 +50,7 @@
     font-size: 24px;
     cursor: pointer;
     background-color: transparent;
-    color:#238823;
+    color: #238823;
     width: 12em;
     height: 3em;
     font-family: 'Permanent Marker', cursive;
@@ -63,6 +63,7 @@
     margin-left: 20%;
     margin-top: 100px;
 }
+
 .climateReadMore:hover {
     transition: all 0.5s;
     color: white;

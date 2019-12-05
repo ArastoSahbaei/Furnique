@@ -1,11 +1,11 @@
 .addToCartButton {
   text-align: center;
   cursor: pointer;
-  font-size:24px;
+  font-size: 24px;
   margin: 0 0 0 180px;
   margin-top: 20px;
   border-radius: 24px;
-  background-color:#29b57c;
+  background-color: #29b57c;
   border: none;
   padding: 15px;
   width: 200px;
@@ -14,27 +14,27 @@
 }
 
 .addToCartButton span {
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
 
-  .addToCartButton span:after {
-    content: '»';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
+.addToCartButton span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
 
-  .addToCartButton:hover span {
-    padding-right: 25px;
-  }
+.addToCartButton:hover span {
+  padding-right: 25px;
+}
 
-  .addToCartButton:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+.addToCartButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}

@@ -1,63 +1,65 @@
+.subHeader {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    background-color: #585d72;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+}
 
-    
-    
-    .subHeader {
-        margin: 0;
-        padding: 0;
-        color: #ffffff;
-        background-color: #585d72;
-        text-align: center;
-        font-family: 'Lato', sans-serif;
-        font-size: 24px;
-        display: grid;
-        grid-template-columns: repeat(20, 1fr);
-    }
+.subHeaderListItem {}
 
-    .subHeaderListItem {
-    }
+.fraktFritt,
+.trygghetsGaranti,
+.miljoSmart,
+.betalningsMetoder {
+    list-style-type: none;
+    margin-top: 0.5em;
+}
 
-    .fraktFritt, .trygghetsGaranti, .miljoSmart, .betalningsMetoder {
-        list-style-type: none;
-        margin-top: 0.5em;
-    }
+.fraktFritt {
+    grid-column: 1/5;
+}
 
-    .fraktFritt {
-        grid-column: 1/5;
-    }
-    .trygghetsGaranti {
-        grid-column: 5/10;
-    }
-    .miljoSmart {
-        grid-column: 10/15;
-    }
-    .betalningsMetoder {
-        grid-column: 15/20;
-    }
+.trygghetsGaranti {
+    grid-column: 5/10;
+}
 
-    .headerSubTitle {
-        margin-left: 0.5em;
-    }
+.miljoSmart {
+    grid-column: 10/15;
+}
 
-    .miljoInfo {
-        border-bottom: 1px solid white;
-    }
+.betalningsMetoder {
+    grid-column: 15/20;
+}
 
-    .fraktFrittSubTitle {
-        font-size: 16px;
-    }
+.headerSubTitle {
+    margin-left: 0.5em;
+}
 
-    .fa-truck {
-        color: #8AC926;
-    }
+.miljoInfo {
+    border-bottom: 1px solid white;
+}
 
-    .fa-smile-beam {
-        color: rgb(10, 149, 236);
-    }
+.fraktFrittSubTitle {
+    font-size: 16px;
+}
 
-    .fa-pagelines {
-        color: #00c281;
-    }
+.fa-truck {
+    color: #8AC926;
+}
 
-    .fa-bitcoin {
-        color: #f2a900;
-    }
+.fa-smile-beam {
+    color: rgb(10, 149, 236);
+}
+
+.fa-pagelines {
+    color: #00c281;
+}
+
+.fa-bitcoin {
+    color: #f2a900;
+}
