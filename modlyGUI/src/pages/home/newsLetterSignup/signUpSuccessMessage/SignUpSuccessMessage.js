@@ -1,10 +1,13 @@
 import React from 'react'
-import './SignUpSuccessMessage'
+import './SignUpSuccessMessage.css'
 
 export const SignUpSuccessMessage = () => {
     return (
-        <div className="signUpSuccessMessageContainer">
-            <p className="newsLetterThankYouMessage">You've signed up to the Furnique newsletter.</p>
+        <div className="signUpNewsLetterSuccessMessageContainer">
+            <p className="thankYouLineBreak"> Thank you, </p>
+        <p className="newsLetterThankYouMessage">
+            You've signed up to the Furnique newsletter. 
+        </p>
         </div>
     )
 }

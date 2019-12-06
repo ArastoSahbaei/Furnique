@@ -55,7 +55,6 @@
    from {
       opacity: 0;
    }
-
    to {
       opacity: 1;
    }
@@ -129,6 +128,14 @@
    50% {
       bottom: 50px;
    }
+}
+
+@keyframes fadeInEffect {
+   0% {opacity: 0;}
+   25% {opacity: 0;}
+   50% {opacity: 0.5;}
+   75% {opacity: 0.75;}
+   100% {opacity: 1;}
 }
 
 @keyframes fadeInFromTop {
