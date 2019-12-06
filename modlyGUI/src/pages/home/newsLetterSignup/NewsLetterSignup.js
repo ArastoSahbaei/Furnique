@@ -10,7 +10,6 @@ export const NewsLetterSignup = () => {
     return (
         loading ? <SignUpSuccessMessage /> :
         <div className="newsLetterSignupContainer">
-           {/*  <hr className="newsLetterHR"/> */}
             <form className="newsLetterSignupForm">
             <p className="newsLetterHeadTitle">Inspiration & special offers? Sign up to our newsletter</p> 
                     <input className="newsLetterEmailInput" name="email" type="email" placeholder=" Your Email" required/> 

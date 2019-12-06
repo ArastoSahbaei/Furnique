@@ -9,7 +9,7 @@ const ClimateSection = () => {
             <div className="climateTitleContainer">
             <span className="climateTitle">Furnique <i className="fas fa-heartbeat"></i> Miljön </span> 
             <p className="climateParagraph">Vi klimatkompenserar för varje bord vi tillverkar.</p>
-            <button className="climateReadMore">LÄS MER OM HUR</button>
+            <button className="climateReadMoreButton">Läs mer om hur</button>
             </div>
             <span className="lineBreak" />
         </div>
