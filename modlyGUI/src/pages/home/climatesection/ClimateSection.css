@@ -69,3 +69,8 @@
     color: white;
     background-color: rgb(110, 145, 110, 0.5);
 }
+
+.lineBreak {
+    border-bottom: solid #585d72 2px;
+    grid-column: 2/10;
+}

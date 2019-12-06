@@ -5,17 +5,11 @@
     background-attachment: fixed;
     grid-column: 1 / 10;
     grid-row: 3/3;
-    height: 17vh;
+    height: 25vh;
     width: 100%;
 }
 
 .newsLetterSignupForm {
-}
-
-.newsLetterHR {
-    width: 60%;
-    text-align: center;
-    margin-top: -4%;
 }
 
 .newsLetterHeadTitle {

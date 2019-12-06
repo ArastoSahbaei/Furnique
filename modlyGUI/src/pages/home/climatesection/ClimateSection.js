@@ -11,6 +11,7 @@ const ClimateSection = () => {
             <p className="climateParagraph">Vi klimatkompenserar för varje bord vi tillverkar.</p>
             <button className="climateReadMore">LÄS MER OM HUR</button>
             </div>
+            <span className="lineBreak" />
         </div>
     )
 }
