@@ -76,7 +76,7 @@
     margin-left: 10%;
     height: 50px;
     border-radius: 25px;
-    background: linear-gradient(-135deg, #4158d0, #c850c0);
+    background: linear-gradient(-135deg, #02b07d, #007f8f);
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
     outline: none;
     margin-top: 5%;
