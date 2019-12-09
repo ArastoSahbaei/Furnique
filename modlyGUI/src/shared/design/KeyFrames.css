@@ -29,28 +29,6 @@
    }
 }
 
-@keyframes upDown {
-   0% {
-      top: 0%;
-   }
-
-   25% {
-      top: 2%;
-   }
-
-   50% {
-      top: 4%;
-   }
-
-   75% {
-      top: 2%;
-   }
-
-   100% {
-      top: 0%;
-   }
-}
-
 @keyframes mymovees {
    from {
       opacity: 0;
@@ -115,18 +93,6 @@
 
    100% {
       transform: translateY(-8rem) scale(0.3, 0.5);
-   }
-}
-
-@keyframes MoveUpDown {
-
-   0%,
-   100% {
-      bottom: 0;
-   }
-
-   50% {
-      bottom: 50px;
    }
 }
 

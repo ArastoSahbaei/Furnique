@@ -72,7 +72,6 @@
    margin-bottom: 20px;
    bottom: 0;
    color: white;
-   animation: MoveUpDown 2s linear infinite;
    transition: 0.8s;
 }
 

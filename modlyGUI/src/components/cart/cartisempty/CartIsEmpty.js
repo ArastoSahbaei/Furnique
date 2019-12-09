@@ -9,9 +9,9 @@ const CartIsEmpty = () => {
               <img className="rainDropImage" src={RainDrop} alt="SpinnereeLogo"/>
               <img className="cartIsEmptyLogo" src={Spinneeer} alt="SpinnereeLogo"/>
                     <h1>The cart is empty</h1>
-                    <button className="browseProducts"> <span>Browse products </span> </button> <br/>
-                    <button className="createYourOwn">  <span>Design your own </span> </button> <br/>
-                    <button className="getInspired">    <span>Get inspiration </span> </button> <br/>
+                    <button /* className="browseProducts" */> <span>Browse products </span> </button> 
+                    <button /* className="createYourOwn" */>  <span>Design your own </span> </button> 
+                    <button /* className="getInspired" */>    <span>Get inspiration </span> </button> 
         </div>
     )
 }
