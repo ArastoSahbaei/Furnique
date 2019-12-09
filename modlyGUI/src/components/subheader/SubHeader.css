@@ -48,18 +48,10 @@
     font-size: 16px;
 }
 
-.fa-truck {
-    color: #8AC926;
+.truckIcon, .happyIcon, .enviromentIcon, .bitcoinIcon {
+    width: 11%;
 }
 
-.fa-smile-beam {
-    color: rgb(10, 149, 236);
-}
-
-.fa-pagelines {
-    color: #00c281;
-}
-
-.fa-bitcoin {
-    color: #f2a900;
+.truckIcon {
+    margin-top: 3%;
 }

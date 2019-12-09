@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import Axios from 'axios'
 import {ThankYouMessage} from '../../../components/thankYouMessage/ThankYouMessage'
 import LoadingBar from '../../../shared/images/loadingbar.gif'
+import Lock from '../../../shared/images/icons/lock.svg'
+import Letter from '../../../shared/images/icons/email.svg'
+import Signature from '../../../shared/images/icons/signature.svg'
 import './RegisterForm.css'
 
 const RegisterForm = () => {
@@ -36,9 +39,9 @@ const RegisterForm = () => {
         registered ? <ThankYouMessage /> :
         <form onSubmit={handleSubmit} className="registerAccountContainer">
             <p className="registerAccountTitle"> <i className="fas fa-reply-all"/> New to <span className="registerAccountTitle2">Furnique</span> ?</p>
-            <i className="fas fa-signature" />  <input className="input-field1" type="text"      placeholder="Firstname"            required       onChange={handleChange('firstName')}/>
-            <i className="far fa-envelope" />   <input className="input-field2" type="email"     placeholder="Email"                required       onChange={handleChange('email')}/>
-            <i className="fas fa-lock" />       <input className="input-field3" type="password"  placeholder="Password" pattern=".{8,}" required title="8 characters minimum" onChange={handleChange('password')}/>   
+            <img className="registerIcons" src={Signature} alt="" />  <input className="input-field1" type="text"      placeholder="Firstname"            required       onChange={handleChange('firstName')}/>
+            <img className="registerIcons" src={Letter} alt="" />     <input className="input-field2" type="email"     placeholder="Email"                required       onChange={handleChange('email')}/>
+            <img className="registerIcons" src={Lock} alt="" />       <input className="input-field3" type="password"  placeholder="Password" pattern=".{8,}" required title="8 characters minimum" onChange={handleChange('password')}/>   
               <div className="checkBoxContainer">
                 <input type="checkbox" id="newsLetter"/> 
                 <label for="newsLetter"> <span className="newsLetterTitle">Recieve the latest news, services & offers</span> </label> <br/>
