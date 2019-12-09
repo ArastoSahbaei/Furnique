@@ -2,7 +2,7 @@
   width: 500px;
   position: absolute;
   left: 16%;
-  top: 22%;
+  top: 20%;
   z-index: 1;
   animation: fromLeftToRight 2s;
 }
@@ -43,7 +43,7 @@
   background: none;
   color: #ffffff;
   font-size: 18px;
-  padding: 10px 10px 10px 5px;
+  padding: 13px 13px 13px 5px;
   display: block;
   width: 500px;
   border: none;

@@ -1,13 +1,13 @@
 .loginCard {
     z-index: 1;
-    width: 40vh;
-    height: 50vh;
+    width: 20%;
+    height: 55%;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
     position: absolute;
     left: 62%;
-    top: 28%;
+    top: 25%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 16px 16px 20px 0 rgba(0, 0, 0, 0.4);
     animation: fadeInFromTop 1s;
 }
@@ -63,6 +63,7 @@
     font-family: 'Roboto', sans-serif;
     margin-left: 8%;
     font-weight: bold;
+    font-size: 1.4rem;
 }
 
 .loginButton {
@@ -114,7 +115,7 @@
 .forgotPassword {
     color: #666666;
     font-weight: bold;
-    margin-left: 30%;
+    margin-left: 35%;
 }
 
 .fa-envelope {
@@ -125,4 +126,12 @@
 .fa-lock {
     margin-top: 18px;
     position: absolute;
+}
+
+.emailIconLogin {
+    width: 10%;
+}
+
+.identifyUserIcon {
+    width: 12%;
 }

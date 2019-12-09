@@ -1,4 +1,6 @@
 import React from 'react'
+import EmailIcon from '../../../shared/images/icons/email.svg'
+import FingerPrint from '../../../shared/images/icons/id-card.svg'
 import './LoginForm.css'
 
 const Login = () => {
@@ -10,10 +12,10 @@ const Login = () => {
             <hr/>
             <form method="post">
              <div className="inputFields">
-                <label> <span className="loginFormEmail"> <i class="fas fa-paper-plane"/> Email</span> </label>
-                 <input className="emailInput" name="email" type="email" placeholder=" Your Email" required/> 
+                <label> <span className="loginFormEmail"> <img className="emailIconLogin" src={EmailIcon} alt=""/> Email</span> </label>
+                 <input className="emailInput" name="email" type="email" placeholder="  YourEmail@Host.com" required/> 
                  <br/>
-                <label> <span className="loginFormPassword"><i className="fas fa-key"/> Password</span> </label>
+                <label> <span className="loginFormPassword"> <img className="identifyUserIcon" src={FingerPrint} alt=""/> Password</span> </label>
                  <input className="passwordInput" type="password" placeholder=" Your Password" required></input> 
                  <br/>
             </div>
