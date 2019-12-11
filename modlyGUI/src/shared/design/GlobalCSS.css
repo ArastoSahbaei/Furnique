@@ -39,4 +39,8 @@ a {
   background: #ffffff;
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgb(202, 200, 200);
+}
+
 /* Change Autocomplete styles in Chrome*/
