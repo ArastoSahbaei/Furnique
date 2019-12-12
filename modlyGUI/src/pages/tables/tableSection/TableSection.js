@@ -17,8 +17,9 @@ export default function TableSection() {
 
             <div className="filterContainer">
                 <p> Filter System </p>
-                <p> Texture </p>
-                <p> Filter System </p>
+                <p> Texture's </p>
+                <p> osv </p>
+                <p> osv </p>
             </div>
 
             <NavLink className="r1c1" to="/inspiration">  

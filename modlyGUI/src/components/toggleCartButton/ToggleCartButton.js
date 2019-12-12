@@ -1,18 +1,17 @@
-import React, {useContext} from 'react'
-import {CartMenuContext} from '../cart/CartMenuProvider'
+import React, { useContext } from 'react'
 import './ToggleCartButton.css'
+import { CartContext } from '../addToCartButton/CartContext'
+import { EmptyCartIcon } from './EmptyCartIcon'
+import { CartIconWithItems } from './CartIconWithItems'
 
 const ToggleCart = () => {
-    const menuHandler = useContext(CartMenuContext);
+    const [cart] = useContext(CartContext)
 
     return (
         <div>
-            <span onClick={() => menuHandler.toggleMenu()}>
-                <i className="fa fa-shopping-cart" aria-hidden="true"/>
-            </span>
+           {(cart.length === 0 ? <EmptyCartIcon /> : <CartIconWithItems />)}
         </div>
     )
-    
 }
 
 export default ToggleCart

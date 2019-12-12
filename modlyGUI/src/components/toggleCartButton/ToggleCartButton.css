@@ -1,13 +1,25 @@
-.fa-shopping-cart {
-    font-size: 32px;
-    transition: 0.5s;
-    color: #ffffff !important;
-    border-bottom: solid 1px transparent;
+.emptyCartIconContainer, .cartIconWithItems {
+    animation: fadeInCart 0.4s;
 }
 
-.fa-shopping-cart:hover {
+.itemCounter {
+    position: absolute;
+    font-size: 1rem;
+    width: 50%;
+    height: 50%;
+    margin-left: 20%;
+    margin-top: 19%;
+}
+
+.shoppingCartIcon {
+    width: 90%;
     cursor: pointer;
+    transition: 0.5s;
+    border-bottom: solid 1px transparent;
+    position: absolute;
+    margin-top: -12%;
+}
+
+.shoppingCartIcon:hover {
     border-bottom: solid 1px #ffffff;
-    font-size: 34px;
-    transition: 0.3s;
 }

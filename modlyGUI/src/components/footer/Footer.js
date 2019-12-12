@@ -1,6 +1,8 @@
 import React from 'react'
 import './Footer.css'
 import SocialMedia from './socialmedia/SocialMedia'
+import CopyRightIcon from '../../shared/images/icons/copyright.svg'
+import MapIcon from '../../shared/images/icons/map.svg'
 import { NavLink } from 'react-router-dom'
 
 export default function Footer() {
@@ -56,13 +58,13 @@ export default function Footer() {
                     </ol>
 
                     <ol className="OLConnect">
-                    <li>Connect with us!</li> {/* 'FÖR OSS SAMMAN', 'WORD!' ? */}
+                    <li>Connect with us!</li>
                     <li><SocialMedia/></li>
                     </ol>
 
                     <ol className="OLCompany">
-                    <li className="footerList"><i class="fas fa-map-marker-alt"></i> Mom's incubatorgatan 47B, Göteborg, Sverige.</li> <br/>
-                    <li className="footerList"> © Upphovsrätt 2019, Furnique AB. Alla rättigheter förbehålls.</li>
+                    <li className="footerList"> <img className="mapIcon" src={MapIcon} alt="" /> Mom's incubatorgatan 47B, Göteborg, Sverige.</li> <br/>
+                    <li className="footerList"> <img className="copyRightIcon" src={CopyRightIcon} alt="" />  Upphovsrätt 2019, Furnique AB. Alla rättigheter förbehålls.</li>
                     </ol>
         </div>
     )

@@ -119,6 +119,20 @@
    }
 }
 
+@keyframes fadeInCart {
+   0% {
+      opacity: 0;
+   }
+
+   25% {
+      opacity: 0.25;
+   }
+
+   50% {
+      opacity: 0.55;
+   }
+}
+
 @keyframes change-color {
    0% {
       color: #414747;
