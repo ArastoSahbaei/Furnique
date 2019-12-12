@@ -1,5 +1,6 @@
 import React from 'react'
 import './TableSection.css'
+import { NavLink } from 'react-router-dom'
 import lmao from '../../../shared/images/tableImages/1.jpg'
 import lmao2 from '../../../shared/images/tableImages/2.jpg'
 import lmao3 from '../../../shared/images/tableImages/3.jpg'
@@ -7,20 +8,24 @@ import lmao4 from '../../../shared/images/tableImages/4.jpg'
 import lmao5 from '../../../shared/images/tableImages/5.jpg'
 import lmao6 from '../../../shared/images/tableImages/6.jpg'
 import lmao7 from '../../../shared/images/tableImages/7.jpg'
-import { NavLink } from 'react-router-dom'
 import lmao8 from '../../../shared/images/tableImages/8.jpg'
 import lmao9 from '../../../shared/images/tableImages/9.jpg'
 
 export default function TableSection() {
     return (
         <div className="tableSectionWrapper">
-            <span className="tableSectionTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa</span>
+
+            <div className="filterContainer">
+                <p> Filter System </p>
+                <p> Texture </p>
+                <p> Filter System </p>
+            </div>
 
             <NavLink className="r1c1" to="/inspiration">  
             <img className="tableImages" src={lmao}   alt="SpinnerLogo"/>
             <p className="toBeChanged"> <i className="fas fa-sliders-h"></i> Coconut Dream</p>
             </NavLink>
-
+        
             <NavLink className="r1c2" to="/inspiration">
             <img className="tableImages" src={lmao2}   alt="SpinnerLogo"/>
             <p className="toBeChanged"> <i className="fas fa-sliders-h"></i> Macedonian Peanut</p>
