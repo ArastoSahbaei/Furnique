@@ -14,10 +14,10 @@
 
 .thankYouLineBreak {
     font-size: 2.4rem;
-    animation: mymovees 1s;
+    animation: mymovees 0.5s;
 }
 
 .newsLetterThankYouMessage {
     font-size: 2rem;
-    animation: fadeInEffect 1.5s;
+    animation: fadeInEffect 0.9s;
 }
