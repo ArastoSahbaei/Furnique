@@ -20,7 +20,7 @@ const Login = () => {
                  <br/>
             </div>
                 <button className="loginButton" name="psw" type="submit"><span>Login</span></button> <br />
-                <p className="forgotPassword"><a href="#">Forgot Password?</a></p>
+                <p className="forgotPassword"><a href="/www.lol.com">Forgot Password?</a></p>
             </form>
 
         </div>

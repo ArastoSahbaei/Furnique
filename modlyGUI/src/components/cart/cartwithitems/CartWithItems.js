@@ -8,9 +8,9 @@ const CartWithItems = (props) => {
     const [cart, setCart] = useContext(CartContext);
     const menuHandler = useContext(CartMenuContext)
 
-    const displayMeshParameters = () => {
+/*     const displayMeshParameters = () => {
         console.log({cart})
-    }
+    } */
 
     const deleteItem = (uniqueId) => {
         const remainingItems = cart.filter(item=>item.id !== uniqueId)

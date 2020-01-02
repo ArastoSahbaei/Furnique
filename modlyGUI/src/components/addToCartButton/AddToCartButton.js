@@ -6,7 +6,7 @@ import './AddToCartButton.css'
 export default function AddToCartButton(props) {
     
     const menuHandler = useContext(CartMenuContext);
-    const [cart, setCart] = useContext(CartContext);
+    const [/* cart, */ setCart] = useContext(CartContext);
 
     const addMeshToCart = () => {
         setCart(currentState => [...currentState, {...props.meshObjectValues, id: Date.now()}])
