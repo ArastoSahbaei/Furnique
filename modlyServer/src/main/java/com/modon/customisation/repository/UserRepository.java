@@ -16,4 +16,5 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query(value = "select email from user where is_enabled = true;", nativeQuery = true)
     List getEmailFromConfirmedUsers();
 
+    User findByUsername(String userName);
 }

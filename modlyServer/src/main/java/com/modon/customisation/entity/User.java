@@ -28,6 +28,9 @@ public class User {
     @JsonIgnore
     private List<UserOrder> orders;
 
+    @Column(name = "USER_NAME", length = 50, nullable = false)
+    private String username;
+
     @Column(name = "FIRST_NAME", length = 50, nullable = true)
     private String firstName;
 
@@ -39,7 +42,7 @@ public class User {
     private String email;
 
     @Transient
-    @Column(name = "PASSWORD", length = 100, nullable = true)
+    @Column(name = "PASSWORD", length = 100, nullable = false)
     private String password;
 
     @Column(name = "ADDRESS", length = 60, nullable = true)
@@ -78,6 +81,14 @@ public class User {
 
     public void setOrders(List<UserOrder> orders) {
         this.orders = orders;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getFirstName() {
