@@ -30,7 +30,7 @@ const TableSurface = props => {
     useEffect(() => {
         const { rotationSpeed, tableWidth, tableLength, tableHeight, legWidth, legLength, legHeight, legAxisX, legAxisY } = props.cartObject;
         const table = getEntity();
-
+        console.log(props)
         table[0].rotation.y += -rotationSpeed;
         table[0].scale.x = tableWidth;
         table[0].scale.z = tableLength;
