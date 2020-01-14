@@ -13,7 +13,7 @@ const TableSurface = props => {
         const tableSurface = new THREE.Mesh(tableSurfaceGeometry, tableSurfaceMaterial);
         tableSurface.castShadow = true;
 
-        const tableLegsGeometry = new THREE.BoxGeometry(0.05, 1.3, 0.05);
+        const tableLegsGeometry = new THREE.BoxGeometry(0.05, 0.2, 0.05);
         const tableLegsMaterial = new THREE.MeshStandardMaterial(({map: WoodTexture(), wireframe: false}));
         const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
         const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
@@ -30,7 +30,7 @@ const TableSurface = props => {
     useEffect(() => {
         const { rotationSpeed, tableWidth, tableLength, tableHeight, legWidth, legLength, legHeight, legAxisX, legAxisY } = props.cartObject;
         const table = getEntity();
-        console.log(props)
+        console.log(table)
         table[0].rotation.y += -rotationSpeed;
         table[0].scale.x = tableWidth;
         table[0].scale.z = tableLength;
@@ -42,19 +42,19 @@ const TableSurface = props => {
 
         table[1].position.x = -legAxisX; 
         table[2].position.x = -legAxisX; 
-        table[3].position.x = legAxisX; 
-        table[4].position.x = legAxisX;
+        table[3].position.x =  legAxisX; 
+        table[4].position.x =  legAxisX;
 
         table[1].position.z = -legAxisY; 
-        table[2].position.z = legAxisY; 
-        table[3].position.z = legAxisY; 
+        table[2].position.z =  legAxisY; 
+        table[3].position.z =  legAxisY; 
         table[4].position.z = -legAxisY; 
         
         table[0].position.y =  legHeight * 0.12;
-        table[1].position.y = -legHeight * 0.65;
-        table[2].position.y = -legHeight * 0.65;
-        table[3].position.y = -legHeight * 0.65;
-        table[4].position.y = -legHeight * 0.65;
+        table[1].position.y = -legHeight * 0.10;
+        table[2].position.y = -legHeight * 0.10;
+        table[3].position.y = -legHeight * 0.10;
+        table[4].position.y = -legHeight * 0.10;
 
       },
       [timer],
