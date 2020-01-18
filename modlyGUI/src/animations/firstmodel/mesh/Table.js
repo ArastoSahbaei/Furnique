@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { useEffect } from 'react';
 import { useThree } from '../../ThreeJSManager';
-import WoodTexture from '../../textures/Wood'
+import Oak from '../../textures/Oak'
 
 const TableSurface = props => {
     const {boxWidth = 1.5, boxDepth = 0.1, boxHeight = 1.5} = props;
@@ -9,12 +9,12 @@ const TableSurface = props => {
     const setup = context => {
         const { scene } = context;
         const tableSurfaceGeometry = new THREE.BoxGeometry(boxWidth, boxDepth, boxHeight);
-        const tableSurfaceMaterial = new THREE.MeshStandardMaterial({map: WoodTexture(), wireframe: false});
+        const tableSurfaceMaterial = new THREE.MeshStandardMaterial({map: Oak(), wireframe: false});
         const tableSurface = new THREE.Mesh(tableSurfaceGeometry, tableSurfaceMaterial);
         tableSurface.castShadow = true;
 
         const tableLegsGeometry = new THREE.BoxGeometry(0.05, 0.2, 0.05);
-        const tableLegsMaterial = new THREE.MeshStandardMaterial(({map: WoodTexture(), wireframe: false}));
+        const tableLegsMaterial = new THREE.MeshStandardMaterial(({map: Oak(), wireframe: false}));
         const tableLeg1 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
         const tableLeg2 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
         const tableLeg3 = new THREE.Mesh(tableLegsGeometry, tableLegsMaterial); 
